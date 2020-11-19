@@ -5,6 +5,7 @@
 [build.environment]
   HUGO_VERSION = "0.64.0"
   HUGO_ENABLEGITINFO = "true"
+  GIT_LFS_ENABLED = "true"
 
 [context.production.environment]
   HUGO_ENV = "production"
