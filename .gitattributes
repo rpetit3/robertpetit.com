@@ -1,1 +1,16 @@
 static/pdf/** filter=lfs diff=lfs merge=lfs -text
+static/pdf/2018-staphopia.pdf filter=lfs diff=lfs merge=lfs -text
+static/pdf/2018-usa300-persists.pdf filter=lfs diff=lfs merge=lfs -text
+static/pdf/2018-usa500.pdf filter=lfs diff=lfs merge=lfs -text
+static/pdf/2014-visa-gwas.pdf filter=lfs diff=lfs merge=lfs -text
+static/pdf/2018-bacillus-anthracis.pdf filter=lfs diff=lfs merge=lfs -text
+static/pdf/2014-vancomycin-descriminator.pdf filter=lfs diff=lfs merge=lfs -text
+static/pdf/2016-saureus-in-metagenomes.pdf filter=lfs diff=lfs merge=lfs -text
+static/pdf/2017-whale-shark-draft-genome.pdf filter=lfs diff=lfs merge=lfs -text
+static/pdf/2019-saureus-cf-mra.pdf filter=lfs diff=lfs merge=lfs -text
+static/pdf/2011-hhaemolyticus.pdf filter=lfs diff=lfs merge=lfs -text
+static/pdf/2013-read-classifier.pdf filter=lfs diff=lfs merge=lfs -text
+static/pdf/2015-usa300-chicago.pdf filter=lfs diff=lfs merge=lfs -text
+static/pdf/2020-bactopia.pdf filter=lfs diff=lfs merge=lfs -text
+static/pdf/2020-cfstaph.pdf filter=lfs diff=lfs merge=lfs -text
+static/pdf/2020-deltatoxin.pdf filter=lfs diff=lfs merge=lfs -text
