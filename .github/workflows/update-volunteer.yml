@@ -9,6 +9,7 @@ jobs:
   logLatestPR:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Query Github API
         uses: octokit/graphql-action@v2.x
         id: get_latest_pr
