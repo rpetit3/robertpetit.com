@@ -34,7 +34,6 @@ jobs:
                 }
               }
             }
-          }
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: "echo '${{ steps.get_latest_pr.outputs.data }}' > data/volunteer.json"
