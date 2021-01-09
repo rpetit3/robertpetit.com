@@ -12,7 +12,7 @@ jobs:
       - name: Query Github API
         uses: helaili/github-graphql-action@2.0.1
         with:
-          query: '.queries/pr.yaml'
+          query: '.query/pr.yaml'
           outputFile: 'data/volunteer.json'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
