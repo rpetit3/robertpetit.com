@@ -14,11 +14,11 @@ jobs:
         id: get_latest_pr
         with:
           query: |
-           search(query: "is:pr author:rpetit3 -user:rpetit3 -user:rpetit3-fun -user:staphopia -user:bactopia -user:Read-Lab-Confederation", type: ISSUE, first: 100) {
+            search(query: "is:pr author:rpetit3 -user:rpetit3 -user:rpetit3-fun -user:staphopia -user:bactopia -user:Read-Lab-Confederation", type: ISSUE, first: 100) {
               issueCount
               edges {
                 node {
-                  ... on PullRequest {
+                ... on PullRequest {
                     number
                     title
                     repository {
@@ -36,16 +36,16 @@ jobs:
             }
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: "echo '${{ steps.get_latest_pr.outputs.data }}' > data/volunteer.json"
-    - name: Commit files
-      run: |
-        echo ${{ github.ref }}
-        git add data/volunteer.json
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "ci: update volunteer.json" -a | exit 0
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+      - name: Update and Commit
+        run: |
+          echo ${{ github.ref }}
+          echo '${{ steps.get_latest_pr.outputs.data }}' > data/volunteer.json
+          git add data/volunteer.json
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "ci: update volunteer.json" -a | exit 0
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
