@@ -9,6 +9,7 @@ jobs:
   logLatestPR:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Query Github API
         uses: helaili/github-graphql-action@2.0.1
         with:
