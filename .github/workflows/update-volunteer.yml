@@ -14,7 +14,7 @@ jobs:
         id: get_latest_pr
         with:
           query: |
-            query is:pr author:rpetit3 -user:rpetit3 -user:rpetit3-fun -user:staphopia -user:bactopia -user:Read-Lab-Confederation -user:turtlecoin -user:DarkstarProject {
+            search(q: "is:pr author:rpetit3 -user:rpetit3 -user:rpetit3-fun -user:staphopia -user:bactopia -user:Read-Lab-Confederation", type: ISSUE, first: 100) {
               issueCount
               edges {
                 node {
