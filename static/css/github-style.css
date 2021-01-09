@@ -32,6 +32,10 @@ body {
   fill: currentColor;
 }
 
+.merged {
+  color: #a371f7 !important;
+}
+
 .Header-search {
   max-width: 272px;
   width: 100%;

@@ -21,25 +21,62 @@
 
           {{- .Content -}}
         <h2>Conda Submissions</h2>
-        <p>These are tools I have create Conda recipes for, I did not create the tool!</p>
+        <p>I have created {{ len .Params.conda }} (<i>woohoo!</i>🎉) Conda recipes for the community.</p>
         <div>
-        <table>
+          <table>
+              <tr>
+                <th>Tool</th>
+                <th>Description</th>
+                <th>Pull Request</th>
+              </tr>
+            {{ range sort .Params.conda "tool" "" }}
+              <tr>
+                  <td><a href="{{ .tool_url }}" alt="{{ .tool }}" target="_blank">{{ .tool }}</a></td>
+                  <td>{{ .description }}</td>
+                  <td><a href="{{ .pr_url }}" alt="{{ .pr_name }}" target="_blank">{{ .pr_name }}</a></td>
+              </tr>
+            {{ end }}
+          </table>
+        </div>
+        <h2>Pull Requests</h2>
+        {{ $filter_user := delimit .Params.filter_user "+-user:"}}
+        {{ $github_url := printf "%s%s" .Params.github_pr_url $filter_user }}
+        {{ $merged := len (where $.Site.Data.volunteer.search.edges ".node.mergedAt" "!=" nil) }}
+        {{ $total := mul $.Site.Data.volunteer.search.issueCount 1.0 }}
+        {{ $percent := math.Round (mul (div $merged $total) 100) }}
+        <p>I have submitted {{ $.Site.Data.volunteer.search.issueCount }} (<i>{{ $percent }}% merged, yay!</i>🎉) pull requests to various open source projects. Below are my most recent pull requests. To see the full list, which also includes personal projects, please <a href="{{ .Params.github_pr_url }}" alt="Full list of Pull Requests" target="_blank">view them on Github</a>.</p>
+        <div>
+          <table>
             <tr>
-              <th>Tool</th>
-              <th>Description</th>
               <th>Pull Request</th>
+              <th>Description</th>
             </tr>
+            {{ range first 10 $.Site.Data.volunteer.search.edges }}
+              {{ $repo_url := printf "https://www.github.com/%s" .node.repository.nameWithOwner }}
+              {{ $pr := printf "%s%s%.0f" .node.repository.nameWithOwner "#" .node.number }}
+              {{ $created := substr .node.createdAt 0 10 }}
+              <tr>
+                  <td>
+                    {{ if eq .node.mergedAt nil }}
+                    <span class="tooltipped tooltipped-e" aria-label="Open pull request">
+                      {{ partial "select_octicon.html" (dict "context" . "octicon" "pr_open") }}
+                    </span>
+                    
+                    {{ else }}
+                    <span class="tooltipped tooltipped-e" aria-label="Merged pull request">
+                      {{ partial "select_octicon.html" (dict "context" . "octicon" "pr_closed") }}
+                    </span>
 
-          
-          {{ range where (where $.Site.RegularPages.ByTitle "Section" "volunteer") ".Params.is_conda" true }}
-            <tr>
-                <td><a href="{{ .Params.tool_url }}" alt="{{ .Params.tool }}" target="_blank">{{ .Params.tool }}</a></td>
-                <td>{{ .Params.description }}</td>
-                <td><a href="{{ .Params.pr_url }}" alt="{{ .Params.pr_name }}" target="_blank">{{ .Params.pr_name }}</a></td>
-            </tr>
-          {{ end }}
-        </table>
-    </div>
+                    {{ end }}
+                    <a href="{{ htmlEscape .node.url }}" alt="{{ $pr }}" target="_blank">{{ $pr }}</a>
+
+                  </td>
+                  <td>{{ .node.title }}</td>
+              </tr>
+            {{ end }}
+          </table>
+          <p>{{ partial "select_octicon.html" (dict "context" . "octicon" "pr_open") }} <i>Open pull request</i> <span style="padding-right: 20px;"></span> {{ partial "select_octicon.html" (dict "context" . "octicon" "pr_closed") }} <i>Merged pull request</i> </p>
+        </div>
         </article>
       </div>
     </div>
