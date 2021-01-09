@@ -1,27 +1,15 @@
 +++
+draft = false
+pin = true
+type = "publication"
+
 abstract = "**Importance**: Invasive nontypeable *Haemophilus influenzae* (NTHi) infection among adults is typically associated with bacteremic pneumonia. Nontypeable *H influenzae *is genetically diverse and clusters of infection are uncommon. **Objective**: To evaluate an increase in invasive NTHi infection from 2017-2018 among HIV-infected men who have sex with men in metropolitan Atlanta, Georgia. **Design, Setting, and Participants**: A population-based surveillance study with a cohort substudy and descriptive epidemiological analysis identified adults aged 18 years or older with invasive NTHi infection (isolation of NTHi from a normally sterile site) between January 1, 2008, and December 31, 2018 (final date of follow-up). **Exposures**: Time period, HIV status, and genetic relatedness (ie, cluster status) of available NTHi isolates. **Main Outcomes and Measures**: The primary outcome was incidence of invasive NTHi infection (from 2008-2016 and 2017-2018) among persons with HIV and compared with NTHi infection from 2008-2018 among those without HIV. The secondary outcomes were assessed among those aged 18 to 55 years with invasive NTHi infection and included epidemiological, clinical, and geographic comparisons by cluster status. **Results**: Among 553 adults with invasive NTHi infection (median age, 66 years [Q1-Q3, 48-78 years]; 52% male; and 38% black), 60 cases occurred among persons with HIV. Incidence of invasive NTHi infection from 2017-2018 among persons with HIV (41.7 cases per 100 000) was significantly greater than from 2008-2016 among those with HIV (9.6 per 100 000; P < .001) and from 2008-2018 among those without HIV (1.1 per 100 000; P < .001). Among adults aged 18 to 55 years with invasive NTHi infections from 2017-2018 (n = 179), persons with HIV (n = 31) were significantly more likely than those from 2008-2018 without HIV (n = 124) to be male (94% vs 49%, respectively; P < .001), black (100% vs 53%; P < .001), and have septic arthritis (35% vs 1%; P < .001). Persons with HIV who had invasive NTHi infection from 2017-2018 (n = 31) were more likely than persons with HIV who had invasive NTHi infection from 2008-2016 (n = 24) to have septic arthritis (35% vs 4%, respectively; P = .01). Pulsed-field gel electrophoresis of 174 of 179 NTHi isolates from 18- to 55-year-olds identified 2 genetically distinct clonal groups: cluster 1 (C1; n = 24) and cluster 2 (C2; n = 23). Whole-genome sequencing confirmed 2 clonal lineages of NTHi infection and revealed all C1 isolates (but none of the C2 isolates) carried IS1016 (an insertion sequence associated with *H influenzae* capsule genes). Persons with HIV were significantly more likely to have C1 or C2 invasive NTHi infection from 2017-2018 (28/31 [90%]) compared with from 2008-2016 among persons with HIV (10/24 [42%]; P < .001) and compared with from 2008-2018 among those without HIV (9/119 [8%]; P < .001). Among persons with C1 or C2 invasive NTHi infection who had HIV (n = 38) (median age, 34.5 years; 100% male; 100% black; 82% men who have sex with men), 32 (84%) lived in 2 urban counties and an area of significant spatial aggregation was identified compared with those without C1 or C2 invasive NTHi infection. **Conclusions and Relevance**: Among persons with HIV in Atlanta, the incidence of invasive nontypeable *H influenzae* infection increased significantly from 2017-2018 compared with 2008-2016. Two unique but genetically related clonal strains were identified and were associated with septic arthritis among black men who have sex with men and who lived in geographic proximity."
 
-authors = ["Lauren F Collins", "Fiona P Havers", "Amy Tunali", "Stephanie Thomas", "Julie A Clennon", "Zanthia Wiley", "Melissa Tobin-D'Angelo", "Tonia Parrott", "Timothy D Read", "Sarah W Satola", "***Robert A Petit III***", "Monica M Farley"]
+authors = ["Lauren F. Collins", "Fiona P. Havers", "Amy Tunali", "Stephanie Thomas", "Julie A. Clennon", "Zanthia Wiley", "Melissa Tobin-D'Angelo", "Tonia Parrott", "Timothy D. Read", "Sarah W Satola", "***Robert A. Petit III***", "Monica M. Farley"]
 date = "2019-12-01"
-image_preview = ""
-math = true
-publication_types = ["2"]
-publication = "in *Journal of the American Medical Association*"
-publication_short = ""
-selected = false
+journal = "*Journal of the American Medical Association*"
 title = "Invasive Nontypeable *Haemophilus influenzae* Infection Among Adults With HIV in Metropolitan Atlanta, Georgia, 2008-2018"
-url_code = ""
-url_dataset = ""
-url_pdf = ""
-url_project = ""
-url_slides = ""
-url_video = ""
-tags =  ["IS1016", "HIV", "Septic Arthritis", "*Haemophilus influenzae*"]
-
-url_journal = "https://doi.org/10.1001/jama.2019.18800"
-
-# Optional featured image (relative to `static/img/` folder).
-[header]
-image = ""
-caption = ""
+tags =  ["is1016", "virulence", "haemophilus"]
+doi = "10.1001/jama.2019.18800"
+citation = "Collins, L. F. et al. Invasive Nontypeable *Haemophilus influenzae* Infection Among Adults With HIV in Metropolitan Atlanta, Georgia, 2008-2018. *JAMA* 322, 2399–2410 (2019)"
 +++

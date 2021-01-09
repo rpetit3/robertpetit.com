@@ -1,0 +1,7 @@
+{{ define "content" }}
+    {{ if eq .Section "publication" }}
+        {{ partial "publication.html" . }}
+    {{ else }}
+        {{ partial "post.html" . }}
+    {{ end }}
+{{end }}

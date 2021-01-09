@@ -1,0 +1,18 @@
+# Versioning and Subresource Integrity (SRI) for GitHub Style's JavaScript and CSS dependencies
+
+# When updating the version of an asset below, please also update the corresponding SRI.
+# How to update the SRI for an entry:
+#   echo -n "sha512-" && curl --silent "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML" | openssl dgst -sha512 -binary | openssl enc -base64 -A
+# Or, the SRI for the appropriate asset can be copied from https://cdnjs.com/ .
+
+# JavaScript
+
+# CSS
+[css.fontAwesome]
+  version = "5.6.0"
+  sri = "sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
+  url = "https://use.fontawesome.com/releases/v%s/css/all.css"
+[css.academicons]
+  version = "1.8.6"
+  sri = "sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw="
+  url = "https://cdnjs.cloudflare.com/ajax/libs/academicons/%s/css/academicons.min.css"

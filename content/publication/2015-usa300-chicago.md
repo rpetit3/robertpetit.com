@@ -1,27 +1,16 @@
 +++
+draft = false
+pin = false
+type = "publication"
+
 abstract = "Methicillin-resistant *Staphylococcus aureus* (MRSA) USA300 is a successful *S. aureus* clone in the United States and a common cause of skin and soft tissue infections (SSTIs). We performed whole-genome sequencing (WGS) of 146 USA300 MRSA isolates from SSTIs and colonization cultures obtained from an investigation conducted from 2008 to 2010 in Chicago and Los Angeles households that included an index case with an *S. aureus* SSTI. Identifying unique single nucleotide polymorphisms (SNPs) and analyzing whole-genome phylogeny, we characterized isolates to understand transmission dynamics, genetic relatedness, and microevolution of USA300 MRSA within the households. We also compared the 146 USA300 MRSA isolates from our study with the previously published genome sequences of the USA300 MRSA isolates from San Diego (n = 35) and New York City (n = 277). We found little genetic variation within the USA300 MRSA household isolates from Los Angeles (mean number of SNPs $±$ standard deviation, 17.6 $±$ 35; $π$ nucleotide diversity, 3.1 $times$ 10(-5)) or from Chicago (mean number of SNPs $±$ standard deviation, 12 $±$ 19; $π$ nucleotide diversity, 3.1 $times$ 10(-5)). The isolates within a household clustered into closely related monophyletic groups, suggesting the introduction into and transmission within each household of a single common USA300 ancestral strain. From a Bayesian evolutionary reconstruction, we inferred that USA300 persisted within households for 2.33 to 8.35 years prior to sampling. We also noted that fluoroquinolone-resistant USA300 clones emerged around 1995 and were more widespread in Los Angeles and New York City than in Chicago. Our findings strongly suggest that unique USA300 MRSA isolates are transmitted within households that contain an individual with an SSTI. Decolonization of household members may be a critical component of prevention programs to control USA300 MRSA spread in the United States. IMPORTANCE: USA300, a virulent and easily transmissible strain of methicillin-resistant *Staphylococcus aureus* (MRSA), is the predominant community-associated MRSA clone in the United States. It most commonly causes skin infections but also causes necrotizing pneumonia and endocarditis. Strategies to limit the spread of MRSA in the community can only be effective if we understand the most common sources of transmission and the microevolutionary processes that provide a fitness advantage to MRSA. We performed a whole-genome sequence comparison of 146 USA300 MRSA isolates from Chicago and Los Angeles. We show that households represent a frequent site of transmission and a long-term reservoir of USA300 strains; individuals within households transmit the same USA300 strain among themselves. Our study also reveals that a large proportion of the USA300 isolates sequenced are resistant to fluoroquinolone antibiotics. The significance of this study is that if households serve as long-term reservoirs of USA300, household MRSA eradication programs may result in a uniquely effective control method."
 
-authors = ["Md Tauqeer Alam", "Timothy D Read", "***Robert A Petit III***", "Susan Boyle-Vavra", "Loren G Miller", "Samantha J Eells", "Robert S Daum", "Michael Z David"]
+authors = ["Md Tauqeer Alam", "Timothy D. Read", "***Robert A. Petit III***", "Susan Boyle-Vavra", "Loren G. Miller", "Samantha J. Eells", "Robert S. Daum", "Michael Z. David"]
 date = "2015-03-01"
-image_preview = ""
-math = true
-publication_types = ["2"]
-publication = "in *mBio*"
-publication_short = ""
-selected = false
+journal = "*mBio*"
 title = "Transmission and microevolution of USA300 MRSA in U.S. households: evidence from whole-genome sequencing"
-url_code = ""
-url_dataset = ""
-url_pdf = "pdf/2015-usa300-chicago.pdf"
-url_project = ""
-url_slides = ""
-url_video = ""
-tags = ["Genomics", "Phylogeny", "*Staphylococcus aureus*"]
-
-url_journal = "https://mbio.asm.org/content/6/2/e00054-15"
-
-# Optional featured image (relative to `static/img/` folder).
-[header]
-image = ""
-caption = ""
+pdf = "/pdf/2015-usa300-chicago.pdf"
+tags = ["genomics", "phylogeny", "staphylococcus", "usa300"]
+doi = "10.1128/mBio.00054-15"
+citation = "Alam, M. T. et al. Transmission and microevolution of USA300 MRSA in U.S. households: evidence from whole-genome sequencing. *MBio* 6, e00054 (2015)"
 +++
