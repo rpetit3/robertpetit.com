@@ -1,9 +1,8 @@
 name: Latest Pull Requests
 on:
-  push:
-    branches:
-      - master
-      - staging
+  schedule:
+    # Every Sunday at midnight
+    - cron:  '0 0 * * 0'
 
 jobs:
   logLatestPR:
