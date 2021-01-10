@@ -41,7 +41,7 @@ jobs:
       - name: Update and Commit
         run: |
           echo ${{ github.ref }}
-          echo '${{ steps.get_latest_pr.outputs.data }}' > data/volunteer.json
+          echo '${{ steps.get_latest_pr.outputs.data }}' > data/github.json
           git add data/volunteer.json
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
