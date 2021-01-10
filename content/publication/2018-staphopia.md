@@ -10,7 +10,7 @@ date = "2018-07-01"
 journal = "*PeerJ*"
 title = "*Staphylococcus aureus* viewed from the perspective of 40,000+ genomes"
 pdf = "/pdf/2018-staphopia.pdf"
-tags = ["resistance", "database", "nextflow", "staphylococcus"]
+tags = ["resistance", "nextflow", "staphylococcus", "staphopia"]
 doi = "10.7717/peerj.5261"
 citation = "Petit, R. A., III & Read, T. D. *Staphylococcus aureus* viewed from the perspective of 40,000+ genomes. *PeerJ* 6, e5261 (2018)"
 +++

@@ -4,7 +4,7 @@ My name is Robert and I decided since I spend most of may day using Github I mig
 
 I am a bioinformatician working in the field of bacterial genomics.
 
-
+ 
 I received my PhD in
 [Population Biology, Ecology, and Evolution (PBEE)](http://www.biomed.emory.edu/PROGRAM_SITES/PBEE/index.html) 
 from Emory University in 2018. During my PhD, I developed [Staphopia](https://staphopia.emory.edu) 

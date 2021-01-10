@@ -32,9 +32,9 @@
                 {{ if ne $section_name "about" }}
                   {{ if eq $section_name "volunteer" }}
                     {{ range $section }}
-                      {{ if isset .Params "conda" }}
-                        {{ $conda := len .Params.conda }}
-                        <span class="Counter">{{ sub $.Site.Data.volunteer.search.issueCount $conda }}</span>
+                      {{ if isset $.Site.Data.volunteer "conda" }}
+                        {{ $conda := len $.Site.Data.volunteer.conda }}
+                        <span class="Counter">{{ sub $.Site.Data.github.search.issueCount $conda }}</span>
                       {{ end }}
                     {{ end }}
                   {{ else if eq $section_name "software" }}
