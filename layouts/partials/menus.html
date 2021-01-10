@@ -37,6 +37,8 @@
                         <span class="Counter">{{ sub $.Site.Data.volunteer.search.issueCount $conda }}</span>
                       {{ end }}
                     {{ end }}
+                  {{ else if eq $section_name "software" }}
+                  <span class="Counter">{{ sub $section_count 1 }}</span>
                   {{ else }}
                   <span class="Counter">{{ $section_count }}</span>
                   {{ end }}

@@ -129,6 +129,8 @@
         {{ block "overview" . }}{{ end }}
       {{ else if eq .Section "publication" }}
         {{ block "publications" . }}{{ end }}
+      {{ else if eq .Section "software" }}
+        {{ block "softwares" . }}{{ end }}
       {{ else if eq .Section "volunteer" }}
         {{ block "volunteer" . }}{{ end }}
       {{ else if eq .Section "about" }}

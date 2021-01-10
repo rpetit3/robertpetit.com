@@ -12,7 +12,8 @@ let contributions;
 
   contributions = JSON.parse(dom.getAttribute('data'));
   let year = 0;
-  for (const item of contributions) {
+  for (const item of contributions.sort(sort_by_date)) {
+
     item.publishDate = decodeURI(item.publishDate).replace(' ', 'T');
     item.date = new Date(item.publishDate);
     if (item.date.getFullYear() > year) {
@@ -24,6 +25,10 @@ let contributions;
   yearList();
   switchYear(year.toString());
 })();
+
+function sort_by_date(a, b) {
+  return new Date(decodeURI(b.publishDate).replace(' ', 'T')).getTime() - new Date(decodeURI(a.publishDate).replace(' ', 'T')).getTime();
+}
 
 function switchYear(year) {
   let startDate;
