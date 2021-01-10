@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 type: "software"
 title: "vcf-annotator"
 summary: "Add biological annotations to variants in a given VCF file."

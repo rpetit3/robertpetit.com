@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 type: "software"
 title: "fastq-scan"
 summary: "Output FASTQ summary statistics in JSON format"

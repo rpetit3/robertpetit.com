@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 type: "software"
 title: "fastq-dl"
 summary: "Download FASTQ files from SRA or ENA repositories."

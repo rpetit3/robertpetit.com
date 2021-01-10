@@ -1,4 +1,5 @@
 ---
+draft: false
 title: "Bactopia"
 type: "software"
 summary: "A flexible pipeline for complete analysis of bacterial genomes"

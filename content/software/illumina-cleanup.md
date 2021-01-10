@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 type: "software"
 title: "illumina-cleanup"
 summary: "A Nextflow pipeline for pre-processing Illumina FASTQ files"

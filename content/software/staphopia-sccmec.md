@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 type: "software"
 title: "staphopia-sccmec"
 summary: "A standalone version of Staphopia's SCCmec typing method."

@@ -1,4 +1,5 @@
 ---
+draft: false
 title: "Staphopia"
 type: "software"
 summary: "A workflow and database focused on the genomes of the bacterial pathogen *Staphylococcus aureus*"

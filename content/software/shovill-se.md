@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 type: "software"
 title: "shovill-se"
 summary: "A fork of Shovill that includes support for single end reads"

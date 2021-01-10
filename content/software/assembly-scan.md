@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 type: "software"
 title: "assembly-scan"
 summary: "Generate basic stats for an assembly"
