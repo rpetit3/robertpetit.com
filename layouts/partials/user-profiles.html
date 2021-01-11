@@ -107,13 +107,21 @@
         </div>
       </div>
     </div>
-
+    
     <div class="flex-shrink-0 col-12 col-md-9 mb-4 mb-md-0">
       {{ partial "mobile-menus.html" . }}
-      {{ if eq .Section "publication" }}
-        {{ block "publication" . }}{{ end }}
+      {{ if .IsHome }}
+        {{ block "overview" . }}{{ end }}
+      {{ else if eq .Section "publication" }}
+        {{ block "publications" . }}{{ end }}
+      {{ else if eq .Section "software" }}
+        {{ block "softwares" . }}{{ end }}
+      {{ else if eq .Section "volunteer" }}
+        {{ block "volunteer" . }}{{ end }}
+      {{ else if eq .Section "about" }}
+        {{ block "about" . }}{{ end }}
       {{ else }}
-        {{ block "post" . }}{{ end }}
+        {{ block "posts" . }}{{ end }}
       {{ end }}
     </div>
   </div>

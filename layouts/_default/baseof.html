@@ -4,7 +4,11 @@
 
 <body>
   {{ partial "header" . }}
-  {{ block "content" . }}{{ end }}
+  {{ if or .Page.IsSection .Page.IsHome }}
+    {{ block "content" . }}{{ end }}
+  {{ else }}
+    {{ block "single-content" . }}{{ end }}
+  {{ end }}
   {{ partial "footer.html" . }}
   {{ partial "script.html" . }}
 </body>

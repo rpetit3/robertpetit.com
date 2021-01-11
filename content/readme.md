@@ -1,25 +1,10 @@
-Welcome!👋 
+### Yo! 👋
 
-My name is Robert and I decided since I spend most of may day using Github I might as well use a theme to mimic it! *haha*
+Yep, I'm using a theme that looks exactly like GitHub's! I stumbled upon it while [browsing Hugo themes](https://themes.gohugo.io/github-style/). I figured since I spend a lot of time browsing GitHub, I'd use it, and with some modifications, here we are! Now with that out the way...
 
-I am a bioinformatician working in the field of bacterial genomics.
+Welcome and thank you for stopping by! I'm Robert and I currently work as a bioinformatician in the Division of Infectious Diseases at Emory University. My work involves further developing [Bactopia](https://bactopia.github.io/), a bacterial genome analysis pipeline, and providing bioinformatic support for the [EMERGENT Group](https://read-lab-confederation.github.io/) and collaborators.
 
- 
-I received my PhD in
-[Population Biology, Ecology, and Evolution (PBEE)](http://www.biomed.emory.edu/PROGRAM_SITES/PBEE/index.html) 
-from Emory University in 2018. During my PhD, I developed [Staphopia](https://staphopia.emory.edu) 
-a pipeline and database with genomic results for more than [40,000 *Staphylococcus aureus* 
-genomes](https://peerj.com/articles/5261/). You know what's even better!? People around the world are still 
-using Staphopia, which is super exciting!
-
-My latest workflow baby is [Bactopia](https://bactopia.github.io/), the successor to Staphopia's analysis workflow. 
-Bactopia, built with the [Nextflow platform](https://www.nextflow.io/), provides efficient comparative genomic 
-analysis for any bacterial species or genus. My goal with Bactopia is to help you process your data with a broad set 
-of tools, so that you can get to the fun part quicker!
-
-Aside from [Staphopia](https://staphopia.emory.edu) and [Bactopia](https://bactopia.github.io/), I am also a big advocate for making bioinformatics more accessible to others. The days of slogging through installations should be long gone for everyone! To help in this effort, I have contributed multiple recipes to [conda-forge](https://conda-forge.org/) and [Bioconda](https://bioconda.github.io/contributor/index.html).
-
-#### Education
-- 🎓 PhD, [Population Biology, Ecology, and Evolution](http://www.biomed.emory.edu/PROGRAM_SITES/PBEE/index.html), Emory University, 2018
-- 🎓 MSc, [Bioinformatics](https://bioinformatics.gatech.edu/), Georgia Institute of Technology, 2011
-- 🎓 BSc, [Biology](https://www.valdosta.edu/biology/), Valdosta State University, 2010
+- 💻 Things I use daily: [Nextflow](https://www.nextflow.io/), [Conda](https://docs.conda.io/en/latest/), Unix, Python
+- 🌱 I’m currently learning: [Github Actions](https://github.com/features/actions)
+- 💬 Ask me about: [Bactopia](https://bactopia.github.io/) and [Bioconda](https://bioconda.github.io/)
+- 🛠️ Bug or feedback? Please submit a [GitHub Issue](https://github.com/rpetit3/robertpetit.com/issues/new) (*thank you!*)

@@ -1,9 +1,5 @@
-{{ define "content" }}
-    {{ if eq .Section "publication" }}
-        {{ partial "publication.html" . }}
-    {{ else if eq .Section "software" }}
-        {{ partial "software.html" . }}
-    {{ else }}
-        {{ partial "post.html" . }}
-    {{ end }}
+{{ define "single-content" }}
+<div class="application-main">
+    {{ partial "user-profile.html" . }}
+</div>
 {{end }}
