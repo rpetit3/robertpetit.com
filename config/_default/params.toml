@@ -12,6 +12,7 @@ favicon = "/images/github.png"
 location = "Atlanta, GA"
 date_format = "January 2006"
 organization = "Emory University"
+group = "Division of Infectious Diseases"
 
 # Social Links
 [[social]]

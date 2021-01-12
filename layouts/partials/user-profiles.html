@@ -59,6 +59,14 @@
                 <span class="p-label">{{ .Site.Params.organization }}</span>
               </li>
               {{ end }}
+              {{ if .Site.Params.group }}
+              <li class="vcard-detail pt-1 css-truncate css-truncate-target hide-sm hide-md">
+                <span class="">
+                  {{ partial "select_octicon.html" (dict "context" . "octicon" "home" ) }}
+                </span>
+                <span class="p-label">{{ .Site.Params.group }}</span>
+              </li>
+              {{ end }}
               {{ if .Site.Params.location }}
               <li class="vcard-detail pt-1 css-truncate css-truncate-target hide-sm hide-md">
                 <span class="">

@@ -1,4 +1,12 @@
 conda:
+    - title: "Submitted Phirbo to Bioconda"
+      date: 2021-01-11
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/26144"
+      pr_name: "bioconda/bioconda-recipes#26144"
+      tool: "Phirbo"
+      tool_url: "https://github.com/aziele/phirbo"
+      description: "predict prokaryotic hosts for phage (meta) genomic sequences"
+
     - title: "Submitted spaTyper to Bioconda"
       date: 2021-01-04
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/26044"
