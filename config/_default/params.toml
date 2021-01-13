@@ -1,9 +1,9 @@
 
 author = "Robert A. Petit III, PhD"
 seo_author = "Robert A. Petit III, PhD"
-description = "Research scientist studying bacterial genomics and developer of [Bactopia](https://bactopia.github.io/) and [Staphopia](https://staphopia.emory.edu/) workflows."
-seo_description = "Dr. Robert A. Petit III is a research scientist at Emory University studying bacterial genomics and developer of Bactopia and Staphopia Nextflow pipelines"
-tagline = "Dr. Robert A. Petit III is a research scientist at Emory University studying bacterial genomics and developer of Bactopia and Staphopia Nextflow pipelines"
+description = "Bioinformatician studying bacterial genomics and developer of [Bactopia](https://bactopia.github.io/) and [Staphopia](https://staphopia.emory.edu/) workflows."
+seo_description = "Dr. Robert A. Petit III is a bioinformatician at Emory University studying bacterial genomics while also developing the Bactopia and Staphopia workflows"
+tagline = "Dr. Robert A. Petit III is a bioinformatician at Emory University studying bacterial genomics while also developing the Bactopia and Staphopia workflows"
 email = "robert.petit@emory.edu"
 avatar = "/images/profile.png"
 github = "rpetit3"
