@@ -1,7 +1,37 @@
 {
   "search": {
-    "issueCount": 59,
+    "issueCount": 61,
     "edges": [
+      {
+        "node": {
+          "number": 2,
+          "title": "Add Bioconda install info",
+          "repository": {
+            "nameWithOwner": "aziele/phirbo"
+          },
+          "createdAt": "2021-01-12T00:57:59Z",
+          "mergedAt": "2021-01-12T06:30:55Z",
+          "url": "https://github.com/aziele/phirbo/pull/2",
+          "changedFiles": 1,
+          "additions": 7,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 26144,
+          "title": "add recipe for phirbo",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2021-01-11T12:56:54Z",
+          "mergedAt": "2021-01-11T21:42:22Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/26144",
+          "changedFiles": 2,
+          "additions": 37,
+          "deletions": 0
+        }
+      },
       {
         "node": {
           "number": 463,
