@@ -1,9 +1,5 @@
 name: Latest Pull Requests - Manual
-on:
-  push:
-    branches:
-      - master
-      - staging
+on: workflow_dispatch
 
 jobs:
   logLatestPR:

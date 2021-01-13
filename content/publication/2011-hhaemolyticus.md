@@ -2,7 +2,7 @@
 draft = false
 pin = false
 type = "publication"
-summary = ""
+summary = "The first whole-genome sequences for five strains, two carried and three pathogenic, of the emerging pathogen Haemophilus haemolyticus"
 cover = ""
 
 abstract = "We report the first whole-genome sequences for five strains, two carried and three pathogenic, of the emerging pathogen *Haemophilus haemolyticus*. Preliminary analyses indicate that these genome sequences encode markers that distinguish *H. haemolyticus* from its closest *Haemophilus* relatives and provide clues to the identity of its virulence factors."

@@ -1,6 +1,6 @@
 <meta name="description"
-  content="{{ if .IsHome }}{{ .Site.Params.tagline }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
-<meta name="title" content="{{ if .IsHome }}{{ else }}{{ if eq .Title "Abouts" }}About{{ else if eq .Title "Softwares" }}Software{{ else if eq .Title "Volunteers" }}Volunteer{{ else }}{{ .Title }}{{ end }} - {{ end }}{{ .Site.Title }}">
+  content="{{ if .IsHome }}{{ .Site.Params.tagline }}{{ else }}{{ .Summary | markdownify | plainify }}{{ end }}" />
+<meta name="title" content="{{ if .IsHome }}{{ else }}{{ if eq .Title "Abouts" }}About{{ else if eq .Title "Softwares" }}Software{{ else if eq .Title "Volunteers" }}Volunteer{{ else }}{{ .Title | markdownify | plainify }}{{ end }} - {{ end }}{{ .Site.Title }}">
 <meta name="keywords"
   content='{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}' />
 <meta name="robots" content="noodp" />
@@ -9,19 +9,19 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="{{ if .IsHome }}{{ else }}{{ if eq .Title "Abouts" }}About{{ else if eq .Title "Softwares" }}Software{{ else if eq .Title "Volunteers" }}Volunteer{{ else }}{{ .Title }}{{ end }} - {{ end }}{{ .Site.Title }}">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ else }}{{ if eq .Title "Abouts" }}About{{ else if eq .Title "Softwares" }}Software{{ else if eq .Title "Volunteers" }}Volunteer{{ else }}{{ .Title | markdownify | plainify }}{{ end }} - {{ end }}{{ .Site.Title }}">
 <meta name="twitter:description"
-  content="{{ if .IsHome }}{{ $.Site.Params.seo_description }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+  content="{{ if .IsHome }}{{ $.Site.Params.seo_description }}{{ else }}{{ .Summary | markdownify | plainify }}{{ end }}" />
 <meta name="twitter:site" content="{{ $.Site.BaseURL }}" />
 <meta name="twitter:creator" content="{{ if isset .Params "author" }}{{ if len .Params.Author }}{{ .Params.Author }}{{ else }}{{ $.Site.Params.seo_author }}{{ end }}{{ else }}{{ $.Site.Params.seo_author }}{{ end }}">
 <meta name="twitter:image" content="{{ if isset .Params "cover" }}{{ if len .Params.Cover }}{{ .Params.Cover | absURL }}{{ else }}{{ $.Site.Params.avatar | absURL }}{{ end }}{{ else }}{{ $.Site.Params.avatar | absURL }}{{ end }}">
 
 <!-- OG data -->
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
-<meta property="og:title" content="{{ if .IsHome }}{{ else }}{{ if eq .Title "Abouts" }}About{{ else if eq .Title "Softwares" }}Software{{ else if eq .Title "Volunteers" }}Volunteer{{ else }}{{ .Title }}{{ end }} - {{ end }}{{ .Site.Title }}">
-<meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.seo_description }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta property="og:title" content="{{ if .IsHome }}{{ else }}{{ if eq .Title "Abouts" }}About{{ else if eq .Title "Softwares" }}Software{{ else if eq .Title "Volunteers" }}Volunteer{{ else }}{{ .Title | markdownify | plainify}}{{ end }} - {{ end }}{{ .Site.Title }}">
+<meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.seo_description }}{{ else }}{{ .Summary | markdownify | plainify }}{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:site_name" content="{{ .Title }}" />
+<meta property="og:site_name" content="{{ .Title | markdownify | plainify}}" />
 <meta property="og:image" content="{{ if isset .Params "cover" }}{{ if len .Params.Cover }}{{ .Params.Cover | absURL }}{{ else }}{{ $.Site.Params.avatar | absURL }}{{ end }}{{ else }}{{ $.Site.Params.avatar | absURL }}{{ end }}">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">

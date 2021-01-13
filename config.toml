@@ -4,7 +4,7 @@
 baseURL = "https://www.robertpetit.com/"
 defaultContentLanguage = "en"
 languageCode = "en-us"
-title = "Dr. Robert A. Petit III"
+title = "Robert A. Petit III, PhD"
 theme = "github-style"
 googleAnalytics = "G-BSZQDCMRH9"
 pygmentsCodeFences = true
