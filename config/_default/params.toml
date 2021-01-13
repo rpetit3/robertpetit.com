@@ -1,11 +1,11 @@
 
 author = "Robert A. Petit III, PhD"
-description = "Research scientist working in bacterial genomics. Developer of [Staphopia](https://staphopia.emory.edu) and [Bactopia](https://bactopia.github.io/) workflows, feedback always welcome!"
+description = "Research scientist working in bacterial genomics. Developer of Staphopia and Bactopia workflows, feedback always welcome!"
 email = "robert.petit@emory.edu"
 avatar = "/images/profile.png"
 github = "rpetit3"
 url = "https://www.robertpetit.com"
-keywords = "blog, google analytics"
+keywords = "blog, genomics, bioinformatics, bacteria, bactopia, staphopia"
 rss = true
 lastmod = true
 favicon = "/images/github.png"
@@ -13,6 +13,7 @@ location = "Atlanta, GA"
 date_format = "January 2006"
 organization = "Emory University"
 group = "Division of Infectious Diseases"
+tagline = "Dr. Robert A Petit III's personal website for bacterial genomics and bioinformatic anlayses."
 
 # Social Links
 [[social]]

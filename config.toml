@@ -4,7 +4,7 @@
 baseURL = "https://www.robertpetit.com/"
 defaultContentLanguage = "en"
 languageCode = "en-us"
-title = "RP3's Site"
+title = "Dr. Robert A. Petit's Website"
 theme = "github-style"
 googleAnalytics = "UA-123456-789"
 pygmentsCodeFences = true
