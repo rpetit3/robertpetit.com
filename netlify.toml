@@ -13,7 +13,7 @@
   command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
-  command = "hugo --gc --minify -b https://$SITE_NAME.robertpetit.com/"
+  command = "hugo --gc --minify -b https://staging.robertpetit.com"
 
 [[headers]]
   for = "*.webmanifest"
