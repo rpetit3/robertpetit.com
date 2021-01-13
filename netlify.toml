@@ -6,6 +6,19 @@
   HUGO_VERSION = "0.80.0"
   HUGO_ENABLEGITINFO = "true"
 
+[build.processing]
+  skip_processing = false
+[build.processing.css]
+  bundle = true
+  minify = true
+[build.processing.js]
+  bundle = true
+  minify = true
+[build.processing.html]
+  pretty_urls = true
+[build.processing.images]
+  compress = true
+
 [context.production.environment]
   HUGO_ENV = "production"
 
@@ -24,3 +37,9 @@
   for = "index.xml"
   [headers.values]
     Content-Type = "application/rss+xml"
+
+[context.branch-name.processing]
+  skip_processing = false
+[context.branch-name.processing.css]
+  bundle = true
+  minify = true
