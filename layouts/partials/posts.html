@@ -19,7 +19,6 @@
         </div>
       </div>
       {{ end }}
-      {{ if isset .Paginator "Pages" }}
       <ul>
         {{ range .Paginator.Pages }}
         <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
@@ -73,7 +72,6 @@
             {{ end }}
           </div>
         </div>
-      {{ end }}
     </div>
   </div>
 </div>

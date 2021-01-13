@@ -52,7 +52,7 @@
           <div class="js-profile-editable-area d-flex flex-column d-md-block">
             <ul class="vcard-details">
               {{ if .Site.Params.organization }}
-              <li class="vcard-detail pt-1 css-truncate css-truncate-target hide-sm hide-md">
+              <li class="vcard-detail pt-1 css-truncate css-truncate-target">
                 <span class="">
                   {{ partial "select_octicon.html" (dict "context" . "octicon" "organization" ) }}
                 </span>
@@ -60,7 +60,7 @@
               </li>
               {{ end }}
               {{ if .Site.Params.group }}
-              <li class="vcard-detail pt-1 css-truncate css-truncate-target hide-sm hide-md">
+              <li class="vcard-detail pt-1 css-truncate css-truncate-target">
                 <span class="">
                   {{ partial "select_octicon.html" (dict "context" . "octicon" "home" ) }}
                 </span>

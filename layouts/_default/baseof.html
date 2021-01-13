@@ -6,6 +6,8 @@
   {{ partial "header" . }}
   {{ if or .Page.IsSection .Page.IsHome }}
     {{ block "content" . }}{{ end }}
+  {{ else if eq .Page.Section "tags" }}
+    {{ block "content" . }}{{ end }}
   {{ else }}
     {{ block "single-content" . }}{{ end }}
   {{ end }}
