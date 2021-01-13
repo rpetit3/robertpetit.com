@@ -19,10 +19,10 @@ function setTheme(style) {
 
 function currentTheme() {
   const localStyle = localStorage.getItem('data-color-mode');
-  const systemStyle = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  return localStyle || systemStyle;
+  const defaultStyle = 'dark';
+  return localStyle || defaultStyle;
 }
 
 (() => {
-  setTheme('dark');
+  setTheme(currentTheme());
 })();

@@ -1,8 +1,10 @@
 <meta name="description"
   content="{{ if .IsHome }}{{ .Site.Params.tagline }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
+<meta name="title" content="{{ if .IsHome }}{{ else }}{{ if eq .Title "Abouts" }}About{{ else if eq .Title "Softwares" }}Software{{ else if eq .Title "Volunteers" }}Volunteer{{ else }}{{ .Title }}{{ end }} - {{ end }}{{ .Site.Title }}">
 <meta name="keywords"
   content='{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}' />
 <meta name="robots" content="noodp" />
+
 <link rel="canonical" href="{{ .Permalink }}" />
 
 <!-- Twitter Card -->
