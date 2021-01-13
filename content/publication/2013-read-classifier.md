@@ -2,6 +2,8 @@
 draft = false
 pin = false
 type = "publication"
+summary = ""
+cover = ""
 
 abstract = "*Next Generation Sequencing* (NGS) has revolutionised molecular biology, allowing routine clinical sequencing. NGS data consists of short sequence reads, given context through downstream assembly and annotation, a process requiring reads consistent with the assumed species or species group. The common bacterium *Staphylococcus aureus* may cause severe and life-threatening infections in humans, with some strains exhibiting antibiotic resistance. Here we apply an SVM classifier to the important problem of distinguishing *S. aureus* sequencing projects from other pathogens, including closely related *Staphylococci*. Using a sequence *k-mer* representation, we achieve precision and recall above 95%, implicating features with important functional associations."
 

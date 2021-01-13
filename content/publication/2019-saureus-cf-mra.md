@@ -2,6 +2,8 @@
 draft = false
 pin = false
 type = "publication"
+summary = ""
+cover = ""
 
 abstract = "*Staphylococcus aureus* is an early colonizer in the lungs of individuals with cystic fibrosis (CF), but surprisingly, only a limited number of genomes from CF-associated *S. aureus* isolates have been sequenced. Here, we present the whole-genome sequences of 65 *S. aureus* isolates obtained from 50 individuals with CF."
 

@@ -6,6 +6,7 @@ type = "publication"
 # Details about the publication
 title = ""
 authors = []
+summary = ""
 journal = ""
 date = ""
 doi = ""

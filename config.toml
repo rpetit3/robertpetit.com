@@ -4,12 +4,12 @@
 baseURL = "https://www.robertpetit.com/"
 defaultContentLanguage = "en"
 languageCode = "en-us"
-title = "Dr. Robert A. Petit's Website"
+title = "Dr. Robert A. Petit III"
 theme = "github-style"
-googleAnalytics = "UA-123456-789"
+googleAnalytics = "G-BSZQDCMRH9"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
-copyright = "&copy; Robert A. Petit III, 2020-{year}"
+copyright = "&copy; Dr. Robert A. Petit III, 2020-{year}"
 
 [frontmatter]
   lastmod = ["lastmod", ":fileModTime", ":default"]
