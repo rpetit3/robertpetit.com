@@ -1,9 +1,8 @@
 name: Latest Pull Requests
 on:
-  push:
-    branches: [ master, main, staging ]
-  pull_request:
-    branches: [ master, main, staging ]
+  schedule:
+    # At 01:30 on Wednesday and Saturday
+    - cron:  '30 1 * * 3,6'
     
 jobs:
   logLatestPR:

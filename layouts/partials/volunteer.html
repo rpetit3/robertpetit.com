@@ -42,7 +42,7 @@
         {{ $merged := len (where $.Site.Data.github.search.edges ".node.mergedAt" "!=" nil) }}
         {{ $total := mul $.Site.Data.github.search.issueCount 1.0 }}
         {{ $percent := math.Round (mul (div $merged $total) 100) }}
-        <p>I have submitted {{ $.Site.Data.github.search.issueCount }} (<i>{{ $percent }}% merged, yay!</i>🎉) pull requests to various open source projects. Below are my most recent pull requests. To see the full list, which also includes personal projects, please <a href="{{ .Params.github_pr_url }}" alt="Full list of Pull Requests" target="_blank">view them on Github</a>.</p>
+        <p>I have submitted {{ $.Site.Data.github.search.issueCount }} pull requests (<i>{{ $percent }}% merged, yay!</i>🎉) to various open source projects. Below are my most recent pull requests. To see the full list, which also includes personal projects, please <a href="{{ .Params.github_pr_url }}" alt="Full list of Pull Requests" target="_blank">view them on Github</a>.</p>
         <div>
           <table>
             <tr>
