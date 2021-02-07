@@ -1,9 +1,10 @@
 name: Latest Pull Requests
 on:
-  schedule:
-    # Every Sunday at midnight
-    - cron:  '0 0 * * 0'
-
+  push:
+    branches: [ master, main, staging ]
+  pull_request:
+    branches: [ master, main, staging ]
+    
 jobs:
   logLatestPR:
     runs-on: ubuntu-latest
