@@ -1,0 +1,55 @@
+<div class="mt-4 position-sticky top-0 d-none d-md-block bg-white width-full border-bottom color-border-secondary"
+  style="z-index:3;">
+  <div class="container-xl px-3 px-md-4 px-lg-5">
+    <div class="gutter-condensed gutter-lg flex-column flex-md-row d-flex">
+      <div class="flex-shrink-0 col-12 col-md-3 mb-4 mb-md-0">
+      </div>
+      <div class="flex-shrink-0 col-12 col-md-9 mb-4 mb-md-0">
+        <div class="UnderlineNav width-full box-shadow-none hx_UnderlineNav-with-profile-color-modes-banner">
+          <nav class="UnderlineNav-body">
+            <a class="UnderlineNav-item {{ if .IsHome }} selected {{ end }}" href="{{ .Site.BaseURL }}">
+              <span class="UnderlineNav-octicon hide-sm">
+                {{ partial "select_octicon.html" (dict "context" . "octicon" "book") }}
+              </span>
+              Overview
+            </a>
+            {{ range $.Site.Params.sections }}
+              {{ $name := .name }}
+              {{ $url := .url }}
+              {{ $section_name := trim $url "/" }}
+              {{ $section := where $.Site.RegularPages "Section" $section_name }}
+              {{ $section_count := len $section }}
+              {{ $url := cond (eq 0 $section_count) "#" $url }}
+              {{ $url := cond (eq $section_name "about") "/about/" $url }}
+              <a class="UnderlineNav-item {{ if eq $.Section $section_name }} selected {{ end }}{{ if eq $.Type "tags" }} selected {{ end }}"
+                href="{{ $url }}">
+                <span class=" UnderlineNav-octicon hide-sm">
+                  {{ partial "select_octicon.html" (dict "context" . "octicon" .octicon) }}
+                </span>
+                {{ $name }}
+
+                {{ if ne $section_name "about" }}
+                  {{ if eq $section_name "volunteer" }}
+                    {{ range $section }}
+                      {{ if isset $.Site.Data.volunteer "conda" }}
+                        {{ $conda := len $.Site.Data.volunteer.conda }}
+                        <span class="Counter">{{ sub $.Site.Data.github.search.issueCount $conda }}</span>
+                      {{ end }}
+                    {{ end }}
+                  {{ else if eq $section_name "software" }}
+                  <span class="Counter">{{ sub $section_count 1 }}</span>
+                  {{ else }}
+                  <span class="Counter">{{ $section_count }}</span>
+                  {{ end }}
+                {{ end }}
+              </a>
+            {{ end }}
+          </nav>
+          <div class="profile-color-modes js-promo-color-modes-banner-profile isInitialToggle">
+            {{ partial "select_octicon.html" (dict "context" . "octicon" "octicat") }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

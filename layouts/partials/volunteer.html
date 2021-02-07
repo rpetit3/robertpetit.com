@@ -1,0 +1,94 @@
+{{ define "volunteer" }}
+<div>
+  <div class="position-relative">
+    {{ with .Site.GetPage "/volunteer/volunteer"  }}
+    <div class="Box mt-4">
+      <div class="Box-body p-4">
+        <div class="d-flex flex-justify-between">
+          <div class="text-mono text-small mb-3">
+            <span class="" style="margin-right: 4px;">
+              {{ partial "select_octicon.html" (dict "context" . "octicon" "face" ) }}
+            </span>
+            VOLUNTEER<span class="text-gray-light">.md</span>
+          </div>
+        </div>
+        <article class="markdown-body entry-content container-lg f5">
+
+          {{- .Content -}}
+        <h2>Conda Submissions</h2>
+        <p>I have created {{ len $.Site.Data.volunteer.conda }} (<i>woohoo!</i>🎉) Conda recipes for the community. If you have a tool 
+           you would like to submit to Bioconda, but are not sure where to start, please reach out! Between the 
+           <a href="https://gitter.im/bioconda/Lobby" target="_blank">Bioconda Gitter</a> and myself 
+           (<a href="https://twitter.com/rpetit3" target="_blank">Twitter</a>), I'm sure we can find some one to help you!</p>
+        <div>
+          <table>
+              <tr>
+                <th>Tool</th>
+                <th>Description</th>
+                <th>Pull Request</th>
+              </tr>
+            {{ range sort $.Site.Data.volunteer.conda "tool" "" }}
+              <tr>
+                  <td><a href="{{ .tool_url }}" alt="{{ .tool }}" target="_blank">{{ .tool }}</a></td>
+                  <td>{{ .description }}</td>
+                  <td><a href="{{ .pr_url }}" alt="{{ .pr_name }}" target="_blank">{{ .pr_name }}</a></td>
+              </tr>
+            {{ end }}
+          </table>
+        </div>
+        <h2>Pull Requests</h2>
+        {{ $filter_user := delimit .Params.filter_user "+-user:"}}
+        {{ $github_url := printf "%s%s" .Params.github_pr_url $filter_user }}
+        {{ $merged := len (where $.Site.Data.github.search.edges ".node.mergedAt" "!=" nil) }}
+        {{ $total := mul $.Site.Data.github.search.issueCount 1.0 }}
+        {{ $percent := math.Round (mul (div $merged $total) 100) }}
+        <p>I have submitted {{ $.Site.Data.github.search.issueCount }} pull requests (<i>{{ $percent }}% merged, yay!</i>🎉) to various open source projects. Below are my most recent pull requests. To see the full list, which also includes personal projects, please <a href="{{ .Params.github_pr_url }}" alt="Full list of Pull Requests" target="_blank">view them on Github</a>.</p>
+        <div>
+          <table>
+            <tr>
+              <th>Pull Request</th>
+              <th>Description</th>
+            </tr>
+            {{ range first 10 $.Site.Data.github.search.edges }}
+              {{ $repo_url := printf "https://www.github.com/%s" .node.repository.nameWithOwner }}
+              {{ $pr := printf "%s%s%.0f" .node.repository.nameWithOwner "#" .node.number }}
+              {{ $created := substr .node.createdAt 0 10 }}
+              <tr>
+                  <td>
+                    {{ if eq .node.mergedAt nil }}
+                    <span class="tooltipped tooltipped-e UnderlineNav-octicon" aria-label="Open pull request">
+                      {{ partial "select_octicon.html" (dict "context" . "octicon" "pr_open") }}
+                    </span>
+                    
+                    {{ else }}
+                    <span class="tooltipped tooltipped-e UnderlineNav-octicon" aria-label="Merged pull request">
+                      {{ partial "select_octicon.html" (dict "context" . "octicon" "pr_closed") }}
+                    </span>
+
+                    {{ end }}
+                    <a href="{{ htmlEscape .node.url }}" alt="{{ $pr }}" target="_blank">{{ $pr }}</a>
+
+                  </td>
+                  <td>{{ .node.title }}</td>
+              </tr>
+            {{ end }}
+          </table>
+          <p>
+            <span class="UnderlineNav-octicon" aria-label="Open pull request">
+              {{ partial "select_octicon.html" (dict "context" . "octicon" "pr_open") }}
+            </span>
+            <i>Open pull request</i>
+            <span style="padding-right: 20px;"></span>
+            <span class="UnderlineNav-octicon" aria-label="Merged pull request">
+              {{ partial "select_octicon.html" (dict "context" . "octicon" "pr_closed") }}
+            </span>
+            <i>Merged pull request</i> 
+          </p>
+        </div>
+        </article>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

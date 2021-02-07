@@ -1,0 +1,132 @@
+{{ define "softwares" }}
+{{ $pinned := where (where $.Site.RegularPages "Section" "software" ) "Params.software_pin" true }}
+{{ $section := $pinned }}
+{{ $section_title := "Pinned" }}
+
+{{ if ne (len $pinned) 0}}
+{{ else }}
+{{ $section = where .Site.RegularPages "Section" "in" (slice "software") }}
+{{ $section_title = "Popular posts" }}
+{{ end }}
+<div>
+    <div class="position-relative">
+      {{ with .Site.GetPage "software/software"  }}
+      <div class="Box mt-4">
+        <div class="Box-body p-4">
+          <div class="d-flex flex-justify-between">
+            <div class="text-mono text-small mb-3">
+              <span class="" style="margin-right: 4px;">
+                {{ partial "select_octicon.html" (dict "context" . "octicon" "face" ) }}
+              </span>
+              SOFTWARE<span class="text-gray-light">.md</span>
+            </div>
+          </div>
+          <article class="markdown-body entry-content container-lg f5">
+            {{- .Content -}}
+          </article>
+        </div>
+      </div>
+      {{ end }}
+      <div class="mt-4">
+        <div class="js-pinned-items-reorder-container">
+          <h2 class="f4 mb-2 text-normal">
+            {{ $section_title }}
+          </h2>
+          <ol class="d-flex flex-wrap list-style-none gutter-condensed mb-4 js-pinned-items-reorder-list">
+            {{ range (first 6 $section) }}
+            <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
+              
+              <div
+                class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source reorderable sortable-button-item">
+                <div class="pinned-item-list-item-content">
+                  <div class="d-flex width-full flex-items-center position-relative">
+                    <span class="mr-2 text-gray flex-shrink-0">
+                      {{ partial "select_octicon.html" (dict "context" . "octicon" "flame" ) }}
+                    </span>
+                    <a class="text-bold flex-auto min-width-0" href="{{ .Params.link }}" target="_blank">
+                      <span class="repo" title="{{ .Title | markdownify }}">{{ .Title | markdownify }}</span>
+                    </a>
+                  </div>
+  
+  
+                  <div name="summary" class="pinned-item-desc text-gray text-small d-block mt-2 mb-3">
+                    {{ .Summary | safeHTML }}
+                  </div>
+  
+                  <p class="mb-0 f6 text-gray">
+                    {{ with .Params.tags }}
+                    {{ range $tag := (first 5 .) }}
+                    <a href="{{ relURL (print "/tags/" . | urlize) }}" class="pinned-item-meta muted-link ">
+                      <span class=" UnderlineNav-octicon hide-sm">
+                        {{ partial "select_octicon.html" (dict "context" . "octicon" "tag" ) }}
+                      </span>
+                      {{ $tag | markdownify }}
+                    </a>
+                    {{ end }}
+                    {{ end }}
+                  </p>
+                </div>
+              </div>
+            </li>
+            {{ end }}
+          </ol>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <div class="js-pinned-items-reorder-container">
+        <h2 class="f4 mb-2 text-normal">
+            Software
+        </h2>
+
+            <ol class="d-flex flex-wrap list-style-none gutter-condensed mb-4 js-pinned-items-reorder-list">
+                {{ range where (where $.Site.RegularPages.ByTitle "Section" "software" ) "Params.software_pin" false }}
+                {{ if ne .File.LogicalName "software.md" }}
+                <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
+                <div
+                    class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source reorderable sortable-button-item">
+                    <div class="pinned-item-list-item-content">
+                    <div class="d-flex width-full flex-items-center position-relative">
+                        <span class="mr-2 text-gray flex-shrink-0">
+                          {{ partial "select_octicon.html" (dict "context" . "octicon" "code-square" ) }}
+                        </span>
+                        <a class="text-bold flex-auto min-width-0" href="{{ .Params.link }}" target="_blank">
+                        <span class="repo" title="{{ .Title | markdownify }}">{{ .Title | markdownify }}</span>
+                        </a>
+                    </div>
+    
+    
+                    <div name="summary" class="pinned-item-desc text-gray text-small d-block mt-2 mb-3">
+                        {{ .Summary | safeHTML }}
+                    </div>
+    
+                    <p class="mb-0 f6 text-gray">
+                        {{ with .Params.tags }}
+                        {{ range $tag := (first 5 .) }}
+                        <a href="{{ relURL (print "/tags/" . | urlize) }}" class="pinned-item-meta muted-link ">
+                        <span class=" UnderlineNav-octicon hide-sm">
+                          {{ partial "select_octicon.html" (dict "context" . "octicon" "tag" ) }}
+                        </span>
+                        {{ $tag | markdownify }}
+                        </a>
+                        {{ end }}
+                        {{ end }}
+                    </p>
+                    </div>
+                </div>
+                </li>
+                {{ end }}
+                {{ end }}
+            </ol>
+            </div>
+        </div>
+ 
+      <div id="pinned-items-modal-wrapper"></div>
+  
+    </div>
+  </div>
+  
+  
+  <div id="svg-tip" class="svg-tip svg-tip-one-line" style="pointer-events: none; display: none;">
+  </div>
+{{ end }}

@@ -1,157 +1,80 @@
-# SITE SETUP
-# Documentation: https://sourcethemes.com/academic/
 
-# Color theme.
-#   Choose from `default`, `ocean`, `forest`, `dark`, `apogee`, `1950s`, `coffee`, `cupcake`, `strawberry`.
-color_theme = "alison"
-# Enable users to switch between day and night mode?
-day_night = true
+author = "Robert A. Petit III, PhD"
+seo_author = "Robert A. Petit III, PhD"
+description = "Bioinformatician studying bacterial genomics and developer of [Bactopia](https://bactopia.github.io/) and [Staphopia](https://staphopia.emory.edu/) workflows."
+seo_description = "Dr. Robert A. Petit III is a bioinformatician at Emory University studying bacterial genomics while also developing the Bactopia and Staphopia workflows"
+tagline = "Dr. Robert A. Petit III is a bioinformatician at Emory University studying bacterial genomics while also developing the Bactopia and Staphopia workflows"
+email = "robert.petit@emory.edu"
+avatar = "/images/profile.png"
+github = "rpetit3"
+url = "https://www.robertpetit.com"
+keywords = "blog, genomics, bioinformatics, bacteria, bactopia, staphopia, nextflow"
+rss = true
+lastmod = true
+favicon = "/images/github.png"
+location = "Atlanta, GA"
+date_format = "January 2006"
+organization = "Emory University"
+group = "Division of Infectious Diseases"
 
-# Font style.
-#   Choose from `default`, `classic`, or `playfair`.
-font = "alison"
+# Social Links
+[[social]]
+    site = "Github"
+    image = "images/github.png"
+    link = "https://github.com/rpetit3"
 
-# Description for social sharing and search engines. If undefined, superuser role is used in place.
-description = "Personal website of Robert A. Petit III where I blog about bacterial genomics, bioinformatics, programming, and Python."
+[[social]]
+    site = "Twitter"
+    image = "images/twitter.png"
+    link = "https://twitter.com/rpetit3"
 
-# Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
-sharing_image = "avatar.jpg"
+[[social]]
+    site = "LinkedIn"
+    image = "images/linkedin.png"
+    link = "https://www.linkedin.com/in/rpetit3"
 
-# Twitter username (without @). Used when a vistor shares your site on Twitter.
-twitter = "rpetit3"
+[[social]]
+    site = "Impactstory"
+    image = "images/impactstory.png"
+    link = "https://profiles.impactstory.org/u/0000-0002-1350-9426"
 
-# Diplay a logo in navigation bar rather than title (optional).
-#   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
-logo = ""
+[[social]]
+    site = "ORCID"
+    image = "images/orcid.png"
+    link = "https://orcid.org/0000-0002-1350-9426"
 
-# Enable global source code highlighting? true/false
-# Documentation: https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
-highlight = true
-highlight_languages = ["r", "css", "bash", "javascript", "markdown"]  # Add support for highlighting additional languages
-highlight_style = "solarized-dark"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
+[[social]]
+    site = "Google Scholar"
+    image = "images/google-scholar.png"
+    link = "https://scholar.google.com/citations?user=sBSRYTkAAAAJ"
 
-# Enable global LaTeX math rendering?
-#   If false, you can enable it locally on a per page basis.
-math = false
+# Navigation Sections
+[[sections]]
+    name = "Posts"
+    url = "/post/"
+    weight = 10
+    octicon = "project"
 
-# Privacy pack
-#   Show a cookie consent message to visitors
-#   Anonymize IP in Google Analytics (if enabled)
-privacy_pack = true
+[[sections]]
+    name = "Publications"
+    url = "/publication/"
+    weight = 20
+    octicon = "journal"
 
-# Date and time format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
-#   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-date_format = "Jan 2, 2006"
-#   Examples: "3:04 pm" or "15:04"
-time_format = "3:04 PM"
+[[sections]]
+    name = "Software"
+    url = "/software/"
+    weight = 5
+    octicon = "code"
 
-############################
-## Contact Widget setup   ##
-############################
+[[sections]]
+    name = "Volunteer"
+    url = "/volunteer/"
+    weight = 5
+    octicon = "rocket"
 
-# Enter contact details (optional). To hide a field, clear it to "".
-email = "robbie.petit@gmail.com"
-phone = ""
-address = ""
-
-# Office hours: use `<br>` to insert a line break, or set to "" to remove office hours
-office_hours = ""
-
-# Enter an optional link for booking appointments (e.g. calendly.com).
-appointment_url = ""
-
-# Contact links
-#   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
-contact_links = [
-  {icon = "twitter", icon_pack = "fab", name = "@rpetit3", link = "https://twitter.com/rpetit3"},
-  ]
-
-# Display a map.
-# To show your address on a map in the contact widget, you need to enter your latitude, longitude and choose
-# a map provider below.
-# To use Google Maps, set `map = 1` and enter your API key that can be obtained here:
-#   https://developers.google.com/maps/documentation/javascript/get-api-key
-# To use OpenStreetMap tiles, set `map = 2`.
-# To use OpenStreetMap on a high traffic site, set `map = 3` and enter your API key that can be obtained here:
-#   https://www.mapbox.com/studio/account/tokens
-# To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-#
-# Map provider:
-#   0: No map
-#   1: Google Maps
-#   2: OpenStreetMap (Mapnik)
-#   3: OpenStreetMap (Mapbox)
-map = 0
-map_api_key = ""
-latitude = "37.4275"
-longitude = "-122.1697"
-zoom = 15
-
-############################
-## Plugins                ##
-############################
-
-# Load CSS and JS plugins
-#   E.g. To load `/assets/css/custom.css`, set `plugins_css = ["custom"]`.
-#   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
-plugins_css = ["alison"]
-plugins_js  = []
-
-############################
-## Advanced options       ##
-############################
-
-# Get user avatars from Gravatar.com? (true/false)
-gravatar = false
-
-# Align the main menu to the right of the page? (true/false)
-menu_align_right = true
-
-# Show estimated reading time for posts? (true/false)
-reading_time = true
-
-# Display comment count (if commenting enabled in config.toml)? (true/false)
-comment_count = true
-
-# Display next/previous section pager? (true/false)
-section_pager = false
-docs_section_pager = true  # Display pager in Docs layout (e.g. tutorials)?
-
-# Enable in-built social sharing buttons? (true/false)
-sharing = true
-
-# Configuration of publication pages.
-[publications]
-  # Date format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
-  #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-  date_format = "January 2006"
-
-  # Citation style ("apa" or "mla")
-  citation_style = "apa"
-
-# Configuration of project pages.
-[projects]
-  # Views for associated content.
-  #   1: List
-  #   2: Compact
-  #   3: Card
-  #   4: Citation (publications only)
-  post_view = 2
-  publication_view = 2
-  talk_view = 2
-
-# Search.
-[search]
-  # Search provider:
-  #   0: No search engine
-  #   1: Academic (built-in)
-  #   2: Algolia (https://www.algolia.com)
-  engine = 1
-
-  # Configuration of Algolia search engine.
-  # Paste the values from your Algolia dashboard.
-  [search.algolia]
-    app_id = ""
-    api_key = ""
-    index_name = ""
-    show_logo = false
+[[sections]]
+    name = "About"
+    url = "/about/"
+    weight = 5
+    octicon = "telescope"

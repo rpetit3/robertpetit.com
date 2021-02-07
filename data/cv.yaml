@@ -1,0 +1,217 @@
+awards:
+  - name: ASMNGS Student Travel Award
+    description: Provided $500 towards travel to ASMNGS 2017
+    organization: American Society of Microbiology
+    date: 2017-08-17
+
+  - name: Graduate Research Assistantship
+    description: Provided a tuition waiver for the semester
+    organization: School of Biology, Georgia Institute of Technology
+    date: 2011-08-01
+
+  - name: Graduate Research Assistantship
+    description: Provided a tuition waiver for the semester
+    organization: School of Biology, Georgia Institute of Technology
+    date: 2011-05-01
+
+  - name: Graduate Research Assistantship
+    description: Provided a tuition waiver for the semester
+    organization: School of Biology, Georgia Institute of Technology
+    date: 2011-01-01
+
+education:
+  - degree: Doctor of Philosophy
+    field: Population Biology, Ecology, and Evoltion
+    school: Emory University
+    start: 2013
+    end: 2018
+    url: http://www.biomed.emory.edu/PROGRAM_SITES/PBEE/index.html
+
+  - degree: Master of Science
+    field: Bioinformatics
+    school: Georgia Institute of Technology
+    start: 2010
+    end: 2011
+    url: https://bioinformatics.gatech.edu/
+   
+  - degree: Bachelor of Science
+    field: Biology
+    school: Valdosta State University
+    start: 2005
+    end: 2010
+    url: https://www.valdosta.edu/biology/
+
+employment:
+  - title: Senior Data Analyst
+    company: Emory University
+    location: Atlanta, GA
+    start: 2018-07-01
+    end: present
+
+  - title: Information Analyst III
+    company: Emory University
+    location: Atlanta, GA
+    start: 2012-01-01
+    end: 2013-08-01
+
+  - title: Network and Systems Administrator
+    company: Total Technology Integrators
+    location: Valdosta, GA
+    start: 2005-09-01
+    end: 2010-02-01
+
+  - title: Software Developer and Technician
+    company: Charleston Credit Adjustment Bureau
+    location: Charleston, SC
+    start: 2004-09-01
+    end: 2005-08-01
+
+grants:
+  - name: Amazon Web Services Cloud Credits for Research
+    amount: 12500
+    date: 2019-10-01
+
+  - name: Seven Bridges Cancer Genomics Cloud Collaborative Grant
+    amount: 15000
+    date: 2017-12-01
+
+  - name: Amazon Web Services Education Grant 
+    amount: 15000
+    date: 2015-06-01
+
+  - name: Amazon Web Services Education Grant 
+    amount: 10000
+    date: 2013-06-01
+
+presentations:
+  - title: Integrating Staphopia into *S. aureus* genomic investigations
+    conference: Virtual *S. aureus* Seminar Series Early Career Symposium
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2021-02-04
+    url: https://bit.ly/3asgn2C
+    video: https://www.youtube.com/watch?v=ijW_ZwZrwSs
+
+  - title: Bactopia, A Flexible Pipeline for Complete Analysis of Bacterial Genomes
+    conference: 4th ASM Conference on Rapid Applied Microbial Next-Generation Sequencing and Bioinformatic Pipelines
+    authors: ["***Robert A Petit III***", "Timothy D Read"]
+    type: poster
+    date: 2020-12-07
+    url: https://doi.org/10.6084/m9.figshare.13347992.v1
+
+  - title: Bacterial Genome Analysis Using Bactopia
+    conference: StaPH-B Monthly Webinar
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2020-05-01
+    url: http://bit.ly/3aKszf4
+    video: https://www.youtube.com/watch?v=hECn_fTr_uM
+
+  - title: Genomic investigation of invasive nontypeable *Haemophilus influenzae* in adults in Atlanta
+    conference: 17th Annual Georgia Emerging Infections Program Meeting (Cancelled due to Covid-19)
+    authors: ["***Robert A Petit III***", "Timothy D Read", "Lauren F Collins", "Sarah W Satola", "Monica M Farley"]
+    type: poster
+    date: 2020-03-13
+    url: https://bit.ly/3oY06Yk
+
+  - title: "*Staphylococcus aureus* viewed from the perspective of 40,000+ Genomes"
+    conference: ASM Southeastern Branch Meeting
+    authors: ["***Robert A Petit III***", "Timothy D Read"]
+    type: poster
+    date: 2018-11-30
+    url: https://doi.org/10.6084/m9.figshare.7121681.v2
+
+  - title: Bioinformatics behind Staphopia and the Read Lab
+    conference: StaPH-B Monthly Seminar
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2018-11-13
+    url: http://bit.ly/3tCcEbm
+
+  - title: "*Staphylococcus aureus* viewed from the perspective of 40,000+ Genomes"
+    conference: 2018 Emory Department of Medicine Research Day
+    authors: ["***Robert A Petit III***", "Timothy D Read"]
+    type: poster
+    date: 2018-10-11
+    url: https://doi.org/10.6084/m9.figshare.7121681.v2
+
+  - title: "*Staphylococcus aureus* viewed from the perspective of 40,000+ Genomes"
+    conference: 3rd ASM Conference on Rapid Applied Microbial Next-Generation Sequencing and Bioinformatic Pipelines
+    authors: ["***Robert A Petit III***", "Timothy D Read"]
+    type: poster
+    date: 2018-09-23
+    url: https://doi.org/10.6084/m9.figshare.7121681.v2
+
+  - title: Staphopia, an analysis pipeline and Application Programming Interface focused on *Staphylococcus aureus*
+    conference: 11th International Conference on Bioinformatics 
+    authors: ["***Robert A Petit III***", "Timothy D Read"]
+    type: poster
+    date: 2017-11-03
+    url: https://doi.org/10.6084/m9.figshare.5488666.v2
+
+  - title: Staphopia, an analysis pipeline and Application Programming Interface focused on *Staphylococcus aureus*
+    conference: 2nd ASM Conference on Rapid Applied Microbial Next-Generation Sequencing and Bioinformatic Pipelines
+    authors: ["***Robert A Petit III***", "Timothy D Read"]
+    type: poster
+    date: 2017-10-11
+    url: https://doi.org/10.6084/m9.figshare.5488666.v2
+
+  - title: Staphopia, an analysis pipeline and Application Programming Interface focused on *Staphylococcus aureus*
+    conference: Emory-LGS STEM Symposium
+    authors: ["***Robert A Petit III***", "Timothy D Read"]
+    type: poster
+    date: 2017-10-02
+    url: https://doi.org/10.6084/m9.figshare.5488666.v2
+
+  - title: Staphopia, a web application for rapid analysis of *Staphylococcus aureus* whole genome sequencing projects
+    conference: Emory DSAC Student Research Symposium
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2016-01-14
+    url: https://doi.org/10.6084/m9.figshare.13726480.v1
+
+  - title: Staphopia, a web application for *S. aureus* whole genome shotgun sequencing data
+    conference: Emory Antibiotic Resistance Symposium
+    authors: ["***Robert A Petit III***", "Timothy D Read"]
+    type: poster
+    date: 2016-01-14
+    url: https://doi.org/10.6084/m9.figshare.13726480.v1
+
+  - title: Staphopia, a web application for *S. aureus* whole genome shotgun sequencing data
+    conference: 10th International Conference on Bioinformatics 
+    authors: ["***Robert A Petit III***", "Timothy D Read"]
+    type: poster
+    date: 2015-11-19
+    url: https://doi.org/10.6084/m9.figshare.13726480.v1
+
+  - title: Staphopia, a web application for *S. aureus* whole genome shotgun sequencing data
+    conference: Emory Microbiome Symposium 
+    authors: ["***Robert A Petit III***", "Timothy D Read"]
+    type: poster
+    date: 2015-11-06
+    url: https://doi.org/10.6084/m9.figshare.13726480.v1
+
+teaching:
+  - course: Advance Python Programming in Bioinformatics
+    description: Developed and taught an advanced Python programming course to a group of graduate students.
+    faculty: Dr. Tim Read
+    role: Instructor
+    school: Emory University
+    level: Graduate
+    date: 2016-08-01
+
+  - course: Introduction to Microbiology
+    description: Facilitated weekly discussions with a group of 11 undergraduate and graduate students covering broad topics in the field of microbiology.
+    faculty: Dr. Bruce Levin
+    role: Teaching Assistant
+    school: Emory University
+    level: Undergraduate
+    date: 2016-01-01
+
+  - course: Computational Biology and Bioinformatics
+    description: Taught a group of ~30 graduate students the basics of programming. Developed a ‘manual’ of tips using GitHub pages for future classes to use.
+    faculty: Dr. Carlos Moreno, Dr. Tim Read, Dr. Hao Wu, and Dr. Michael Zwick
+    role: Teaching Assistant
+    school: Emory University
+    level: Graduate
+    date: 2015-01-01
