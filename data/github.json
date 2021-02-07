@@ -1,7 +1,52 @@
 {
   "search": {
-    "issueCount": 61,
+    "issueCount": 64,
     "edges": [
+      {
+        "node": {
+          "number": 26599,
+          "title": "ISMapper - Fix BioPython pinning",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2021-02-05T02:16:47Z",
+          "mergedAt": "2021-02-05T07:29:13Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/26599",
+          "changedFiles": 1,
+          "additions": 2,
+          "deletions": 2
+        }
+      },
+      {
+        "node": {
+          "number": 26374,
+          "title": "Rebuild Bactopia v1.6.0",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2021-01-24T06:38:21Z",
+          "mergedAt": "2021-01-24T12:53:03Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/26374",
+          "changedFiles": 1,
+          "additions": 2,
+          "deletions": 2
+        }
+      },
+      {
+        "node": {
+          "number": 26208,
+          "title": "bump spaTyper to 0.3.3",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2021-01-14T14:49:55Z",
+          "mergedAt": "2021-01-14T19:20:08Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/26208",
+          "changedFiles": 1,
+          "additions": 3,
+          "deletions": 3
+        }
+      },
       {
         "node": {
           "number": 2,
