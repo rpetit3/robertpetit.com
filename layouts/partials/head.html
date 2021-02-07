@@ -10,7 +10,7 @@
     <link rel="stylesheet" href='{{ "css/syntax.css" | absURL }}' />
 
     <title>
-        {{ if .IsHome }}{{ else }}{{ if eq .Title "Abouts" }}About{{ else if eq .Title "Softwares" }}Software{{ else if eq .Title "Volunteers" }}Volunteer{{ else }}{{ .Title }}{{ end }} - {{ end }}{{ .Site.Title }}
+        {{ if .IsHome }}{{ else }}{{ if eq .Title "Abouts" }}About{{ else if eq .Title "Cvs" }}CV{{ else if eq .Title "Softwares" }}Software{{ else if eq .Title "Volunteers" }}Volunteer{{ else }}{{ .Title }}{{ end }} - {{ end }}{{ .Site.Title }}
     </title>
     {{ if .Site.Params.favicon }}
     <link rel="icon" type="image/x-icon" href='{{ .Site.Params.favicon  }}'>

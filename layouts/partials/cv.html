@@ -1,0 +1,121 @@
+{{ define "cv" }}
+<div>
+  <div class="position-relative">
+    {{ with .Site.GetPage "/cv/cv"  }}
+    <div class="Box mt-4">
+      <div class="Box-body p-4">
+        <div class="d-flex flex-justify-between">
+          <div class="text-mono text-small mb-3">
+            <span class="" style="margin-right: 4px;">
+              {{ partial "select_octicon.html" (dict "context" . "octicon" "face" ) }}
+            </span>
+            CV<span class="text-gray-light">.md</span>
+          </div>
+        </div>
+        <article class="markdown-body entry-content container-lg f5">
+          {{- .Content -}}
+          
+          <h2>Education</h2>
+          {{ range sort $.Site.Data.cv.education "end" "desc" }}
+            <p>
+            <strong>{{ .degree }}</strong><br/> 
+            {{ if isset . "url" }}
+                <a href="{{ .url }}" alt="{{ .field }}" target="_blank">{{ .field }}</a>,
+            {{ else }}
+                {{ .field }},
+            {{end}} {{ .school }}, {{ .end }}
+            </p>
+          {{end}}
+          <h2>Publications</h2>
+          {{ $section := where $.Site.RegularPages "Section" "publication" }}
+          {{ $count := len $section }}
+          {{ range  $i, $e := sort $section ".Params.date" "desc" }}
+            <p>
+                {{ sub $count $i }}.  {{ delimit $e.Params.authors ", " | markdownify }} <a href="{{ $e.Permalink }}" target="_blank">{{ $e.Title | markdownify }}</a> {{ $e.Params.journal | markdownify }} ({{ $e.Date.Format "2006" }})
+            </p>
+          {{end}}
+
+          <h2>Teaching Experience</h2>
+          {{ range sort $.Site.Data.cv.teaching "date" "desc" }}
+            <p>
+            <strong>{{ .role | title }}</strong><br/>
+            <i>{{ .course }}, {{ .level }} Level, {{.school}}, {{ dateFormat "2006" .date }} </i><br/>
+            Supervised by {{ .faculty }} <br />
+            {{ .description }}
+            <p>
+          {{end}}
+
+          <h2>Presentations</h2>
+          <h3>Talk</h3>
+          {{ $talk := where $.Site.Data.cv.presentations "type" "talk" }}
+          {{ $count := len $talk }}
+          {{ range $i, $e := sort $talk "date" "desc" }}
+            <p>
+                {{ sub $count $i }}. {{ delimit $e.authors ", " | markdownify }}, 
+                {{ if isset $e "url" }}
+                    <a href="{{ $e.url }}" target="_blank">{{ $e.title | markdownify }}</a>,
+                {{ else }}
+                    {{ $e.title | markdownify }},
+                {{ end }}
+                <i>{{ $e.conference | markdownify }}</i> ({{ dateFormat "January 2006" $e.date }})
+
+                {{ if isset $e "video" }}
+                    <a href="{{ $e.video }}" target="_blank">(Recording)</a>
+                {{ end }}
+            <p>
+          {{end}}
+          <h3>Poster</h3>
+          {{ $poster := where $.Site.Data.cv.presentations "type" "poster" }}
+          {{ $count := len $poster }}
+          {{ range $i, $e := sort $poster "date" "desc" }}
+            <p>
+                {{ sub $count $i }}. {{ delimit $e.authors ", " | markdownify }},
+
+                {{ if isset $e "url" }}
+                    <a href="{{ $e.url }}" target="_blank">{{ $e.title | markdownify }}</a>,
+                {{ else }}
+                    {{ $e.title | markdownify }},
+                {{ end }}
+                <i>{{ $e.conference | markdownify }}</i> ({{ dateFormat "January 2006" $e.date }})
+            <p>
+          {{end}}
+
+          <h2>Grants</h2>
+          {{ range sort $.Site.Data.cv.grants "date" "desc" }}
+            <p>
+            <strong>{{ .name | title }}</strong>, ${{ .amount | lang.NumFmt 0 }},  {{ dateFormat "2006" .date }}
+            <p>
+          {{end}}
+          <h2>Awards</h2>
+          {{ range sort $.Site.Data.cv.awards "date" "desc" }}
+            <p>
+            <strong>{{ .name | title }}</strong>, <i>{{ .organization }}</i>,  {{ dateFormat "January 2006" .date }}<br/>
+            {{ .description }}
+            <p>
+          {{end}}
+          <h2>Professional Experience</h2>
+          {{ range sort $.Site.Data.cv.employment "start" "desc" }}
+            <p>
+            <strong>{{ .title | title }}</strong><br />
+            <i>{{ .company }}, {{ .location }},
+                {{ if eq .end "present" }}
+                {{ dateFormat "2006" .start }}-Present
+                {{ else }}
+                {{ dateFormat "2006" .start }}-{{ dateFormat "2006" .end }}
+                {{ end }}
+            </i>
+            {{ .description }}
+            <p>
+          {{end}}
+        </article>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+- title: Senior Data Analyst
+company: Emory University
+location: Atlanta, GA
+start: 2018-07-01
+end: present

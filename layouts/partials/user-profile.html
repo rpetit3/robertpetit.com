@@ -83,6 +83,18 @@
                 <a class="u-email link-gray-dark " href="mailto:{{ .Site.Params.Email }}">{{ .Site.Params.Email }}</a>
               </li>
               {{ end }}
+              <li class="vcard-detail pt-1 css-truncate css-truncate-target ">
+                <span class="">
+                  {{ partial "select_octicon.html" (dict "context" . "octicon" "mortar" ) }}
+                </span>
+                <a class="link-gray-dark " href="/cv/">Curriculum Vitae</a>
+              </li>
+              <li class="vcard-detail pt-1 css-truncate css-truncate-target ">
+                <span class="">
+                  {{ partial "select_octicon.html" (dict "context" . "octicon" "briefcase" ) }}
+                </span>
+                <a class="link-gray-dark" href="/pdf/robert-petit-resume.pdf" target="_blank">Resume</a>
+              </li>
             </ul>
           </div>
         </div>

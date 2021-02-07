@@ -20,7 +20,7 @@ During my masters I worked with [Dr. Timothy Read](https://med.emory.edu/directo
 
 ---
 
-🎓 **Bachelor of science**  
+🎓 **Bachelor of Science**  
 *[Biology](https://www.valdosta.edu/biology/), Valdosta State University, 2010*  
 
 Undergrad, was an adventure. I changed my major a lot, but hovered around Education, Computer Science and Biology. Favorite classes were probably Ecology and Botany (*I have a green thumb!*). I spent a summer helping [Dr. Colleen McDonough](https://www.valdosta.edu/biology/faculty-staff/colleen-mcdonough.php) catch and tag nine-banded armadillos for her behavioral ecology studies. 
