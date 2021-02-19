@@ -1,8 +1,13 @@
----
-title: "{{ replace .Name "-" " " | title }}"
-summary: ""
-date: {{ .Date }}
-tags: []
-type: ""
-draft: true
----
++++
+draft = true
+pin = false
+type = "post"
+
+# Details about the post
+title = "{{ replace .Name "-" " " | title }}"
+authors = []
+summary = ""
+date = {{ .Date }}
+tags =  []
+description = ""
++++

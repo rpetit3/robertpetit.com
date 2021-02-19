@@ -25,7 +25,23 @@
           <div class="col-12 d-inline-block">
             <div class="d-inline-block mb-1">
               <h3 class="wb-break-all">
-                <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+                <a href="{{ .Permalink }}">
+                  <span class=" UnderlineNav-octicon hide-sm">
+                    {{if .Params.type }}
+                      {{ if eq .Params.type "post" }}
+                        {{ partial "select_octicon.html" (dict "context" . "octicon" "tag_project" ) }}
+                      {{ else if eq .Params.type "publication" }}
+                        {{ partial "select_octicon.html" (dict "context" . "octicon" "tag_journal" ) }}
+                      {{ else if eq .Params.type "software" }}
+                        {{ partial "select_octicon.html" (dict "context" . "octicon" "tag_code" ) }}
+                      {{ else }}
+                        {{ partial "select_octicon.html" (dict "context" . "octicon" "tag_book" ) }}
+                      {{ end }}
+                    {{ else }}
+                      {{ partial "select_octicon.html" (dict "context" . "octicon" "tag_book" ) }}
+                    {{ end }}
+                  </span>{{ .Title | markdownify }}
+                </a>
               </h3>
             </div>
 
@@ -47,11 +63,13 @@
               {{ end }}
               {{ end }}
 
-              Created
+              {{ if isset .Params "date" }}
+              {{ if isset .Params "type" }}{{ if eq .Params.type "publication" }}Published{{ else }}Created{{ end }}{{ else }}Created{{ end }}
               <relative-time datetime="{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}" class="no-wrap"
                 title="{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}">
                 {{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}
               </relative-time>
+              {{end}}
             </div>
           </div>
         </li>

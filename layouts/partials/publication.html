@@ -8,7 +8,7 @@
               <div id="file-pytest" class="file my-2">
                 <div class="file-header d-flex flex-md-items-center flex-items-start">
                   <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
-                    <div class="file-actions flex-order-2 pt-0">
+                    <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
                       {{ with .Params.tags }}
                       {{ range $tag := sort . "" "" }}
                       <a class="muted-link mr-3" href="{{ relURL (print "/tags/" . | urlize) }}">
@@ -19,6 +19,14 @@
                       </a>
                       {{ end }}
                       {{ end }}
+                    </div>
+                    <div class="text-mono f6 file-actions flex-order-2 pt-0">
+                      <a class="muted-link mr-3" href="https://twitter.com/intent/tweet/?text={{ .Title | markdownify | plainify | safeHTML }}&url={{if .Params.doi}}https://doi.org/{{ .Params.doi }}{{else}}{{.Permalink}}{{end}}">
+                        <span class=" UnderlineNav-octicon hide-sm">
+                          {{ partial "select_octicon.html" (dict "context" . "octicon" "twitter" ) }}
+                        </span>
+                        Tweet
+                      </a>
                     </div>
                   </div>
                 </div>
