@@ -19,6 +19,7 @@ declare -a tools=(
 
 for tool in "${tools[@]}"; do
     count=0
+    fixed_name=${tool//-/_}
     if [[ "staphopia" != "${tool}" ]]; then
         count=$(curl -s  https://anaconda.org/bioconda/${tool} | grep "total downloads" | sed -r 's=.*<span>([0-9]+)</span>.*=\1=')
     fi
@@ -40,7 +41,7 @@ for tool in "${tools[@]}"; do
         star=0
     fi
 
-    printf "%s:\n" "${tool}"
+    printf "%s:\n" "${fixed_name}"
     printf "  - downloads: %s\n" "${count}"
     printf "    stars: %s\n\n" "${star}"
     sleep 0.5
