@@ -1,4 +1,4 @@
-assembly-scan:
+assembly_scan:
   - downloads: 2499
     stars: 1
 
@@ -10,27 +10,27 @@ call_variants:
   - downloads: 0
     stars: 2
 
-ena-dl:
+ena_dl:
   - downloads: 134
     stars: 1
 
-fastq-dl:
+fastq_dl:
   - downloads: 572
     stars: 9
 
-fastq-scan:
+fastq_scan:
   - downloads: 7736
     stars: 13
 
-illumina-cleanup:
+illumina_cleanup:
   - downloads: 1732
     stars: 2
 
-illumina-simulation:
+illumina_simulation:
   - downloads: 0
     stars: 0
 
-shovill-se:
+shovill_se:
   - downloads: 201
     stars: 0
 
@@ -38,15 +38,15 @@ staphopia:
   - downloads: 0
     stars: 4
 
-staphopia-sccmec:
+staphopia_sccmec:
   - downloads: 0
     stars: 0
 
-tbl2asn-forever:
+tbl2asn_forever:
   - downloads: 10396
     stars: 2
 
-vcf-annotator:
+vcf_annotator:
   - downloads: 2357
     stars: 5
 
