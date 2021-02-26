@@ -34,20 +34,33 @@
           </h2>
           <ol class="d-flex flex-wrap list-style-none gutter-condensed mb-4 js-pinned-items-reorder-list">
             {{ range (first 6 $section) }}
+            {{ $counts := (index (index $.Site.Data.software_counts .Title) 0) }}
             <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
               
               <div
                 class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source reorderable sortable-button-item">
                 <div class="pinned-item-list-item-content">
+ 
                   <div class="d-flex width-full flex-items-center position-relative">
-                    <span class="mr-2 text-gray flex-shrink-0">
-                      {{ partial "select_octicon.html" (dict "context" . "octicon" "flame" ) }}
-                    </span>
-                    <a class="text-bold flex-auto min-width-0" href="{{ .Params.link }}" target="_blank">
-                      <span class="repo" title="{{ .Title | markdownify }}">{{ .Title | markdownify }}</span>
-                    </a>
+                    <div class="flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                      <span class="mr-2 text-gray flex-shrink-0">
+                        {{ partial "select_octicon.html" (dict "context" . "octicon" "flame" ) }}
+                      </span>
+                      <a class="text-bold flex-auto min-width-0" href="{{ .Params.link }}" target="_blank">
+                        <span class="repo" title="{{ .Title | markdownify }}">{{ .Title | markdownify }}</span>
+                      </a>
+                    </div>
+                    <div class="file-actions flex-order-2 pt-0">
+                        <span class="UnderlineNav-octicon hide-sm" style="margin-right: 0px;">
+                          {{ partial "select_octicon.html" (dict "context" . "octicon" "star" ) }}{{ $counts.stars  | lang.NumFmt 0 }}
+                        </span>
+
+                        <span class="UnderlineNav-octicon hide-sm" style="padding-left:7px; margin-right: 0px;">
+                          {{ partial "select_octicon.html" (dict "context" . "octicon" "download" ) }}{{ $counts.downloads | lang.NumFmt 0 }}
+                        </span>
+                    </div>
                   </div>
-  
+
   
                   <div name="summary" class="pinned-item-desc text-gray text-small d-block mt-2 mb-3">
                     {{ .Summary | safeHTML }}
@@ -82,17 +95,33 @@
             <ol class="d-flex flex-wrap list-style-none gutter-condensed mb-4 js-pinned-items-reorder-list">
                 {{ range where (where $.Site.RegularPages.ByTitle "Section" "software" ) "Params.software_pin" false }}
                 {{ if ne .File.LogicalName "software.md" }}
+                
                 <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
                 <div
                     class="Box pinned-item-list-item d-flex p-3 width-full js-pinned-item-list-item public source reorderable sortable-button-item">
                     <div class="pinned-item-list-item-content">
                     <div class="d-flex width-full flex-items-center position-relative">
-                        <span class="mr-2 text-gray flex-shrink-0">
-                          {{ partial "select_octicon.html" (dict "context" . "octicon" "code-square" ) }}
-                        </span>
-                        <a class="text-bold flex-auto min-width-0" href="{{ .Params.link }}" target="_blank">
-                        <span class="repo" title="{{ .Title | markdownify }}">{{ .Title | markdownify }}</span>
-                        </a>
+
+
+                        <div class="flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                          <span class="mr-2 text-gray flex-shrink-0">
+                            {{ partial "select_octicon.html" (dict "context" . "octicon" "code-square" ) }}
+                          </span>
+                          <a class="text-bold flex-auto min-width-0" href="{{ .Params.link }}" target="_blank">
+                          <span class="repo" title="{{ .Title | markdownify }}">{{ .Title | markdownify }}</span>
+                          </a>
+                        </div>
+                        <div class="file-actions flex-order-2 pt-0">
+                            {{ $fixed_title := replace .Title "-" "_" }}
+                            {{ $counts := (index (index $.Site.Data.software_counts $fixed_title) 0) }}
+                            <span class="UnderlineNav-octicon hide-sm" style="margin-right: 0px;">
+                              {{ partial "select_octicon.html" (dict "context" . "octicon" "star" ) }}{{ $counts.stars | lang.NumFmt 0 }}
+                            </span>
+    
+                            <span class="UnderlineNav-octicon hide-sm" style="padding-left:7px; margin-right: 0px;">
+                              {{ partial "select_octicon.html" (dict "context" . "octicon" "download" ) }}{{ $counts.downloads | lang.NumFmt 0 }}
+                            </span>
+                        </div>
                     </div>
     
     

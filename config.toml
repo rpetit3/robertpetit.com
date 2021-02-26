@@ -24,5 +24,11 @@ copyright = "&copy; Dr. Robert A. Petit III, 2020-{year}"
     "hardLineBreak", # newlines result in line breaks
   ]
 
+[markup.goldmark.renderer]
+  unsafe= true
+
 [taxonomies]
   tag = "tags"
+
+[permalinks]
+  post = "/post/:year/:month/:title/"

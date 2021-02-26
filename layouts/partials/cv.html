@@ -1,19 +1,89 @@
 {{ define "cv" }}
 <div>
   <div class="position-relative">
-    {{ with .Site.GetPage "/cv/cv"  }}
-    <div class="Box mt-4">
-      <div class="Box-body p-4">
-        <div class="d-flex flex-justify-between">
-          <div class="text-mono text-small mb-3">
-            <span class="" style="margin-right: 4px;">
-              {{ partial "select_octicon.html" (dict "context" . "octicon" "face" ) }}
-            </span>
-            CV<span class="text-gray-light">.md</span>
-          </div>
-        </div>
-        <article class="markdown-body entry-content container-lg f5">
-          {{- .Content -}}
+    {{ with .Site.GetPage "/cv/"  }}
+    <div class="mt-4">
+      <div class="p-4">
+        <article class="markdown-body entry-content container-lg f5 pt-2">
+            <div class="clearfix gutter-md-spacious">
+              <div class="col-3 float-left">
+                      {{ with $.Site.Params.avatar }}
+                        <img style="height:auto;" alt="Avatar" at="profile" id="headerImg"  width="240" height="240"
+                          class="avatar avatar-user width-full border bg-white" src="{{ $.Site.Params.avatar }}">
+                      {{ else }}
+                        <img style="height:auto;" alt="Avatar" alt="profile" id="headerImg" width="240" height="240"
+                          class="avatar avatar-user width-full border bg-white" src="{{ "images/avatar.png" | absURL }}">
+                      {{ end }}
+              </div>
+              <div class="col-9 float-left pl-6">
+                <div>
+                  <div class="vcard-names-container float-left col-10 col-md-12 js-sticky js-user-profile-sticky-fields"
+                  data-original-top="0px" style="position: sticky;">
+                    <span class="vcard-names">
+                      <div class="d-flex flex-justify-between">
+                        <div class="text-mono f4 mt-1 mb-3">
+                          Curriculum Vitae
+                        </div>
+                      </div>
+                      <span class="p-name vcard-fullname d-block overflow-hidden">{{ .Site.Params.author }}</span>
+                      {{ range first 1 (sort $.Site.Data.cv.employment "start" "desc") }}
+                        <span class="p-nickname vcard-username d-block">{{ .title | title }}</span>
+
+                      {{end}}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <p>
+            <div class="clearfix gutter-md-spacious">
+              <div class="col-5 float-left">
+                  <strong>
+                    Address
+                  </strong>
+                  <p>
+                    Emory University</br>
+                    1760 Haygood Dr NE, HSRB E169</br>
+                    Atlanta, Ga 30322-1119
+                  </p>
+                  <p>
+                    <!-- email -->
+                    <strong>Email: </strong>{{$.Site.Params.email}}
+                  </p>
+                  <p>
+                    <!-- ORCID -->
+                    {{ $orcid := (index (where .Site.Params.social "site" "ORCID") 0) }}
+                    <strong>ORCID: </strong><a href="{{$orcid.link}}" target="_blank">{{$orcid.user}}</a>
+                  </p>
+              </div>
+              <div class="col-7 float-left">
+
+                <p>
+                  <!-- GitHub -->
+                  {{ $github := (index (where .Site.Params.social "site" "GitHub") 0) }}
+                  <strong>GitHub: </strong><a href="{{$github.link}}" target="_blank">{{$github.link}}</a>
+                </p>
+                <p>
+                  <!-- LinkedIn -->
+                  {{ $linkedin := (index (where .Site.Params.social "site" "LinkedIn") 0) }}
+                  <strong>LinkedIn: </strong><a href="{{$linkedin.link}}" target="_blank">{{$linkedin.link}}</a>
+                </p>
+                <p>
+                  <!-- Twitter -->
+                  {{ $twitter := (index (where .Site.Params.social "site" "Twitter") 0) }}
+                  <strong>Twitter: </strong><a href="{{$twitter.link}}" target="_blank">{{$twitter.link}}</a>
+                </p>
+                <p>
+                  <!-- Personal Site -->
+                  <strong>Personal Site: </strong><a href="{{$.Site.Params.url}}" target="_blank">{{$.Site.Params.url}}</a>
+                </p>
+              </div>
+            </div>
+          </p>
+          <p>
+            {{- .Content -}}
+          </p>
+          
           
           <h2>Education</h2>
           {{ range sort $.Site.Data.cv.education "end" "desc" }}
@@ -26,6 +96,22 @@
             {{end}} {{ .school }}, {{ .end }}
             </p>
           {{end}}
+
+          <h2>Professional Experience</h2>
+          {{ range sort $.Site.Data.cv.employment "start" "desc" }}
+            <p>
+            <strong>{{ .title | title }}</strong><br />
+            <i>{{ .company }}, {{ .location }},
+                {{ if eq .end "present" }}
+                {{ dateFormat "2006" .start }}-Present
+                {{ else }}
+                {{ dateFormat "2006" .start }}-{{ dateFormat "2006" .end }}
+                {{ end }}
+            </i>
+            {{ .description }}
+            <p>
+          {{end}}
+
           <h2>Publications</h2>
           {{ $section := where $.Site.RegularPages "Section" "publication" }}
           {{ $count := len $section }}
@@ -35,18 +121,33 @@
             </p>
           {{end}}
 
-          <h2>Teaching Experience</h2>
-          {{ range sort $.Site.Data.cv.teaching "date" "desc" }}
+          <h2>Software</h2>
+          {{ $downloads := 0 }}
+          {{ $stars := 0 }}
+          {{ range $.Site.Data.software_counts }}
+            {{ $data := (index . 0 ) }}
+            {{ $downloads = add $downloads $data.downloads }}
+            {{ $stars = add $stars $data.stars }}
+          {{ end }}
+          <p>
+          Software tools which I developed or maintain, have been downloaded {{ $downloads | lang.NumFmt 0}} times using Conda and have {{ $stars | lang.NumFmt 0}} total Stargazers.
+          </p>
+          {{ $section := where $.Site.RegularPages "Section" "software" }}
+          {{ range  $i, $e := sort $section ".Params.title" "ascd" }}
+            {{ if gt $i 0 }}
+            {{ $fixed_title := replace $e.Title "-" "_" }}
+            {{ $counts := (index (index $.Site.Data.software_counts $fixed_title) 0) }}
+
             <p>
-            <strong>{{ .role | title }}</strong><br/>
-            <i>{{ .course }}, {{ .level }} Level, {{.school}}, {{ dateFormat "2006" .date }} </i><br/>
-            Supervised by {{ .faculty }} <br />
-            {{ .description }}
-            <p>
+                {{ $i }}.  <a href="{{ $e.Params.link }}" target="_blank">{{ $e.Title | markdownify }}</a><br />
+                <i>{{ .Summary | safeHTML }}</i><br />
+                {{ if gt $counts.downloads 0 }}{{$counts.downloads | lang.NumFmt 0}} total downloads{{ if gt $counts.stars 0 }} and {{$counts.stars | lang.NumFmt 0 }} Stargazers{{end}}{{else if gt $counts.stars 0 }}{{$counts.stars | lang.NumFmt 0}} Stargazers{{end}}
+            </p>
+            {{ end }}
           {{end}}
 
           <h2>Presentations</h2>
-          <h3>Talk</h3>
+          <h3>Talks</h3>
           {{ $talk := where $.Site.Data.cv.presentations "type" "talk" }}
           {{ $count := len $talk }}
           {{ range $i, $e := sort $talk "date" "desc" }}
@@ -64,7 +165,7 @@
                 {{ end }}
             <p>
           {{end}}
-          <h3>Poster</h3>
+          <h3>Posters</h3>
           {{ $poster := where $.Site.Data.cv.presentations "type" "poster" }}
           {{ $count := len $poster }}
           {{ range $i, $e := sort $poster "date" "desc" }}
@@ -93,17 +194,14 @@
             {{ .description }}
             <p>
           {{end}}
-          <h2>Professional Experience</h2>
-          {{ range sort $.Site.Data.cv.employment "start" "desc" }}
+
+
+          <h2>Teaching Experience</h2>
+          {{ range sort $.Site.Data.cv.teaching "date" "desc" }}
             <p>
-            <strong>{{ .title | title }}</strong><br />
-            <i>{{ .company }}, {{ .location }},
-                {{ if eq .end "present" }}
-                {{ dateFormat "2006" .start }}-Present
-                {{ else }}
-                {{ dateFormat "2006" .start }}-{{ dateFormat "2006" .end }}
-                {{ end }}
-            </i>
+            <strong>{{ .role | title }}</strong><br/>
+            <i>{{ .course }}, {{ .level }} Level, {{.school}}, {{ dateFormat "2006" .date }} </i><br/>
+            Supervised by {{ .faculty }} <br />
             {{ .description }}
             <p>
           {{end}}
@@ -114,8 +212,3 @@
   </div>
 </div>
 {{ end }}
-- title: Senior Data Analyst
-company: Emory University
-location: Atlanta, GA
-start: 2018-07-01
-end: present

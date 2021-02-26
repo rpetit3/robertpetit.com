@@ -1,6 +1,10 @@
+{{ if ne .Section "cv" }}
 {{ partial "menus.html" . }}
+{{ end }}
+
 <div class="container-xl px-3 px-md-4 px-lg-5">
   <div class="gutter-condensed gutter-lg flex-column flex-md-row d-flex">
+    {{ if ne .Section "cv" }}
     <div class="flex-shrink-0 col-12 col-md-3 mb-4 mb-md-0">
       <div class="h-card mt-md-n5">
         <div class="user-profile-sticky-bar js-user-profile-sticky-bar d-none d-md-block" id="headerStuck">
@@ -44,6 +48,7 @@
           </div>
         </div>
 
+        
         <div class="p-note user-profile-bio mb-3 js-user-profile-bio f4">
           <div>{{ .Site.Params.Description | markdownify }}</div>
         </div>
@@ -88,7 +93,7 @@
                 <span class="">
                   {{ partial "select_octicon.html" (dict "context" . "octicon" "mortar" ) }}
                 </span>
-                <a class="link-gray-dark " href="/cv/">Curriculum Vitae</a>
+                <a class="link-gray-dark " href="/cv/" target="_blank">Curriculum Vitae</a>
               </li>
               <li class="vcard-detail pt-1 css-truncate css-truncate-target ">
                 <span class="">
@@ -127,9 +132,17 @@
         </div>
       </div>
     </div>
-    
+    {{end}}
+
+    {{ if ne .Section "cv" }}
     <div class="flex-shrink-0 col-12 col-md-9 mb-4 mb-md-0">
+    {{ else }}
+    <div class="flex-shrink-0 col-12 col-md-12 mb-4 mb-md-0">
+    {{ end }}
+      {{ if ne .Section "cv" }}
       {{ partial "mobile-menus.html" . }}
+      {{ end }}
+      
       {{ if .IsHome }}
         {{ block "overview" . }}{{ end }}
       {{ else if eq .Section "publication" }}

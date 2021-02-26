@@ -19,34 +19,40 @@ group = "Division of Infectious Diseases"
 
 # Social Links
 [[social]]
-    site = "Github"
+    site = "GitHub"
     image = "images/github.png"
     link = "https://github.com/rpetit3"
+    user = "rpetit3"
 
 [[social]]
     site = "Twitter"
     image = "images/twitter.png"
     link = "https://twitter.com/rpetit3"
+    user = "rpetit3"
 
 [[social]]
     site = "LinkedIn"
     image = "images/linkedin.png"
     link = "https://www.linkedin.com/in/rpetit3"
+    user = "rpetit3"
 
 [[social]]
     site = "Impactstory"
     image = "images/impactstory.png"
     link = "https://profiles.impactstory.org/u/0000-0002-1350-9426"
+    user = "0000-0002-1350-9426"
 
 [[social]]
     site = "ORCID"
     image = "images/orcid.png"
     link = "https://orcid.org/0000-0002-1350-9426"
+    user = "0000-0002-1350-9426"
 
 [[social]]
     site = "Google Scholar"
     image = "images/google-scholar.png"
     link = "https://scholar.google.com/citations?user=sBSRYTkAAAAJ"
+    user = "sBSRYTkAAAAJ"
 
 # Navigation Sections
 [[sections]]

@@ -7,8 +7,12 @@
         <li class="col-12 d-flex width-full py-4 border-bottom color-border-secondary public source">
           <div class="col-12 d-inline-block">
             <div class="d-inline-block mb-1">
-              <h3 class="wb-break-all">
-                <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+              <h3 class="">
+                <a href="{{ .Permalink }}">
+                  <span class=" UnderlineNav-octicon hide-sm">
+                      {{ partial "select_octicon.html" (dict "context" . "octicon" "tag_journal" ) }}
+                  </span>{{ .Title | markdownify }}
+                </a>
               </h3>
             </div>
 

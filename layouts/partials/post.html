@@ -1,0 +1,79 @@
+{{ define "post" }}
+<div>
+    <main>
+      <div class="container-lg px-3 new-discussion-timeline">
+        <div class="repository-content gist-content">
+          <div>
+            <div class="js-gist-file-update-container js-task-list-container file-box">
+              <div id="file-pytest" class="file my-2">
+                <div class="file-header d-flex flex-md-items-center flex-items-start">
+                  <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                    <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                        {{ countwords .Content }} Words
+                        <span class="file-info-divider"></span>
+                        Created <relative-time datetime="{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}" class="no-wrap">
+                          {{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}
+                        </relative-time>
+      
+                        {{ if .Site.Params.lastmod }}
+                        <span class="file-info-divider"></span>
+                        Modified <relative-time datetime="{{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}" class="no-wrap">
+                          {{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}
+                        </relative-time>
+                        {{ end }}
+                    </div>
+                    <div class="text-mono f6 file-actions flex-order-2 pt-0">
+                      {{ with .Params.tags }}
+                      {{ range $tag := . }}
+                      <a class="muted-link mr-3" href="{{ relURL (print "/tags/" . | urlize) }}">
+                          <span class=" UnderlineNav-octicon hide-sm">
+                            {{ partial "select_octicon.html" (dict "context" . "octicon" "tag" ) }}
+                          </span>
+                        {{ $tag }}
+                      </a>
+                      {{ end }}
+                      {{ end }}
+                      <a class="muted-link mr-3" href="https://twitter.com/intent/tweet/?text={{if .Params.tweet}}{{ .Params.tweet | safeHTML}}{{else}}{{ .Title | safeHTML }}{{end}}&url={{ .Permalink }}">
+                        <span class=" UnderlineNav-octicon hide-sm">
+                          {{ partial "select_octicon.html" (dict "context" . "octicon" "twitter" ) }}
+                        </span>
+                        Tweet
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-2">
+                  <div class="px-0">
+                    <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+                      <div class="flex-auto min-width-0 width-fit mr-3">
+                        <div class="d-flex">
+                          <div class="d-flex flex-column">
+                            <h1 class="break-word f2 text-normal mb-md-0 mb-1">
+                              <strong class="css-truncate-target mr-1" style="max-width: 410px">
+                                <a href="#">{{ .Title }}</a>
+                              </strong>
+                            </h1>
+
+                            <div class="note f5 m-0">
+                              {{ with .Params.authors }}{{ delimit . ", " | markdownify }}{{end}}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Box-body px-5 pb-5">
+                  <article class="markdown-body entry-content container-lg">
+                    {{- .Content -}}
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+{{ end }}

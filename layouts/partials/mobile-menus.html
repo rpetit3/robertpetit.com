@@ -15,7 +15,7 @@
       {{ $section_count := len $section }}
       {{ $url := cond (eq 0 $section_count) "#" $url }}
       {{ $url := cond (eq $section_name "about") "/about/" $url }}
-      <a class="UnderlineNav-item {{ if eq $.Section $section_name }} selected {{ end }}{{ if eq $.Type "tags" }} selected {{ end }}"
+      <a class="UnderlineNav-item {{ if eq $.Section $section_name }} selected {{ end }}"
         href="{{ $url }}">
         <span class=" UnderlineNav-octicon hide-sm">
           {{ partial "select_octicon.html" (dict "context" . "octicon" .octicon) }}
