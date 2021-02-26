@@ -1,0 +1,25 @@
+name: Latest Counts
+on:
+  schedule:
+    # At 01:30 on Tuesday and Friday
+    - cron:  '30 1 * * 2,5'
+    
+jobs:
+  logLatestPR:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+      - name: Update and Commit
+        run: |
+          bash update-counts.sh > data/software_counts.yml
+          git add data/software_counts.yml
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "ci: update software_counts.yml" -a | exit 0
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

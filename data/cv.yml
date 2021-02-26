@@ -100,7 +100,7 @@ presentations:
     url: https://doi.org/10.6084/m9.figshare.13347992.v1
 
   - title: Bacterial Genome Analysis Using Bactopia
-    conference: StaPH-B Monthly Webinar
+    conference: State Public Health Bioinformatics (StaPH-B) Monthly Webinar
     authors: ["***Robert A Petit III***"]
     type: talk
     date: 2020-05-01
@@ -108,7 +108,7 @@ presentations:
     video: https://www.youtube.com/watch?v=hECn_fTr_uM
 
   - title: Genomic investigation of invasive nontypeable *Haemophilus influenzae* in adults in Atlanta
-    conference: 17th Annual Georgia Emerging Infections Program Meeting (Cancelled due to Covid-19)
+    conference: 17th Annual Georgia Emerging Infections Program Meeting (Cancelled due to SARS-CoV-2)
     authors: ["***Robert A Petit III***", "Timothy D Read", "Lauren F Collins", "Sarah W Satola", "Monica M Farley"]
     type: poster
     date: 2020-03-13
@@ -122,7 +122,7 @@ presentations:
     url: https://doi.org/10.6084/m9.figshare.7121681.v2
 
   - title: Bioinformatics behind Staphopia and the Read Lab
-    conference: StaPH-B Monthly Seminar
+    conference: State Public Health Bioinformatics (StaPH-B) Monthly Seminar
     authors: ["***Robert A Petit III***"]
     type: talk
     date: 2018-11-13
