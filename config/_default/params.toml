@@ -15,6 +15,10 @@ favicon = "/images/github.png"
 location = "Atlanta, GA"
 date_format = "January 2006"
 organization = "Emory University"
+organization_street = "1760 Haygood Dr. NE, HSRB E169"
+organization_city = "Atlanta"
+organization_state = "GA"
+organization_zip = "30322-1119"
 group = "Division of Infectious Diseases"
 
 # Social Links
