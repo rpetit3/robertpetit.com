@@ -56,7 +56,7 @@
                         </span>
 
                         <span class="UnderlineNav-octicon hide-sm" style="padding-left:7px; margin-right: 0px;">
-                          {{ partial "select_octicon.html" (dict "context" . "octicon" "download" ) }}{{ $counts.downloads | lang.NumFmt 0 }}
+                          {{ partial "select_octicon.html" (dict "context" . "octicon" "download" ) }}{{if gt $counts.downloads 0 }}{{ $counts.downloads | lang.NumFmt 0 }}{{else}}?{{end}}
                         </span>
                     </div>
                   </div>
@@ -119,7 +119,7 @@
                             </span>
     
                             <span class="UnderlineNav-octicon hide-sm" style="padding-left:7px; margin-right: 0px;">
-                              {{ partial "select_octicon.html" (dict "context" . "octicon" "download" ) }}{{ $counts.downloads | lang.NumFmt 0 }}
+                              {{ partial "select_octicon.html" (dict "context" . "octicon" "download" ) }}{{if gt $counts.downloads 0 }}{{ $counts.downloads | lang.NumFmt 0 }}{{else}}?{{end}}
                             </span>
                         </div>
                     </div>
