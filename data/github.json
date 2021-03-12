@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 70,
+    "issueCount": 71,
     "edges": [
+      {
+        "node": {
+          "number": 27321,
+          "title": "update spatyper - drop blake_sha256 requirement",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2021-03-11T21:05:53Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/27321",
+          "changedFiles": 1,
+          "additions": 4,
+          "deletions": 3
+        }
+      },
       {
         "node": {
           "number": 14211,
@@ -10,10 +25,10 @@
             "nameWithOwner": "conda-forge/staged-recipes"
           },
           "createdAt": "2021-03-10T01:57:07Z",
-          "mergedAt": null,
+          "mergedAt": "2021-03-11T21:19:40Z",
           "url": "https://github.com/conda-forge/staged-recipes/pull/14211",
-          "changedFiles": 1,
-          "additions": 39,
+          "changedFiles": 2,
+          "additions": 61,
           "deletions": 0
         }
       },
@@ -28,8 +43,8 @@
           "mergedAt": null,
           "url": "https://github.com/bioconda/bioconda-recipes/pull/27282",
           "changedFiles": 1,
-          "additions": 3,
-          "deletions": 3
+          "additions": 7,
+          "deletions": 5
         }
       },
       {
