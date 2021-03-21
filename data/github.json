@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 71,
+    "issueCount": 72,
     "edges": [
+      {
+        "node": {
+          "number": 27482,
+          "title": "Update bactopia to v1.6.2",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2021-03-21T02:31:46Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/27482",
+          "changedFiles": 1,
+          "additions": 3,
+          "deletions": 3
+        }
+      },
       {
         "node": {
           "number": 27321,
