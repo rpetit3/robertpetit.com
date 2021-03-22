@@ -10,11 +10,11 @@
             "nameWithOwner": "bioconda/bioconda-recipes"
           },
           "createdAt": "2021-03-21T02:31:46Z",
-          "mergedAt": null,
+          "mergedAt": "2021-03-21T20:05:54Z",
           "url": "https://github.com/bioconda/bioconda-recipes/pull/27482",
           "changedFiles": 1,
-          "additions": 3,
-          "deletions": 3
+          "additions": 5,
+          "deletions": 4
         }
       },
       {
@@ -25,11 +25,11 @@
             "nameWithOwner": "bioconda/bioconda-recipes"
           },
           "createdAt": "2021-03-11T21:05:53Z",
-          "mergedAt": null,
+          "mergedAt": "2021-03-21T22:32:29Z",
           "url": "https://github.com/bioconda/bioconda-recipes/pull/27321",
           "changedFiles": 1,
           "additions": 4,
-          "deletions": 3
+          "deletions": 4
         }
       },
       {
@@ -70,7 +70,7 @@
             "nameWithOwner": "conda-forge/staged-recipes"
           },
           "createdAt": "2021-03-08T19:16:07Z",
-          "mergedAt": null,
+          "mergedAt": "2021-03-21T19:44:44Z",
           "url": "https://github.com/conda-forge/staged-recipes/pull/14192",
           "changedFiles": 3,
           "additions": 450,
