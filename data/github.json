@@ -1,7 +1,37 @@
 {
   "search": {
-    "issueCount": 72,
+    "issueCount": 74,
     "edges": [
+      {
+        "node": {
+          "number": 27511,
+          "title": "Update Ariba pinning in Bactopia",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2021-03-22T20:20:19Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/27511",
+          "changedFiles": 1,
+          "additions": 2,
+          "deletions": 2
+        }
+      },
+      {
+        "node": {
+          "number": 298,
+          "title": "add prokka module",
+          "repository": {
+            "nameWithOwner": "nf-core/modules"
+          },
+          "createdAt": "2021-03-22T11:57:59Z",
+          "mergedAt": null,
+          "url": "https://github.com/nf-core/modules/pull/298",
+          "changedFiles": 6,
+          "additions": 250,
+          "deletions": 0
+        }
+      },
       {
         "node": {
           "number": 27482,
