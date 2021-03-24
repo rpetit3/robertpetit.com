@@ -1,7 +1,52 @@
 {
   "search": {
-    "issueCount": 74,
+    "issueCount": 77,
     "edges": [
+      {
+        "node": {
+          "number": 350,
+          "title": "Update Prokka modules - add process label ",
+          "repository": {
+            "nameWithOwner": "nf-core/modules"
+          },
+          "createdAt": "2021-03-24T00:59:06Z",
+          "mergedAt": null,
+          "url": "https://github.com/nf-core/modules/pull/350",
+          "changedFiles": 1,
+          "additions": 1,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 349,
+          "title": "README - Fix link describing process labels",
+          "repository": {
+            "nameWithOwner": "nf-core/modules"
+          },
+          "createdAt": "2021-03-24T00:57:02Z",
+          "mergedAt": null,
+          "url": "https://github.com/nf-core/modules/pull/349",
+          "changedFiles": 1,
+          "additions": 1,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 337,
+          "title": "Update shovill module",
+          "repository": {
+            "nameWithOwner": "nf-core/modules"
+          },
+          "createdAt": "2021-03-23T14:42:01Z",
+          "mergedAt": null,
+          "url": "https://github.com/nf-core/modules/pull/337",
+          "changedFiles": 10,
+          "additions": 277,
+          "deletions": 72
+        }
+      },
       {
         "node": {
           "number": 27511,
@@ -10,7 +55,7 @@
             "nameWithOwner": "bioconda/bioconda-recipes"
           },
           "createdAt": "2021-03-22T20:20:19Z",
-          "mergedAt": null,
+          "mergedAt": "2021-03-23T08:44:18Z",
           "url": "https://github.com/bioconda/bioconda-recipes/pull/27511",
           "changedFiles": 1,
           "additions": 2,
@@ -25,7 +70,7 @@
             "nameWithOwner": "nf-core/modules"
           },
           "createdAt": "2021-03-22T11:57:59Z",
-          "mergedAt": null,
+          "mergedAt": "2021-03-23T09:51:23Z",
           "url": "https://github.com/nf-core/modules/pull/298",
           "changedFiles": 6,
           "additions": 250,
