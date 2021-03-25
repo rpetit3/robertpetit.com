@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 77,
+    "issueCount": 78,
     "edges": [
+      {
+        "node": {
+          "number": 384,
+          "title": "update tests for new config",
+          "repository": {
+            "nameWithOwner": "nf-core/modules"
+          },
+          "createdAt": "2021-03-24T15:14:48Z",
+          "mergedAt": null,
+          "url": "https://github.com/nf-core/modules/pull/384",
+          "changedFiles": 15,
+          "additions": 40,
+          "deletions": 42
+        }
+      },
       {
         "node": {
           "number": 350,
@@ -10,7 +25,7 @@
             "nameWithOwner": "nf-core/modules"
           },
           "createdAt": "2021-03-24T00:59:06Z",
-          "mergedAt": null,
+          "mergedAt": "2021-03-24T04:54:52Z",
           "url": "https://github.com/nf-core/modules/pull/350",
           "changedFiles": 1,
           "additions": 1,
@@ -25,7 +40,7 @@
             "nameWithOwner": "nf-core/modules"
           },
           "createdAt": "2021-03-24T00:57:02Z",
-          "mergedAt": null,
+          "mergedAt": "2021-03-24T05:03:57Z",
           "url": "https://github.com/nf-core/modules/pull/349",
           "changedFiles": 1,
           "additions": 1,
@@ -40,7 +55,7 @@
             "nameWithOwner": "nf-core/modules"
           },
           "createdAt": "2021-03-23T14:42:01Z",
-          "mergedAt": null,
+          "mergedAt": "2021-03-24T04:57:41Z",
           "url": "https://github.com/nf-core/modules/pull/337",
           "changedFiles": 10,
           "additions": 277,
