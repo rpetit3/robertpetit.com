@@ -10,11 +10,11 @@
             "nameWithOwner": "nf-core/modules"
           },
           "createdAt": "2021-03-24T15:14:48Z",
-          "mergedAt": null,
+          "mergedAt": "2021-04-01T19:22:07Z",
           "url": "https://github.com/nf-core/modules/pull/384",
           "changedFiles": 21,
-          "additions": 100,
-          "deletions": 101
+          "additions": 94,
+          "deletions": 138
         }
       },
       {
