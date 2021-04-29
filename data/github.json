@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 79,
+    "issueCount": 80,
     "edges": [
+      {
+        "node": {
+          "number": 9,
+          "title": "Fix for dots in sample names",
+          "repository": {
+            "nameWithOwner": "VishnuRaghuram94/AgrVATE"
+          },
+          "createdAt": "2021-04-28T17:23:09Z",
+          "mergedAt": null,
+          "url": "https://github.com/VishnuRaghuram94/AgrVATE/pull/9",
+          "changedFiles": 1,
+          "additions": 2,
+          "deletions": 2
+        }
+      },
       {
         "node": {
           "number": 28214,
