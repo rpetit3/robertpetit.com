@@ -42,11 +42,17 @@ education:
     url: https://www.valdosta.edu/biology/
 
 employment:
+  - title: Chief Scientist for Bioinformatics
+    company: Wyoming Public Health Laboratory
+    location: Cheyenne, WY
+    start: 2021-05-01
+    end: present
+    
   - title: Senior Data Analyst
     company: Emory University
     location: Atlanta, GA
     start: 2018-07-01
-    end: present
+    end: 2021-04-30
 
   - title: Information Analyst III
     company: Emory University
@@ -84,6 +90,14 @@ grants:
     date: 2013-06-01
 
 presentations:
+  - title: Using Bactopia to process 67,000 *Staphylococcus aureus* genomes with AWS Batch
+    conference: Applied Bioinformatics & Public Health Microbiology 2021
+    authors: ["***Robert A Petit III***", "Timothy D Read"]
+    type: poster
+    date: 2021-05-05
+    url: https://bit.ly/3sAslOT
+    video: https://youtu.be/JywoIlD4-l0
+
   - title: Integrating Staphopia into *S. aureus* genomic investigations
     conference: Virtual *S. aureus* Seminar Series Early Career Symposium
     authors: ["***Robert A Petit III***"]
