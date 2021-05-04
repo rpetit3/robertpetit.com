@@ -1,7 +1,232 @@
 {
   "search": {
-    "issueCount": 65,
+    "issueCount": 80,
     "edges": [
+      {
+        "node": {
+          "number": 9,
+          "title": "Fix for dots in sample names",
+          "repository": {
+            "nameWithOwner": "VishnuRaghuram94/AgrVATE"
+          },
+          "createdAt": "2021-04-28T17:23:09Z",
+          "mergedAt": null,
+          "url": "https://github.com/VishnuRaghuram94/AgrVATE/pull/9",
+          "changedFiles": 1,
+          "additions": 2,
+          "deletions": 2
+        }
+      },
+      {
+        "node": {
+          "number": 28214,
+          "title": "add recipe for staphopia-sccmec",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2021-04-26T17:18:21Z",
+          "mergedAt": "2021-04-26T18:19:56Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/28214",
+          "changedFiles": 2,
+          "additions": 48,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 384,
+          "title": "update tests for new config",
+          "repository": {
+            "nameWithOwner": "nf-core/modules"
+          },
+          "createdAt": "2021-03-24T15:14:48Z",
+          "mergedAt": "2021-04-01T19:22:07Z",
+          "url": "https://github.com/nf-core/modules/pull/384",
+          "changedFiles": 21,
+          "additions": 94,
+          "deletions": 138
+        }
+      },
+      {
+        "node": {
+          "number": 350,
+          "title": "Update Prokka modules - add process label ",
+          "repository": {
+            "nameWithOwner": "nf-core/modules"
+          },
+          "createdAt": "2021-03-24T00:59:06Z",
+          "mergedAt": "2021-03-24T04:54:52Z",
+          "url": "https://github.com/nf-core/modules/pull/350",
+          "changedFiles": 1,
+          "additions": 1,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 349,
+          "title": "README - Fix link describing process labels",
+          "repository": {
+            "nameWithOwner": "nf-core/modules"
+          },
+          "createdAt": "2021-03-24T00:57:02Z",
+          "mergedAt": "2021-03-24T05:03:57Z",
+          "url": "https://github.com/nf-core/modules/pull/349",
+          "changedFiles": 1,
+          "additions": 1,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 337,
+          "title": "Update shovill module",
+          "repository": {
+            "nameWithOwner": "nf-core/modules"
+          },
+          "createdAt": "2021-03-23T14:42:01Z",
+          "mergedAt": "2021-03-24T04:57:41Z",
+          "url": "https://github.com/nf-core/modules/pull/337",
+          "changedFiles": 10,
+          "additions": 277,
+          "deletions": 72
+        }
+      },
+      {
+        "node": {
+          "number": 27511,
+          "title": "Update Ariba pinning in Bactopia",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2021-03-22T20:20:19Z",
+          "mergedAt": "2021-03-23T08:44:18Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/27511",
+          "changedFiles": 1,
+          "additions": 2,
+          "deletions": 2
+        }
+      },
+      {
+        "node": {
+          "number": 298,
+          "title": "add prokka module",
+          "repository": {
+            "nameWithOwner": "nf-core/modules"
+          },
+          "createdAt": "2021-03-22T11:57:59Z",
+          "mergedAt": "2021-03-23T09:51:23Z",
+          "url": "https://github.com/nf-core/modules/pull/298",
+          "changedFiles": 6,
+          "additions": 250,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 27482,
+          "title": "Update bactopia to v1.6.2",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2021-03-21T02:31:46Z",
+          "mergedAt": "2021-03-21T20:05:54Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/27482",
+          "changedFiles": 1,
+          "additions": 5,
+          "deletions": 4
+        }
+      },
+      {
+        "node": {
+          "number": 27321,
+          "title": "update spatyper - drop blake_sha256 requirement",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2021-03-11T21:05:53Z",
+          "mergedAt": "2021-03-21T22:32:29Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/27321",
+          "changedFiles": 1,
+          "additions": 4,
+          "deletions": 4
+        }
+      },
+      {
+        "node": {
+          "number": 14211,
+          "title": "add recipe for disjoin-set Python package",
+          "repository": {
+            "nameWithOwner": "conda-forge/staged-recipes"
+          },
+          "createdAt": "2021-03-10T01:57:07Z",
+          "mergedAt": "2021-03-11T21:19:40Z",
+          "url": "https://github.com/conda-forge/staged-recipes/pull/14211",
+          "changedFiles": 2,
+          "additions": 61,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 27282,
+          "title": "bump clinker-py to v0.0.19",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2021-03-10T01:07:21Z",
+          "mergedAt": "2021-03-15T07:58:52Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/27282",
+          "changedFiles": 1,
+          "additions": 7,
+          "deletions": 5
+        }
+      },
+      {
+        "node": {
+          "number": 14192,
+          "title": "add recipe for DB_File Perl module",
+          "repository": {
+            "nameWithOwner": "conda-forge/staged-recipes"
+          },
+          "createdAt": "2021-03-08T19:16:07Z",
+          "mergedAt": "2021-03-21T19:44:44Z",
+          "url": "https://github.com/conda-forge/staged-recipes/pull/14192",
+          "changedFiles": 3,
+          "additions": 450,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 27181,
+          "title": "Add recipe for DB_File",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2021-03-04T19:12:38Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/27181",
+          "changedFiles": 2,
+          "additions": 59,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 27174,
+          "title": "bowtie2 - fix tbb version",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2021-03-04T17:42:07Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/27174",
+          "changedFiles": 1,
+          "additions": 4,
+          "deletions": 4
+        }
+      },
       {
         "node": {
           "number": 26855,
@@ -295,7 +520,7 @@
             "nameWithOwner": "danielecook/Awesome-Bioinformatics"
           },
           "createdAt": "2020-11-18T20:53:24Z",
-          "mergedAt": null,
+          "mergedAt": "2021-03-31T14:57:26Z",
           "url": "https://github.com/danielecook/Awesome-Bioinformatics/pull/71",
           "changedFiles": 1,
           "additions": 1,
