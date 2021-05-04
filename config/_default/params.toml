@@ -2,9 +2,9 @@
 author = "Robert A. Petit III, PhD"
 seo_author = "Robert A. Petit III, PhD"
 description = "Bioinformatician studying bacterial genomics and developer of [Bactopia](https://bactopia.github.io/) and [Staphopia](https://staphopia.emory.edu/) workflows."
-seo_description = "Dr. Robert A. Petit III is a bioinformatician at Emory University studying bacterial genomics while also developing the Bactopia and Staphopia workflows"
-tagline = "Dr. Robert A. Petit III is a bioinformatician at Emory University studying bacterial genomics while also developing the Bactopia and Staphopia workflows"
-email = "robert.petit@emory.edu"
+seo_description = "Dr. Robert A. Petit III is a bioinformatician at Wyoming Public Health Laboratory and developer of the Bactopia and Staphopia workflows"
+tagline = "Dr. Robert A. Petit III is a bioinformatician at Wyoming Public Health Laboratory and developer of the Bactopia and Staphopia workflows"
+email = "robbie.petit@gmail.com"
 avatar = "/images/profile.png"
 github = "rpetit3"
 url = "https://www.robertpetit.com"
@@ -12,14 +12,14 @@ keywords = "blog, genomics, bioinformatics, bacteria, bactopia, staphopia, nextf
 rss = true
 lastmod = true
 favicon = "/images/github.png"
-location = "Atlanta, GA"
+location = "Cheyenne, WY"
 date_format = "January 2006"
-organization = "Emory University"
-organization_street = "1760 Haygood Dr. NE, HSRB E169"
-organization_city = "Atlanta"
-organization_state = "GA"
-organization_zip = "30322-1119"
-group = "Division of Infectious Diseases"
+organization = "Wyoming Public Health Laboratory"
+organization_street = "208 South College Drive"
+organization_city = "Cheyenne"
+organization_state = "WY"
+organization_zip = "82002"
+group = "Microbiology Laboratories"
 
 # Social Links
 [[social]]
