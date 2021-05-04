@@ -27,10 +27,17 @@ Undergrad, was an adventure. I changed my major a lot, but hovered around Educat
 
 ## Professional Experience
 
+🛠️ **Chief Scientist for Bioinformatics**  
+*Wyoming Public Health Laboratory, Cheyenne, WY, 2021-present*  
+
+I am developing the bioinformatics capacity for [Wyoming Public Health Laboratory](https://health.wyo.gov/publichealth/lab/) and facilitating bioinformatic training.
+
+---
+
 🛠️ **Senior Data Analyst**  
-*Emory University, Atlanta, GA, 2018-Present*  
+*Emory University, Atlanta, GA, 2018-2021*  
   
-I am working again as a bioinformatician in Tim Read's lab, but also the [Georgia Emerging Infections Program](https://dph.georgia.gov/EIP). Much of my work at the moment involves further developing [Bactopia](https://bactopia.github.io/), working on my own projects, providing support for the lab, and I still maintain those servers.
+I worked as a bioinformatician in Tim Read's lab, but also the [Georgia Emerging Infections Program](https://dph.georgia.gov/EIP). Much of my work involved developing [Bactopia](https://bactopia.github.io/), working on my own projects, providing support for the lab, and maintaining those servers.
 
 ---
 
