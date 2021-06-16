@@ -1,7 +1,52 @@
 {
   "search": {
-    "issueCount": 80,
+    "issueCount": 83,
     "edges": [
+      {
+        "node": {
+          "number": 212,
+          "title": "Add fastq scan",
+          "repository": {
+            "nameWithOwner": "StaPH-B/docker-builds"
+          },
+          "createdAt": "2021-06-15T22:41:43Z",
+          "mergedAt": null,
+          "url": "https://github.com/StaPH-B/docker-builds/pull/212",
+          "changedFiles": 1,
+          "additions": 51,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 17,
+          "title": "Whitespace fixes (e.g. replace tabs with spaces)",
+          "repository": {
+            "nameWithOwner": "theiagen/public_health_viral_genomics"
+          },
+          "createdAt": "2021-06-15T16:22:27Z",
+          "mergedAt": "2021-06-15T21:17:19Z",
+          "url": "https://github.com/theiagen/public_health_viral_genomics/pull/17",
+          "changedFiles": 26,
+          "additions": 891,
+          "deletions": 905
+        }
+      },
+      {
+        "node": {
+          "number": 16,
+          "title": "Toast patches  (#14)",
+          "repository": {
+            "nameWithOwner": "theiagen/public_health_viral_genomics"
+          },
+          "createdAt": "2021-06-15T16:19:10Z",
+          "mergedAt": "2021-06-15T16:20:00Z",
+          "url": "https://github.com/theiagen/public_health_viral_genomics/pull/16",
+          "changedFiles": 2,
+          "additions": 2,
+          "deletions": 2
+        }
+      },
       {
         "node": {
           "number": 9,
