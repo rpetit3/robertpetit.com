@@ -10,10 +10,10 @@
             "nameWithOwner": "StaPH-B/docker-builds"
           },
           "createdAt": "2021-06-15T22:41:43Z",
-          "mergedAt": null,
+          "mergedAt": "2021-06-16T14:24:44Z",
           "url": "https://github.com/StaPH-B/docker-builds/pull/212",
-          "changedFiles": 1,
-          "additions": 51,
+          "changedFiles": 3,
+          "additions": 58,
           "deletions": 0
         }
       },
