@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 84,
+    "issueCount": 85,
     "edges": [
+      {
+        "node": {
+          "number": 25,
+          "title": "Add support for Titan GC cli",
+          "repository": {
+            "nameWithOwner": "theiagen/public_health_viral_genomics"
+          },
+          "createdAt": "2021-06-22T22:49:02Z",
+          "mergedAt": null,
+          "url": "https://github.com/theiagen/public_health_viral_genomics/pull/25",
+          "changedFiles": 7,
+          "additions": 990,
+          "deletions": 31
+        }
+      },
       {
         "node": {
           "number": 10,
