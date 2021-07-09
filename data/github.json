@@ -1,7 +1,52 @@
 {
   "search": {
-    "issueCount": 85,
+    "issueCount": 88,
     "edges": [
+      {
+        "node": {
+          "number": 225,
+          "title": "add recipe for shovill-se",
+          "repository": {
+            "nameWithOwner": "StaPH-B/docker-builds"
+          },
+          "createdAt": "2021-07-08T17:30:52Z",
+          "mergedAt": "2021-07-08T23:46:16Z",
+          "url": "https://github.com/StaPH-B/docker-builds/pull/225",
+          "changedFiles": 1,
+          "additions": 171,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 224,
+          "title": "add TSV to VCF script to iVar container",
+          "repository": {
+            "nameWithOwner": "StaPH-B/docker-builds"
+          },
+          "createdAt": "2021-07-08T16:33:25Z",
+          "mergedAt": null,
+          "url": "https://github.com/StaPH-B/docker-builds/pull/224",
+          "changedFiles": 2,
+          "additions": 16,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 4,
+          "title": "Fix a few links",
+          "repository": {
+            "nameWithOwner": "pha4ge/pipeline-resources"
+          },
+          "createdAt": "2021-07-08T14:32:04Z",
+          "mergedAt": null,
+          "url": "https://github.com/pha4ge/pipeline-resources/pull/4",
+          "changedFiles": 1,
+          "additions": 2,
+          "deletions": 2
+        }
+      },
       {
         "node": {
           "number": 25,
@@ -10,10 +55,10 @@
             "nameWithOwner": "theiagen/public_health_viral_genomics"
           },
           "createdAt": "2021-06-22T22:49:02Z",
-          "mergedAt": null,
+          "mergedAt": "2021-07-08T19:53:19Z",
           "url": "https://github.com/theiagen/public_health_viral_genomics/pull/25",
-          "changedFiles": 17,
-          "additions": 1341,
+          "changedFiles": 16,
+          "additions": 1280,
           "deletions": 125
         }
       },
