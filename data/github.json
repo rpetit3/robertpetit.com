@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 88,
+    "issueCount": 89,
     "edges": [
+      {
+        "node": {
+          "number": 315,
+          "title": "fix SPAdes version capture",
+          "repository": {
+            "nameWithOwner": "sanger-pathogens/ariba"
+          },
+          "createdAt": "2021-07-09T14:30:07Z",
+          "mergedAt": "2021-07-09T14:35:59Z",
+          "url": "https://github.com/sanger-pathogens/ariba/pull/315",
+          "changedFiles": 1,
+          "additions": 1,
+          "deletions": 1
+        }
+      },
       {
         "node": {
           "number": 225,
@@ -40,7 +55,7 @@
             "nameWithOwner": "pha4ge/pipeline-resources"
           },
           "createdAt": "2021-07-08T14:32:04Z",
-          "mergedAt": null,
+          "mergedAt": "2021-07-09T14:22:50Z",
           "url": "https://github.com/pha4ge/pipeline-resources/pull/4",
           "changedFiles": 1,
           "additions": 2,
