@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 89,
+    "issueCount": 90,
     "edges": [
+      {
+        "node": {
+          "number": 8,
+          "title": "add gzip support for scrubber",
+          "repository": {
+            "nameWithOwner": "ncbi/sra-human-scrubber"
+          },
+          "createdAt": "2021-07-13T22:46:30Z",
+          "mergedAt": null,
+          "url": "https://github.com/ncbi/sra-human-scrubber/pull/8",
+          "changedFiles": 3,
+          "additions": 28,
+          "deletions": 4
+        }
+      },
       {
         "node": {
           "number": 315,
