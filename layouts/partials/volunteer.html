@@ -39,17 +39,17 @@
         <h2>Pull Requests</h2>
         {{ $filter_user := delimit .Params.filter_user "+-user:"}}
         {{ $github_url := printf "%s%s" .Params.github_pr_url $filter_user }}
-        {{ $merged := len (where $.Site.Data.github.search.edges ".node.mergedAt" "!=" nil) }}
-        {{ $total := mul $.Site.Data.github.search.issueCount 1.0 }}
+        {{ $merged := len (where $.Site.Data.github.data.search.edges ".node.mergedAt" "!=" nil) }}
+        {{ $total := mul $.Site.Data.github.data.search.issueCount 1.0 }}
         {{ $percent := math.Round (mul (div $merged $total) 100) }}
-        <p>I have submitted {{ $.Site.Data.github.search.issueCount }} pull requests (<i>{{ $percent }}% merged, yay!</i>🎉) to various open source projects. Below are my most recent pull requests. To see the full list, which also includes personal projects, please <a href="{{ .Params.github_pr_url }}" alt="Full list of Pull Requests" target="_blank">view them on Github</a>.</p>
+        <p>I have submitted {{ $.Site.Data.github.data.search.issueCount }} pull requests (<i>{{ $percent }}% merged, yay!</i>🎉) to various open source projects. Below are my most recent pull requests. To see the full list, which also includes personal projects, please <a href="{{ .Params.github_pr_url }}" alt="Full list of Pull Requests" target="_blank">view them on Github</a>.</p>
         <div>
           <table>
             <tr>
               <th>Pull Request</th>
               <th>Description</th>
             </tr>
-            {{ range first 10 $.Site.Data.github.search.edges }}
+            {{ range first 10 $.Site.Data.github.data.search.edges }}
               {{ $repo_url := printf "https://www.github.com/%s" .node.repository.nameWithOwner }}
               {{ $pr := printf "%s%s%.0f" .node.repository.nameWithOwner "#" .node.number }}
               {{ $created := substr .node.createdAt 0 10 }}
