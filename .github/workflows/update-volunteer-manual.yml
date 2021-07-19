@@ -8,43 +8,24 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.ref }}
+
       - name: Query Github API
-        uses: octokit/graphql-action@v2.x
+        uses: helaili/github-graphql-action@2.0.1
         id: get_latest_pr
-        with:
-          query: |
-            query {
-              search(query: "is:pr author:rpetit3 -user:rpetit3 -user:rpetit3-fun -user:staphopia -user:bactopia -user:Read-Lab-Confederation", type: ISSUE, first: 100) {
-                issueCount
-                edges {
-                  node {
-                  ... on PullRequest {
-                      number
-                      title
-                      repository {
-                        nameWithOwner
-                      }
-                      createdAt
-                      mergedAt
-                      url
-                      changedFiles
-                      additions
-                      deletions
-                    }
-                  }
-                }
-              }
-            }
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          query: ./.github/workflows/update-volunteer-query.yml
+          outputFile: data/github.json
+
       - name: Update and Commit
         run: |
           echo ${{ github.ref }}
-          echo '${{ steps.get_latest_pr.outputs.data }}' > data/github.json
           git add  data/github.json
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m "ci: update github.json" -a | exit 0
+
       - name: Push Changes
         uses: ad-m/github-push-action@master
         with:
