@@ -1,4 +1,12 @@
 conda:
+    - title: "Submitted Dragonflye to Bioconda"
+      date: 2021-07-21
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/29696"
+      pr_name: "bioconda/bioconda-recipes#29696"
+      tool: "Dragonflye"
+      tool_url: "https://github.com/rpetit3/dragonflye"
+      description: "Assemble bacterial isolate genomes from Nanopore reads"
+
     - title: "Submitted Phirbo to Bioconda"
       date: 2021-01-11
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/26144"
