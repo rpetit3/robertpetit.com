@@ -5,6 +5,7 @@ declare -a tools=(
     "assembly-scan" 
     "bactopia"
     "call_variants"
+    "dragonflye"
     "ena-dl"
     "fastq-dl"
     "fastq-scan"
