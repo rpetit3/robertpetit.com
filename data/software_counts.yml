@@ -10,6 +10,10 @@ call_variants:
   - downloads: 0
     stars: 2
 
+dragonflye:
+  - downloads: 0
+    stars: 6
+
 ena_dl:
   - downloads: 246
     stars: 0
