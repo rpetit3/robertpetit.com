@@ -18,7 +18,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          query: ./.github/workflows/update-volunteer-query.yml
+          query: ./.github/data/update-volunteer-query.yml
           outputFile: data/github.json
 
       - name: Update and Commit
