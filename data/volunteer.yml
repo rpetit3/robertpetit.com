@@ -1,4 +1,12 @@
 conda:
+    - title: "Submitted SeroTtpeFinder to Bioconda"
+      date: 2021-07-22
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/29718"
+      pr_name: "bioconda/bioconda-recipes#29718"
+      tool: "SerotypeFinder"
+      tool_url: "https://bitbucket.org/genomicepidemiology/serotypefinder/src/master/"
+      description: "Identifies the serotype in total or partial sequenced isolates of E. coli"
+
     - title: "Submitted Dragonflye to Bioconda"
       date: 2021-07-21
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/29696"
