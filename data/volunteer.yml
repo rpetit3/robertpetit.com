@@ -1,4 +1,20 @@
 conda:
+    - title: "Submitted Bio-Easel to Bioconda"
+      date: 2021-07-28
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/29824"
+      pr_name: "bioconda/bioconda-recipes#29824"
+      tool: "Bio-Easel"
+      tool_url: "https://github.com/nawrockie/Bio-Easel"
+      description: "Perl modules and scripts for interfacing with Sean Eddy's C easel sequence analysis library using Perl's Inline."
+      
+    - title: "Submitted Sequip to Bioconda"
+      date: 2021-07-28
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/29820"
+      pr_name: "bioconda/bioconda-recipes#29820"
+      tool: "Sequip"
+      tool_url: "https://github.com/nawrockie/sequip"
+      description: "Perl module for biological sequence analysis and supporting utilities."
+
     - title: "Submitted SeroTtpeFinder to Bioconda"
       date: 2021-07-22
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/29718"
