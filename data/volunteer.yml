@@ -1,4 +1,12 @@
 conda:
+    - title: "Submitted VADR to Bioconda"
+      date: 2021-07-30
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/29855"
+      pr_name: "bioconda/bioconda-recipes#29855"
+      tool: "VADR"
+      tool_url: "https://github.com/ncbi/vadr"
+      description: "classification and annotation of viral sequences based on RefSeq"
+
     - title: "Submitted Bio-Easel to Bioconda"
       date: 2021-07-28
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/29824"
