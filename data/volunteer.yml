@@ -1,4 +1,12 @@
 conda:
+    - title: "Submitted SRA Human Scrubber to Bioconda"
+      date: 2021-08-04
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/29926"
+      pr_name: "bioconda/bioconda-recipes#29926"
+      tool: "sra-human-scrubber"
+      tool_url: "https://github.com/ncbi/sra-human-scrubber"
+      description: "Identify and remove human reads from FASTQ files"
+
     - title: "Submitted VADR to Bioconda"
       date: 2021-07-30
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/29855"
