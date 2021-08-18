@@ -1,4 +1,12 @@
 conda:
+    - title: "Submitted Titan-GC to Bioconda"
+      date: 2021-08-17
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/30099"
+      pr_name: "bioconda/bioconda-recipes#30099"
+      tool: "titan-gc"
+      tool_url: "https://github.com/theiagen/public_health_viral_genomics"
+      description: "Workflow for genomic characterization of viral pathogens"
+
     - title: "Submitted SRA Human Scrubber to Bioconda"
       date: 2021-08-04
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/29926"
