@@ -178,6 +178,9 @@
                     {{ $e.title | markdownify }},
                 {{ end }}
                 <i>{{ $e.conference | markdownify }}</i> ({{ dateFormat "January 2006" $e.date }})
+                {{ if isset $e "video" }}
+                    <a href="{{ $e.video }}" target="_blank">(Recording)</a>
+                {{ end }}
             <p>
           {{end}}
 
