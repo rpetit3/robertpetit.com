@@ -21,13 +21,23 @@ jobs:
           query: ./.github/data/update-volunteer-query.yml
           outputFile: data/github.json
 
+      - name: Query Github API
+        uses: helaili/github-graphql-action@2.0.1
+        id: get_latest_pr_merged
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          query: ./.github/data/update-volunteer-merged.yml
+          outputFile: data/merged.json
+
       - name: Update and Commit
         run: |
           echo ${{ github.ref }}
-          git add  data/github.json
+          git add data/github.json
+          git add data/merged.json
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git commit -m "ci: update github.json" -a | exit 0
+          git commit -m "ci: update github stats" -a | exit 0
           
       - name: Push Changes
         uses: ad-m/github-push-action@master
