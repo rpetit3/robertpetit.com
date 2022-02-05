@@ -90,6 +90,27 @@ grants:
     date: 2013-06-01
 
 presentations:
+  - title: Deeper dives, workflows and Bactopia
+    conference: CLIMB Big Data - Bioinformatics Skills for Microbial Genomics Workshop
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2022-02-02
+    url: https://www.climb.ac.uk/bioinformatics-skills-microbial-genomics/
+
+  - title: Bactopia and using workflow managers in bioinformatics part 2
+    conference: Micro Binfie Podcast
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2022-01-13
+    url: https://soundcloud.com/microbinfie/bactopia-part-1
+
+  - title: Bactopia and using workflow managers in bioinformatics part 1
+    conference: Micro Binfie Podcast
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2022-01-06
+    url: https://soundcloud.com/microbinfie/bactopia-part-1
+
   - title: Bactopia v2 Highly scalable, portable and customizable bacterial genome analyses
     conference: Sequencing to Function, Analysis, and Applications for the Future 2021
     authors: ["***Robert A Petit III***", "Davi J. Marcon", "Abhinav Sharma", "Timothy D Read"]
