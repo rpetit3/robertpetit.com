@@ -1,4 +1,12 @@
 conda:
+    - title: "Submitted pLannotate to Bioconda"
+      date: 2022-02-04
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/32760"
+      pr_name: "bioconda/bioconda-recipes/#32760"
+      tool: "pLannotate"
+      tool_url: "https://github.com/barricklab/pLannotate"
+      description: "Tool for annotating engineered plasmids"
+
     - title: "Submitted Titan-GC to Bioconda"
       date: 2021-08-17
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/30099"
