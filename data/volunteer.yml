@@ -1,4 +1,12 @@
 conda:
+    - title: "Submitted pmga to Bioconda"
+      date: 2022-02-07
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/32801"
+      pr_name: "bioconda/bioconda-recipes/#32801"
+      tool: "pmga"
+      tool_url: "https://github.com/CDCgov/BMGAP"
+      description: "Command-line version of PMGA (PubMLST Genome Annotator)"
+
     - title: "Submitted pLannotate to Bioconda"
       date: 2022-02-04
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/32760"
