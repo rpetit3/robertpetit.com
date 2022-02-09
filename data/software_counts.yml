@@ -3,7 +3,7 @@ assembly_scan:
     stars: 4
 
 bactopia:
-  - downloads: 14511
+  - downloads: 14559
     stars: 126
 
 call_variants:
@@ -27,11 +27,15 @@ fastq_scan:
     stars: 21
 
 illumina_cleanup:
-  - downloads: 2464
+  - downloads: 2466
     stars: 2
 
 illumina_simulation:
   - downloads: 0
+    stars: 0
+
+pmga:
+  - downloads: 13
     stars: 0
 
 shovill_se:
@@ -51,6 +55,6 @@ tbl2asn_forever:
     stars: 2
 
 vcf_annotator:
-  - downloads: 4224
+  - downloads: 4230
     stars: 14
 
