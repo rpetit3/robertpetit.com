@@ -1,6 +1,4 @@
 conda:
-
-
     - title: "Submitted peregrine-2021 to Bioconda"
       date: 2022-02-08
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/32810"
