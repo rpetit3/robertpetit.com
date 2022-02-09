@@ -1,4 +1,14 @@
 conda:
+
+
+    - title: "Submitted peregrine-2021 to Bioconda"
+      date: 2022-02-08
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/32810"
+      pr_name: "bioconda/bioconda-recipes/#32810"
+      tool: "peregrine-2021"
+      tool_url: "https://github.com/cschin/peregrine-2021"
+      description: "Long read assembler written in Rust"
+
     - title: "Submitted pmga to Bioconda"
       date: 2022-02-07
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/32801"
