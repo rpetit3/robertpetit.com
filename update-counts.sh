@@ -11,6 +11,7 @@ declare -a tools=(
     "fastq-scan"
     "illumina-cleanup"
     "illumina-simulation"
+    "pmga"
     "shovill-se"
     "staphopia"
     "staphopia-sccmec"
