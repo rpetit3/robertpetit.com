@@ -28,7 +28,7 @@ Undergrad, was an adventure. I changed my major a lot, but hovered around Educat
 ## Professional Experience
 
 🛠️ **Senior Bioinformatics Scientist**  
-*Wyoming Public Health Laboratory, Cheyenne, WY, 2021-present*  
+*Theiagen Genomics & Wyoming Public Health Laboratory, Cheyenne, WY, 2021-present*  
 
 I am developing the bioinformatics capacity for [Wyoming Public Health Laboratory](https://health.wyo.gov/publichealth/lab/) and facilitating bioinformatic training.
 
