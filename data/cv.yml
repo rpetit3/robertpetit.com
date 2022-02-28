@@ -95,7 +95,8 @@ presentations:
     authors: ["***Robert A Petit III***"]
     type: talk
     date: 2022-02-02
-    url: https://www.climb.ac.uk/bioinformatics-skills-microbial-genomics/
+    url: https://bit.ly/32PNhue
+    video: https://www.youtube.com/watch?v=s0nxMZd58VY
 
   - title: Bactopia and using workflow managers in bioinformatics part 2
     conference: Micro Binfie Podcast
