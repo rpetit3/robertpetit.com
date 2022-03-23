@@ -204,7 +204,7 @@
               <a href="{{ .url }}" target="_blank">
                 <strong>{{ .course }}</strong><br/>
               </a>
-              <i>{{ .description }}</i><br/>
+              <i>{{ .description }} Completed on {{ dateFormat "Monday, Jan 2, 2006" .date }}.</i><br/>
             <p>
           {{end}}
               
