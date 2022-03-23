@@ -198,7 +198,16 @@
             <p>
           {{end}}
 
-
+          <h2>Professional Development Training</h2>
+          {{ range sort $.Site.Data.cv.training "date" "desc" }}
+            <p>
+              <a href="{{ .url }}" target="_blank">
+                <strong>{{ .course }}</strong><br/>
+              </a>
+              <i>{{ .description }}</i><br/>
+            <p>
+          {{end}}
+              
           <h2>Teaching Experience</h2>
           {{ range sort $.Site.Data.cv.teaching "date" "desc" }}
             <p>
