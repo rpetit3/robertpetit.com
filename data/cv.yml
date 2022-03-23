@@ -271,7 +271,7 @@ training:
     url: https://coursera.org/verify/7NZJQNKYKAA8
     date: 2022-03-07
 
-  - course: Machine Learning Foundations: A Case Study Approach
+  - course: "Machine Learning Foundations: A Case Study Approach"
     description: A Coursera course covering machine learning with a series of practical case-studies.
     url: https://coursera.org/verify/FPVB85653ZX7
     date: 2016-05-15
