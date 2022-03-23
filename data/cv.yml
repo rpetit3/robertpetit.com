@@ -259,3 +259,17 @@ teaching:
     school: Emory University
     level: Graduate
     date: 2015-01-01
+
+training:
+  - course: Microsoft Azure Management Tools and Security Solutions
+    description: A Coursera course introducing Microsoft Azure portal and security related services.
+    cert_link: https://coursera.org/verify/MTDWGQDKMBG4
+    date: 2022-03-22
+  - course: Introduction to Microsoft Azure Cloud Services
+    description: A Coursera course which provides basic introductions into the Microsoft Azure ecosystem.
+    cert_link: https://coursera.org/verify/7NZJQNKYKAA8
+    date: 2022-03-07
+  - course: Machine Learning Foundations: A Case Study Approach
+    description: A Coursera course covering machine learning with a series of practical case-studies.
+    cert_link: https://coursera.org/verify/FPVB85653ZX7
+    date: 2016-05-15
