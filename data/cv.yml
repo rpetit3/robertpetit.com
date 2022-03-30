@@ -261,6 +261,11 @@ teaching:
     date: 2015-01-01
 
 training:
+  - course: Microsoft Azure Services and Lifecycles
+    description: A Coursera course introducing Microsoft Azure service level agreements and service lifecycles.
+    url: https://coursera.org/verify/CJ5MBHV739JC
+    date: 2022-03-30
+
   - course: Microsoft Azure Management Tools and Security Solutions
     description: A Coursera course introducing Microsoft Azure portal and security related services.
     url: https://coursera.org/verify/MTDWGQDKMBG4
