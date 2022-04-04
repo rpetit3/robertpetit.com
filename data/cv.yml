@@ -261,6 +261,16 @@ teaching:
     date: 2015-01-01
 
 training:
+  - course: Specialization - Microsoft Azure Fundamentals AZ-900 Exam Prep
+    description: A Coursera specialization which includes 4 courses to prepare the learned for the Microsoft Azure AZ-900 certification.
+    url: https://coursera.org/verify/specialization/R87JX7KGUGCF
+    date: 2022-04-04
+
+  - course: Preparing for the AZ-900 Microsoft Azure Fundamentals Exam
+    description: A Coursera course with an overview of AZ-900 and practice exams
+    url: https://coursera.org/verify/222YE5N7A2PX
+    date: 2022-04-04
+
   - course: Microsoft Azure Services and Lifecycles
     description: A Coursera course introducing Microsoft Azure service level agreements and service lifecycles.
     url: https://coursera.org/verify/CJ5MBHV739JC
