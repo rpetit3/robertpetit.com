@@ -118,7 +118,10 @@
               <a href="{{ .url }}" target="_blank">
                 <strong>{{ .name }}</strong><br/>
               </a>
-              <i>{{ .description }} Achieved on {{ dateFormat "January 2, 2006" .date }}.</i>
+              <i>
+                Achieved on {{ dateFormat "January 2, 2006" .date }} <br />
+                {{ .description }} 
+              </i>
             <p>
           {{end}}
 
