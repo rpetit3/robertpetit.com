@@ -112,6 +112,16 @@
             <p>
           {{end}}
 
+          <h2>Certifications</h2>
+          {{ range sort $.Site.Data.cv.certifications "date" "desc" }}
+            <p>
+              <a href="{{ .url }}" target="_blank">
+                <strong>{{ .name }}</strong><br/>
+              </a>
+              <i>{{ .description }} Achieved on {{ dateFormat "January 2, 2006" .date }}.</i>
+            <p>
+          {{end}}
+
           <h2>Publications</h2>
           {{ $section := where $.Site.RegularPages "Section" "publication" }}
           {{ $count := len $section }}
