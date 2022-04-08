@@ -290,3 +290,9 @@ training:
     description: A Coursera course covering machine learning with a series of practical case-studies.
     url: https://coursera.org/verify/FPVB85653ZX7
     date: 2016-05-15
+
+certifications:
+  - name: "AZ-900: Microsoft Azure Fundamentals"
+    description: Demonstrates foundational knowledge of cloud services and how those services are provided with Microsoft Azure.
+    url: https://www.credly.com/badges/6bc1b80a-92ca-4f50-9fba-a3443962b06f
+    date: 2022-04-08
