@@ -100,7 +100,7 @@ presentations:
 
   - title: Bactopia: Highly scalable, portable and customizable bacterial genome analyses
     conference: Antimicrobial Resistance – Genomes, Big Data and Emerging Technologies
-    authors: ["***Robert A Petit III***"]
+    authors: ["***Robert A Petit III***", "Davi J. Marcon", "Abhinav Sharma", "Timothy D Read"]
     type: poster
     date: 2022-04-28
     url: https://bactopia.github.io/data/resources/2022-wellcome-amr-conference.pdf
