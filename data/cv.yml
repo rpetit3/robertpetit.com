@@ -98,7 +98,7 @@ presentations:
     url: https://bactopia.github.io/data/resources/2022-abn-bactopia.pdf
     video: https://youtu.be/x-xNO1zZ54s
 
-  - title: Bactopia: Highly scalable, portable and customizable bacterial genome analyses
+  - title: Bactopia Highly scalable, portable and customizable bacterial genome analyses
     conference: Antimicrobial Resistance – Genomes, Big Data and Emerging Technologies
     authors: ["***Robert A Petit III***", "Davi J. Marcon", "Abhinav Sharma", "Timothy D Read"]
     type: poster
