@@ -90,6 +90,22 @@ grants:
     date: 2013-06-01
 
 presentations:
+  - title: Using Bactopia for the complete analysis of bacterial genomes
+    conference: African Bioinformatics Network
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2022-05-01
+    url: https://bactopia.github.io/data/resources/2022-abn-bactopia.pdf
+    video: https://youtu.be/x-xNO1zZ54s
+
+  - title: Bactopia: Highly scalable, portable and customizable bacterial genome analyses
+    conference: Antimicrobial Resistance – Genomes, Big Data and Emerging Technologies
+    authors: ["***Robert A Petit III***"]
+    type: poster
+    date: 2022-04-28
+    url: https://bactopia.github.io/data/resources/2022-wellcome-amr-conference.pdf
+    video: https://youtu.be/pWVa-blIw48
+
   - title: Deeper dives, workflows and Bactopia
     conference: CLIMB Big Data - Bioinformatics Skills for Microbial Genomics Workshop
     authors: ["***Robert A Petit III***"]
