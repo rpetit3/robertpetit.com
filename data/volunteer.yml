@@ -1,4 +1,28 @@
 conda:
+    - title: "Submitted Mashpit to Bioconda"
+      date: 2022-06-02
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/35199"
+      pr_name: "bioconda/bioconda-recipes#35199"
+      tool: "mashpit"
+      tool_url: "https://github.com/tongzhouxu/mashpit"
+      description: "Sketch-based surveillance platform"
+      
+    - title: "Submitted LMAS to Bioconda"
+      date: 2022-03-25
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/33909"
+      pr_name: "bioconda/bioconda-recipes#33909"
+      tool: "lmas"
+      tool_url: "https://github.com/B-UMMI/LMAS"
+      description: "Workflow for benchmarking traditional and metagenomic assemblers"
+
+    - title: "Submitted TheiaCoV-GC to Bioconda"
+      date: 2022-02-17
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/33228"
+      pr_name: "bioconda/bioconda-recipes#33228"
+      tool: "theiacov-gc"
+      tool_url: "https://github.com/theiagen/public_health_viral_genomics"
+      description: "Workflow for genomic characterization of viral pathogens"
+
     - title: "Submitted peregrine-2021 to Bioconda"
       date: 2022-02-08
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/32810"
