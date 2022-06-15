@@ -87,7 +87,7 @@ conda:
       tool_url: "https://github.com/nawrockie/sequip"
       description: "Perl module for biological sequence analysis and supporting utilities"
 
-    - title: "Submitted SeroTtpeFinder to Bioconda"
+    - title: "Submitted SerotypeFinder to Bioconda"
       date: 2021-07-22
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/29718"
       pr_name: "bioconda/bioconda-recipes#29718"
