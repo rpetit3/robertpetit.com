@@ -133,7 +133,7 @@ conda:
       pr_name: "bioconda/bioconda-recipes#26040"
       tool: "shovill-se"
       tool_url: "https://github.com/rpetit3/shovill"
-      description: "A fork of Shovill that includes support for single end reads
+      description: "A fork of Shovill that includes support for single end reads"
 
     - title: "Submitted RFPlasmid to Bioconda"
       date: 2020-12-16
