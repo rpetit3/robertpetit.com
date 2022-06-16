@@ -103,6 +103,14 @@ conda:
       tool_url: "https://github.com/rpetit3/dragonflye"
       description: "Assemble bacterial isolate genomes from Nanopore reads"
 
+    - title: "Added staphopia-sccmec to Bioconda"
+      date: 2021-04-26
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/28214"
+      pr_name: "bioconda/bioconda-recipes#28214"
+      tool: "staphopia-sccmec"
+      tool_url: "https://github.com/staphopia/staphopia-sccmec"
+      description: "A standalone version of Staphopia's SCCmec typing method"
+
     - title: "Submitted Phirbo to Bioconda"
       date: 2021-01-11
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/26144"
