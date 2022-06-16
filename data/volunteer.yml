@@ -127,6 +127,14 @@ conda:
       tool_url: "https://github.com/gamcil/clinker"
       description: "gene cluster comparison figure generator"
 
+    - title: "Submitted shovill-se to Bioconda"
+      date: 2021-01-04
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/26040"
+      pr_name: "bioconda/bioconda-recipes#26040"
+      tool: "shovill-se"
+      tool_url: "https://github.com/rpetit3/shovill"
+      description: "A fork of Shovill that includes support for single end reads
+
     - title: "Submitted RFPlasmid to Bioconda"
       date: 2020-12-16
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/25849"
@@ -143,14 +151,6 @@ conda:
       tool_url: "https://github.com/katholt/genotyphi"
       description: "assign genotypes to *Salmonella* Typhi genomes"
 
-    - title: "Submitted Aspera Connect to personal Anaconda channel"
-      date: 2019-10-08
-      pr_url: "https://anaconda.org/rpetit3/aspera-connect"
-      pr_name: "anaconda/rpetit3"
-      tool: "Aspera Connect"
-      tool_url: "https://www.ibm.com/aspera/connect/"
-      description: "high-performance transfer client"
-
     - title: "Submitted tbl2asn-forever Bioconda"
       date: 2020-01-31
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/20073"
@@ -159,13 +159,37 @@ conda:
       tool_url: "https://github.com/rpetit3/tbl2asn-forever"
       description: "use tbl2asn forever by pretending that it's still 2019"
 
-    - title: "Submitted ISMapper to Bioconda"
-      date: 2019-03-25
-      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/14180"
-      pr_name: "bioconda/bioconda-recipes#14180"
-      tool: "ISMapper"
-      tool_url: "https://github.com/jhawkey/IS_mapper"
-      description: "insertion sequence mapping software"
+    - title: "Submitted Aspera Connect to personal Anaconda channel"
+      date: 2019-10-08
+      pr_url: "https://anaconda.org/rpetit3/aspera-connect"
+      pr_name: "anaconda/rpetit3"
+      tool: "Aspera Connect"
+      tool_url: "https://www.ibm.com/aspera/connect/"
+      description: "high-performance transfer client"
+
+    - title: "Submitted fastq-dl Bioconda"
+      date: 2019-08-12
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/18252"
+      pr_name: "bioconda/bioconda-recipes#18252"
+      tool: "fastq-dl"
+      tool_url: "https://github.com/rpetit3/fastq-dl"
+      description: "Download FASTQ files from SRA or ENA repositories."
+
+    - title: "Submitted bactopia Bioconda"
+      date: 2019-08-12
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/17434"
+      pr_name: "bioconda/bioconda-recipes#17434"
+      tool: "bactopia"
+      tool_url: "https://github.com/bactopia/bactopia"
+      description: "A flexible pipeline for complete analysis of bacterial genomes"
+
+    - title: "Submitted ena-dl Bioconda"
+      date: 2019-08-09
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/17354"
+      pr_name: "bioconda/bioconda-recipes#17354"
+      tool: "ena-dl"
+      tool_url: "https://github.com/rpetit3/ena-dl"
+      description: "Download FASTQ files from ENA"
 
     - title: "Submitted Executor to Conda-Forge"
       date: 2019-08-07
@@ -182,3 +206,44 @@ conda:
       tool: "property-manager"
       tool_url: "https://github.com/xolox/python-property-manager"
       description: "useful property variants for Python programming"
+
+    - title: "Submitted ISMapper to Bioconda"
+      date: 2019-03-25
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/14180"
+      pr_name: "bioconda/bioconda-recipes#14180"
+      tool: "ISMapper"
+      tool_url: "https://github.com/jhawkey/IS_mapper"
+      description: "insertion sequence mapping software"
+
+    - title: "Submitted illumina-cleanup Bioconda"
+      date: 2019-01-30
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/11481"
+      pr_name: "bioconda/bioconda-recipes#11481"
+      tool: "illumina-cleanup"
+      tool_url: "https://github.com/rpetit3/illumina-cleanup"
+      description: "A simple pipeline for pre-processing Illumina FASTQ files"
+
+    - title: "Submitted vcf-annotator Bioconda"
+      date: 2019-10-26
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/13417"
+      pr_name: "bioconda/bioconda-recipes#13417"
+      tool: "vcf-annotator"
+      tool_url: "https://github.com/rpetit3/assembly-scan"
+      description: "Add biological annotations to variants in a given VCF file"
+
+    - title: "Submitted assembly-scan Bioconda"
+      date: 2019-10-19
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/11425"
+      pr_name: "bioconda/bioconda-recipes#11425"
+      tool: "assembly-scan"
+      tool_url: "https://github.com/rpetit3/assembly-scan"
+      description: "Generate basic stats for an assembly"
+
+    - title: "Submitted fastq-scan Bioconda"
+      date: 2019-10-19
+      pr_url: "https://github.com/bioconda/bioconda-recipes/pull/11415"
+      pr_name: "bioconda/bioconda-recipes#11415"
+      tool: "fastq-scan"
+      tool_url: "https://github.com/rpetit3/fastq-scan"
+      description: "Output FASTQ summary statistics in JSON format"
+
