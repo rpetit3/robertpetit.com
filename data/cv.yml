@@ -74,6 +74,10 @@ employment:
 
 grants:
   - name: Amazon Web Services Cloud Credits for Research
+    amount: 10000
+    date: 2022-06-01
+
+  - name: Amazon Web Services Cloud Credits for Research
     amount: 12500
     date: 2019-10-01
 
@@ -90,6 +94,20 @@ grants:
     date: 2013-06-01
 
 presentations:
+  - title: Using Bactopia for highly scalable, portable and customizable bacterial genome analyses
+    conference: Sequencing to Function Analysis and Applications for the Future 
+    authors: ["***Robert A Petit III***", "Davi J. Marcon", "Abhinav Sharma", "Timothy D Read"]
+    type: poster
+    date: 2022-06-21
+    url: https://bactopia.github.io/data/resources/2022-sfaf-poster-final.pdf
+
+  - title: Bactopia v2 Highly scalable, portable and customizable bacterial genome analyses
+    conference: APHL Annual Conference
+    authors: ["***Robert A Petit III***", "Davi J. Marcon", "Abhinav Sharma", "Timothy D Read"]
+    type: poster
+    date: 2022-05-17
+    url: https://bactopia.github.io/data/resources/2022-aphl-conference.pdf
+
   - title: Using Bactopia for the complete analysis of bacterial genomes
     conference: African Bioinformatics Network
     authors: ["***Robert A Petit III***"]
@@ -98,7 +116,7 @@ presentations:
     url: https://bactopia.github.io/data/resources/2022-abn-bactopia.pdf
     video: https://youtu.be/x-xNO1zZ54s
 
-  - title: Bactopia Highly scalable, portable and customizable bacterial genome analyses
+  - title: Bactopia v2 Highly scalable, portable and customizable bacterial genome analyses
     conference: Antimicrobial Resistance – Genomes, Big Data and Emerging Technologies
     authors: ["***Robert A Petit III***", "Davi J. Marcon", "Abhinav Sharma", "Timothy D Read"]
     type: poster
