@@ -1,4 +1,12 @@
 conda:
+    - title: "Submitted ParallelTask to Conda-Forge"
+      date: 2022-07-25
+      pr_url: "https://github.com/conda-forge/staged-recipes/pull/19616"
+      pr_name: "conda-forge/staged-recipes#19616"
+      tool: "ParallelTask"
+      tool_url: "https://github.com/moold/ParallelTask"
+      description: "A simple and lightweight parallel task engine"
+
     - title: "Submitted Mashpit to Bioconda"
       date: 2022-06-02
       pr_url: "https://github.com/bioconda/bioconda-recipes/pull/35199"
