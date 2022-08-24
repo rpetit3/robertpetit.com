@@ -12,6 +12,7 @@ declare -a tools=(
     "illumina-cleanup"
     "illumina-simulation"
     "pasty"
+    "pbptyper"
     "pmga"
     "shovill-se"
     "staphopia"
