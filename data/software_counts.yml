@@ -4,7 +4,7 @@ assembly_scan:
 
 bactopia:
   - downloads: 31993
-    stars: 186
+    stars: 187
 
 call_variants:
   - downloads: 0
@@ -39,7 +39,7 @@ pasty:
     stars: 3
 
 pbptyper:
-  - downloads: 245
+  - downloads: 251
     stars: 5
 
 pmga:
@@ -59,7 +59,7 @@ staphopia_sccmec:
     stars: 0
 
 tbl2asn_forever:
-  - downloads: 29897
+  - downloads: 29952
     stars: 2
 
 vcf_annotator:
