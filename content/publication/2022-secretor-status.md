@@ -7,7 +7,7 @@ cover = ""
 
 abstract = "Norovirus infection causing acute gastroenteritis could lead to adverse effects on the gut microbiome. We assessed the association of microbiome diversity with norovirus infection and secretor status in patients from Veterans Affairs medical centers. Alpha diversity metrics were lower among patients with acute gastroenteritis but were similar for other comparisons."
 
-authors = ["Jordan A Johnson", "Timothy D Read", "***Robert A Petit III", "Vincent C Marconi", "Kathryn L Meagley", "Maria C Rodriguez-Barradas", "David O Beenhouwer", "Sheldon T Brown", "Mark Holodniy", "Cynthia A Lucero-Obusan", "Patricia Schirmer", "Jessica M Ingersoll", "Colleen S Kraft", "Frederick H Neill", "Robert L Atmar", "Anita K Kambhampati", "Jordan E Cates", "Sara A Mirza", "Aron J Hall", "Cristina V Cardemil", "Benjamin A Lopman"]
+authors = ["Jordan A Johnson", "Timothy D Read", "***Robert A Petit III***", "Vincent C Marconi", "Kathryn L Meagley", "Maria C Rodriguez-Barradas", "David O Beenhouwer", "Sheldon T Brown", "Mark Holodniy", "Cynthia A Lucero-Obusan", "Patricia Schirmer", "Jessica M Ingersoll", "Colleen S Kraft", "Frederick H Neill", "Robert L Atmar", "Anita K Kambhampati", "Jordan E Cates", "Sara A Mirza", "Aron J Hall", "Cristina V Cardemil", "Benjamin A Lopman"]
 date = "2022-05-01"
 journal = "*Open Forum Infectious Diseases*"
 title = "Association of Secretor Status and Recent Norovirus Infection With Gut Microbiome Diversity Metrics in a Veterans Affairs Population"
