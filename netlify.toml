@@ -37,6 +37,19 @@
   for = "index.xml"
   [headers.values]
     Content-Type = "application/rss+xml"
+    
+# The following redirect is intended for use with most SPAs that handle
+# routing internally.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
 
 [context.branch-name.processing]
   skip_processing = false
