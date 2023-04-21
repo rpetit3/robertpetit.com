@@ -226,7 +226,9 @@
             <p>
             <strong>{{ .role | title }}</strong><br/>
             <i>{{ .course }}, {{ .level }} Level, {{.school}}, {{ dateFormat "2006" .date }} </i><br/>
-            Supervised by {{ .faculty }} <br />
+            {{ if isset $e "video" }}
+                Supervised by {{ .faculty }} <br />
+            {{ end }}
             {{ .description }}
             <p>
           {{end}}

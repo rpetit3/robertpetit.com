@@ -94,6 +94,64 @@ grants:
     date: 2013-06-01
 
 presentations:
+  - title: Production pipeline for wastewater surveillance, a new tool for Wyoming public health
+    conference: Wyoming Association of Rural Water Systems 32nd Annual Training Conference
+    authors: ["Daniel J.R. Hintz", "***Robert A Petit III***", "Taylor Fearing", "Chayse Rowley", "Jim Mildenberger", "Rob Christensen", "Timothy J. Robinson", "Joseph M. Reed"]
+    type: poster
+    date: 2023-04-19
+    url: https://www.robertpetit.com/pdf/posters/2023-04-wastewater-poster.pdf
+
+  - title: Production pipeline for wastewater surveillance, a new tool for Wyoming public health
+    conference: 60th International Biomedical Sciences Instrumentation Symposium
+    authors: ["Daniel J.R. Hintz", "***Robert A Petit III***", "Taylor Fearing", "Chayse Rowley", "Jim Mildenberger", "Rob Christensen", "Timothy J. Robinson", "Joseph M. Reed"]
+    type: poster
+    date: 2023-04-15
+    url: https://www.robertpetit.com/pdf/posters/2023-04-wastewater-poster.pdf
+
+  - title: Automated genomic surveillance in Wyoming with Microsoft Azure and Nextflow
+    conference: APHL ID Lab Con 2023
+    authors: ["***Robert A Petit III***", "Taylor Fearing", "Chayse Rowley", "Ashley Norberg", "Jim Mildenberger", "Rob Christensen", "Joseph M. Reed"]
+    type: poster
+    date: 2023-03-13
+    url: https://www.robertpetit.com/pdf/posters/2023-03-APHL-IDLabCon-poster.pdf
+
+  - title: Supporting the bioinformatics community by supporting Bactopia users
+    conference: ASM Conference on Rapid Applied Microbial Next-Generation Sequencing and Bioinformatic Pipelines (ASMNGS)
+    authors: ["***Robert A Petit III***", "Taylor Fearing", "Chayse Rowley", "Jim Mildenberger", "Timothy D Read"]
+    type: poster
+    date: 2022-10-16
+    url: https://bactopia.github.io/v2.2.0/data/resources/2022-asmngs.pdf
+
+  - title: Designing mechanisms into Bactopia to support its users and contribute back to the community
+    conference: Nextflow Summit 2022
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2022-10-12
+    url: https://summit.nextflow.io/program/oct-12-designing-mechanisms-into-bactopia-to-support-its-users-and-contribute-back-to-the-community/
+    video: https://youtu.be/I0z1z7EKv2M
+
+  - title: Using Bactopia for highly scalable, portable and customizable bacterial genome analyses
+    conference: 11th International Conference on Emerging Infectious Diseases (ICEID)
+    authors: ["***Robert A Petit III***", "Taylor Fearing", "Chayse Rowley", "Jim Mildenberger", "Timothy D Read"]
+    type: poster
+    date: 2022-08-07
+    url: https://bactopia.github.io/data/resources/2022-iceid-poster-final.pdf
+
+  - title: Bactopia & it's usage of nf-core components
+    conference: nf-core Bytesize Talks
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2022-07-20
+    url: https://bactopia.github.io/v2.2.0/data/resources/2022-nf-core-bytesize-bactopia.pdf
+    video: https://www.youtube.com/watch?v=egjgcmeJ0wQ
+
+  - title: Microreact and Data.flo for more than genomic epidemiology
+    conference: SPHERES Meeting
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2022-05-25
+    url: https://www.robertpetit.com/pdf/posters/2022-05-cgps-spheres.pdf
+
   - title: Using Bactopia for highly scalable, portable and customizable bacterial genome analyses
     conference: Sequencing to Function Analysis and Applications for the Future 
     authors: ["***Robert A Petit III***", "Davi J. Marcon", "Abhinav Sharma", "Timothy D Read"]
@@ -270,6 +328,13 @@ presentations:
     url: https://doi.org/10.6084/m9.figshare.13726480.v1
 
 teaching:
+  - course: Workshop for using Bactopia
+    description: A workshop conducted with the CDC Enteric Diseases Laboratory Branch (EDLB), introducing Bactopia and Bactopia Tools.
+    role: Instructor
+    school: Wyoming Public Health Laboratory
+    level: Professional
+    date: 2023-03-13
+
   - course: Advance Python Programming in Bioinformatics
     description: Developed and taught an advanced Python programming course to a group of graduate students.
     faculty: Dr. Tim Read
