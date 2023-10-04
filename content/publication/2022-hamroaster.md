@@ -1,0 +1,18 @@
++++
+draft = false
+pin = false
+type = "publication"
+summary = "We report hAMRoaster for assessing accuracy of prediction of antibiotic resistance phenotypes"
+cover = ""
+
+abstract = "**Background** The use of shotgun metagenomics for AMR detection is appealing because data can be generated from clinical samples with minimal processing. Detecting antimicrobial resistance (AMR) in clinical genomic data is an important epidemiological task, yet a complex bioinformatic process. Many software tools exist to detect AMR genes, but they have mostly been tested in their detection of genotypic resistance in individual bacterial strains. Further, these tools use different databases, or even different versions of the same databases. Understanding the comparative performance of these bioinformatics tools for AMR gene detection in shotgun metagenomic data is important because this data type is increasingly used in public health and clinical settings.\\\n\\\n**Methods** We developed a software pipeline, hAMRoaster (Harmonized AMR Output compAriSon Tool ER; https://github.com/ewissel/hAMRoaster), for assessing accuracy of prediction of antibiotic resistance phenotypes. For evaluation purposes, we simulated a highly resistant mock community and several low resistance metagenomic short read (Illumina) samples based on sequenced strains with known phenotypes. We benchmarked nine open source bioinformatics tools for detecting AMR genes that 1) were conda or Docker installable, 2) had been actively maintained, 3) had an open source license, and 4) took FASTA or FASTQ files as input. hAMRoaster calculated sensitivity, specificity, precision, and accuracy for each tool, comparing detected AMR genes to susceptibility testing.\\\n\\\n**Conclusion** Overall, all tools were precise and accurate at all genome coverage levels tested (5x, 50x, 100x sequenced bases / genome length) in the highly resistant mock community with more variability in the low resistance community (1x coverage). This study demonstrated that different bioinformatic tools and pipelines yield differences in AMR gene identification across drug classes, and that these differences become important if researchers are interested in resistance to specific drug classes.\\\n\\\n**Significance** Software selection for metagenomic AMR prediction should be driven by the context of the clinical/research questions and tolerance for true and false negative results. The ability to assess which bioinformatics tool best fits a particular dataset prior to beginning a large-scale project allows for more efficient processing and analysis using optimal tools for a particular research question. As prediction software and databases are in a state of constant refinement, the approach used here—creating synthetic communities containing taxa and phenotypes of interest along with using hAMRoaster to assess performance of candidate software—offers a template to aid researchers in selecting the most appropriate strategy at the time of analysis."
+
+authors = ["Emily F Wissel", "Brooke M Talbot", "Noriko A B Toyosato", "***Robert A Petit III***", "Vicki Hertzberg", "Anne Dunlop", "Timothy D Read"]
+date = "2022-01-13"
+journal = "*bioRxiv*"
+title = "hAMRoaster: a tool for comparing performance of AMR gene detection software"
+tags =  ["amr", "bioinformatics", "report"]
+doi = "10.1101/2022.01.13.476279"
+pdf = "/pdf/2022-hamroaster.pdf"
+citation = "Wissel, E. F., Talbot, B. M., Toyosato, N. A. B., Petit III, R. A., Hertzberg, V., Dunlop, A., & Read T. D. hAMRoaster: a tool for comparing performance of AMR gene detection software. bioRxiv (2022)"
++++
