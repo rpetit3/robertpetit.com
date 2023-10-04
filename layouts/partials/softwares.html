@@ -33,7 +33,7 @@
             {{ $section_title }}
           </h2>
           <ol class="d-flex flex-wrap list-style-none gutter-condensed mb-4 js-pinned-items-reorder-list">
-            {{ range (first 6 $section) }}
+            {{ range where (where $.Site.RegularPages.ByTitle "Section" "software" ) "Params.software_pin" true }}
             {{ $counts := (index (index $.Site.Data.software_counts .Title) 0) }}
             <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
               
