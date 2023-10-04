@@ -9,6 +9,7 @@ declare -a tools=(
     "ena-dl"
     "fastq-dl"
     "fastq-scan"
+    "goblin"
     "illumina-cleanup"
     "illumina-simulation"
     "pasty"
