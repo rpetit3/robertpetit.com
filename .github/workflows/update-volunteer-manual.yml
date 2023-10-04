@@ -55,8 +55,8 @@ jobs:
       - name: Update and Commit
         run: |
           echo ${{ github.ref }}
-          echo '${{ JSON.stringify(steps.get_latest_pr.outputs.data)}}'" > data/github.json
-          echo '${{ JSON.stringify(steps.get_latest_pr_merged.outputs.data)}}'" > data/merged.json
+          echo '${{ steps.get_latest_pr.outputs.data }}'" > data/github.json
+          echo '${{ steps.get_latest_pr_merged.outputs.data }}'" > data/merged.json
           git add data/github.json
           git add data/merged.json
           git config --local user.email "action@github.com"
