@@ -70,7 +70,7 @@
             "nameWithOwner": "nf-core/modules"
           },
           "createdAt": "2023-08-11T05:26:07Z",
-          "mergedAt": null,
+          "mergedAt": "2023-10-05T05:33:44Z",
           "url": "https://github.com/nf-core/modules/pull/3725",
           "changedFiles": 6,
           "additions": 173,
@@ -445,7 +445,7 @@
             "nameWithOwner": "nf-core/modules"
           },
           "createdAt": "2022-12-28T17:25:44Z",
-          "mergedAt": null,
+          "mergedAt": "2023-10-05T05:33:44Z",
           "url": "https://github.com/nf-core/modules/pull/2702",
           "changedFiles": 6,
           "additions": 135,
