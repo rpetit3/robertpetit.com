@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 320,
+    "issueCount": 321,
     "edges": [
+      {
+        "node": {
+          "number": 44370,
+          "title": "update vadr to v1.6",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2023-11-21T04:04:43Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/44370",
+          "changedFiles": 1,
+          "additions": 9,
+          "deletions": 7
+        }
+      },
       {
         "node": {
           "number": 461,
@@ -1485,21 +1500,6 @@
           "changedFiles": 6,
           "additions": 40,
           "deletions": 33
-        }
-      },
-      {
-        "node": {
-          "number": 56,
-          "title": "Update README.md",
-          "repository": {
-            "nameWithOwner": "microbinfie-hackathon2020/CSIS"
-          },
-          "createdAt": "2022-03-14T23:40:44Z",
-          "mergedAt": "2022-04-01T09:37:08Z",
-          "url": "https://github.com/microbinfie-hackathon2020/CSIS/pull/56",
-          "changedFiles": 1,
-          "additions": 1,
-          "deletions": 1
         }
       }
     ]
