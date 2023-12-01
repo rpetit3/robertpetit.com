@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 321,
+    "issueCount": 322,
     "edges": [
+      {
+        "node": {
+          "number": 44553,
+          "title": "nrpys -  fix license text",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2023-11-30T16:57:59Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/44553",
+          "changedFiles": 2,
+          "additions": 666,
+          "deletions": 4542
+        }
+      },
       {
         "node": {
           "number": 44370,
@@ -1485,21 +1500,6 @@
           "changedFiles": 3,
           "additions": 255,
           "deletions": 1
-        }
-      },
-      {
-        "node": {
-          "number": 23,
-          "title": "Add new reference index params to required input checks, allow single sample, add skip_phylogeny",
-          "repository": {
-            "nameWithOwner": "CDCgov/mycosnp-nf"
-          },
-          "createdAt": "2022-03-17T01:00:45Z",
-          "mergedAt": "2022-03-17T20:15:49Z",
-          "url": "https://github.com/CDCgov/mycosnp-nf/pull/23",
-          "changedFiles": 6,
-          "additions": 40,
-          "deletions": 33
         }
       }
     ]
