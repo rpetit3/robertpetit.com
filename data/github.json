@@ -10,11 +10,11 @@
             "nameWithOwner": "bioconda/bioconda-recipes"
           },
           "createdAt": "2023-11-30T16:57:59Z",
-          "mergedAt": null,
+          "mergedAt": "2023-12-01T10:29:40Z",
           "url": "https://github.com/bioconda/bioconda-recipes/pull/44553",
           "changedFiles": 2,
-          "additions": 666,
-          "deletions": 4542
+          "additions": 664,
+          "deletions": 4540
         }
       },
       {
