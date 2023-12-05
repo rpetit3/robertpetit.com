@@ -26,10 +26,7 @@
                         </div>
                       </div>
                       <span class="p-name vcard-fullname d-block overflow-hidden">{{ .Site.Params.author }}</span>
-                      {{ range first 1 (sort $.Site.Data.cv.employment "start" "desc") }}
-                        <span class="p-nickname vcard-username d-block">{{ .title | title }}</span>
-
-                      {{end}}
+                        <span class="p-nickname vcard-username d-block">{{ $.Site.Data.cv.title }}</span>
                     </span>
                   </div>
                 </div>
