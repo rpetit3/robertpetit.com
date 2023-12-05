@@ -47,7 +47,13 @@ employment:
     location: Cheyenne, WY
     start: 2021-05-01
     end: present
-    
+
+  - title: Adjunct Professor
+    company: University of Wyoming
+    location: Laramie, WY
+    start: 2022-03-01
+    end: present
+
   - title: Senior Data Analyst
     company: Emory University
     location: Atlanta, GA
@@ -93,7 +99,15 @@ grants:
     amount: 10000
     date: 2013-06-01
 
-presentations:
+presentations:  
+  - title: Bactopia v3 enhancements for on-going genomic surveillance
+    conference: Nextflow Summit - Boston 2023
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2023-11-28
+    url: https://datasets.bactopia.com/media/2023-bactopiav3-nf-summit-boston.pdf
+    video: https://youtu.be/su8wvdR7N2Y?si=EFZlOf7R9Qa40jbP
+
   - title: Production pipeline for wastewater surveillance, a new tool for Wyoming public health
     conference: Wyoming Association of Rural Water Systems 32nd Annual Training Conference
     authors: ["Daniel J.R. Hintz", "***Robert A Petit III***", "Taylor Fearing", "Chayse Rowley", "Jim Mildenberger", "Rob Christensen", "Timothy J. Robinson", "Joseph M. Reed"]
@@ -120,7 +134,7 @@ presentations:
     authors: ["***Robert A Petit III***", "Taylor Fearing", "Chayse Rowley", "Jim Mildenberger", "Timothy D Read"]
     type: poster
     date: 2022-10-16
-    url: https://bactopia.github.io/v2.2.0/data/resources/2022-asmngs.pdf
+    url: https://datasets.bactopia.com/media/2022-asmngs.pdf
 
   - title: Designing mechanisms into Bactopia to support its users and contribute back to the community
     conference: Nextflow Summit 2022
@@ -135,7 +149,7 @@ presentations:
     authors: ["***Robert A Petit III***", "Taylor Fearing", "Chayse Rowley", "Jim Mildenberger", "Timothy D Read"]
     type: poster
     date: 2022-08-07
-    url: https://bactopia.github.io/data/resources/2022-iceid-poster-final.pdf
+    url: https://datasets.bactopia.com/media/2022-iceid-poster-final.pdf
 
   - title: Bactopia & it's usage of nf-core components
     conference: nf-core Bytesize Talks
@@ -157,21 +171,21 @@ presentations:
     authors: ["***Robert A Petit III***", "Davi J. Marcon", "Abhinav Sharma", "Timothy D Read"]
     type: poster
     date: 2022-06-21
-    url: https://bactopia.github.io/data/resources/2022-sfaf-poster-final.pdf
+    url: https://datasets.bactopia.com/media/2022-sfaf-poster-final.pdf
 
   - title: Bactopia v2 Highly scalable, portable and customizable bacterial genome analyses
     conference: APHL Annual Conference
     authors: ["***Robert A Petit III***", "Davi J. Marcon", "Abhinav Sharma", "Timothy D Read"]
     type: poster
     date: 2022-05-17
-    url: https://bactopia.github.io/data/resources/2022-aphl-conference.pdf
+    url: https://datasets.bactopia.com/media/2022-aphl-conference.pdf
 
   - title: Using Bactopia for the complete analysis of bacterial genomes
     conference: African Bioinformatics Network
     authors: ["***Robert A Petit III***"]
     type: talk
     date: 2022-05-01
-    url: https://bactopia.github.io/data/resources/2022-abn-bactopia.pdf
+    url: https://datasets.bactopia.com/media/2022-abn-bactopia.pdf
     video: https://youtu.be/x-xNO1zZ54s
 
   - title: Bactopia v2 Highly scalable, portable and customizable bacterial genome analyses
@@ -179,7 +193,7 @@ presentations:
     authors: ["***Robert A Petit III***", "Davi J. Marcon", "Abhinav Sharma", "Timothy D Read"]
     type: poster
     date: 2022-04-28
-    url: https://bactopia.github.io/data/resources/2022-wellcome-amr-conference.pdf
+    url: https://datasets.bactopia.com/media/2022-wellcome-amr-conference.pdf
     video: https://youtu.be/pWVa-blIw48
 
   - title: Deeper dives, workflows and Bactopia
@@ -328,6 +342,27 @@ presentations:
     url: https://doi.org/10.6084/m9.figshare.13726480.v1
 
 teaching:
+  - course: Building NGS Data Analysis Workflows
+    description: A workshop on workflow managers and their usage in genomics delivered at ASM Microbe 2023
+    role: Instructor
+    school: Wyoming Public Health Laboratory
+    level: Professional
+    date: 2023-06-15
+
+  - course: Bacterial or Fungal WGS Bioinformatics
+    description: An introductory course on bacterial and fungal WGS delivered at ASM Microbe 2023
+    role: Instructor
+    school: Wyoming Public Health Laboratory
+    level: Professional
+    date: 2023-06-15
+
+  - course: Nextflow on ARCC
+    description: "A workshop for using Nextflow on the University of Wyoming's Advanced Research Compute Cluster"
+    role: Instructor
+    school: Wyoming Public Health Laboratory
+    level: Professional
+    date: 2023-05-15
+
   - course: Workshop for using Bactopia
     description: A workshop conducted with the CDC Enteric Diseases Laboratory Branch (EDLB), introducing Bactopia and Bactopia Tools.
     role: Instructor
