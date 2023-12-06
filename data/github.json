@@ -20,7 +20,7 @@
       {
         "node": {
           "number": 44370,
-          "title": "update vadr to v1.6",
+          "title": "update vadr to v1.6.2",
           "repository": {
             "nameWithOwner": "bioconda/bioconda-recipes"
           },
