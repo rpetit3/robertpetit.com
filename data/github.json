@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 322,
+    "issueCount": 323,
     "edges": [
+      {
+        "node": {
+          "number": 12,
+          "title": "split seqbox_utils.py into smaller files",
+          "repository": {
+            "nameWithOwner": "flashton2003/seqbox"
+          },
+          "createdAt": "2023-12-10T01:03:40Z",
+          "mergedAt": null,
+          "url": "https://github.com/flashton2003/seqbox/pull/12",
+          "changedFiles": 25,
+          "additions": 2932,
+          "deletions": 1821
+        }
+      },
       {
         "node": {
           "number": 44553,
@@ -1485,21 +1500,6 @@
           "changedFiles": 1,
           "additions": 4,
           "deletions": 4
-        }
-      },
-      {
-        "node": {
-          "number": 25,
-          "title": "add mycosnptree workflow",
-          "repository": {
-            "nameWithOwner": "CDCgov/mycosnp-nf"
-          },
-          "createdAt": "2022-03-18T03:29:36Z",
-          "mergedAt": null,
-          "url": "https://github.com/CDCgov/mycosnp-nf/pull/25",
-          "changedFiles": 3,
-          "additions": 255,
-          "deletions": 1
         }
       }
     ]
