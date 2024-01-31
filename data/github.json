@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 323,
+    "issueCount": 324,
     "edges": [
+      {
+        "node": {
+          "number": 622,
+          "title": "add profile for arcc",
+          "repository": {
+            "nameWithOwner": "nf-core/configs"
+          },
+          "createdAt": "2024-01-30T22:01:54Z",
+          "mergedAt": null,
+          "url": "https://github.com/nf-core/configs/pull/622",
+          "changedFiles": 5,
+          "additions": 136,
+          "deletions": 0
+        }
+      },
       {
         "node": {
           "number": 12,
@@ -1485,21 +1500,6 @@
           "changedFiles": 3,
           "additions": 4,
           "deletions": 15
-        }
-      },
-      {
-        "node": {
-          "number": 1419,
-          "title": "Update test.yml for Roary module",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2022-03-18T15:10:40Z",
-          "mergedAt": "2022-03-19T15:06:21Z",
-          "url": "https://github.com/nf-core/modules/pull/1419",
-          "changedFiles": 1,
-          "additions": 4,
-          "deletions": 4
         }
       }
     ]
