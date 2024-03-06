@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 324,
+    "issueCount": 325,
     "edges": [
+      {
+        "node": {
+          "number": 46168,
+          "title": "build fastq-scan for linux-aarch64",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-03-05T06:24:03Z",
+          "mergedAt": "2024-03-06T01:52:57Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/46168",
+          "changedFiles": 1,
+          "additions": 7,
+          "deletions": 1
+        }
+      },
       {
         "node": {
           "number": 622,
@@ -1485,21 +1500,6 @@
           "changedFiles": 1,
           "additions": 4,
           "deletions": 3
-        }
-      },
-      {
-        "node": {
-          "number": 1428,
-          "title": "update bakta to latest version (v1.4.0)",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2022-03-22T19:23:23Z",
-          "mergedAt": "2022-03-24T16:49:17Z",
-          "url": "https://github.com/nf-core/modules/pull/1428",
-          "changedFiles": 3,
-          "additions": 4,
-          "deletions": 15
         }
       }
     ]
