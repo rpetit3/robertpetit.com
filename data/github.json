@@ -1,7 +1,52 @@
 {
   "search": {
-    "issueCount": 325,
+    "issueCount": 328,
     "edges": [
+      {
+        "node": {
+          "number": 46238,
+          "title": "linux-aarch64 build for entrez-direct",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-03-06T21:00:15Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/46238",
+          "changedFiles": 5,
+          "additions": 55,
+          "deletions": 31
+        }
+      },
+      {
+        "node": {
+          "number": 46237,
+          "title": "linux-aarch64 build for ncbi blast",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-03-06T20:36:10Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/46237",
+          "changedFiles": 1,
+          "additions": 3,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 46236,
+          "title": "linux-aarch64 build for assembly-scan",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-03-06T20:27:11Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/46236",
+          "changedFiles": 1,
+          "additions": 7,
+          "deletions": 1
+        }
+      },
       {
         "node": {
           "number": 46168,
@@ -1455,51 +1500,6 @@
           "changedFiles": 2,
           "additions": 8,
           "deletions": 11
-        }
-      },
-      {
-        "node": {
-          "number": 33909,
-          "title": "add recipe for LMAS",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2022-03-25T15:44:34Z",
-          "mergedAt": "2022-03-26T01:05:57Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/33909",
-          "changedFiles": 2,
-          "additions": 46,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 1444,
-          "title": "add module for panaroo, fix pirate tests",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2022-03-24T18:09:57Z",
-          "mergedAt": "2022-03-25T02:11:05Z",
-          "url": "https://github.com/nf-core/modules/pull/1444",
-          "changedFiles": 9,
-          "additions": 186,
-          "deletions": 38
-        }
-      },
-      {
-        "node": {
-          "number": 1442,
-          "title": "Update dragonflye to latest version",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2022-03-24T17:07:09Z",
-          "mergedAt": "2022-03-24T18:56:32Z",
-          "url": "https://github.com/nf-core/modules/pull/1442",
-          "changedFiles": 1,
-          "additions": 4,
-          "deletions": 3
         }
       }
     ]
