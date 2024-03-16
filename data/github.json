@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 328,
+    "issueCount": 329,
     "edges": [
+      {
+        "node": {
+          "number": 46458,
+          "title": "pin tabix version in snippy",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-03-15T04:50:17Z",
+          "mergedAt": "2024-03-15T16:46:33Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/46458",
+          "changedFiles": 1,
+          "additions": 4,
+          "deletions": 1
+        }
+      },
       {
         "node": {
           "number": 46238,
@@ -73,7 +88,7 @@
           "mergedAt": null,
           "url": "https://github.com/nf-core/configs/pull/622",
           "changedFiles": 5,
-          "additions": 136,
+          "additions": 347,
           "deletions": 0
         }
       },
@@ -1485,21 +1500,6 @@
           "changedFiles": 6,
           "additions": 185,
           "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 46,
-          "title": "Remove extra tabs in qc_report and replace `+=` on list",
-          "repository": {
-            "nameWithOwner": "CDCgov/mycosnp-nf"
-          },
-          "createdAt": "2022-04-20T00:42:02Z",
-          "mergedAt": "2022-04-28T13:53:13Z",
-          "url": "https://github.com/CDCgov/mycosnp-nf/pull/46",
-          "changedFiles": 2,
-          "additions": 8,
-          "deletions": 11
         }
       }
     ]
