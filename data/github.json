@@ -85,10 +85,10 @@
             "nameWithOwner": "nf-core/configs"
           },
           "createdAt": "2024-01-30T22:01:54Z",
-          "mergedAt": null,
+          "mergedAt": "2024-03-18T18:32:58Z",
           "url": "https://github.com/nf-core/configs/pull/622",
           "changedFiles": 5,
-          "additions": 347,
+          "additions": 301,
           "deletions": 0
         }
       },
