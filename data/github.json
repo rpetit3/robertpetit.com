@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 329,
+    "issueCount": 330,
     "edges": [
+      {
+        "node": {
+          "number": 46669,
+          "title": "update rgi pinning for pyrodigal",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-03-22T01:15:15Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/46669",
+          "changedFiles": 1,
+          "additions": 5,
+          "deletions": 3
+        }
+      },
       {
         "node": {
           "number": 46458,
@@ -1484,21 +1499,6 @@
           "url": "https://github.com/bioconda/bioconda-recipes/pull/34670",
           "changedFiles": 2,
           "additions": 51,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 1548,
-          "title": "add module for shigatyper",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2022-04-21T18:50:39Z",
-          "mergedAt": "2022-05-03T11:21:43Z",
-          "url": "https://github.com/nf-core/modules/pull/1548",
-          "changedFiles": 6,
-          "additions": 185,
           "deletions": 0
         }
       }
