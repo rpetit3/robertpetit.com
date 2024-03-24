@@ -1,7 +1,52 @@
 {
   "search": {
-    "issueCount": 330,
+    "issueCount": 333,
     "edges": [
+      {
+        "node": {
+          "number": 46714,
+          "title": "fix amrfinderplus pinning in abritamr",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-03-23T22:49:42Z",
+          "mergedAt": "2024-03-24T00:32:24Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/46714",
+          "changedFiles": 1,
+          "additions": 5,
+          "deletions": 2
+        }
+      },
+      {
+        "node": {
+          "number": 46713,
+          "title": "adjust python pinning in gubbins",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-03-23T22:28:02Z",
+          "mergedAt": "2024-03-24T00:31:57Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/46713",
+          "changedFiles": 1,
+          "additions": 3,
+          "deletions": 3
+        }
+      },
+      {
+        "node": {
+          "number": 46712,
+          "title": "fix issue with sistr container",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-03-23T22:02:56Z",
+          "mergedAt": "2024-03-24T00:31:36Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/46712",
+          "changedFiles": 2,
+          "additions": 3,
+          "deletions": 6
+        }
+      },
       {
         "node": {
           "number": 46669,
@@ -10,7 +55,7 @@
             "nameWithOwner": "bioconda/bioconda-recipes"
           },
           "createdAt": "2024-03-22T01:15:15Z",
-          "mergedAt": null,
+          "mergedAt": "2024-03-24T00:31:13Z",
           "url": "https://github.com/bioconda/bioconda-recipes/pull/46669",
           "changedFiles": 1,
           "additions": 5,
@@ -1454,51 +1499,6 @@
           "url": "https://github.com/theiagen/public_health_bacterial_genomics/pull/70",
           "changedFiles": 4,
           "additions": 206,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 34720,
-          "title": "Pin perl version in VADR recipe",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2022-05-04T15:15:44Z",
-          "mergedAt": null,
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/34720",
-          "changedFiles": 1,
-          "additions": 3,
-          "deletions": 3
-        }
-      },
-      {
-        "node": {
-          "number": 34672,
-          "title": "add open-mpi support to nonpareil",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2022-05-02T19:50:26Z",
-          "mergedAt": null,
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/34672",
-          "changedFiles": 1,
-          "additions": 14,
-          "deletions": 1
-        }
-      },
-      {
-        "node": {
-          "number": 34670,
-          "title": "add recipe for kSNP3",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2022-05-02T16:36:10Z",
-          "mergedAt": null,
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/34670",
-          "changedFiles": 2,
-          "additions": 51,
           "deletions": 0
         }
       }
