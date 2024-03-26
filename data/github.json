@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 333,
+    "issueCount": 334,
     "edges": [
+      {
+        "node": {
+          "number": 46746,
+          "title": "add treeqmc to blacklist",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-03-25T20:27:07Z",
+          "mergedAt": "2024-03-25T20:41:12Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/46746",
+          "changedFiles": 1,
+          "additions": 1,
+          "deletions": 1
+        }
+      },
       {
         "node": {
           "number": 46714,
@@ -1485,21 +1500,6 @@
           "changedFiles": 1,
           "additions": 4,
           "deletions": 1
-        }
-      },
-      {
-        "node": {
-          "number": 70,
-          "title": "Add kraken2 workflow ",
-          "repository": {
-            "nameWithOwner": "theiagen/public_health_bacterial_genomics"
-          },
-          "createdAt": "2022-05-10T14:58:11Z",
-          "mergedAt": "2022-05-12T13:01:26Z",
-          "url": "https://github.com/theiagen/public_health_bacterial_genomics/pull/70",
-          "changedFiles": 4,
-          "additions": 206,
-          "deletions": 0
         }
       }
     ]
