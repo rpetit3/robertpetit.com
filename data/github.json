@@ -1,7 +1,37 @@
 {
   "search": {
-    "issueCount": 334,
+    "issueCount": 336,
     "edges": [
+      {
+        "node": {
+          "number": 46824,
+          "title": "pinn macsyfinder version in defense-finder",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-03-27T18:50:51Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/46824",
+          "changedFiles": 1,
+          "additions": 4,
+          "deletions": 2
+        }
+      },
+      {
+        "node": {
+          "number": 1,
+          "title": "remove bat file, rename to perl-bio-db-seqfeature, add depends",
+          "repository": {
+            "nameWithOwner": "lskatz/bioconda-recipes"
+          },
+          "createdAt": "2024-03-27T03:14:15Z",
+          "mergedAt": "2024-03-27T14:27:54Z",
+          "url": "https://github.com/lskatz/bioconda-recipes/pull/1",
+          "changedFiles": 4,
+          "additions": 86,
+          "deletions": 76
+        }
+      },
       {
         "node": {
           "number": 46746,
@@ -1470,36 +1500,6 @@
           "changedFiles": 4,
           "additions": 113,
           "deletions": 3
-        }
-      },
-      {
-        "node": {
-          "number": 1643,
-          "title": "add module for snippy",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2022-05-10T21:33:11Z",
-          "mergedAt": "2022-06-03T19:20:57Z",
-          "url": "https://github.com/nf-core/modules/pull/1643",
-          "changedFiles": 6,
-          "additions": 229,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 59,
-          "title": "mask positions based on DP",
-          "repository": {
-            "nameWithOwner": "CDCgov/mycosnp-nf"
-          },
-          "createdAt": "2022-05-10T16:55:13Z",
-          "mergedAt": "2022-05-10T17:46:17Z",
-          "url": "https://github.com/CDCgov/mycosnp-nf/pull/59",
-          "changedFiles": 1,
-          "additions": 4,
-          "deletions": 1
         }
       }
     ]
