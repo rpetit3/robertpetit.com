@@ -1,7 +1,37 @@
 {
   "search": {
-    "issueCount": 337,
+    "issueCount": 339,
     "edges": [
+      {
+        "node": {
+          "number": 47484,
+          "title": "fix pinning of bactopia",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-04-25T18:38:45Z",
+          "mergedAt": "2024-04-25T19:48:05Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/47484",
+          "changedFiles": 1,
+          "additions": 2,
+          "deletions": 2
+        }
+      },
+      {
+        "node": {
+          "number": 47453,
+          "title": "add recipe for camlhmp",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-04-25T04:44:30Z",
+          "mergedAt": "2024-04-25T05:50:04Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/47453",
+          "changedFiles": 1,
+          "additions": 49,
+          "deletions": 0
+        }
+      },
       {
         "node": {
           "number": 18,
@@ -1470,36 +1500,6 @@
           "changedFiles": 11,
           "additions": 228,
           "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 35199,
-          "title": "add recipe for mashpit",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2022-06-02T20:11:00Z",
-          "mergedAt": "2022-06-03T08:13:06Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/35199",
-          "changedFiles": 1,
-          "additions": 40,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 35174,
-          "title": "Allow GTDB-Tk database download with container",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2022-06-02T00:37:19Z",
-          "mergedAt": "2022-06-02T02:41:22Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/35174",
-          "changedFiles": 2,
-          "additions": 6,
-          "deletions": 2
         }
       }
     ]
