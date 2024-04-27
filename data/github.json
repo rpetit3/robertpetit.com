@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 339,
+    "issueCount": 340,
     "edges": [
+      {
+        "node": {
+          "number": 677,
+          "title": "add a default time for arcc config",
+          "repository": {
+            "nameWithOwner": "nf-core/configs"
+          },
+          "createdAt": "2024-04-26T16:56:50Z",
+          "mergedAt": null,
+          "url": "https://github.com/nf-core/configs/pull/677",
+          "changedFiles": 1,
+          "additions": 2,
+          "deletions": 0
+        }
+      },
       {
         "node": {
           "number": 47484,
@@ -1484,21 +1499,6 @@
           "url": "https://github.com/nf-core/modules/pull/1750",
           "changedFiles": 6,
           "additions": 118,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 1731,
-          "title": "add module for ariba",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2022-06-05T19:58:43Z",
-          "mergedAt": "2022-06-15T16:18:31Z",
-          "url": "https://github.com/nf-core/modules/pull/1731",
-          "changedFiles": 11,
-          "additions": 228,
           "deletions": 0
         }
       }
