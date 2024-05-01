@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 340,
+    "issueCount": 341,
     "edges": [
+      {
+        "node": {
+          "number": 47600,
+          "title": "Add recipe for sccmec",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-05-01T00:50:45Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/47600",
+          "changedFiles": 2,
+          "additions": 47,
+          "deletions": 0
+        }
+      },
       {
         "node": {
           "number": 677,
@@ -1485,21 +1500,6 @@
           "changedFiles": 4,
           "additions": 31,
           "deletions": 19
-        }
-      },
-      {
-        "node": {
-          "number": 1750,
-          "title": "add module for mcroni",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2022-06-10T04:42:04Z",
-          "mergedAt": "2022-06-13T13:04:01Z",
-          "url": "https://github.com/nf-core/modules/pull/1750",
-          "changedFiles": 6,
-          "additions": 118,
-          "deletions": 0
         }
       }
     ]
