@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 341,
+    "issueCount": 342,
     "edges": [
+      {
+        "node": {
+          "number": 47664,
+          "title": "update recipe for genotyphi",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-05-03T16:05:32Z",
+          "mergedAt": "2024-05-03T18:19:27Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/47664",
+          "changedFiles": 2,
+          "additions": 6,
+          "deletions": 4
+        }
+      },
       {
         "node": {
           "number": 47600,
@@ -342,8 +357,8 @@
           "createdAt": "2023-09-07T03:32:03Z",
           "mergedAt": null,
           "url": "https://github.com/nf-core/modules/pull/3817",
-          "changedFiles": 6,
-          "additions": 147,
+          "changedFiles": 5,
+          "additions": 143,
           "deletions": 0
         }
       },
@@ -1485,21 +1500,6 @@
           "changedFiles": 6,
           "additions": 141,
           "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 35314,
-          "title": "Update PlasmidFinder for better container support",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2022-06-10T05:09:34Z",
-          "mergedAt": "2022-06-10T22:24:24Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/35314",
-          "changedFiles": 4,
-          "additions": 31,
-          "deletions": 19
         }
       }
     ]
