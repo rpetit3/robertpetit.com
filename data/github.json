@@ -1,7 +1,37 @@
 {
   "search": {
-    "issueCount": 343,
+    "issueCount": 345,
     "edges": [
+      {
+        "node": {
+          "number": 49373,
+          "title": "add recipe for scrubby",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-07-17T22:17:30Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/49373",
+          "changedFiles": 2,
+          "additions": 61,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 49372,
+          "title": "clermontyping use share folder",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-07-17T21:50:00Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/49372",
+          "changedFiles": 2,
+          "additions": 14,
+          "deletions": 4
+        }
+      },
       {
         "node": {
           "number": 48007,
@@ -1470,36 +1500,6 @@
           "changedFiles": 2,
           "additions": 16,
           "deletions": 1
-        }
-      },
-      {
-        "node": {
-          "number": 36,
-          "title": "allow the user to specify temp dir or use the system default",
-          "repository": {
-            "nameWithOwner": "sanger-pathogens/pymummer"
-          },
-          "createdAt": "2022-06-15T03:15:14Z",
-          "mergedAt": null,
-          "url": "https://github.com/sanger-pathogens/pymummer/pull/36",
-          "changedFiles": 1,
-          "additions": 1,
-          "deletions": 1
-        }
-      },
-      {
-        "node": {
-          "number": 35378,
-          "title": "Add database to Seroba recipe",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2022-06-14T21:47:29Z",
-          "mergedAt": "2022-06-17T14:06:48Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/35378",
-          "changedFiles": 5,
-          "additions": 127,
-          "deletions": 11
         }
       }
     ]
