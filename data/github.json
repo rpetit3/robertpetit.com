@@ -13,7 +13,7 @@
           "mergedAt": null,
           "url": "https://github.com/bioconda/bioconda-recipes/pull/49373",
           "changedFiles": 2,
-          "additions": 61,
+          "additions": 63,
           "deletions": 0
         }
       },
@@ -25,7 +25,7 @@
             "nameWithOwner": "bioconda/bioconda-recipes"
           },
           "createdAt": "2024-07-17T21:50:00Z",
-          "mergedAt": null,
+          "mergedAt": "2024-07-18T16:39:39Z",
           "url": "https://github.com/bioconda/bioconda-recipes/pull/49372",
           "changedFiles": 2,
           "additions": 14,
