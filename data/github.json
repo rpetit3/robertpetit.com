@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 345,
+    "issueCount": 346,
     "edges": [
+      {
+        "node": {
+          "number": 50068,
+          "title": "rebuild pasty",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-08-14T21:33:59Z",
+          "mergedAt": "2024-08-14T22:57:05Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/50068",
+          "changedFiles": 1,
+          "additions": 1,
+          "deletions": 1
+        }
+      },
       {
         "node": {
           "number": 49373,
@@ -1485,21 +1500,6 @@
           "changedFiles": 6,
           "additions": 11,
           "deletions": 11
-        }
-      },
-      {
-        "node": {
-          "number": 35379,
-          "title": "patch pymummer recipe",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2022-06-15T03:22:57Z",
-          "mergedAt": "2022-06-15T06:35:46Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/35379",
-          "changedFiles": 2,
-          "additions": 16,
-          "deletions": 1
         }
       }
     ]
