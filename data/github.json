@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 346,
+    "issueCount": 347,
     "edges": [
+      {
+        "node": {
+          "number": 51033,
+          "title": "add recipe for sizemeup",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-09-29T21:19:40Z",
+          "mergedAt": "2024-09-29T23:31:38Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/51033",
+          "changedFiles": 2,
+          "additions": 62,
+          "deletions": 0
+        }
+      },
       {
         "node": {
           "number": 50068,
@@ -1485,21 +1500,6 @@
           "changedFiles": 1,
           "additions": 4,
           "deletions": 4
-        }
-      },
-      {
-        "node": {
-          "number": 68,
-          "title": "let tempfile determine temp dir location",
-          "repository": {
-            "nameWithOwner": "sanger-pathogens/seroba"
-          },
-          "createdAt": "2022-06-15T03:33:40Z",
-          "mergedAt": null,
-          "url": "https://github.com/sanger-pathogens/seroba/pull/68",
-          "changedFiles": 6,
-          "additions": 11,
-          "deletions": 11
         }
       }
     ]
