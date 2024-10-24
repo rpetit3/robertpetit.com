@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 347,
+    "issueCount": 348,
     "edges": [
+      {
+        "node": {
+          "number": 51612,
+          "title": "add recipe for steamboat",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2024-10-23T16:12:37Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/51612",
+          "changedFiles": 1,
+          "additions": 49,
+          "deletions": 0
+        }
+      },
       {
         "node": {
           "number": 51033,
@@ -1485,21 +1500,6 @@
           "changedFiles": 2,
           "additions": 11,
           "deletions": 1
-        }
-      },
-      {
-        "node": {
-          "number": 35383,
-          "title": "Update ariba dependencies",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2022-06-15T15:45:56Z",
-          "mergedAt": "2022-06-15T17:37:01Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/35383",
-          "changedFiles": 1,
-          "additions": 4,
-          "deletions": 4
         }
       }
     ]
