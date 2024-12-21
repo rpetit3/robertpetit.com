@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 349,
+    "issueCount": 350,
     "edges": [
+      {
+        "node": {
+          "number": 1,
+          "title": "add a simple FASTQ gotcha",
+          "repository": {
+            "nameWithOwner": "samuell/awesome-bioinformatics-gotchas"
+          },
+          "createdAt": "2024-12-20T17:39:31Z",
+          "mergedAt": "2024-12-20T19:37:41Z",
+          "url": "https://github.com/samuell/awesome-bioinformatics-gotchas/pull/1",
+          "changedFiles": 1,
+          "additions": 25,
+          "deletions": 0
+        }
+      },
       {
         "node": {
           "number": 8,
@@ -1484,21 +1499,6 @@
           "url": "https://github.com/nf-core/modules/pull/1818",
           "changedFiles": 11,
           "additions": 239,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 1816,
-          "title": "add module for seroba",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2022-06-27T20:47:05Z",
-          "mergedAt": "2022-09-26T15:06:09Z",
-          "url": "https://github.com/nf-core/modules/pull/1816",
-          "changedFiles": 6,
-          "additions": 118,
           "deletions": 0
         }
       }
