@@ -1,9 +1,9 @@
 assembly_scan:
-  - downloads: 19062
+  - downloads: 19073
     stars: 9
 
 bactopia:
-  - downloads: 108037
+  - downloads: 108135
     stars: 423
 
 call_variants:
@@ -11,19 +11,19 @@ call_variants:
     stars: 2
 
 dragonflye:
-  - downloads: 39747
+  - downloads: 39788
     stars: 119
 
 ena_dl:
-  - downloads: 3039
+  - downloads: 3041
     stars: 0
 
 fastq_dl:
-  - downloads: 33337
+  - downloads: 33371
     stars: 286
 
 fastq_scan:
-  - downloads: 36025
+  - downloads: 36045
     stars: 29
 
 goblin:
@@ -31,7 +31,7 @@ goblin:
     stars: 2
 
 illumina_cleanup:
-  - downloads: 4831
+  - downloads: 4834
     stars: 3
 
 illumina_simulation:
@@ -39,19 +39,19 @@ illumina_simulation:
     stars: 0
 
 pasty:
-  - downloads: 7867
+  - downloads: 7885
     stars: 11
 
 pbptyper:
-  - downloads: 9028
+  - downloads: 9040
     stars: 9
 
 pmga:
-  - downloads: 4217
+  - downloads: 4222
     stars: 1
 
 shovill_se:
-  - downloads: 6069
+  - downloads: 6071
     stars: 0
 
 staphopia:
@@ -59,14 +59,14 @@ staphopia:
     stars: 7
 
 staphopia_sccmec:
-  - downloads: 3213
+  - downloads: 3215
     stars: 0
 
 tbl2asn_forever:
-  - downloads: 73136
+  - downloads: 73163
     stars: 2
 
 vcf_annotator:
-  - downloads: 13441
+  - downloads: 13447
     stars: 28
 
