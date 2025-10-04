@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 350,
+    "issueCount": 351,
     "edges": [
+      {
+        "node": {
+          "number": 168,
+          "title": "add new plugin nf-bactopia",
+          "repository": {
+            "nameWithOwner": "nextflow-io/plugins"
+          },
+          "createdAt": "2025-10-03T18:52:50Z",
+          "mergedAt": null,
+          "url": "https://github.com/nextflow-io/plugins/pull/168",
+          "changedFiles": 1,
+          "additions": 13,
+          "deletions": 1
+        }
+      },
       {
         "node": {
           "number": 1,
@@ -1485,21 +1500,6 @@
           "changedFiles": 1,
           "additions": 1,
           "deletions": 1
-        }
-      },
-      {
-        "node": {
-          "number": 1818,
-          "title": "add module for mykrobe predict and genotyphi parse",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2022-06-28T01:10:23Z",
-          "mergedAt": "2022-09-26T14:18:04Z",
-          "url": "https://github.com/nf-core/modules/pull/1818",
-          "changedFiles": 11,
-          "additions": 239,
-          "deletions": 0
         }
       }
     ]
