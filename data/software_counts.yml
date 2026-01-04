@@ -12,7 +12,7 @@ call_variants:
 
 dragonflye:
   - downloads: 0
-    stars: 128
+    stars: 127
 
 ena_dl:
   - downloads: 0
@@ -32,7 +32,7 @@ goblin:
 
 illumina_cleanup:
   - downloads: 0
-    stars: 3
+    stars: 0
 
 illumina_simulation:
   - downloads: 0
@@ -40,15 +40,15 @@ illumina_simulation:
 
 pasty:
   - downloads: 0
-    stars: 13
+    stars: 0
 
 pbptyper:
   - downloads: 0
-    stars: 9
+    stars: 0
 
 pmga:
   - downloads: 0
-    stars: 2
+    stars: 0
 
 shovill_se:
   - downloads: 0
@@ -56,7 +56,7 @@ shovill_se:
 
 staphopia:
   - downloads: 0
-    stars: 7
+    stars: 0
 
 staphopia_sccmec:
   - downloads: 0
@@ -64,9 +64,9 @@ staphopia_sccmec:
 
 tbl2asn_forever:
   - downloads: 0
-    stars: 3
+    stars: 0
 
 vcf_annotator:
   - downloads: 0
-    stars: 32
+    stars: 0
 
