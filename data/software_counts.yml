@@ -24,15 +24,15 @@ fastq_dl:
 
 fastq_scan:
   - downloads: 0
-    stars: 0
+    stars: 29
 
 goblin:
   - downloads: 0
-    stars: 0
+    stars: 2
 
 illumina_cleanup:
   - downloads: 0
-    stars: 0
+    stars: 3
 
 illumina_simulation:
   - downloads: 0
@@ -40,15 +40,15 @@ illumina_simulation:
 
 pasty:
   - downloads: 0
-    stars: 0
+    stars: 13
 
 pbptyper:
   - downloads: 0
-    stars: 0
+    stars: 9
 
 pmga:
   - downloads: 0
-    stars: 0
+    stars: 2
 
 shovill_se:
   - downloads: 0
@@ -56,7 +56,7 @@ shovill_se:
 
 staphopia:
   - downloads: 0
-    stars: 0
+    stars: 7
 
 staphopia_sccmec:
   - downloads: 0
@@ -64,9 +64,9 @@ staphopia_sccmec:
 
 tbl2asn_forever:
   - downloads: 0
-    stars: 0
+    stars: 3
 
 vcf_annotator:
   - downloads: 0
-    stars: 0
+    stars: 32
 
