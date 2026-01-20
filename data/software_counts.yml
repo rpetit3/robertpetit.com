@@ -64,9 +64,9 @@ staphopia_sccmec:
 
 tbl2asn_forever:
   - downloads: 0
-    stars: 3
+    stars: 0
 
 vcf_annotator:
   - downloads: 0
-    stars: 32
+    stars: 0
 
