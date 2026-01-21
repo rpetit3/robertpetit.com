@@ -4,7 +4,7 @@ assembly_scan:
 
 bactopia:
   - downloads: 0
-    stars: 494
+    stars: 496
 
 call_variants:
   - downloads: 0
@@ -20,7 +20,7 @@ ena_dl:
 
 fastq_dl:
   - downloads: 0
-    stars: 363
+    stars: 362
 
 fastq_scan:
   - downloads: 0
@@ -64,9 +64,9 @@ staphopia_sccmec:
 
 tbl2asn_forever:
   - downloads: 0
-    stars: 0
+    stars: 3
 
 vcf_annotator:
   - downloads: 0
-    stars: 0
+    stars: 32
 
