@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 351,
+    "issueCount": 352,
     "edges": [
+      {
+        "node": {
+          "number": 63166,
+          "title": "add new recipe for gigatyper",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2026-03-03T17:33:48Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/63166",
+          "changedFiles": 2,
+          "additions": 45,
+          "deletions": 0
+        }
+      },
       {
         "node": {
           "number": 168,
@@ -1485,21 +1500,6 @@
           "changedFiles": 6,
           "additions": 167,
           "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 1,
-          "title": "Add another empty column",
-          "repository": {
-            "nameWithOwner": "liampshaw/mcroni"
-          },
-          "createdAt": "2022-06-28T21:00:36Z",
-          "mergedAt": "2022-06-29T06:53:07Z",
-          "url": "https://github.com/liampshaw/mcroni/pull/1",
-          "changedFiles": 1,
-          "additions": 1,
-          "deletions": 1
         }
       }
     ]
