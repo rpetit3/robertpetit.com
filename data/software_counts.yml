@@ -20,7 +20,7 @@ ena_dl:
 
 fastq_dl:
   - downloads: 0
-    stars: 374
+    stars: 375
 
 fastq_scan:
   - downloads: 0
@@ -40,7 +40,7 @@ illumina_simulation:
 
 pasty:
   - downloads: 0
-    stars: 13
+    stars: 14
 
 pbptyper:
   - downloads: 0
