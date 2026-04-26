@@ -12,7 +12,7 @@ call_variants:
 
 dragonflye:
   - downloads: 0
-    stars: 130
+    stars: 131
 
 ena_dl:
   - downloads: 0
