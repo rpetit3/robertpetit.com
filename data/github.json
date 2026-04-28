@@ -1,6 +1,6 @@
 {
   "search": {
-    "issueCount": 353,
+    "issueCount": 41,
     "edges": [
       {
         "node": {
@@ -49,216 +49,6 @@
       },
       {
         "node": {
-          "number": 1,
-          "title": "add a simple FASTQ gotcha",
-          "repository": {
-            "nameWithOwner": "samuell/awesome-bioinformatics-gotchas"
-          },
-          "createdAt": "2024-12-20T17:39:31Z",
-          "mergedAt": "2024-12-20T19:37:41Z",
-          "url": "https://github.com/samuell/awesome-bioinformatics-gotchas/pull/1",
-          "changedFiles": 1,
-          "additions": 25,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 8,
-          "title": "patch recipe to support python 3.13",
-          "repository": {
-            "nameWithOwner": "conda-forge/executor-feedstock"
-          },
-          "createdAt": "2024-11-04T21:34:21Z",
-          "mergedAt": "2024-11-04T22:03:50Z",
-          "url": "https://github.com/conda-forge/executor-feedstock/pull/8",
-          "changedFiles": 15,
-          "additions": 358,
-          "deletions": 69
-        }
-      },
-      {
-        "node": {
-          "number": 51612,
-          "title": "add recipe for steamboat",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2024-10-23T16:12:37Z",
-          "mergedAt": "2024-10-24T05:28:58Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/51612",
-          "changedFiles": 1,
-          "additions": 49,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 51033,
-          "title": "add recipe for sizemeup",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2024-09-29T21:19:40Z",
-          "mergedAt": "2024-09-29T23:31:38Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/51033",
-          "changedFiles": 2,
-          "additions": 62,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 50068,
-          "title": "rebuild pasty",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2024-08-14T21:33:59Z",
-          "mergedAt": "2024-08-14T22:57:05Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/50068",
-          "changedFiles": 1,
-          "additions": 1,
-          "deletions": 1
-        }
-      },
-      {
-        "node": {
-          "number": 49373,
-          "title": "add recipe for scrubby",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2024-07-17T22:17:30Z",
-          "mergedAt": "2024-07-19T15:42:16Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/49373",
-          "changedFiles": 2,
-          "additions": 63,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 49372,
-          "title": "clermontyping use share folder",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2024-07-17T21:50:00Z",
-          "mergedAt": "2024-07-18T16:39:39Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/49372",
-          "changedFiles": 2,
-          "additions": 14,
-          "deletions": 4
-        }
-      },
-      {
-        "node": {
-          "number": 48007,
-          "title": "disable phone home snpeff",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2024-05-23T13:37:31Z",
-          "mergedAt": "2024-05-23T15:41:11Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/48007",
-          "changedFiles": 2,
-          "additions": 22,
-          "deletions": 11
-        }
-      },
-      {
-        "node": {
-          "number": 47664,
-          "title": "update recipe for genotyphi",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2024-05-03T16:05:32Z",
-          "mergedAt": "2024-05-03T18:19:27Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/47664",
-          "changedFiles": 2,
-          "additions": 6,
-          "deletions": 4
-        }
-      },
-      {
-        "node": {
-          "number": 47600,
-          "title": "Add recipe for sccmec",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2024-05-01T00:50:45Z",
-          "mergedAt": "2024-05-01T13:51:10Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/47600",
-          "changedFiles": 2,
-          "additions": 47,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 677,
-          "title": "add a default time for arcc config",
-          "repository": {
-            "nameWithOwner": "nf-core/configs"
-          },
-          "createdAt": "2024-04-26T16:56:50Z",
-          "mergedAt": "2024-05-02T14:39:49Z",
-          "url": "https://github.com/nf-core/configs/pull/677",
-          "changedFiles": 1,
-          "additions": 2,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 47484,
-          "title": "fix pinning of bactopia",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2024-04-25T18:38:45Z",
-          "mergedAt": "2024-04-25T19:48:05Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/47484",
-          "changedFiles": 1,
-          "additions": 2,
-          "deletions": 2
-        }
-      },
-      {
-        "node": {
-          "number": 47453,
-          "title": "add recipe for camlhmp",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2024-04-25T04:44:30Z",
-          "mergedAt": "2024-04-25T05:50:04Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/47453",
-          "changedFiles": 1,
-          "additions": 49,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 18,
-          "title": "add rp3 orcid",
-          "repository": {
-            "nameWithOwner": "ubinfie/ubinfie.github.io"
-          },
-          "createdAt": "2024-04-04T00:58:45Z",
-          "mergedAt": "2024-04-04T01:23:36Z",
-          "url": "https://github.com/ubinfie/ubinfie.github.io/pull/18",
-          "changedFiles": 1,
-          "additions": 1,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
           "number": 46824,
           "title": "pinn macsyfinder version in defense-finder",
           "repository": {
@@ -300,66 +90,6 @@
           "changedFiles": 1,
           "additions": 1,
           "deletions": 1
-        }
-      },
-      {
-        "node": {
-          "number": 46714,
-          "title": "fix amrfinderplus pinning in abritamr",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2024-03-23T22:49:42Z",
-          "mergedAt": "2024-03-24T00:32:24Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/46714",
-          "changedFiles": 1,
-          "additions": 5,
-          "deletions": 2
-        }
-      },
-      {
-        "node": {
-          "number": 46713,
-          "title": "adjust python pinning in gubbins",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2024-03-23T22:28:02Z",
-          "mergedAt": "2024-03-24T00:31:57Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/46713",
-          "changedFiles": 1,
-          "additions": 3,
-          "deletions": 3
-        }
-      },
-      {
-        "node": {
-          "number": 46712,
-          "title": "fix issue with sistr container",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2024-03-23T22:02:56Z",
-          "mergedAt": "2024-03-24T00:31:36Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/46712",
-          "changedFiles": 2,
-          "additions": 3,
-          "deletions": 6
-        }
-      },
-      {
-        "node": {
-          "number": 46669,
-          "title": "update rgi pinning for pyrodigal",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2024-03-22T01:15:15Z",
-          "mergedAt": "2024-03-24T00:31:13Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/46669",
-          "changedFiles": 1,
-          "additions": 5,
-          "deletions": 3
         }
       },
       {
@@ -439,501 +169,6 @@
       },
       {
         "node": {
-          "number": 622,
-          "title": "add profile for arcc",
-          "repository": {
-            "nameWithOwner": "nf-core/configs"
-          },
-          "createdAt": "2024-01-30T22:01:54Z",
-          "mergedAt": "2024-03-18T18:32:58Z",
-          "url": "https://github.com/nf-core/configs/pull/622",
-          "changedFiles": 5,
-          "additions": 301,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 12,
-          "title": "split seqbox_utils.py into smaller files",
-          "repository": {
-            "nameWithOwner": "flashton2003/seqbox"
-          },
-          "createdAt": "2023-12-10T01:03:40Z",
-          "mergedAt": null,
-          "url": "https://github.com/flashton2003/seqbox/pull/12",
-          "changedFiles": 25,
-          "additions": 2932,
-          "deletions": 1821
-        }
-      },
-      {
-        "node": {
-          "number": 44553,
-          "title": "nrpys -  fix license text",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2023-11-30T16:57:59Z",
-          "mergedAt": "2023-12-01T10:29:40Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/44553",
-          "changedFiles": 2,
-          "additions": 664,
-          "deletions": 4540
-        }
-      },
-      {
-        "node": {
-          "number": 44370,
-          "title": "update vadr to v1.6.2",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2023-11-21T04:04:43Z",
-          "mergedAt": null,
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/44370",
-          "changedFiles": 1,
-          "additions": 9,
-          "deletions": 7
-        }
-      },
-      {
-        "node": {
-          "number": 461,
-          "title": "add GHA for multiple versions of python and tensorflow using Medaka test suite",
-          "repository": {
-            "nameWithOwner": "nanoporetech/medaka"
-          },
-          "createdAt": "2023-10-03T22:17:05Z",
-          "mergedAt": null,
-          "url": "https://github.com/nanoporetech/medaka/pull/461",
-          "changedFiles": 1,
-          "additions": 52,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 3817,
-          "title": "add module for btyper3",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2023-09-07T03:32:03Z",
-          "mergedAt": null,
-          "url": "https://github.com/nf-core/modules/pull/3817",
-          "changedFiles": 6,
-          "additions": 300,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 42648,
-          "title": "bump mashtree to v1.4.3",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2023-08-24T15:41:42Z",
-          "mergedAt": "2023-08-31T06:03:13Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/42648",
-          "changedFiles": 2,
-          "additions": 12,
-          "deletions": 11
-        }
-      },
-      {
-        "node": {
-          "number": 149,
-          "title": "fix hostrange() missing 1 required positional argument: database_directory",
-          "repository": {
-            "nameWithOwner": "phac-nml/mob-suite"
-          },
-          "createdAt": "2023-08-11T17:22:08Z",
-          "mergedAt": "2023-08-14T13:41:48Z",
-          "url": "https://github.com/phac-nml/mob-suite/pull/149",
-          "changedFiles": 3,
-          "additions": 13,
-          "deletions": 14
-        }
-      },
-      {
-        "node": {
-          "number": 3725,
-          "title": "add module for abritamr_run",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2023-08-11T05:26:07Z",
-          "mergedAt": "2023-10-05T05:33:44Z",
-          "url": "https://github.com/nf-core/modules/pull/3725",
-          "changedFiles": 6,
-          "additions": 173,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 3,
-          "title": "Bump mycosnp-wdl to match v1.5 of mycosnp-nf",
-          "repository": {
-            "nameWithOwner": "theiagen/mycosnp-wdl"
-          },
-          "createdAt": "2023-07-30T19:35:35Z",
-          "mergedAt": "2023-08-04T14:06:46Z",
-          "url": "https://github.com/theiagen/mycosnp-wdl/pull/3",
-          "changedFiles": 2,
-          "additions": 11,
-          "deletions": 9
-        }
-      },
-      {
-        "node": {
-          "number": 3592,
-          "title": "add module for pneumocat",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2023-07-04T00:26:15Z",
-          "mergedAt": "2023-10-04T17:14:17Z",
-          "url": "https://github.com/nf-core/modules/pull/3592",
-          "changedFiles": 6,
-          "additions": 134,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 41640,
-          "title": "Patch ncbi-genome-download recipe",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2023-06-22T21:13:44Z",
-          "mergedAt": "2023-06-23T15:35:38Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/41640",
-          "changedFiles": 2,
-          "additions": 27,
-          "deletions": 1
-        }
-      },
-      {
-        "node": {
-          "number": 101,
-          "title": "update theiacov GHA tests for v1.0.0",
-          "repository": {
-            "nameWithOwner": "theiagen/public_health_bioinformatics"
-          },
-          "createdAt": "2023-06-17T20:19:57Z",
-          "mergedAt": "2023-06-19T23:49:35Z",
-          "url": "https://github.com/theiagen/public_health_bioinformatics/pull/101",
-          "changedFiles": 3,
-          "additions": 41,
-          "deletions": 57
-        }
-      },
-      {
-        "node": {
-          "number": 77,
-          "title": "add theiacov gha",
-          "repository": {
-            "nameWithOwner": "theiagen/public_health_bioinformatics"
-          },
-          "createdAt": "2023-05-28T20:22:33Z",
-          "mergedAt": "2023-06-12T13:26:26Z",
-          "url": "https://github.com/theiagen/public_health_bioinformatics/pull/77",
-          "changedFiles": 20,
-          "additions": 1598,
-          "deletions": 6
-        }
-      },
-      {
-        "node": {
-          "number": 6,
-          "title": "update nextflow descriptions",
-          "repository": {
-            "nameWithOwner": "lskatz/lskatz.github.io"
-          },
-          "createdAt": "2023-05-26T06:56:41Z",
-          "mergedAt": "2023-05-26T12:35:28Z",
-          "url": "https://github.com/lskatz/lskatz.github.io/pull/6",
-          "changedFiles": 1,
-          "additions": 4,
-          "deletions": 3
-        }
-      },
-      {
-        "node": {
-          "number": 10,
-          "title": "improve folder structure visuals",
-          "repository": {
-            "nameWithOwner": "GoogleCloudPlatform/generative-ai"
-          },
-          "createdAt": "2023-05-15T17:43:54Z",
-          "mergedAt": "2023-05-16T09:08:24Z",
-          "url": "https://github.com/GoogleCloudPlatform/generative-ai/pull/10",
-          "changedFiles": 1,
-          "additions": 4,
-          "deletions": 4
-        }
-      },
-      {
-        "node": {
-          "number": 873,
-          "title": "chore: update change visibility action",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-utils"
-          },
-          "createdAt": "2023-05-03T08:36:23Z",
-          "mergedAt": "2023-05-07T05:18:09Z",
-          "url": "https://github.com/bioconda/bioconda-utils/pull/873",
-          "changedFiles": 2,
-          "additions": 9,
-          "deletions": 5
-        }
-      },
-      {
-        "node": {
-          "number": 662,
-          "title": "Convert Travis CI to Github Actions",
-          "repository": {
-            "nameWithOwner": "tseemann/prokka"
-          },
-          "createdAt": "2023-05-02T14:20:53Z",
-          "mergedAt": "2025-12-09T22:31:31Z",
-          "url": "https://github.com/tseemann/prokka/pull/662",
-          "changedFiles": 3,
-          "additions": 56,
-          "deletions": 22
-        }
-      },
-      {
-        "node": {
-          "number": 8,
-          "title": "[WIP] add command to convert inputs to new format",
-          "repository": {
-            "nameWithOwner": "Wytamma/write-the"
-          },
-          "createdAt": "2023-05-02T11:27:03Z",
-          "mergedAt": "2023-05-02T13:22:07Z",
-          "url": "https://github.com/Wytamma/write-the/pull/8",
-          "changedFiles": 5,
-          "additions": 120,
-          "deletions": 1
-        }
-      },
-      {
-        "node": {
-          "number": 40392,
-          "title": "update blast osx build",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2023-04-11T19:34:53Z",
-          "mergedAt": null,
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/40392",
-          "changedFiles": 2,
-          "additions": 55,
-          "deletions": 29
-        }
-      },
-      {
-        "node": {
-          "number": 40333,
-          "title": "Update GTDB-tk recipe",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2023-04-09T05:30:54Z",
-          "mergedAt": "2023-04-10T21:51:30Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/40333",
-          "changedFiles": 2,
-          "additions": 2,
-          "deletions": 3
-        }
-      },
-      {
-        "node": {
-          "number": 39,
-          "title": "add frame work for GHA, working theiaprok_illumina_pe workflow",
-          "repository": {
-            "nameWithOwner": "theiagen/public_health_bioinformatics"
-          },
-          "createdAt": "2023-03-25T17:57:29Z",
-          "mergedAt": "2023-04-25T04:40:42Z",
-          "url": "https://github.com/theiagen/public_health_bioinformatics/pull/39",
-          "changedFiles": 26,
-          "additions": 1588,
-          "deletions": 1
-        }
-      },
-      {
-        "node": {
-          "number": 93,
-          "title": "add new phoenix qc entrypoint",
-          "repository": {
-            "nameWithOwner": "CDCgov/phoenix"
-          },
-          "createdAt": "2023-03-06T18:54:21Z",
-          "mergedAt": null,
-          "url": "https://github.com/CDCgov/phoenix/pull/93",
-          "changedFiles": 5,
-          "additions": 308,
-          "deletions": 1
-        }
-      },
-      {
-        "node": {
-          "number": 39473,
-          "title": "add recipe for bactopia-py",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2023-02-20T06:51:06Z",
-          "mergedAt": "2023-02-20T14:45:27Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/39473",
-          "changedFiles": 1,
-          "additions": 53,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 39362,
-          "title": "update vadr recipe and pinning",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2023-02-14T21:24:44Z",
-          "mergedAt": "2023-02-15T18:29:04Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/39362",
-          "changedFiles": 2,
-          "additions": 27,
-          "deletions": 4
-        }
-      },
-      {
-        "node": {
-          "number": 39361,
-          "title": "Add recipe for bactopia subtools",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2023-02-14T20:22:28Z",
-          "mergedAt": "2023-02-15T11:29:53Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/39361",
-          "changedFiles": 4,
-          "additions": 97,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 39215,
-          "title": "add recipes for bactopia subtools",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2023-02-07T17:38:16Z",
-          "mergedAt": "2023-02-08T06:16:30Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/39215",
-          "changedFiles": 8,
-          "additions": 204,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 39018,
-          "title": "update vadr recipe pinnings",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2023-01-26T16:08:29Z",
-          "mergedAt": "2023-01-26T17:06:09Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/39018",
-          "changedFiles": 1,
-          "additions": 2,
-          "deletions": 3
-        }
-      },
-      {
-        "node": {
-          "number": 83,
-          "title": "add new phoenix qc entrypoint",
-          "repository": {
-            "nameWithOwner": "CDCgov/phoenix"
-          },
-          "createdAt": "2023-01-25T23:59:50Z",
-          "mergedAt": null,
-          "url": "https://github.com/CDCgov/phoenix/pull/83",
-          "changedFiles": 5,
-          "additions": 613,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 835,
-          "title": "chore: add CI to changevisibility of private containers",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-utils"
-          },
-          "createdAt": "2023-01-25T21:23:11Z",
-          "mergedAt": "2023-02-07T01:13:22Z",
-          "url": "https://github.com/bioconda/bioconda-utils/pull/835",
-          "changedFiles": 2,
-          "additions": 149,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 54,
-          "title": "Patch - small fix on merge command and quay toggle visibility",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-containers"
-          },
-          "createdAt": "2023-01-20T15:14:22Z",
-          "mergedAt": "2023-01-25T07:05:11Z",
-          "url": "https://github.com/bioconda/bioconda-containers/pull/54",
-          "changedFiles": 1,
-          "additions": 1,
-          "deletions": 1
-        }
-      },
-      {
-        "node": {
-          "number": 38922,
-          "title": "add recipe for goblin",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2023-01-19T17:10:53Z",
-          "mergedAt": "2023-01-19T18:36:05Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/38922",
-          "changedFiles": 2,
-          "additions": 45,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 38826,
-          "title": "Update mlst recipe to include helper scripts",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2023-01-13T21:13:19Z",
-          "mergedAt": null,
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/38826",
-          "changedFiles": 2,
-          "additions": 9,
-          "deletions": 1
-        }
-      },
-      {
-        "node": {
           "number": 2702,
           "title": "add module for stecfinder",
           "repository": {
@@ -974,186 +209,6 @@
           "url": "https://github.com/nf-core/modules/pull/2696",
           "changedFiles": 6,
           "additions": 155,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 2694,
-          "title": "add modules for sra-human-scrubber",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2022-12-23T22:41:23Z",
-          "mergedAt": null,
-          "url": "https://github.com/nf-core/modules/pull/2694",
-          "changedFiles": 13,
-          "additions": 327,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 89,
-          "title": "Use consistent versions across pipeline",
-          "repository": {
-            "nameWithOwner": "CDCgov/mycosnp-nf"
-          },
-          "createdAt": "2022-12-12T21:12:12Z",
-          "mergedAt": "2023-03-24T20:42:06Z",
-          "url": "https://github.com/CDCgov/mycosnp-nf/pull/89",
-          "changedFiles": 12,
-          "additions": 36,
-          "deletions": 36
-        }
-      },
-      {
-        "node": {
-          "number": 2523,
-          "title": "add module for shigeifinder",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2022-11-18T02:57:07Z",
-          "mergedAt": "2022-11-19T17:20:55Z",
-          "url": "https://github.com/nf-core/modules/pull/2523",
-          "changedFiles": 6,
-          "additions": 145,
-          "deletions": 8
-        }
-      },
-      {
-        "node": {
-          "number": 38001,
-          "title": "update gtdbtk depends based on docs",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2022-11-16T17:01:48Z",
-          "mergedAt": null,
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/38001",
-          "changedFiles": 1,
-          "additions": 4,
-          "deletions": 4
-        }
-      },
-      {
-        "node": {
-          "number": 38000,
-          "title": "add readfq dependency to kmergenie",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2022-11-16T16:51:13Z",
-          "mergedAt": null,
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/38000",
-          "changedFiles": 1,
-          "additions": 2,
-          "deletions": 1
-        }
-      },
-      {
-        "node": {
-          "number": 37887,
-          "title": "Add recipe for piranha-polio",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2022-11-09T04:07:23Z",
-          "mergedAt": "2022-11-16T22:49:58Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/37887",
-          "changedFiles": 1,
-          "additions": 45,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 14,
-          "title": "Incorporate patches from Bioconda",
-          "repository": {
-            "nameWithOwner": "CFSAN-Biostatistics/shigatyper"
-          },
-          "createdAt": "2022-11-07T01:22:58Z",
-          "mergedAt": "2022-11-07T04:19:15Z",
-          "url": "https://github.com/CFSAN-Biostatistics/shigatyper/pull/14",
-          "changedFiles": 4,
-          "additions": 105,
-          "deletions": 7
-        }
-      },
-      {
-        "node": {
-          "number": 185,
-          "title": "add support for adapter files in bbduk, update ci test",
-          "repository": {
-            "nameWithOwner": "theiagen/public_health_viral_genomics"
-          },
-          "createdAt": "2022-10-30T03:54:31Z",
-          "mergedAt": "2022-10-31T15:42:29Z",
-          "url": "https://github.com/theiagen/public_health_viral_genomics/pull/185",
-          "changedFiles": 5,
-          "additions": 43,
-          "deletions": 11
-        }
-      },
-      {
-        "node": {
-          "number": 37653,
-          "title": "Update nextclade and nextalign to version 2.8.0",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2022-10-27T00:35:52Z",
-          "mergedAt": "2022-10-27T12:38:47Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/37653",
-          "changedFiles": 2,
-          "additions": 8,
-          "deletions": 8
-        }
-      },
-      {
-        "node": {
-          "number": 2252,
-          "title": "fix a few tests after restructure",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2022-10-11T14:45:33Z",
-          "mergedAt": "2022-11-30T08:45:59Z",
-          "url": "https://github.com/nf-core/modules/pull/2252",
-          "changedFiles": 4,
-          "additions": 22,
-          "deletions": 16
-        }
-      },
-      {
-        "node": {
-          "number": 37394,
-          "title": "rebuild smoove container",
-          "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
-          },
-          "createdAt": "2022-10-11T13:59:43Z",
-          "mergedAt": "2022-10-12T11:04:29Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/37394",
-          "changedFiles": 1,
-          "additions": 8,
-          "deletions": 8
-        }
-      },
-      {
-        "node": {
-          "number": 2234,
-          "title": "add module for biohansel",
-          "repository": {
-            "nameWithOwner": "nf-core/modules"
-          },
-          "createdAt": "2022-10-11T11:27:47Z",
-          "mergedAt": "2022-10-21T07:40:16Z",
-          "url": "https://github.com/nf-core/modules/pull/2234",
-          "changedFiles": 6,
-          "additions": 185,
           "deletions": 0
         }
       },
@@ -1429,77 +484,137 @@
       },
       {
         "node": {
-          "number": 19616,
-          "title": "add paralleltask from PyPi",
+          "number": 35161,
+          "title": "update shigatyper recipe for better container support",
           "repository": {
-            "nameWithOwner": "conda-forge/staged-recipes"
+            "nameWithOwner": "bioconda/bioconda-recipes"
           },
-          "createdAt": "2022-07-12T00:07:37Z",
-          "mergedAt": "2022-07-26T13:41:44Z",
-          "url": "https://github.com/conda-forge/staged-recipes/pull/19616",
-          "changedFiles": 1,
-          "additions": 44,
-          "deletions": 0
-        }
-      },
-      {
-        "node": {
-          "number": 80,
-          "title": "sync `nextflow.config` and `nextflow_schema.json`",
-          "repository": {
-            "nameWithOwner": "CDCgov/mycosnp-nf"
-          },
-          "createdAt": "2022-07-08T16:09:38Z",
-          "mergedAt": "2022-07-13T13:46:45Z",
-          "url": "https://github.com/CDCgov/mycosnp-nf/pull/80",
-          "changedFiles": 1,
-          "additions": 3,
+          "createdAt": "2022-06-01T04:46:38Z",
+          "mergedAt": "2022-06-02T08:50:07Z",
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/35161",
+          "changedFiles": 4,
+          "additions": 113,
           "deletions": 3
         }
       },
       {
         "node": {
-          "number": 35734,
-          "title": "Update pinnings in pggb",
+          "number": 2,
+          "title": "Add requirements.txt for python modules",
           "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
+            "nameWithOwner": "kwongj/maskrc-svg"
           },
-          "createdAt": "2022-07-08T13:14:00Z",
-          "mergedAt": "2022-07-13T13:08:59Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/35734",
+          "createdAt": "2018-04-10T19:35:13Z",
+          "mergedAt": "2018-05-18T07:53:24Z",
+          "url": "https://github.com/kwongj/maskrc-svg/pull/2",
           "changedFiles": 1,
-          "additions": 8,
-          "deletions": 7
+          "additions": 4,
+          "deletions": 0
         }
       },
       {
         "node": {
-          "number": 35687,
-          "title": "Rebuild nullarbor container",
+          "number": 1965,
+          "title": "SQL: Updated AH category (aH column in item_basic) for multiple items.",
           "repository": {
-            "nameWithOwner": "bioconda/bioconda-recipes"
+            "nameWithOwner": "DarkstarProject/darkstar"
           },
-          "createdAt": "2022-07-06T15:46:09Z",
-          "mergedAt": "2022-07-09T07:04:32Z",
-          "url": "https://github.com/bioconda/bioconda-recipes/pull/35687",
+          "createdAt": "2015-08-21T14:55:34Z",
+          "mergedAt": "2015-08-21T16:23:19Z",
+          "url": "https://github.com/DarkstarProject/darkstar/pull/1965",
           "changedFiles": 1,
-          "additions": 19,
-          "deletions": 13
+          "additions": 16,
+          "deletions": 16
         }
       },
       {
         "node": {
-          "number": 2228,
-          "title": "Add mulled for gubbins and snp-sites",
+          "number": 1962,
+          "title": "SQL: Updated AH category for multiple items",
           "repository": {
-            "nameWithOwner": "BioContainers/multi-package-containers"
+            "nameWithOwner": "DarkstarProject/darkstar"
           },
-          "createdAt": "2022-07-06T03:43:00Z",
+          "createdAt": "2015-08-21T04:54:25Z",
           "mergedAt": null,
-          "url": "https://github.com/BioContainers/multi-package-containers/pull/2228",
+          "url": "https://github.com/DarkstarProject/darkstar/pull/1962",
+          "changedFiles": 2,
+          "additions": 16961,
+          "deletions": 17035
+        }
+      },
+      {
+        "node": {
+          "number": 520,
+          "title": "Corrected AH categories for multiple items",
+          "repository": {
+            "nameWithOwner": "DarkstarProject/darkstar"
+          },
+          "createdAt": "2014-10-05T06:13:29Z",
+          "mergedAt": "2014-10-06T05:21:03Z",
+          "url": "https://github.com/DarkstarProject/darkstar/pull/520",
+          "changedFiles": 1,
+          "additions": 15503,
+          "deletions": 15503
+        }
+      },
+      {
+        "node": {
+          "number": 515,
+          "title": "Fix include paths which wont work in case-sensitive filesystems.",
+          "repository": {
+            "nameWithOwner": "DarkstarProject/darkstar"
+          },
+          "createdAt": "2014-10-04T13:43:48Z",
+          "mergedAt": "2014-10-04T15:46:18Z",
+          "url": "https://github.com/DarkstarProject/darkstar/pull/515",
+          "changedFiles": 4,
+          "additions": 7,
+          "deletions": 6
+        }
+      },
+      {
+        "node": {
+          "number": 488,
+          "title": "Proper implementation of BST Snarl command",
+          "repository": {
+            "nameWithOwner": "DarkstarProject/darkstar"
+          },
+          "createdAt": "2014-09-18T05:53:54Z",
+          "mergedAt": "2014-09-18T06:46:20Z",
+          "url": "https://github.com/DarkstarProject/darkstar/pull/488",
+          "changedFiles": 3,
+          "additions": 18,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 483,
+          "title": "Rock door in Kuftal Tunnel now opens or closes based on current weather",
+          "repository": {
+            "nameWithOwner": "DarkstarProject/darkstar"
+          },
+          "createdAt": "2014-09-15T04:38:51Z",
+          "mergedAt": "2014-09-15T20:42:10Z",
+          "url": "https://github.com/DarkstarProject/darkstar/pull/483",
+          "changedFiles": 1,
+          "additions": 15,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 482,
+          "title": "Corrected typo",
+          "repository": {
+            "nameWithOwner": "DarkstarProject/darkstar"
+          },
+          "createdAt": "2014-09-15T03:25:53Z",
+          "mergedAt": "2014-09-15T03:26:36Z",
+          "url": "https://github.com/DarkstarProject/darkstar/pull/482",
           "changedFiles": 1,
           "additions": 2,
-          "deletions": 1
+          "deletions": 2
         }
       }
     ]
