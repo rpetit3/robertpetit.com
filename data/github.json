@@ -1,6 +1,6 @@
 {
   "search": {
-    "issueCount": 41,
+    "issueCount": 78,
     "edges": [
       {
         "node": {
@@ -169,6 +169,66 @@
       },
       {
         "node": {
+          "number": 461,
+          "title": "add GHA for multiple versions of python and tensorflow using Medaka test suite",
+          "repository": {
+            "nameWithOwner": "nanoporetech/medaka"
+          },
+          "createdAt": "2023-10-03T22:17:05Z",
+          "mergedAt": null,
+          "url": "https://github.com/nanoporetech/medaka/pull/461",
+          "changedFiles": 1,
+          "additions": 52,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 6,
+          "title": "update nextflow descriptions",
+          "repository": {
+            "nameWithOwner": "lskatz/lskatz.github.io"
+          },
+          "createdAt": "2023-05-26T06:56:41Z",
+          "mergedAt": "2023-05-26T12:35:28Z",
+          "url": "https://github.com/lskatz/lskatz.github.io/pull/6",
+          "changedFiles": 1,
+          "additions": 4,
+          "deletions": 3
+        }
+      },
+      {
+        "node": {
+          "number": 873,
+          "title": "chore: update change visibility action",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-utils"
+          },
+          "createdAt": "2023-05-03T08:36:23Z",
+          "mergedAt": "2023-05-07T05:18:09Z",
+          "url": "https://github.com/bioconda/bioconda-utils/pull/873",
+          "changedFiles": 2,
+          "additions": 9,
+          "deletions": 5
+        }
+      },
+      {
+        "node": {
+          "number": 835,
+          "title": "chore: add CI to changevisibility of private containers",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-utils"
+          },
+          "createdAt": "2023-01-25T21:23:11Z",
+          "mergedAt": "2023-02-07T01:13:22Z",
+          "url": "https://github.com/bioconda/bioconda-utils/pull/835",
+          "changedFiles": 2,
+          "additions": 149,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
           "number": 2702,
           "title": "add module for stecfinder",
           "repository": {
@@ -210,6 +270,21 @@
           "changedFiles": 6,
           "additions": 155,
           "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 89,
+          "title": "Use consistent versions across pipeline",
+          "repository": {
+            "nameWithOwner": "CDCgov/mycosnp-nf"
+          },
+          "createdAt": "2022-12-12T21:12:12Z",
+          "mergedAt": "2023-03-24T20:42:06Z",
+          "url": "https://github.com/CDCgov/mycosnp-nf/pull/89",
+          "changedFiles": 12,
+          "additions": 36,
+          "deletions": 36
         }
       },
       {
@@ -495,6 +570,486 @@
           "changedFiles": 4,
           "additions": 113,
           "deletions": 3
+        }
+      },
+      {
+        "node": {
+          "number": 36,
+          "title": "add task for mlst",
+          "repository": {
+            "nameWithOwner": "theiagen/public_health_bacterial_genomics"
+          },
+          "createdAt": "2022-02-25T18:56:13Z",
+          "mergedAt": "2022-02-25T18:59:37Z",
+          "url": "https://github.com/theiagen/public_health_bacterial_genomics/pull/36",
+          "changedFiles": 1,
+          "additions": 48,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 35,
+          "title": "Bump SNP-dists version",
+          "repository": {
+            "nameWithOwner": "theiagen/public_health_bacterial_genomics"
+          },
+          "createdAt": "2022-02-25T18:42:43Z",
+          "mergedAt": "2022-02-25T18:59:25Z",
+          "url": "https://github.com/theiagen/public_health_bacterial_genomics/pull/35",
+          "changedFiles": 1,
+          "additions": 2,
+          "deletions": 2
+        }
+      },
+      {
+        "node": {
+          "number": 34,
+          "title": "Add species_typing tasks",
+          "repository": {
+            "nameWithOwner": "theiagen/public_health_bacterial_genomics"
+          },
+          "createdAt": "2022-02-25T18:13:06Z",
+          "mergedAt": "2022-02-25T18:19:39Z",
+          "url": "https://github.com/theiagen/public_health_bacterial_genomics/pull/34",
+          "changedFiles": 17,
+          "additions": 686,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 17,
+          "title": "use grep -q to play nice with bioconda docker build",
+          "repository": {
+            "nameWithOwner": "tseemann/legsta"
+          },
+          "createdAt": "2022-02-17T17:24:54Z",
+          "mergedAt": "2026-02-08T04:59:43Z",
+          "url": "https://github.com/tseemann/legsta/pull/17",
+          "changedFiles": 1,
+          "additions": 1,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 33,
+          "title": "add task and workflow for pmga",
+          "repository": {
+            "nameWithOwner": "theiagen/public_health_bacterial_genomics"
+          },
+          "createdAt": "2022-02-08T18:01:19Z",
+          "mergedAt": "2022-02-14T22:42:45Z",
+          "url": "https://github.com/theiagen/public_health_bacterial_genomics/pull/33",
+          "changedFiles": 2,
+          "additions": 88,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 290,
+          "title": "add dockerfile for pgma",
+          "repository": {
+            "nameWithOwner": "StaPH-B/docker-builds"
+          },
+          "createdAt": "2022-02-08T03:18:07Z",
+          "mergedAt": "2022-02-08T16:25:45Z",
+          "url": "https://github.com/StaPH-B/docker-builds/pull/290",
+          "changedFiles": 4,
+          "additions": 67,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 319,
+          "title": "Ignore comments column and drop Bio.Alphabet",
+          "repository": {
+            "nameWithOwner": "sanger-pathogens/ariba"
+          },
+          "createdAt": "2022-01-03T17:41:55Z",
+          "mergedAt": "2022-01-05T09:55:02Z",
+          "url": "https://github.com/sanger-pathogens/ariba/pull/319",
+          "changedFiles": 2,
+          "additions": 2,
+          "deletions": 3
+        }
+      },
+      {
+        "node": {
+          "number": 1322,
+          "title": "Update modules vs pipelines check in modules create command",
+          "repository": {
+            "nameWithOwner": "nf-core/tools"
+          },
+          "createdAt": "2021-11-16T22:24:46Z",
+          "mergedAt": "2021-11-17T16:23:44Z",
+          "url": "https://github.com/nf-core/tools/pull/1322",
+          "changedFiles": 3,
+          "additions": 13,
+          "deletions": 8
+        }
+      },
+      {
+        "node": {
+          "number": 93,
+          "title": "Patch GitHub Actions workflow",
+          "repository": {
+            "nameWithOwner": "theiagen/public_health_viral_genomics"
+          },
+          "createdAt": "2021-11-16T01:07:29Z",
+          "mergedAt": "2021-11-16T14:23:58Z",
+          "url": "https://github.com/theiagen/public_health_viral_genomics/pull/93",
+          "changedFiles": 4,
+          "additions": 0,
+          "deletions": 4
+        }
+      },
+      {
+        "node": {
+          "number": 1923,
+          "title": "Add ClonalFrameML and maskrc-svg multipackage",
+          "repository": {
+            "nameWithOwner": "BioContainers/multi-package-containers"
+          },
+          "createdAt": "2021-11-02T18:41:36Z",
+          "mergedAt": "2021-11-05T10:22:46Z",
+          "url": "https://github.com/BioContainers/multi-package-containers/pull/1923",
+          "changedFiles": 1,
+          "additions": 1,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 344,
+          "title": "Add bacteria test-data for nf-core/modules",
+          "repository": {
+            "nameWithOwner": "nf-core/test-datasets"
+          },
+          "createdAt": "2021-09-27T16:33:28Z",
+          "mergedAt": "2021-11-25T09:34:55Z",
+          "url": "https://github.com/nf-core/test-datasets/pull/344",
+          "changedFiles": 13,
+          "additions": 24722,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 26,
+          "title": "update python version requirement",
+          "repository": {
+            "nameWithOwner": "ulelab/ultraplex"
+          },
+          "createdAt": "2021-07-23T14:38:43Z",
+          "mergedAt": "2021-09-22T12:01:47Z",
+          "url": "https://github.com/ulelab/ultraplex/pull/26",
+          "changedFiles": 1,
+          "additions": 1,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 4,
+          "title": "Fix a few links",
+          "repository": {
+            "nameWithOwner": "pha4ge/pipeline-resources"
+          },
+          "createdAt": "2021-07-08T14:32:04Z",
+          "mergedAt": "2021-07-09T14:22:50Z",
+          "url": "https://github.com/pha4ge/pipeline-resources/pull/4",
+          "changedFiles": 1,
+          "additions": 2,
+          "deletions": 2
+        }
+      },
+      {
+        "node": {
+          "number": 10,
+          "title": "bring dsl2-modules branch up to v1.7.1",
+          "repository": {
+            "nameWithOwner": "bioinformatics-lab/bactopia"
+          },
+          "createdAt": "2021-06-19T06:14:27Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioinformatics-lab/bactopia/pull/10",
+          "changedFiles": 932,
+          "additions": 116606,
+          "deletions": 1384
+        }
+      },
+      {
+        "node": {
+          "number": 9,
+          "title": "Fix for dots in sample names",
+          "repository": {
+            "nameWithOwner": "VishnuRaghuram94/AgrVATE"
+          },
+          "createdAt": "2021-04-28T17:23:09Z",
+          "mergedAt": "2021-07-28T14:54:48Z",
+          "url": "https://github.com/VishnuRaghuram94/AgrVATE/pull/9",
+          "changedFiles": 1,
+          "additions": 2,
+          "deletions": 2
+        }
+      },
+      {
+        "node": {
+          "number": 2,
+          "title": "Add Bioconda install info",
+          "repository": {
+            "nameWithOwner": "aziele/phirbo"
+          },
+          "createdAt": "2021-01-12T00:57:59Z",
+          "mergedAt": "2021-01-12T06:30:55Z",
+          "url": "https://github.com/aziele/phirbo/pull/2",
+          "changedFiles": 1,
+          "additions": 7,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 463,
+          "title": "add new theme classic-dark",
+          "repository": {
+            "nameWithOwner": "utterance/utterances"
+          },
+          "createdAt": "2021-01-08T16:25:14Z",
+          "mergedAt": null,
+          "url": "https://github.com/utterance/utterances/pull/463",
+          "changedFiles": 6,
+          "additions": 42,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 31,
+          "title": "Add info for conda install",
+          "repository": {
+            "nameWithOwner": "gamcil/clinker"
+          },
+          "createdAt": "2021-01-06T01:03:55Z",
+          "mergedAt": "2021-01-06T04:01:49Z",
+          "url": "https://github.com/gamcil/clinker/pull/31",
+          "changedFiles": 1,
+          "additions": 8,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 25,
+          "title": "Add Kraken, Kraken2 and KrakenUniq workflows",
+          "repository": {
+            "nameWithOwner": "microbinfie-hackathon2020/CSIS"
+          },
+          "createdAt": "2020-12-04T01:14:09Z",
+          "mergedAt": "2020-12-04T13:43:21Z",
+          "url": "https://github.com/microbinfie-hackathon2020/CSIS/pull/25",
+          "changedFiles": 4,
+          "additions": 171,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 24,
+          "title": "add All the Krakens team info",
+          "repository": {
+            "nameWithOwner": "microbinfie-hackathon2020/CSIS"
+          },
+          "createdAt": "2020-12-04T01:05:07Z",
+          "mergedAt": "2020-12-04T13:43:06Z",
+          "url": "https://github.com/microbinfie-hackathon2020/CSIS/pull/24",
+          "changedFiles": 1,
+          "additions": 4,
+          "deletions": 7
+        }
+      },
+      {
+        "node": {
+          "number": 15,
+          "title": "Add Bactopia",
+          "repository": {
+            "nameWithOwner": "nextflow-io/awesome-nextflow"
+          },
+          "createdAt": "2020-11-18T20:53:54Z",
+          "mergedAt": "2020-11-18T22:55:48Z",
+          "url": "https://github.com/nextflow-io/awesome-nextflow/pull/15",
+          "changedFiles": 1,
+          "additions": 1,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 71,
+          "title": "Add Bactopia to README.md",
+          "repository": {
+            "nameWithOwner": "danielecook/Awesome-Bioinformatics"
+          },
+          "createdAt": "2020-11-18T20:53:24Z",
+          "mergedAt": "2021-03-31T14:57:26Z",
+          "url": "https://github.com/danielecook/Awesome-Bioinformatics/pull/71",
+          "changedFiles": 1,
+          "additions": 1,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 53,
+          "title": "Add minimum feature length option",
+          "repository": {
+            "nameWithOwner": "SionBayliss/PIRATE"
+          },
+          "createdAt": "2020-08-25T19:16:20Z",
+          "mergedAt": "2020-09-04T09:59:42Z",
+          "url": "https://github.com/SionBayliss/PIRATE/pull/53",
+          "changedFiles": 1,
+          "additions": 4,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 305,
+          "title": "Fix for changes in PubMLST url",
+          "repository": {
+            "nameWithOwner": "sanger-pathogens/ariba"
+          },
+          "createdAt": "2020-08-17T21:32:24Z",
+          "mergedAt": "2020-09-07T12:19:53Z",
+          "url": "https://github.com/sanger-pathogens/ariba/pull/305",
+          "changedFiles": 1,
+          "additions": 1,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 303,
+          "title": "Solution 2 for fixing CARD downloads with getref",
+          "repository": {
+            "nameWithOwner": "sanger-pathogens/ariba"
+          },
+          "createdAt": "2020-08-12T18:30:01Z",
+          "mergedAt": null,
+          "url": "https://github.com/sanger-pathogens/ariba/pull/303",
+          "changedFiles": 1,
+          "additions": 1,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 302,
+          "title": "Solution 1: for fixing CARD download",
+          "repository": {
+            "nameWithOwner": "sanger-pathogens/ariba"
+          },
+          "createdAt": "2020-08-12T18:29:04Z",
+          "mergedAt": "2020-09-07T12:21:26Z",
+          "url": "https://github.com/sanger-pathogens/ariba/pull/302",
+          "changedFiles": 1,
+          "additions": 1,
+          "deletions": 1
+        }
+      },
+      {
+        "node": {
+          "number": 302,
+          "title": "Rename VERSION to BOWTIE2_VERSION",
+          "repository": {
+            "nameWithOwner": "BenLangmead/bowtie2"
+          },
+          "createdAt": "2020-06-30T00:19:04Z",
+          "mergedAt": "2020-08-25T15:25:15Z",
+          "url": "https://github.com/BenLangmead/bowtie2/pull/302",
+          "changedFiles": 5,
+          "additions": 6,
+          "deletions": 6
+        }
+      },
+      {
+        "node": {
+          "number": 102,
+          "title": "Improved single end support",
+          "repository": {
+            "nameWithOwner": "HRGV/phyloFlash"
+          },
+          "createdAt": "2020-01-10T17:40:43Z",
+          "mergedAt": "2020-01-10T21:33:36Z",
+          "url": "https://github.com/HRGV/phyloFlash/pull/102",
+          "changedFiles": 1,
+          "additions": 17,
+          "deletions": 3
+        }
+      },
+      {
+        "node": {
+          "number": 35,
+          "title": "Add License to repo",
+          "repository": {
+            "nameWithOwner": "julianoappelklein/hokus"
+          },
+          "createdAt": "2019-12-03T13:54:02Z",
+          "mergedAt": "2019-12-04T11:22:50Z",
+          "url": "https://github.com/julianoappelklein/hokus/pull/35",
+          "changedFiles": 1,
+          "additions": 21,
+          "deletions": 0
+        }
+      },
+      {
+        "node": {
+          "number": 38,
+          "title": "set min_range and max_range args to be a float",
+          "repository": {
+            "nameWithOwner": "jhawkey/IS_mapper"
+          },
+          "createdAt": "2019-04-06T06:11:36Z",
+          "mergedAt": "2019-06-11T00:28:45Z",
+          "url": "https://github.com/jhawkey/IS_mapper/pull/38",
+          "changedFiles": 1,
+          "additions": 3,
+          "deletions": 3
+        }
+      },
+      {
+        "node": {
+          "number": 34,
+          "title": "Added count_31mers function to count 31mers using Jellyfish",
+          "repository": {
+            "nameWithOwner": "MetaSUB/MetaSUB_CAP"
+          },
+          "createdAt": "2018-10-03T17:51:39Z",
+          "mergedAt": "2019-01-14T03:58:49Z",
+          "url": "https://github.com/MetaSUB/MetaSUB_CAP/pull/34",
+          "changedFiles": 3,
+          "additions": 64,
+          "deletions": 5
+        }
+      },
+      {
+        "node": {
+          "number": 33,
+          "title": "Added Dockerfile to set up dependencies for MetaSUB_CAP",
+          "repository": {
+            "nameWithOwner": "MetaSUB/MetaSUB_CAP"
+          },
+          "createdAt": "2018-10-03T15:31:23Z",
+          "mergedAt": "2019-01-14T03:39:59Z",
+          "url": "https://github.com/MetaSUB/MetaSUB_CAP/pull/33",
+          "changedFiles": 4,
+          "additions": 106,
+          "deletions": 0
         }
       },
       {
