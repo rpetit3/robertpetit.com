@@ -20,7 +20,7 @@ ena_dl:
 
 fastq_dl:
   - downloads: 0
-    stars: 395
+    stars: 396
 
 fastq_scan:
   - downloads: 0
