@@ -1,7 +1,22 @@
 {
   "search": {
-    "issueCount": 353,
+    "issueCount": 354,
     "edges": [
+      {
+        "node": {
+          "number": 67534,
+          "title": "add recipe for genome-dl",
+          "repository": {
+            "nameWithOwner": "bioconda/bioconda-recipes"
+          },
+          "createdAt": "2026-07-24T18:09:14Z",
+          "mergedAt": null,
+          "url": "https://github.com/bioconda/bioconda-recipes/pull/67534",
+          "changedFiles": 1,
+          "additions": 45,
+          "deletions": 0
+        }
+      },
       {
         "node": {
           "number": 64860,
@@ -1485,21 +1500,6 @@
           "changedFiles": 1,
           "additions": 19,
           "deletions": 13
-        }
-      },
-      {
-        "node": {
-          "number": 2228,
-          "title": "Add mulled for gubbins and snp-sites",
-          "repository": {
-            "nameWithOwner": "BioContainers/multi-package-containers"
-          },
-          "createdAt": "2022-07-06T03:43:00Z",
-          "mergedAt": null,
-          "url": "https://github.com/BioContainers/multi-package-containers/pull/2228",
-          "changedFiles": 1,
-          "additions": 2,
-          "deletions": 1
         }
       }
     ]
