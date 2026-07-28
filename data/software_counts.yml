@@ -4,7 +4,7 @@ assembly_scan:
 
 bactopia:
   - downloads: 0
-    stars: 519
+    stars: 520
 
 call_variants:
   - downloads: 0
@@ -20,7 +20,7 @@ ena_dl:
 
 fastq_dl:
   - downloads: 0
-    stars: 399
+    stars: 400
 
 fastq_scan:
   - downloads: 0
@@ -44,11 +44,11 @@ pasty:
 
 pbptyper:
   - downloads: 0
-    stars: 0
+    stars: 10
 
 pmga:
   - downloads: 0
-    stars: 0
+    stars: 2
 
 shovill_se:
   - downloads: 0
@@ -56,7 +56,7 @@ shovill_se:
 
 staphopia:
   - downloads: 0
-    stars: 0
+    stars: 7
 
 staphopia_sccmec:
   - downloads: 0
@@ -64,9 +64,9 @@ staphopia_sccmec:
 
 tbl2asn_forever:
   - downloads: 0
-    stars: 0
+    stars: 3
 
 vcf_annotator:
   - downloads: 0
-    stars: 0
+    stars: 33
 
