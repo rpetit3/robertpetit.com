@@ -4,7 +4,7 @@ assembly_scan:
 
 bactopia:
   - downloads: 0
-    stars: 521
+    stars: 520
 
 call_variants:
   - downloads: 0
@@ -20,7 +20,7 @@ ena_dl:
 
 fastq_dl:
   - downloads: 0
-    stars: 402
+    stars: 403
 
 fastq_scan:
   - downloads: 0
