@@ -1,16 +1,19 @@
 name: Latest Pull Requests - Manual
 on: workflow_dispatch
 
+permissions:
+  contents: write
+
 jobs:
   logLatestPR:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.ref }}
 
       - name: Query Github API
-        uses: octokit/graphql-action@v2.x
+        uses: octokit/graphql-action@v3.0.2
         id: get_latest_pr
         with:
           query: |
@@ -40,7 +43,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Query Github API
-        uses: octokit/graphql-action@v2.x
+        uses: octokit/graphql-action@v3.0.2
         id: get_latest_pr_merged
         with:
           query: |
@@ -64,7 +67,7 @@ jobs:
           git commit -m "ci: update github stats" -a | exit 0
 
       - name: Push Changes
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v1.3.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}

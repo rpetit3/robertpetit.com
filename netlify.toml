@@ -3,8 +3,9 @@
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.80.0"
+  HUGO_VERSION = "0.169.0"
   HUGO_ENABLEGITINFO = "true"
+  NODE_VERSION = "24"
 
 [build.processing]
   skip_processing = false

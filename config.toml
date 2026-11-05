@@ -3,7 +3,7 @@
 
 baseURL = "https://www.robertpetit.com/"
 defaultContentLanguage = "en"
-languageCode = "en-us"
+locale = "en-us"
 title = "Robert A. Petit III, PhD"
 theme = "github-style"
 googleAnalytics = "G-BSZQDCMRH9"
@@ -13,16 +13,6 @@ copyright = "&copy; Dr. Robert A. Petit III, 2020-{year}"
 
 [frontmatter]
   lastmod = ["lastmod", ":fileModTime", ":default"]
-
-[blackfriday]
-  nofollowLinks = true
-  noreferrerLinks = true
-  plainIDAnchors = true
-  hrefTargetBlank = true
-  extensions = [
-    "laxHtmlBlocks", # laxer block handling... let's see what this does?
-    "hardLineBreak", # newlines result in line breaks
-  ]
 
 [markup.goldmark.renderer]
   unsafe= true

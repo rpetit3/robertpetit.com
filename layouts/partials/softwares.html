@@ -35,7 +35,7 @@
           <ol class="d-flex flex-wrap list-style-none gutter-condensed mb-4 js-pinned-items-reorder-list">
             {{ range (first 6 $section) }}
             {{ $fixed_title := replace .Title "-" "_" }}
-            {{ $counts := (index (index $.Site.Data.software_counts $fixed_title) 0) }}
+            {{ $counts := (index (index hugo.Data.software_counts $fixed_title) 0) }}
             <li class="col-12 col-md-6 col-lg-6 mb-3 d-flex flex-content-stretch">
               
               <div
@@ -53,11 +53,11 @@
                     </div>
                     <div class="file-actions flex-order-2 pt-0">
                         <span class="UnderlineNav-octicon hide-sm" style="margin-right: 0px;">
-                          {{ partial "select_octicon.html" (dict "context" . "octicon" "star" ) }}{{ $counts.stars  | lang.NumFmt 0 }}
+                          {{ partial "select_octicon.html" (dict "context" . "octicon" "star" ) }}{{ $counts.stars  | lang.FormatNumber 0 }}
                         </span>
 
                         <span class="UnderlineNav-octicon hide-sm" style="padding-left:7px; margin-right: 0px;">
-                          {{ partial "select_octicon.html" (dict "context" . "octicon" "download" ) }}{{if gt $counts.downloads 0 }}{{ $counts.downloads | lang.NumFmt 0 }}{{else}}?{{end}}
+                          {{ partial "select_octicon.html" (dict "context" . "octicon" "download" ) }}{{if gt $counts.downloads 0 }}{{ $counts.downloads | lang.FormatNumber 0 }}{{else}}?{{end}}
                         </span>
                     </div>
                   </div>
@@ -114,13 +114,13 @@
                         </div>
                         <div class="file-actions flex-order-2 pt-0">
                             {{ $fixed_title := replace .Title "-" "_" }}
-                            {{ $counts := (index (index $.Site.Data.software_counts $fixed_title) 0) }}
+                            {{ $counts := (index (index hugo.Data.software_counts $fixed_title) 0) }}
                             <span class="UnderlineNav-octicon hide-sm" style="margin-right: 0px;">
-                              {{ partial "select_octicon.html" (dict "context" . "octicon" "star" ) }}{{ $counts.stars | lang.NumFmt 0 }}
+                              {{ partial "select_octicon.html" (dict "context" . "octicon" "star" ) }}{{ $counts.stars | lang.FormatNumber 0 }}
                             </span>
     
                             <span class="UnderlineNav-octicon hide-sm" style="padding-left:7px; margin-right: 0px;">
-                              {{ partial "select_octicon.html" (dict "context" . "octicon" "download" ) }}{{if gt $counts.downloads 0 }}{{ $counts.downloads | lang.NumFmt 0 }}{{else}}?{{end}}
+                              {{ partial "select_octicon.html" (dict "context" . "octicon" "download" ) }}{{if gt $counts.downloads 0 }}{{ $counts.downloads | lang.FormatNumber 0 }}{{else}}?{{end}}
                             </span>
                         </div>
                     </div>

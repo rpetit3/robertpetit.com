@@ -84,8 +84,8 @@
     {{ $section := union $section (where .Site.RegularPages "Section" "volunteer") }}
     <div class="mt-4 position-relative" id="contributions" data='[{{ range $index, $elem := $section }}
     {{ if eq .Params.type "conda" }}
-      {{ $pr_count := len $.Site.Data.github.search.edges }}
-      {{ range $i, $e := $.Site.Data.github.search.edges }}
+      {{ $pr_count := len hugo.Data.github.search.edges }}
+      {{ range $i, $e := hugo.Data.github.search.edges }}
       {
         "title": "{{ .node.title | markdownify }}",
         "link": "/volunteer/",
@@ -94,8 +94,8 @@
       },
       {{ end }}
 
-      {{ $conda_len := len $.Site.Data.volunteer.conda }}
-      {{ range $i, $e := $.Site.Data.volunteer.conda }}
+      {{ $conda_len := len hugo.Data.volunteer.conda }}
+      {{ range $i, $e := hugo.Data.volunteer.conda }}
 {
   "title": "{{ .title | markdownify }}",
   "link": "/volunteer/",

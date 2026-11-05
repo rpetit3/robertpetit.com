@@ -26,7 +26,7 @@
                         </div>
                       </div>
                       <span class="p-name vcard-fullname d-block overflow-hidden">{{ .Site.Params.author }}</span>
-                        <span class="p-nickname vcard-username d-block">{{ $.Site.Data.cv.title }}</span>
+                        <span class="p-nickname vcard-username d-block">{{ hugo.Data.cv.title }}</span>
                     </span>
                   </div>
                 </div>
@@ -83,7 +83,7 @@
           
           
           <h2>Education</h2>
-          {{ range sort $.Site.Data.cv.education "end" "desc" }}
+          {{ range sort hugo.Data.cv.education "end" "desc" }}
             <p>
             <strong>{{ .degree }}</strong><br/> 
             {{ if isset . "url" }}
@@ -95,7 +95,7 @@
           {{end}}
 
           <h2>Professional Experience</h2>
-          {{ range sort $.Site.Data.cv.employment "start" "desc" }}
+          {{ range sort hugo.Data.cv.employment "start" "desc" }}
             <p>
             <strong>{{ .title | title }}</strong><br />
             <i>{{ .company }}, {{ .location }},
@@ -110,7 +110,7 @@
           {{end}}
 
           <h2>Certifications</h2>
-          {{ range sort $.Site.Data.cv.certifications "date" "desc" }}
+          {{ range sort hugo.Data.cv.certifications "date" "desc" }}
             <p>
               <a href="{{ .url }}" target="_blank">
                 <strong>{{ .name }}</strong><br/>
@@ -134,31 +134,31 @@
           <h2>Software</h2>
           {{ $downloads := 0 }}
           {{ $stars := 0 }}
-          {{ range $.Site.Data.software_counts }}
+          {{ range hugo.Data.software_counts }}
             {{ $data := (index . 0 ) }}
             {{ $downloads = add $downloads $data.downloads }}
             {{ $stars = add $stars $data.stars }}
           {{ end }}
           <p>
-          Software tools which I developed or maintain, have been downloaded {{ $downloads | lang.NumFmt 0}} times using Conda and have {{ $stars | lang.NumFmt 0}} total Stargazers.
+          Software tools which I developed or maintain, have been downloaded {{ $downloads | lang.FormatNumber 0}} times using Conda and have {{ $stars | lang.FormatNumber 0}} total Stargazers.
           </p>
           {{ $section := where $.Site.RegularPages "Section" "software" }}
-          {{ range  $i, $e := sort $section ".Params.title" "ascd" }}
+          {{ range  $i, $e := sort $section ".Title" "ascd" }}
             {{ if gt $i 0 }}
             {{ $fixed_title := replace $e.Title "-" "_" }}
-            {{ $counts := (index (index $.Site.Data.software_counts $fixed_title) 0) }}
+            {{ $counts := (index (index hugo.Data.software_counts $fixed_title) 0) }}
 
             <p>
                 {{ $i }}.  <a href="{{ $e.Params.link }}" target="_blank">{{ $e.Title | markdownify }}</a><br />
                 <i>{{ .Summary | safeHTML }}</i><br />
-                {{ if gt $counts.downloads 0 }}{{$counts.downloads | lang.NumFmt 0}} total downloads{{ if gt $counts.stars 0 }} and {{$counts.stars | lang.NumFmt 0 }} Stargazers{{end}}{{else if gt $counts.stars 0 }}{{$counts.stars | lang.NumFmt 0}} Stargazers{{end}}
+                {{ if gt $counts.downloads 0 }}{{$counts.downloads | lang.FormatNumber 0}} total downloads{{ if gt $counts.stars 0 }} and {{$counts.stars | lang.FormatNumber 0 }} Stargazers{{end}}{{else if gt $counts.stars 0 }}{{$counts.stars | lang.FormatNumber 0}} Stargazers{{end}}
             </p>
             {{ end }}
           {{end}}
 
           <h2>Presentations</h2>
           <h3>Talks</h3>
-          {{ $talk := where $.Site.Data.cv.presentations "type" "talk" }}
+          {{ $talk := where hugo.Data.cv.presentations "type" "talk" }}
           {{ $count := len $talk }}
           {{ range $i, $e := sort $talk "date" "desc" }}
             <p>
@@ -176,7 +176,7 @@
             <p>
           {{end}}
           <h3>Posters</h3>
-          {{ $poster := where $.Site.Data.cv.presentations "type" "poster" }}
+          {{ $poster := where hugo.Data.cv.presentations "type" "poster" }}
           {{ $count := len $poster }}
           {{ range $i, $e := sort $poster "date" "desc" }}
             <p>
@@ -195,13 +195,13 @@
           {{end}}
 
           <h2>Grants</h2>
-          {{ range sort $.Site.Data.cv.grants "date" "desc" }}
+          {{ range sort hugo.Data.cv.grants "date" "desc" }}
             <p>
-            <strong>{{ .name | title }}</strong>, ${{ .amount | lang.NumFmt 0 }},  {{ dateFormat "2006" .date }}
+            <strong>{{ .name | title }}</strong>, ${{ .amount | lang.FormatNumber 0 }},  {{ dateFormat "2006" .date }}
             <p>
           {{end}}
           <h2>Awards</h2>
-          {{ range sort $.Site.Data.cv.awards "date" "desc" }}
+          {{ range sort hugo.Data.cv.awards "date" "desc" }}
             <p>
             <strong>{{ .name | title }}</strong>, <i>{{ .organization }}</i>,  {{ dateFormat "January 2006" .date }}<br/>
             {{ .description }}
@@ -209,7 +209,7 @@
           {{end}}
 
           <h2>Professional Development Training</h2>
-          {{ range sort $.Site.Data.cv.training "date" "desc" }}
+          {{ range sort hugo.Data.cv.training "date" "desc" }}
             <p>
               <a href="{{ .url }}" target="_blank">
                 <strong>{{ .course }}</strong><br/>
@@ -219,7 +219,7 @@
           {{end}}
               
           <h2>Teaching Experience</h2>
-          {{ range sort $.Site.Data.cv.teaching "date" "desc" }}
+          {{ range sort hugo.Data.cv.teaching "date" "desc" }}
             <p>
             <strong>{{ .role | title }}</strong><br/>
             <i>{{ .course }}, {{ .level }} Level, {{.school}}, {{ dateFormat "2006" .date }} </i><br/>

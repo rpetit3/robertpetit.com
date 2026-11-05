@@ -41,7 +41,7 @@
 
 <!-- Google Analytics -->
 {{ if eq (getenv "HUGO_ENV") "production"}}
-  {{ with .Site.GoogleAnalytics }}
+  {{ with .Site.Config.Services.GoogleAnalytics.ID }}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
   <script>
     if (navigator.doNotTrack !== '1') {

@@ -1,11 +1,14 @@
 name: Latest Counts - Manual
 on: workflow_dispatch
 
+permissions:
+  contents: write
+
 jobs:
   logLatestPR:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.ref }}
       - name: Update and Commit
@@ -16,7 +19,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git commit -m "ci: update software_counts.yml" -a | exit 0
       - name: Push Changes
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@v1.3.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
