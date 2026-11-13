@@ -5,8 +5,8 @@
       <div class="flex-shrink-0 col-12 col-md-3 mb-4 mb-md-0">
       </div>
       <div class="flex-shrink-0 col-12 col-md-9 mb-4 mb-md-0">
-        <div class="UnderlineNav width-full box-shadow-none hx_UnderlineNav-with-profile-color-modes-banner">
-          <nav class="UnderlineNav-body">
+        <div class="UnderlineNav width-full box-shadow-none hx_UnderlineNav-with-profile-color-modes-banner flex-items-center">
+          <nav class="UnderlineNav-body" style="flex: 1 1 auto; min-width: 0; overflow-x: auto;">
             <a class="UnderlineNav-item {{ if .IsHome }} selected {{ end }}" href="{{ .Site.BaseURL }}">
               <span class="UnderlineNav-octicon hide-sm">
                 {{ partial "select_octicon.html" (dict "context" . "octicon" "book") }}
@@ -45,9 +45,7 @@
               </a>
             {{ end }}
           </nav>
-          <div class="profile-color-modes js-promo-color-modes-banner-profile isInitialToggle">
-            {{ partial "select_octicon.html" (dict "context" . "octicon" "octicat") }}
-          </div>
+          <span class="Header-link pl-2">{{ partial "theme-toggle.html" . }}</span>
         </div>
       </div>
     </div>

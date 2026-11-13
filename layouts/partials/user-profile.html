@@ -6,11 +6,7 @@
         <div class="user-profile-sticky-bar js-user-profile-sticky-bar d-none d-md-block" id="headerStuck">
           <div class="user-profile-mini-vcard d-table">
             <span class="user-profile-mini-avatar d-table-cell v-align-middle lh-condensed-ultra pr-2">
-              {{ with $.Site.Params.avatar }}
-              <img class="rounded-1 avatar-user" height="32" width="32" alt="profile" src="{{ $.Site.Params.avatar }}">
-              {{ else }}
-              <img class="rounded-1 avatar-user" height="32" width="32" alt="profile" src="{{ "images/avatar.png" | absURL }}">
-              {{ end }}
+              <img class="rounded-1 avatar-user" height="32" width="32" alt="profile" src="{{ "images/profile-small.png" | absURL }}">
             </span>
             <span class="d-table-cell v-align-middle lh-condensed">
               <strong>{{ .Site.Params.author }}</strong>
@@ -102,27 +98,23 @@
         <div class="border-top color-border-secondary pt-3 mt-3 clearfix hide-sm hide-md">
           <h2 class="mb-2 h4">Organizations</h2>
 
-          {{ range .Site.Params.social }}
-            {{ $site_name := .site }}
-            {{ $image := .image }}
-            {{ $link := trim .link " " }}
-            {{ $scheme := (urls.Parse $link).Scheme }}
-            {{ $target := "" }}
-            {{ if not $scheme }}
-                {{ $link = .link | relLangURL }}
-            {{ else if in (slice "http" "https") $scheme }}
-                {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
-            {{ end }}
-            <a class="avatar-group-item" title="{{ $site_name }}" href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }}>
-              <img alt="@{{ $site_name }}" width="32" height="32" src="{{ $image  | absURL }}" class="avatar">
-            </a>
-          {{ end }}
-
-          {{ if .Site.Params.rss }}
-          <a class="avatar-group-item" href="{{ "/index.xml" | absURL }}">
-            <img alt="@rss" width="32" height="32" src="{{ "images/rss.png" | absURL }}" class="avatar">
-          </a>
-          {{ end }}
+          {{/* anchors stay adjacent: spacing comes from mr-1, so dev and minified prod match */}}
+          {{- range .Site.Params.social -}}
+          {{- $site_name := .site -}}
+          {{- $image := .image -}}
+          {{- $link := trim .link " " -}}
+          {{- $scheme := (urls.Parse $link).Scheme -}}
+          {{- $target := "" -}}
+          {{- if not $scheme -}}
+          {{- $link = .link | relLangURL -}}
+          {{- else if in (slice "http" "https") $scheme -}}
+          {{- $target = "target=\"_blank\" rel=\"noopener\"" -}}
+          {{- end -}}
+          <a class="avatar-group-item mr-1" title="{{ $site_name }}" href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }}><img alt="@{{ $site_name }}" width="32" height="32" src="{{ $image  | absURL }}" class="avatar"></a>
+          {{- end }}
+          {{- if .Site.Params.rss -}}
+          <a class="avatar-group-item mr-1" href="{{ "/index.xml" | absURL }}"><img alt="@rss" width="32" height="32" src="{{ "images/rss.png" | absURL }}" class="avatar"></a>
+          {{- end }}
         </div>
       </div>
     </div>
@@ -139,6 +131,7 @@
 <script>
 window.onscroll = function (e) {
   const headerImg = document.querySelector('#headerImg');
+  if (!headerImg) return;
   if (headerImg.getBoundingClientRect().bottom <= 0) {
     document.querySelector('#headerStuck').classList.add('is-stuck');
   } else {

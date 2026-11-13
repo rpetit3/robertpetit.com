@@ -3,7 +3,6 @@
 {{ partial "head.html" . }}
 
 <body>
-  {{ partial "header" . }}
   {{ if or .Page.IsSection .Page.IsHome }}
     {{ block "content" . }}{{ end }}
   {{ else if eq .Page.Section "tags" }}

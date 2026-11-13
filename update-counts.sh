@@ -1,4 +1,5 @@
 #! /bin/bash
+set -euo pipefail
 # Get Conda downloads and GitHub Stargazer counts for each repo
 
 declare -a tools=( 
@@ -26,23 +27,23 @@ for tool in "${tools[@]}"; do
     count=0
     fixed_name=${tool//-/_}
     if [[ "staphopia" != "${tool}" ]]; then
-        count=$(curl -s  https://anaconda.org/bioconda/${tool} | grep "total downloads" | sed -r 's=.*<span>([0-9]+)</span>.*=\1=')
+        count=$(curl -s "https://api.anaconda.org/package/bioconda/${tool}/files" | jq '[.[].ndownloads] | add // 0' 2>/dev/null || true)
     fi
 
     star=0
     if [[ "bactopia" == "${tool}" ]]; then
-        star=$(curl -s https://api.github.com/repos/bactopia/${tool} | jq .stargazers_count)
+        star=$(curl -s https://api.github.com/repos/bactopia/${tool} | jq .stargazers_count || true)
     elif [[ "staphopia" == "${tool}" ]]; then
-        star=$(curl -s https://api.github.com/repos/staphopia/${tool}-ap | jq .stargazers_count)
+        star=$(curl -s https://api.github.com/repos/staphopia/${tool}-ap | jq .stargazers_count || true)
     else
-        star=$(curl -s https://api.github.com/repos/rpetit3/${tool} | jq .stargazers_count)
+        star=$(curl -s https://api.github.com/repos/rpetit3/${tool} | jq .stargazers_count || true)
     fi
 
     if [[ "${count}" == "" ]]; then
         count=0
     fi
 
-    if [[ "${star}" == "null" ]]; then
+    if [[ "${star}" == "null" || "${star}" == "" ]]; then
         star=0
     fi
 

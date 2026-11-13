@@ -56,9 +56,11 @@
                           {{ partial "select_octicon.html" (dict "context" . "octicon" "star" ) }}{{ $counts.stars  | lang.FormatNumber 0 }}
                         </span>
 
+                        {{ if gt $counts.downloads 0 }}
                         <span class="UnderlineNav-octicon hide-sm" style="padding-left:7px; margin-right: 0px;">
-                          {{ partial "select_octicon.html" (dict "context" . "octicon" "download" ) }}{{if gt $counts.downloads 0 }}{{ $counts.downloads | lang.FormatNumber 0 }}{{else}}?{{end}}
+                          {{ partial "select_octicon.html" (dict "context" . "octicon" "download" ) }}{{ $counts.downloads | lang.FormatNumber 0 }}
                         </span>
+                        {{ end }}
                     </div>
                   </div>
 
@@ -119,9 +121,11 @@
                               {{ partial "select_octicon.html" (dict "context" . "octicon" "star" ) }}{{ $counts.stars | lang.FormatNumber 0 }}
                             </span>
     
+                            {{ if gt $counts.downloads 0 }}
                             <span class="UnderlineNav-octicon hide-sm" style="padding-left:7px; margin-right: 0px;">
-                              {{ partial "select_octicon.html" (dict "context" . "octicon" "download" ) }}{{if gt $counts.downloads 0 }}{{ $counts.downloads | lang.FormatNumber 0 }}{{else}}?{{end}}
+                              {{ partial "select_octicon.html" (dict "context" . "octicon" "download" ) }}{{ $counts.downloads | lang.FormatNumber 0 }}
                             </span>
+                            {{ end }}
                         </div>
                     </div>
     

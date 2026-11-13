@@ -1,6 +1,6 @@
-<div class="UnderlineNav user-profile-nav d-block d-md-none position-sticky top-0 pl-3 ml-n3 mr-n3 pr-3 bg-white"
+<div class="user-profile-nav d-md-none position-sticky top-0 pl-3 ml-n3 mr-n3 bg-white d-flex flex-items-center"
   style="z-index:3;">
-  <nav class="UnderlineNav-body">
+  <nav class="UnderlineNav" style="flex: 1 1 auto; min-width: 0;">
     <a class="UnderlineNav-item {{ if .IsHome }} selected {{ end }}" href="{{ .Site.BaseURL }}">
       <span class="UnderlineNav-octicon hide-sm">
         {{ partial "select_octicon.html" (dict "context" . "octicon" "book") }}
@@ -38,4 +38,5 @@
       </a>
     {{ end }}
   </nav>
+  <span class="Header-link pl-2 pr-3 ml-2">{{ partial "theme-toggle.html" . }}</span>
 </div>

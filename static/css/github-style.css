@@ -28,6 +28,37 @@ body {
   margin-right: 16px;
 }
 
+.theme-toggle .profile-color-modes-toggle-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle .theme-toggle-sun {
+  display: none;
+}
+
+[data-color-mode="light"] .theme-toggle .theme-toggle-sun {
+  display: block;
+}
+
+[data-color-mode="light"] .theme-toggle .theme-toggle-moon {
+  display: none;
+}
+
+.theme-toggle {
+  position: relative;
+  top: auto;
+  right: auto;
+  display: block;
+  width: 42px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
 .octicon {
   fill: currentColor;
 }
@@ -145,4 +176,18 @@ body {
 
 .markdown-body hr {
   height: 1px;
+}
+
+.footer > div,
+.footer ul {
+  justify-content: center !important;
+}
+
+.page-404 .footer {
+  margin-top: 0;
+}
+
+.page-404 .footer > div {
+  border-top: 1px solid var(--color-border-primary) !important;
+  margin-top: 0 !important;
 }

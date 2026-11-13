@@ -29,10 +29,10 @@ group = "Microbiology Laboratories"
     user = "rpetit3"
 
 [[social]]
-    site = "Twitter"
-    image = "images/twitter.png"
-    link = "https://twitter.com/rpetit3"
-    user = "rpetit3"
+    site = "Bluesky"
+    image = "images/bluesky.png"
+    link = "https://bsky.app/profile/rpetit3.bsky.social"
+    user = "rpetit3.bsky.social"
 
 [[social]]
     site = "LinkedIn"
@@ -59,12 +59,6 @@ group = "Microbiology Laboratories"
     user = "sBSRYTkAAAAJ"
 
 # Navigation Sections
-[[sections]]
-    name = "Posts"
-    url = "/post/"
-    weight = 10
-    octicon = "project"
-
 [[sections]]
     name = "Publications"
     url = "/publication/"
