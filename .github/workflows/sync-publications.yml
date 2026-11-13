@@ -25,11 +25,12 @@ jobs:
     env:
       OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
       OPENALEX_AUTHOR_PROFILE: ${{ secrets.OPENALEX_AUTHOR_PROFILE || 'https://openalex.org/authors/A5004170724' }}
-      GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v7
         with:
-          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          submodules: true
+          token: ${{ secrets.GITHUB_TOKEN }}
           lfs: true
 
       - uses: conda-incubator/setup-miniconda@v3

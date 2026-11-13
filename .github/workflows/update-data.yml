@@ -1,0 +1,142 @@
+name: Weekly Data Refresh
+on:
+  schedule:
+    # Mondays 01:30 UTC, before the publication sync
+    - cron: '30 1 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+# One env setup, one build and one push for all three refreshes: separate
+# workflows would race each other to main and re-do the setup three times.
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          submodules: true
+
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: environment.yml
+          activate-environment: ctx-robertpetit.com-1-dev
+          miniforge-version: latest
+
+      - name: Test
+        run: python -m pytest tests -q
+
+      # Each source runs on its own so one failure cannot mask the others; the
+      # last step fails the run while everything it did collect still commits.
+      # A Provider failure still writes a partial snapshot; the collector exits
+      # 0 and marks affected tools `incomplete`, so the data shows the gap.
+      - name: Collect counts
+        id: counts
+        continue-on-error: true
+        run: python scripts/collect_software_counts.py
+
+      - name: Query latest pull requests
+        id: get_latest_pr
+        continue-on-error: true
+        uses: octokit/graphql-action@v3.0.2
+        with:
+          query: |
+            query {
+              search(query: "is:pr author:rpetit3 -user:rpetit3 -user:rpetit3-fun -user:staphopia -user:bactopia -user:Read-Lab-Confederation", type: ISSUE, first: 100) {
+                issueCount
+                edges {
+                  node {
+                  ... on PullRequest {
+                      number
+                      title
+                      repository {
+                        nameWithOwner
+                      }
+                      createdAt
+                      mergedAt
+                      url
+                      changedFiles
+                      additions
+                      deletions
+                    }
+                  }
+                }
+              }
+            }
+
+      - name: Query merged pull request count
+        id: get_latest_pr_merged
+        continue-on-error: true
+        uses: octokit/graphql-action@v3.0.2
+        with:
+          query: |
+            query {
+              search(query: "is:pr is:merged author:rpetit3 -user:rpetit3 -user:rpetit3-fun -user:staphopia -user:bactopia -user:Read-Lab-Confederation", type: ISSUE, first: 100) {
+                issueCount
+              }
+            }
+
+      # Env indirection keeps apostrophes in PR titles from breaking the shell.
+      - name: Write pull request data
+        id: write_pr
+        if: steps.get_latest_pr.outcome == 'success' && steps.get_latest_pr_merged.outcome == 'success'
+        continue-on-error: true
+        env:
+          LATEST: ${{ steps.get_latest_pr.outputs.data }}
+          MERGED: ${{ steps.get_latest_pr_merged.outputs.data }}
+        run: |
+          set -euo pipefail
+          printf '%s\n' "$LATEST" > data/github.json
+          printf '%s\n' "$MERGED" > data/merged.json
+
+      # A failed source keeps its previous rows and lands in `_meta.incomplete`,
+      # so the page degrades to stale data instead of losing history.
+      - name: Sync volunteer conda submissions
+        id: conda
+        continue-on-error: true
+        run: python scripts/sync_conda_submissions.py
+
+      - name: Flag incomplete sources
+        if: always()
+        run: |
+          set -euo pipefail
+          if grep -q '^  incomplete:' data/volunteer.yml; then
+            sed -n '/^  incomplete:/,/^[a-z]/p' data/volunteer.yml |
+              grep '^    - ' | sed 's/^    - /source failed: /' >> "$GITHUB_STEP_SUMMARY" || true
+            echo "::warning file=data/volunteer.yml::some sources failed, previous entries kept"
+          fi
+
+      - name: Build
+        if: always()
+        run: hugo --gc --minify -b https://www.robertpetit.com
+
+      - name: Commit and push
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/software-counts.yml metrics data/github.json data/merged.json data/volunteer.yml
+          git diff --cached --quiet && exit 0
+          git commit -m "ci: update counts"
+          git push
+
+      - name: Fail on a failed source
+        if: always()
+        run: |
+          set -euo pipefail
+          for outcome in "${{ steps.counts.outcome }}" "${{ steps.get_latest_pr.outcome }}" \
+                         "${{ steps.write_pr.outcome }}" "${{ steps.conda.outcome }}"; do
+            if [ "$outcome" != "success" ]; then
+              echo "::error::a data source failed, see the step logs"
+              exit 1
+            fi
+          done

@@ -1,0 +1,141 @@
+name: Site Health
+on:
+  schedule:
+    # Daily 05:17 UTC
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: site-health
+
+# The failure mode that matters is silent: a lapsed Netlify certificate once
+# broke the site for weeks. Every probe records its own outcome, a gate fails
+# the run, and an open issue is kept in step with the site.
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SITE: https://www.robertpetit.com
+      HOST: www.robertpetit.com
+    steps:
+      - name: Status codes
+        id: status
+        continue-on-error: true
+        run: |
+          set -uo pipefail
+          fail=0
+          for path in / /about/ /cv/ /publication/ /software/ /volunteer/; do
+            if ! code=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 25 --retry 2 --retry-delay 5 "$SITE$path"); then
+              echo "::error::$SITE$path is unreachable"
+              fail=1
+            elif [ "$code" != "200" ]; then
+              echo "::error::$SITE$path returned $code"
+              fail=1
+            else
+              echo "$path 200"
+            fi
+          done
+          exit $fail
+
+      - name: Content renders
+        id: content
+        continue-on-error: true
+        run: |
+          set -uo pipefail
+          fail=0
+          check() {
+            body=$(curl -sS --max-time 25 "$1") || return 1
+            printf '%s' "$body" | grep -qiF "$2"
+          }
+          check "$SITE/" "Robert A. Petit III" || { echo "::error::home page lost its title"; fail=1; }
+          check "$SITE/volunteer/" "Conda Submissions" || { echo "::error::volunteer page lost its conda table"; fail=1; }
+          check "$SITE/publication/" "publications" || { echo "::error::publication page lost its content"; fail=1; }
+          exit $fail
+
+      - name: Certificate valid and not expiring
+        id: tls
+        continue-on-error: true
+        run: |
+          set -uo pipefail
+          chain=$(echo | timeout 20 openssl s_client -connect "$HOST:443" -servername "$HOST" -verify_return_error 2>&1)
+          printf '%s' "$chain" | grep -q 'Verify return code: 0 (ok)' || {
+            echo "::error::certificate chain does not verify"
+            exit 1
+          }
+          if ! end=$(printf '%s' "$chain" | openssl x509 -noout -enddate | cut -d= -f2); then
+            echo "::error::no certificate returned"
+            exit 1
+          fi
+          days=$(( ($(date -d "$end" +%s) - $(date +%s)) / 86400 ))
+          echo "certificate expires in $days days ($end)"
+          if [ "$days" -le 3 ]; then
+            echo "::error::certificate expires in $days days"
+            exit 1
+          fi
+          if [ "$days" -le 14 ]; then
+            echo "::warning::certificate expires in $days days"
+          fi
+          exit 0
+
+      - name: Redirects to the canonical host
+        id: redirect
+        continue-on-error: true
+        run: |
+          set -uo pipefail
+          fail=0
+          for url in "http://$HOST/" "https://robertpetit.com/"; do
+            read -r code target < <(curl -sS -o /dev/null -w '%{http_code} %{redirect_url}' --max-time 25 "$url" || echo "000 none")
+            if [ "$code" != "301" ] && [ "$code" != "308" ]; then
+              echo "::error::$url returned $code instead of a redirect"
+              fail=1
+            elif [ "$target" != "$SITE/" ]; then
+              echo "::error::$url redirects to $target"
+              fail=1
+            else
+              echo "$url -> $target"
+            fi
+          done
+          exit $fail
+
+      - name: Gate
+        run: |
+          set -euo pipefail
+          status=0
+          for outcome in "${{ steps.status.outcome }}" "${{ steps.content.outcome }}" \
+                         "${{ steps.tls.outcome }}" "${{ steps.redirect.outcome }}"; do
+            [ "$outcome" = "success" ] || status=1
+          done
+          exit $status
+
+      - name: Report outage
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          gh label create site-down --force --color B60205 --description "Automated site check failure" >/dev/null
+          open=$(gh issue list --label site-down --state open --limit 1 --json number --jq '.[0].number // empty')
+          if [ -n "$open" ]; then
+            gh issue comment "$open" --body "Still failing as of $(date -u +%FT%TZ): $RUN"
+          else
+            gh issue create --label site-down --title "Site check failing: $SITE" \
+              --body "The scheduled check failed. Run: $RUN
+
+          Probe each failing step in the run, then close this issue once the site answers."
+          fi
+
+      - name: Report recovery
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          for number in $(gh issue list --label site-down --state open --limit 10 --json number --jq '.[].number'); do
+            gh issue close "$number" --comment "Site is healthy again as of $(date -u +%FT%TZ)."
+          done

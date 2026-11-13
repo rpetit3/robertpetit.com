@@ -94,10 +94,58 @@ export GITHUB_TOKEN=...          # raises the GitHub rate limit
 conda run -n ctx-robertpetit.com-1-dev python scripts/collect_software_counts.py
 ```
 
-`.github/workflows/update-counts.yml` runs daily and from **Actions > Latest
-Counts > Run workflow**. OpenAlex rate-limits the repo mention searches, which
-the site does not render; those warnings do not touch stars, downloads or
-citations.
+`.github/workflows/update-data.yml` runs Mondays 01:30 UTC and from
+**Actions > Weekly Data Refresh > Run workflow**, shared with the pull request
+and conda submission refreshes: one environment, one build, one push. A source
+that fails does not stop the others; the run still commits what it got and
+fails at the end. OpenAlex rate-limits the repo mention searches, which the site
+does not render; those warnings do not touch stars, downloads or citations.
+
+## Volunteer conda submissions
+
+`scripts/sync_conda_submissions.py` rebuilds the conda table on `/volunteer/`
+into `data/volunteer.yml`. Rows come from three public sources, and no hand
+editing is needed:
+
+- Merged pull requests by `rpetit3` that add `recipes/<tool>/meta.yaml` to
+  `bioconda/bioconda-recipes` or `conda-forge/staged-recipes`. The changed files
+  decide what is a new recipe; the PR title only supplies the display casing.
+- Packages on the `anaconda.org/rpetit3` channel, read from its repodata and the
+  anaconda.org package API.
+
+Tool, link and description are lifted from the recipe's `about:` block
+(`home`, `summary`) or the channel package metadata. Dates are merge dates, or
+the earliest channel upload. A missing `home` falls back to the pull request or
+package page, so no row self-links.
+
+- A source that fails keeps its previous rows and is named under
+  `_meta.incomplete`; the page shows stale data instead of losing history.
+- Rows whose `pr_url` matches no source (hand-written) survive every run.
+  `EXTRA_PRS` in the script lists recipes written by the author but opened by
+  somebody else, which an author search cannot find.
+
+```bash
+export GITHUB_TOKEN=...          # required, the run makes ~450 API calls
+conda run -n ctx-robertpetit.com-1-dev python scripts/sync_conda_submissions.py --dry-run
+```
+
+`.github/workflows/update-data.yml` refreshes the table in the Mondays 01:30 UTC
+run (**Actions > Weekly Data Refresh > Run workflow** to force one). Only merged
+recipes are listed, so a closed-without-merge submission never appears.
+
+## Site health
+
+`.github/workflows/site-health.yml` probes production daily (05:17 UTC) and from
+**Actions > Site Health > Run workflow**: status codes on the main pages, a
+content marker per page, certificate chain and expiry, and the http and apex
+redirects. A lapsed Netlify certificate once broke the site for weeks, hence the
+certificate window: it warns at 14 days and fails at 3.
+
+- Any failed probe fails the run and opens a `site-down` issue with the run URL;
+  later failures append a comment instead of a second issue, and the next green
+  run closes it.
+- Point `SITE`/`HOST` at `http://localhost:1515` to exercise the probes against a
+  local build; the TLS and redirect probes fail there by design.
 
 ## Tests
 
