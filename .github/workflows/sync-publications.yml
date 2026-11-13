@@ -67,7 +67,7 @@ jobs:
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR_ID:-0}+${GITHUB_ACTOR}@users.noreply.github.com"
           git switch -c "$branch"
-          git add content/publication static/pdf
+          git add content/publication static/pdf data/citations-count.yml
           if git diff --cached --quiet; then
             echo "No new publications" >> "$GITHUB_STEP_SUMMARY"
             exit 0
@@ -79,6 +79,7 @@ jobs:
             echo "Automated OpenAlex sync."
             echo
             echo "New: $(jq '.created | length' report.json)"
+            echo "Citation counts written: $(jq '.citations_written' report.json)"
             jq -r '.created[] | "- `\(.slug)` (PDF: \(.pdf))"' report.json
             if [ "$(jq '.upgraded | length' report.json)" -gt 0 ]; then
               echo

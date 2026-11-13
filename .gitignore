@@ -5,3 +5,6 @@
 public/
 .DS_Store
 .hugo_build.lock
+__pycache__/
+.pytest_cache/
+metrics/snapshots/

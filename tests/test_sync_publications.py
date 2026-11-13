@@ -314,6 +314,8 @@ class CliTests(unittest.TestCase):
                     str(content),
                     "--pdf-dir",
                     str(pdfs),
+                    "--citations-out",
+                    str(Path(tmp) / "citations-count.yml"),
                     *args,
                 ],
             )
@@ -456,6 +458,30 @@ class CliTests(unittest.TestCase):
         self.assertEqual(result.exit_code, 0, result.output)
         body = (content / "2024-new-paper.md").read_text(encoding="utf-8")
         self.assertIn('doi = "10.1/old"', body)
+
+
+class CitationsTests(unittest.TestCase):
+    def test_writes_only_present_dois(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp) / "citations-count.yml"
+            saved = sp.write_citations(
+                [work("10.1/kept", "Kept", cited_by_count=7), work("10.1/absent", "Absent", cited_by_count=2)],
+                {"10.1/kept"},
+                target,
+                apply=True,
+            )
+            body = target.read_text(encoding="utf-8")
+        self.assertEqual(saved, 1)
+        self.assertIn('"10.1/kept": 7', body)
+        self.assertNotIn("absent", body)
+        self.assertIn("_meta", body)
+
+    def test_dry_run_writes_nothing(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp) / "citations-count.yml"
+            saved = sp.write_citations([work("10.1/kept", "Kept", cited_by_count=7)], {"10.1/kept"}, target, apply=False)
+            self.assertEqual(saved, 1)
+            self.assertFalse(target.exists())
 
 
 if __name__ == "__main__":

@@ -51,6 +51,10 @@
                     {{ if .Params.preprint }}
                     <p><strong>Preprint{{ with .Params.preprint_version }} v{{ . }}{{ end }}</strong></p>
                     {{ end }}
+                    {{ $citations := index hugo.Data "citations-count" | default dict }}
+                    {{ with index $citations (lower .Params.doi) }}
+                    <p class="text-gray">Cited {{ . | lang.FormatNumber 0 }} times</p>
+                    {{ end }}
                     <div>
                         <h3>{{ .Title | markdownify }}</h3>
                         <div class="col-12 d-inline-block text-gray mb-2 pr-4">

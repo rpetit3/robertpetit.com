@@ -112,6 +112,16 @@
           {{end}}
 
           <h2>Publications</h2>
+          {{ $publication_citations := index hugo.Data "citations-count" | default dict }}
+          {{ $cited := 0 }}
+          {{ range $key, $value := $publication_citations }}
+            {{ if ne $key "_meta" }}{{ $cited = add $cited $value }}{{ end }}
+          {{ end }}
+          {{ if gt $cited 0 }}
+          <p>
+          Publications and pre-prints which I contributed to have been cited in total {{ $cited | lang.FormatNumber 0 }} times.
+          </p>
+          {{ end }}
           {{ $section := where $.Site.RegularPages "Section" "publication" }}
           {{ $count := len $section }}
           {{ range  $i, $e := sort $section ".Params.date" "desc" }}
@@ -123,24 +133,29 @@
           <h2>Software</h2>
           {{ $downloads := 0 }}
           {{ $stars := 0 }}
-          {{ range hugo.Data.software_counts }}
-            {{ $data := (index . 0 ) }}
-            {{ $downloads = add $downloads $data.downloads }}
-            {{ $stars = add $stars $data.stars }}
+          {{ $citations := 0 }}
+          {{ range $key, $value := index hugo.Data "software-counts" }}
+            {{ if ne $key "_meta" }}
+            {{ $data := (index $value 0) }}
+            {{ $downloads = add $downloads (default 0 $data.downloads) }}
+            {{ $stars = add $stars (default 0 $data.stars) }}
+            {{ $citations = add $citations (default 0 $data.citations) }}
+            {{ end }}
           {{ end }}
           <p>
-          Software tools which I developed or maintain, have been downloaded {{ $downloads | lang.FormatNumber 0}} times using Conda and have {{ $stars | lang.FormatNumber 0}} total Stargazers.
+          Software tools which I developed or maintain, have been downloaded {{ $downloads | lang.FormatNumber 0}} times using Conda and have {{ $stars | lang.FormatNumber 0}} total Stargazers.{{ if gt $citations 0 }} Their papers have been cited {{ $citations | lang.FormatNumber 0 }} times.{{ end }}
           </p>
           {{ $section := where $.Site.RegularPages "Section" "software" }}
           {{ range  $i, $e := sort $section ".Title" "ascd" }}
             {{ if gt $i 0 }}
             {{ $fixed_title := replace $e.Title "-" "_" }}
-            {{ $counts := (index (index hugo.Data.software_counts $fixed_title) 0) }}
+            {{ $counts := dict }}
+            {{ with index (index hugo.Data "software-counts") $fixed_title }}{{ $counts = index . 0 }}{{ end }}
 
             <p>
                 {{ $i }}.  <a href="{{ $e.Params.link }}" target="_blank">{{ $e.Title | markdownify }}</a><br />
                 <i>{{ .Summary | safeHTML }}</i><br />
-                {{ if gt $counts.downloads 0 }}{{$counts.downloads | lang.FormatNumber 0}} total downloads{{ if gt $counts.stars 0 }} and {{$counts.stars | lang.FormatNumber 0 }} Stargazers{{end}}{{else if gt $counts.stars 0 }}{{$counts.stars | lang.FormatNumber 0}} Stargazers{{end}}
+                {{ if gt (default 0 $counts.downloads) 0 }}{{$counts.downloads | lang.FormatNumber 0}} total downloads{{ if gt (default 0 $counts.stars) 0 }} and {{$counts.stars | lang.FormatNumber 0 }} Stargazers{{end}}{{else if gt (default 0 $counts.stars) 0 }}{{$counts.stars | lang.FormatNumber 0}} Stargazers{{end}}{{ with $counts.citations }}{{ if or (gt (default 0 $counts.downloads) 0) (gt (default 0 $counts.stars) 0) }} and {{ end }}{{ . | lang.FormatNumber 0 }} citations{{ end }}
             </p>
             {{ end }}
           {{end}}

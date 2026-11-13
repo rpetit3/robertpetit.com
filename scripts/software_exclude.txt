@@ -1,0 +1,33 @@
+# Public repos under the tracked owners that are not tracked software:
+# sites, tests, training material, analysis leftovers, placeholders.
+# One owner/name per line; `#` starts a comment.
+bactopia/bactopia-datasets
+bactopia/bactopia-msystems-2020
+bactopia/bactopia-outputs
+bactopia/bactopia-workshop
+bactopia/bactopia.github.io
+rpetit3/admin
+rpetit3/advent-of-code
+rpetit3/anthrax-metagenome-study
+rpetit3/binf-compare
+rpetit3/binf-scripts
+rpetit3/cgc-utils
+rpetit3/clonalSNPs
+rpetit3/fitbit-steps
+rpetit3/motd
+rpetit3/nextconda-base
+rpetit3/polaris
+rpetit3/pollen-metagenomics
+rpetit3/robertpetit.com
+rpetit3/rpetit3.github.io
+rpetit3/sa-gene-prediction-experiment
+rpetit3/scholar-docker
+rpetit3/skel
+rpetit3/spades-cgc
+rpetit3/test-security
+rpetit3/trello-tools
+rpetit3/variant-validation-experiment
+rpetit3/workshops
+staphopia/staphopia-api-docs
+staphopia/staphopia-paper
+staphopia/staphopia.github.io

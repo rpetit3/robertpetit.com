@@ -31,6 +31,8 @@ open-access PDFs to `static/pdf/<slug>.pdf`.
   article appears.
 - Dry-run is the default. `--apply` writes files.
 - Only works with a DOI, accepted type and OA PDF candidates are considered.
+- Citation counts are written to `data/citations-count.yml` on `--apply` runs;
+  pass `--citations-out` to redirect them.
 - Numbered conference abstracts are excluded unless `--include-abstracts` is set.
 - Byline lists are capped at `--max-authors` (default 20) plus `et al.`; the
   profile author stays visible when beyond the cap.
@@ -65,6 +67,37 @@ then opens a PR with the report summary. Configure the `OPENALEX_API_KEY` and
 the hardcoded author ID. `GITHUB_TOKEN` is built in; set an optional `GH_PAT`
 secret to author pushes and PRs as your account. Keep the merge step human:
 OpenAlex metadata can lag behind or contain duplicate records.
+
+## Software counts
+
+`scripts/collect_software_counts.py` writes `data/software-counts.yml`, which
+the software and CV pages render. Tool metadata comes from the pages themselves:
+each `content/software/*.md` needs a public GitHub `link` (or `repo:`) and sets
+`conda: true` when the title is also a Bioconda package. Adding a page is all
+that is needed to track a tool, and the collector warns about public repos under
+the tracked owners that have no page.
+
+- Stars and downloads come from [`boast`](https://github.com/mbhall88/boast).
+  Every run writes a dated snapshot under `metrics/snapshots/`, keeping the last
+  26, so numbers can be re-rendered and diffed later.
+- The collector rejects unknown snapshot schemas (`SUPPORTED_SCHEMA`), so a
+  newer `boast` fails loudly instead of misparsing.
+- Citation counts are read from `data/citations-count.yml`, which
+  `sync_publications.py` rewrites weekly from the publication's `paper_doi`
+  matches, so they move on the sync schedule, not the counts schedule.
+- Only `rpetit3`, `bactopia` and `staphopia` repositories are accepted; any
+  other owner fails the run. `scripts/software_exclude.txt` lists public repos
+  under those owners that are not software: sites, tests, placeholders.
+
+```bash
+export GITHUB_TOKEN=...          # raises the GitHub rate limit
+conda run -n ctx-robertpetit.com-1-dev python scripts/collect_software_counts.py
+```
+
+`.github/workflows/update-counts.yml` runs daily and from **Actions > Latest
+Counts > Run workflow**. OpenAlex rate-limits the repo mention searches, which
+the site does not render; those warnings do not touch stars, downloads or
+citations.
 
 ## Tests
 

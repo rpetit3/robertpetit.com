@@ -4,11 +4,13 @@ channels:
 dependencies:
   - actionlint
   - beautifulsoup4
+  - boast>=0.6
   - curl-cffi
   - git
   - git-lfs
   - hugo
   - pytest
   - python=3.14
+  - pyyaml
   - requests
   - rich-click
