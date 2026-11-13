@@ -33,12 +33,6 @@
                       </a>
                       {{ end }}
                       {{ end }}
-                      <a class="muted-link mr-3" href="https://twitter.com/intent/tweet/?text={{if .Params.tweet}}{{ .Params.tweet | safeHTML}}{{else}}{{ .Title | safeHTML }}{{end}}&url={{ .Permalink }}">
-                        <span class=" UnderlineNav-octicon hide-sm">
-                          {{ partial "select_octicon.html" (dict "context" . "octicon" "twitter" ) }}
-                        </span>
-                        Tweet
-                      </a>
                     </div>
                   </div>
                 </div>

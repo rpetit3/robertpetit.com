@@ -19,6 +19,3 @@ copyright = "&copy; Dr. Robert A. Petit III, 2020-{year}"
 
 [taxonomies]
   tag = "tags"
-
-[permalinks]
-  post = "/post/:year/:month/:title/"

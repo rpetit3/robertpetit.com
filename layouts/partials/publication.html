@@ -20,14 +20,6 @@
                       {{ end }}
                       {{ end }}
                     </div>
-                    <div class="text-mono f6 file-actions flex-order-2 pt-0">
-                      <a class="muted-link mr-3" href="https://twitter.com/intent/tweet/?text={{ .Title | markdownify | plainify | safeHTML }}&url={{if .Params.doi}}https://doi.org/{{ .Params.doi }}{{else}}{{.Permalink}}{{end}}">
-                        <span class=" UnderlineNav-octicon hide-sm">
-                          {{ partial "select_octicon.html" (dict "context" . "octicon" "twitter" ) }}
-                        </span>
-                        Tweet
-                      </a>
-                    </div>
                   </div>
                 </div>
 
