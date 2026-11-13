@@ -1,0 +1,102 @@
+name: Sync Publications
+on:
+  schedule:
+    # Mondays 06:00 UTC
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      since_year:
+        description: Ignore works older than this year
+        required: false
+        default: "2011"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-publications
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+      OPENALEX_AUTHOR_PROFILE: ${{ secrets.OPENALEX_AUTHOR_PROFILE || 'https://openalex.org/authors/A5004170724' }}
+      GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          token: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+          lfs: true
+
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: environment.yml
+          activate-environment: ctx-robertpetit.com-1-dev
+          miniforge-version: latest
+
+      - name: Test
+        run: python -m pytest tests -q
+
+      - name: Sync
+        run: |
+          python scripts/sync_publications.py \
+            --since-year "${{ inputs.since_year || '2011' }}" \
+            --include-preprints \
+            --with-pdfs \
+            --apply \
+            --report report.json
+
+      - name: Build
+        run: hugo --gc --minify -b https://www.robertpetit.com
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: publication-sync-report
+          path: report.json
+          if-no-files-found: ignore
+
+      - name: Open PR
+        run: |
+          set -euo pipefail
+          branch="publications/${GITHUB_RUN_ID}"
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR_ID:-0}+${GITHUB_ACTOR}@users.noreply.github.com"
+          git switch -c "$branch"
+          git add content/publication static/pdf
+          if git diff --cached --quiet; then
+            echo "No new publications" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git commit -m "ci: sync publications from OpenAlex"
+          git push origin "$branch"
+
+          {
+            echo "Automated OpenAlex sync."
+            echo
+            echo "New: $(jq '.created | length' report.json)"
+            jq -r '.created[] | "- `\(.slug)` (PDF: \(.pdf))"' report.json
+            if [ "$(jq '.upgraded | length' report.json)" -gt 0 ]; then
+              echo
+              echo "Upgraded preprints:"
+              jq -r '.upgraded[] | "- `\(.slug)`"' report.json
+            fi
+            if [ "$(jq '.pdf_followup | length' report.json)" -gt 0 ]; then
+              echo
+              echo "OA works without a downloadable PDF:"
+              jq -r '.pdf_followup[] | "- \(.)"' report.json
+            fi
+            echo
+            echo "Review metadata and abstracts before merging."
+          } > pr-body.md
+
+          gh pr create \
+            --base main \
+            --head "$branch" \
+            --title "ci: sync publications $(date -u +%F)" \
+            --body-file pr-body.md
+          gh pr view "$branch" --json url --jq .url >> "$GITHUB_STEP_SUMMARY"

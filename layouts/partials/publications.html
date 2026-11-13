@@ -8,11 +8,7 @@
           <div class="col-12 d-inline-block">
             <div class="d-inline-block mb-1">
               <h3 class="">
-                <a href="{{ .Permalink }}">
-                  <span class=" UnderlineNav-octicon hide-sm">
-                      {{ partial "select_octicon.html" (dict "context" . "octicon" "tag_journal" ) }}
-                  </span>{{ .Title | markdownify }}
-                </a>
+                <span class=" UnderlineNav-octicon hide-sm">{{- partial "select_octicon.html" (dict "context" . "octicon" "tag_journal" ) | strings.TrimSpace | safeHTML -}}</span><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
               </h3>
             </div>
 
@@ -21,7 +17,7 @@
                 {{ delimit .Params.authors ", " | markdownify }}
               </div>
               <div class="col-12 d-inline-block text-gray mb-2 pr-4">
-                Published {{ .Date.Format "January 2, 2006" }} in {{ .Params.journal | markdownify }}
+                {{ if .Params.preprint }}Preprint{{ else }}Published{{ end }} {{ .Date.Format "January 2, 2006" }} in {{ .Params.journal | markdownify }}
               </div>
             </div>
 

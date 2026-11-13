@@ -1,0 +1,14 @@
+name: ctx-robertpetit.com-1-dev
+channels:
+  - conda-forge
+dependencies:
+  - actionlint
+  - beautifulsoup4
+  - curl-cffi
+  - git
+  - git-lfs
+  - hugo
+  - pytest
+  - python=3.14
+  - requests
+  - rich-click
