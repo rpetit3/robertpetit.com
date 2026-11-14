@@ -94,8 +94,9 @@ jobs:
           MERGED: ${{ steps.get_latest_pr_merged.outputs.data }}
         run: |
           set -euo pipefail
-          printf '%s\n' "$LATEST" > data/github.json
-          printf '%s\n' "$MERGED" > data/merged.json
+          # _meta marks the files generated without breaking the JSON readers.
+          jq '. + {_meta: {generated_by: "update-data.yml"}}' <<<"$LATEST" > data/github.json
+          jq '. + {_meta: {generated_by: "update-data.yml"}}' <<<"$MERGED" > data/merged.json
 
       # A failed source keeps its previous rows and lands in `_meta.incomplete`,
       # so the page degrades to stale data instead of losing history.

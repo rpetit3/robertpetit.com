@@ -147,6 +147,15 @@ certificate window: it warns at 14 days and fails at 3.
 - Point `SITE`/`HOST` at `http://localhost:1515` to exercise the probes against a
   local build; the TLS and redirect probes fail there by design.
 
+## Agents and crawlers
+
+`AGENTS.md` carries the environment, generated-file and content conventions for
+coding agents. `static/robots.txt` and `static/llms.txt` are served as real
+files; the SPA catch-all only covers misses, so a new crawler path must exist or
+it returns the homepage with status 200. `site-health.yml` asserts both files
+are served as `text/plain` with their markers, and `tests/test_llms_txt.py`
+fails when an `llms.txt` link stops resolving.
+
 ## Tests
 
 ```bash

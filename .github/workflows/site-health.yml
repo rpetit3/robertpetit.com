@@ -52,9 +52,18 @@ jobs:
             body=$(curl -sS --max-time 25 "$1") || return 1
             printf '%s' "$body" | grep -qiF "$2"
           }
+          # The SPA catch-all answers a missing file with the homepage and
+          # status 200, so these assert the served type as well as the body.
+          plain() {
+            type=$(curl -sS -o /tmp/probe -w '%{content_type}' --max-time 25 "$1") || return 1
+            case "$type" in text/plain*) ;; *) return 1 ;; esac
+            grep -qiF "$2" /tmp/probe
+          }
           check "$SITE/" "Robert A. Petit III" || { echo "::error::home page lost its title"; fail=1; }
           check "$SITE/volunteer/" "Conda Submissions" || { echo "::error::volunteer page lost its conda table"; fail=1; }
           check "$SITE/publication/" "publications" || { echo "::error::publication page lost its content"; fail=1; }
+          plain "$SITE/robots.txt" "Sitemap: https://www.robertpetit.com/sitemap.xml" || { echo "::error::robots.txt is missing or served as the SPA fallback"; fail=1; }
+          plain "$SITE/llms.txt" "# Robert A. Petit III" || { echo "::error::llms.txt is missing or served as the SPA fallback"; fail=1; }
           exit $fail
 
       - name: Certificate valid and not expiring

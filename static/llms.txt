@@ -1,0 +1,25 @@
+# Robert A. Petit III, PhD
+
+> Bioinformatician at the Wyoming Public Health Laboratory and developer of
+> Bactopia. Bacterial genomics, pathogen surveillance, and open-source
+> bioinformatics tooling.
+
+- [About](https://www.robertpetit.com/about/): role, affiliations, background
+- [Curriculum Vitae](https://www.robertpetit.com/cv/): employment, education, awards, talks, posters
+- [Publications](https://www.robertpetit.com/publication/): peer-reviewed papers with abstracts and DOIs
+- [Software](https://www.robertpetit.com/software/): maintained tools with stars, downloads, citations
+- [Volunteer](https://www.robertpetit.com/volunteer/): Bioconda and conda-forge recipes contributed
+- [Short bio](https://www.robertpetit.com/readme/): plain-language summary
+
+## Optional
+
+- [Sitemap](https://www.robertpetit.com/sitemap.xml): every page and PDF
+- [RSS](https://www.robertpetit.com/index.xml): publications feed
+- [Résumé PDF](https://www.robertpetit.com/pdf/robert-petit-resume.pdf)
+- [License](https://www.robertpetit.com/license/): content license
+
+## Details
+
+- Contact: robbie.petit@gmail.com
+- ORCID: https://orcid.org/0000-0002-1350-9426
+- GitHub: https://github.com/rpetit3
