@@ -13,7 +13,7 @@
 
 ## Optional
 
-- [Sitemap](https://www.robertpetit.com/sitemap.xml): every page and PDF
+- [Sitemap](https://www.robertpetit.com/sitemap.xml): all pages
 - [RSS](https://www.robertpetit.com/index.xml): publications feed
 - [Résumé PDF](https://www.robertpetit.com/pdf/robert-petit-resume.pdf)
 - [License](https://www.robertpetit.com/license/): content license

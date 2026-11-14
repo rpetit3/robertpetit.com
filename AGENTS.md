@@ -39,8 +39,11 @@ Hand-editable: `data/cv.yml`, `data/assets.toml`, and everything under
   pair (`---` opened, `+++` closed) fails the build. `hugo new <section>/<name>.md`
   copies the matching archetype.
 - Publication and software bodies are empty; every field is front matter.
+- `data/cv.yml` employment has exactly one `primary: true` row, listed first;
+  the CV orders primary, other current, then past, and
+  `tests/test_cv_data.py` enforces it.
 - New PDFs go to `static/pdf/<slug>.pdf` through LFS: `*.pdf` is LFS-filtered,
-  so a plain `git add` stores a pointer-less blob.
+  so the repository stores a pointer and the working tree keeps the file.
 - `content/software/*.md` needs a public GitHub `link` and sets `conda: true`
   when the title is also a Bioconda package; the collector derives counts from
   those fields. Slugs are `<year>-<title-words>` and are permanent.
@@ -50,11 +53,14 @@ Hand-editable: `data/cv.yml`, `data/assets.toml`, and everything under
 
 ## Scripts
 
-All three network scripts default to dry run; `--apply` writes files.
-`sync_publications.py` needs `OPENALEX_API_KEY`; the other two need
-`GITHUB_TOKEN`. Accepted owners are `rpetit3`, `bactopia`, `staphopia`;
-`scripts/software_exclude.txt` lists public non-software repos. Tests pin these
-contracts, so run pytest after touching a script.
+`sync_publications.py` defaults to a dry run and writes only with `--apply`.
+`sync_conda_submissions.py` writes by default and takes `--dry-run`, while
+`collect_software_counts.py` always writes. `sync_publications.py` needs
+`OPENALEX_API_KEY`; the other two need `GITHUB_TOKEN`. Accepted owners are
+`rpetit3`, `bactopia`, `staphopia`; `scripts/software_exclude.txt` lists public
+non-software repos. Tests pin these contracts, so run pytest after touching a
+script. `consolidate_tags.py` rewrites existing tags from HEAD through the alias
+map; run it after editing `TAG_ALIASES`.
 
 ## Crawler surface
 

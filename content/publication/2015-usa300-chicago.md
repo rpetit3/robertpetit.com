@@ -12,7 +12,7 @@ date = "2015-03-01"
 journal = "*mBio*"
 title = "Transmission and microevolution of USA300 MRSA in U.S. households: evidence from whole-genome sequencing"
 pdf = "/pdf/2015-usa300-chicago.pdf"
-tags = ["genomics", "phylogeny", "staphylococcus", "usa300"]
+tags = ["genomic", "phylogeny", "staphylococcus"]
 doi = "10.1128/mBio.00054-15"
 citation = "Alam, M. T. et al. Transmission and microevolution of USA300 MRSA in U.S. households: evidence from whole-genome sequencing. *MBio* 6, e00054 (2015)"
 +++

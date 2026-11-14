@@ -27,7 +27,7 @@
               <h3 class="">
                 {{if .Params.type }}
                   {{ if eq .Params.type "software" }}
-                  <span class=" UnderlineNav-octicon hide-sm">{{- partial "select_octicon.html" (dict "context" . "octicon" "tag_code" ) | strings.TrimSpace | safeHTML -}}</span><a href="{{ .Params.link }}" target="_blank">{{ .Title | markdownify }}</a>
+                  <span class=" UnderlineNav-octicon hide-sm">{{- partial "select_octicon.html" (dict "context" . "octicon" "tag_code" ) | strings.TrimSpace | safeHTML -}}</span><a href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">{{ .Title | markdownify }}</a>
                   {{ else }}
                   <span class=" UnderlineNav-octicon hide-sm">{{if .Params.type }}{{ if eq .Params.type "post" }}{{- partial "select_octicon.html" (dict "context" . "octicon" "tag_project" ) | strings.TrimSpace | safeHTML -}}{{ else if eq .Params.type "publication" }}{{- partial "select_octicon.html" (dict "context" . "octicon" "tag_journal" ) | strings.TrimSpace | safeHTML -}}{{ else }}{{- partial "select_octicon.html" (dict "context" . "octicon" "tag_book" ) | strings.TrimSpace | safeHTML -}}{{ end }}{{ else }}{{- partial "select_octicon.html" (dict "context" . "octicon" "tag_book" ) | strings.TrimSpace | safeHTML -}}{{ end }}</span><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
                   {{ end }}

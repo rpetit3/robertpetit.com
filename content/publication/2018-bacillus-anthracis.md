@@ -12,7 +12,7 @@ date = "2018-08-01"
 journal = "*PeerJ*"
 title = "Fine-scale differentiation between *Bacillus anthracis* and *Bacillus cereus* group signatures in metagenome shotgun data"
 pdf = "/pdf/2018-bacillus-anthracis.pdf"
-tags = ["anthrax", "bacillus", "metagenomic", "typing"]
+tags = ["pathogens", "genomic", "typing"]
 
 doi = "10.7717/peerj.5515"
 citation = "Petit, R. A., III, Hogan, J. M., Ezewudo, M. N., Joseph, S. J. & Read, T. D. Fine-scale differentiation between *Bacillus anthracis* and *Bacillus cereus* group signatures in metagenome shotgun data. *PeerJ* 6, e5515 (2018)"

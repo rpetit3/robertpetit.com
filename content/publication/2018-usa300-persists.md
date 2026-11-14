@@ -12,7 +12,7 @@ date = "2018-12-01"
 journal = "*BMC Microbiology*"
 title = "USA300 *Staphylococcus aureus* persists on multiple body sites following an infection"
 pdf = "/pdf/2018-usa300-persists.pdf"
-tags =  ["resistance", "usa300", "plasmids", "staphylococcus"]
+tags = ["resistance", "staphylococcus", "genomic"]
 
 doi = "10.1186/s12866-018-1336-z"
 citation = "Read, T. D. et al. USA300 *Staphylococcus aureus* persists on multiple body sites following an infection. *BMC Microbiol.* 18, 206 (2018)"

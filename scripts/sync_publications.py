@@ -618,22 +618,198 @@ def source_name(work: dict[str, Any]) -> str:
     return f"*{name.strip('*')}*"
 
 
+def tag_slug(label: str) -> str:
+    slug = "-".join(re.findall(r"[a-z0-9]+", ascii_fold(label).lower()))
+    return slug[:60].strip("-")
+
+
+# OpenAlex keywords are too specific to browse: most appear once. Fold them
+# into stable buckets so new papers cannot regrow rare tags. A None value drops
+# the tag; anything unlisted falls back to TAG_FALLBACK.
+TAG_FALLBACK = "genomic"
+TAG_ALIASES: dict[str, str | None] = {
+    "16s": "sequencing",
+    "accessory": "typing",
+    "agr": "typing",
+    "amplicon": "sequencing",
+    "amr": "resistance",
+    "annotation": "methods",
+    "anthrax": "pathogens",
+    "antimicrobial-resistance": "resistance",
+    "antimicrobial-resistance-prediction": "resistance",
+    "archived": None,
+    "average-nucleotide-identity": "genomic",
+    "bacillus": "pathogens",
+    "bacteriuria": "pathogens",
+    "benchmark": "methods",
+    "big-data": "data",
+    "bioinformatics": "methods",
+    "bioinformatics-pipeline": "methods",
+    "bloodstream-infection": "pathogens",
+    "candida-auris": "pathogens",
+    "carbapenem-resistant-enterobacteriaceae": "resistance",
+    "classification": "methods",
+    "climate-change": "ecology",
+    "clostridium-difficile": "pathogens",
+    "cluster": "surveillance",
+    "competition": "ecology",
+    "contextual-metadata": "data",
+    "convert": "tools",
+    "cre": "resistance",
+    "cystic-fibrosis": "pathogens",
+    "data": "data",
+    "data-annotation": "data",
+    "data-sharing": "data",
+    "database": "data",
+    "disease-surveillance": "surveillance",
+    "dockstore": "tools",
+    "download": "tools",
+    "dragonflye": "tools",
+    "ena": "sequencing",
+    "fasta": "tools",
+    "fastq": "sequencing",
+    "genbank": "sequencing",
+    "gene-prediction": "genomic",
+    "genome": "genomic",
+    "genomics": "genomic",
+    "gwas": "genomic",
+    "haemophilus": "pathogens",
+    "historical": None,
+    "hsp90": "genomic",
+    "human": None,
+    "identification": "tools",
+    "illumina": "sequencing",
+    "insdc": "sequencing",
+    "invasive-haemophilus-influenzae-infections": "pathogens",
+    "is1016": "typing",
+    "is256": "typing",
+    "isda": "pathogens",
+    "klebsiella-pneumoniae": "pathogens",
+    "kmer": "genomic",
+    "lactobacillus": "pathogens",
+    "lineage-classification": "methods",
+    "mass-transit-systems": "ecology",
+    "mcr": "resistance",
+    "metagenomic": "genomic",
+    "methicillin-resistant-staphylococcus-aureus": "staphylococcus",
+    "mrsa": "staphylococcus",
+    "mycobacterium-tuberculosis": "pathogens",
+    "nanopore": "sequencing",
+    "ncbi": "sequencing",
+    "nontypeable-haemophilus-influenzae": "pathogens",
+    "norvius": "pathogens",
+    "nosocomial-infections": "surveillance",
+    "oman": "surveillance",
+    "ontology-information-science": "data",
+    "pan-genome": "genomic",
+    "pandemic": "surveillance",
+    "pasty": "tools",
+    "pbptyper": "tools",
+    "phage": "genomic",
+    "plant": "ecology",
+    "plasmid-integration": "genomic",
+    "plasmids": "genomic",
+    "plugin": "tools",
+    "pmga": "tools",
+    "pollen": "ecology",
+    "prokka": "tools",
+    "proteins": "genomic",
+    "pseudomonas": "pathogens",
+    "public-health-laboratories": "surveillance",
+    "python": "tools",
+    "qc": "sequencing",
+    "r": "tools",
+    "report": "methods",
+    "reproducibility": "methods",
+    "reproducible-analysis": "methods",
+    "resitance": "resistance",
+    "s3": "tools",
+    "salmonella": "pathogens",
+    "sars-cov-2": "pathogens",
+    "scripts": "tools",
+    "secretor": "pathogens",
+    "septic-arthritis": "pathogens",
+    "sequence-based-typing": "typing",
+    "simulation": "methods",
+    "single-end": "sequencing",
+    "size": "tools",
+    "sketching": "genomic",
+    "skin-and-soft-tissue-infections": "pathogens",
+    "snakemake": "tools",
+    "sra": "sequencing",
+    "staph": "staphylococcus",
+    "staphylococcus-aureus": "staphylococcus",
+    "summary": "methods",
+    "taxonomy": "genomic",
+    "tbl2asn-forever": "tools",
+    "terra-platform": "tools",
+    "testing": "methods",
+    "tetracycline-resistance": "resistance",
+    "training": "methods",
+    "transmission": "surveillance",
+    "tsv": "tools",
+    "tuberculosis": "pathogens",
+    "urban-microbiome": "ecology",
+    "usa300": "staphylococcus",
+    "utility": "tools",
+    "variant": "genomic",
+    "variants": "genomic",
+    "vcf": "genomic",
+    "wdl": "tools",
+    "wgs": "sequencing",
+    "yaml": "tools",
+    "yaml-configuration": "tools",
+}
+
+CANONICAL_TAGS = {
+    "assembly",
+    "bactopia",
+    "bioconda",
+    "data",
+    "django",
+    "ecology",
+    "genomic",
+    "methods",
+    "microbiome",
+    "nextflow",
+    "pathogens",
+    "phylogeny",
+    "resistance",
+    "sequencing",
+    "staphopia",
+    "staphylococcus",
+    "surveillance",
+    "tools",
+    "typing",
+    "virulence",
+}
+
+
+def canonical_tag(label: str) -> str:
+    slug = tag_slug(label)
+    if not slug or slug == TAG_FALLBACK:
+        return TAG_FALLBACK
+    if slug in CANONICAL_TAGS:
+        return slug
+    if slug in TAG_ALIASES:
+        return TAG_ALIASES[slug] or TAG_FALLBACK
+    return TAG_FALLBACK
+
+
 def derive_tags(work: dict[str, Any]) -> list[str]:
     tags: list[str] = []
     for keyword in work.get("keywords") or []:
         label = keyword.get("display_name") or ""
-        tag = "-".join(re.findall(r"[a-z0-9]+", ascii_fold(label).lower()))
-        tag = tag[:60].strip("-")
+        if not label:
+            continue
+        tag = canonical_tag(label)
         if tag and tag not in tags:
             tags.append(tag)
         if len(tags) == 3:
             break
     if not tags:
         topic = (work.get("primary_topic") or {}).get("subfield") or {}
-        label = topic.get("display_name") or ""
-        tag = "-".join(re.findall(r"[a-z0-9]+", ascii_fold(label).lower()))
-        if tag:
-            tags.append(tag)
+        tags.append(canonical_tag(topic.get("display_name") or ""))
     return tags
 
 

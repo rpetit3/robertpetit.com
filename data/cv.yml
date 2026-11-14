@@ -44,6 +44,13 @@ education:
 title: Senior Bioinformatics Scientist
 
 employment:
+  - title: Senior Bioinformatics Scientist
+    company: Wyoming Public Health Laboratory
+    location: Cheyenne, WY
+    primary: true
+    start: 2021-05-01
+    end: present
+
   - title: Bioinformatics Consultant
     company: Simple Bioinformatics, LLC
     location: Cheyenne, WY
@@ -54,12 +61,6 @@ employment:
     company: University of Wyoming
     location: Laramie, WY
     start: 2022-03-01
-    end: present
-
-  - title: Senior Bioinformatics Scientist
-    company: Wyoming Public Health Laboratory
-    location: Cheyenne, WY
-    start: 2021-05-01
     end: present
 
   - title: APHL Global Health Consultant
@@ -77,7 +78,7 @@ employment:
   - title: Information Analyst III
     company: Emory University
     location: Atlanta, GA
-    start: 2012-01-01
+    start: 2011-12-31
     end: 2013-08-01
 
   - title: Network and Systems Administrator
@@ -115,7 +116,7 @@ grants:
 
 presentations:
   - title: "Bactopia v4: A Scalable Bacterial Genome Surveillance Pipeline"
-    conference: "ASM Bioinformatics, Genomics and Big Data Conference (ASMBIG)"
+    conference: "ASM Bioinformatics, Genomics and Big Data Conference (ASM BIG)"
     authors: ["***Robert A Petit III***", "Taylor Fearing", "Elena Groves", "Maren Anderson", "Jim Mildenberger", "Rob Christensen", "Timothy D Read", "Joseph M Reed"]
     type: poster
     date: 2026-10-11
@@ -187,8 +188,8 @@ presentations:
     conference: Association for Molecular Pathology (AMP) 2024 Annual Meeting
     authors: ["***Robert A Petit III***"]
     type: talk
-    date: 2024-11-19
-    url: https://amp2024.eventscribe.net/biography.asp?bucket=city&pfp=Attendees
+    date: 2024-11-23
+    url: https://www.robertpetit.com/pdf/2024-rp3-amp.pdf
 
   - title: Bactopia - Enhancing and expanding the Bactopia framework
     conference: ASM Conference on Rapid Applied Microbial Next-Generation Sequencing and Bioinformatic Pipelines (ASMNGS)
@@ -267,12 +268,12 @@ presentations:
     date: 2024-04-01
     url: https://www.robertpetit.com/pdf/2024-cem-seminar.pdf
 
-  - title: Bactopia v3 enhancements for on-going genomic surveillance
+  - title: Bactopia v3 enhancements for genomic surveillance
     conference: Nextflow Summit - Boston 2023
     authors: ["***Robert A Petit III***"]
     type: talk
     date: 2023-11-28
-    url: https://datasets.bactopia.com/media/2023-bactopiav3-nf-summit-boston.pdf
+    url: https://datasets.bactopia.io/media/2023-bactopiav3-nf-summit-boston.pdf
     video: https://youtu.be/su8wvdR7N2Y?si=EFZlOf7R9Qa40jbP
 
   - title: Bactopia v3 - Enhancements for on-going genomic surveillance of bacterial pathogens
@@ -314,14 +315,14 @@ presentations:
     authors: ["***Robert A Petit III***", "Taylor Fearing", "Chayse Rowley", "Jim Mildenberger", "Timothy D Read"]
     type: poster
     date: 2022-10-16
-    url: https://datasets.bactopia.com/media/2022-asmngs.pdf
+    url: https://datasets.bactopia.io/media/2022-asmngs.pdf
 
   - title: Designing mechanisms into Bactopia to support its users and contribute back to the community
     conference: Nextflow Summit 2022
     authors: ["***Robert A Petit III***"]
     type: talk
     date: 2022-10-12
-    url: https://summit.nextflow.io/program/oct-12-designing-mechanisms-into-bactopia-to-support-its-users-and-contribute-back-to-the-community/
+    url: https://datasets.bactopia.io/media/2022-nextflow-summit.pdf
     video: https://youtu.be/I0z1z7EKv2M
 
   - title: Using Bactopia for highly scalable, portable and customizable bacterial genome analyses
@@ -329,14 +330,14 @@ presentations:
     authors: ["***Robert A Petit III***", "Taylor Fearing", "Chayse Rowley", "Jim Mildenberger", "Timothy D Read"]
     type: poster
     date: 2022-08-07
-    url: https://datasets.bactopia.com/media/2022-iceid-poster-final.pdf
+    url: https://datasets.bactopia.io/media/2022-iceid-poster-final.pdf
 
-  - title: Bactopia & it's usage of nf-core components
+  - title: Bactopia & its usage of nf-core components
     conference: nf-core Bytesize Talks
     authors: ["***Robert A Petit III***"]
     type: talk
     date: 2022-07-20
-    url: https://bactopia.github.io/v2.2.0/data/resources/2022-nf-core-bytesize-bactopia.pdf
+    url: https://datasets.bactopia.io/media/2022-nf-core-bytesize-bactopia.pdf
     video: https://www.youtube.com/watch?v=egjgcmeJ0wQ
 
   - title: Using Bactopia for highly scalable, portable and customizable bacterial genome analyses
@@ -344,7 +345,7 @@ presentations:
     authors: ["***Robert A Petit III***", "Davi J. Marcon", "Abhinav Sharma", "Timothy D Read"]
     type: poster
     date: 2022-06-21
-    url: https://datasets.bactopia.com/media/2022-sfaf-poster-final.pdf
+    url: https://datasets.bactopia.io/media/2022-sfaf-poster-final.pdf
 
   - title: Microreact and Data.flo for more than genomic epidemiology
     conference: SPHERES Meeting
@@ -358,14 +359,14 @@ presentations:
     authors: ["***Robert A Petit III***", "Davi J. Marcon", "Abhinav Sharma", "Timothy D Read"]
     type: poster
     date: 2022-05-17
-    url: https://datasets.bactopia.com/media/2022-aphl-conference.pdf
+    url: https://datasets.bactopia.io/media/2022-aphl-conference.pdf
 
   - title: Using Bactopia for the complete analysis of bacterial genomes
     conference: African Bioinformatics Network
     authors: ["***Robert A Petit III***"]
     type: talk
     date: 2022-05-01
-    url: https://datasets.bactopia.com/media/2022-abn-bactopia.pdf
+    url: https://datasets.bactopia.io/media/2022-abn-bactopia.pdf
     video: https://youtu.be/x-xNO1zZ54s
 
   - title: Bactopia v2 Highly scalable, portable and customizable bacterial genome analyses
@@ -373,7 +374,7 @@ presentations:
     authors: ["***Robert A Petit III***", "Davi J. Marcon", "Abhinav Sharma", "Timothy D Read"]
     type: poster
     date: 2022-04-28
-    url: https://datasets.bactopia.com/media/2022-wellcome-amr-conference.pdf
+    url: https://datasets.bactopia.io/media/2022-wellcome-amr-conference.pdf
     video: https://youtu.be/pWVa-blIw48
 
   - title: "Bactopia v2: Highly scalable, portable and customizable bacterial genome analyses"
@@ -396,7 +397,7 @@ presentations:
     authors: ["***Robert A Petit III***"]
     type: talk
     date: 2022-01-13
-    url: https://soundcloud.com/microbinfie/bactopia-part-1
+    url: https://soundcloud.com/microbinfie/bactopia-part-2
 
   - title: Bactopia and using workflow managers in bioinformatics part 1
     conference: Micro Binfie Podcast
@@ -537,7 +538,7 @@ presentations:
 
 teaching:
   - course: 13th Microbial Bioinformatics Hackathon
-    description: A 3 day hackathon that proceeded the 2026 ASMBIG Conference.
+    description: A 3 day hackathon that preceded the 2026 ASM BIG Conference.
     role: Organizer
     school: Wyoming Public Health Laboratory
     level: Professional
@@ -558,7 +559,7 @@ teaching:
     date: 2025-06-01
 
   - course: 11th Microbial Bioinformatics Hackathon
-    description: A 3 day hackathon that proceeded the 2025 ABPHM Conference.
+    description: A 3 day hackathon that preceded the 2025 ABPHM Conference.
     role: Organizing Committee Member
     school: Wyoming Public Health Laboratory
     level: Professional

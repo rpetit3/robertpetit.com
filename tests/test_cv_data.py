@@ -44,12 +44,15 @@ def test_presentations_are_newest_first():
 
 def test_ongoing_employment_leads():
     rows = employment()
-    starts = [str(row["start"]) for row in rows]
-    ongoing = [start for row, start in zip(rows, starts) if str(row["end"]) == "present"]
+    assert rows[0].get("primary") is True
+    assert [row for row in rows if row.get("primary")] == [rows[0]]
+    ongoing = [row for row in rows if str(row["end"]) == "present" and not row.get("primary")]
     assert ongoing
-    assert starts[: len(ongoing)] == ongoing
-    assert ongoing == sorted(ongoing, reverse=True)
-    past = starts[len(ongoing) :]
+    assert all(str(row["end"]) == "present" for row in rows[: 1 + len(ongoing)])
+    assert [str(row["start"]) for row in ongoing] == sorted(
+        (str(row["start"]) for row in ongoing), reverse=True
+    )
+    past = [str(row["start"]) for row in rows[1 + len(ongoing) :]]
     assert past == sorted(past, reverse=True)
 
 

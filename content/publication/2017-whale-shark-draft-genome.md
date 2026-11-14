@@ -12,7 +12,7 @@ date = "2017-01-01"
 journal = "*BMC Genomics*"
 title = "Draft sequencing and assembly of the genome of the world's largest fish, the whale shark: *Rhincodon typus* Smith 1828"
 pdf = "/pdf/2017-whale-shark-draft-genome.pdf"
-tags = ["genomic", "rhincodon typus", "whale shark"]
+tags = ["genomic"]
 doi = "10.1186/s12864-017-3926-9"
 citation = "Read, T. D. et al. Draft sequencing and assembly of the genome of the world’s largest fish, the whale shark: *Rhincodon typus* Smith 1828. *BMC Genomics* 18, 532 (2017)"
 +++

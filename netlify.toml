@@ -39,6 +39,18 @@
   [headers.values]
     Content-Type = "application/rss+xml"
     
+# The bio lives on the section page, so the old child page is gone rather
+# than served as a duplicate.
+[[redirects]]
+  from = "/about/about/"
+  to = "/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/about/about"
+  to = "/404.html"
+  status = 404
+
 # The following redirect is intended for use with most SPAs that handle
 # routing internally.
 [[redirects]]
@@ -51,6 +63,9 @@
   for = "/*"
     [headers.values]
     Access-Control-Allow-Origin = "*"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy-Report-Only = "default-src 'self'; script-src 'self' 'unsafe-inline' https://*.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com https://img.shields.io https://zenodo.org; connect-src 'self' https://*.google-analytics.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; report-uri /.netlify/functions/csp-report"
 
 [context.branch-name.processing]
   skip_processing = false

@@ -1,3 +1,8 @@
+---
+title: "Short bio"
+summary: "Plain-language summary of my background, current work, and interests."
+---
+
 ### Yo! 👋
 
 I'm Robert Petit (*puh-teet, not pet-it*), a __*"classically trained"*__ bioinformatician focused on AI-driven strategies, public health pathogens, and workflow/tool development, mostly on the bacterial side. *(haha yes, "classically trained" because I was taught C and Perl back in the day)* If I had to describe my *"bioinformatics philosophy"*, it would be "good-enough practical bioinformatics"; I'm in public health, so we need things that answer our questions today, because we have to move on to the next outbreak!

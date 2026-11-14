@@ -11,7 +11,7 @@ authors = ["Lauren F. Collins", "Fiona P. Havers", "Amy Tunali", "Stephanie Thom
 date = "2019-12-01"
 journal = "*Journal of the American Medical Association*"
 title = "Invasive Nontypeable *Haemophilus influenzae* Infection Among Adults With HIV in Metropolitan Atlanta, Georgia, 2008-2018"
-tags =  ["is1016", "virulence", "haemophilus"]
+tags = ["typing", "virulence", "pathogens"]
 doi = "10.1001/jama.2019.18800"
 citation = "Collins, L. F. et al. Invasive Nontypeable *Haemophilus influenzae* Infection Among Adults With HIV in Metropolitan Atlanta, Georgia, 2008-2018. *JAMA* 322, 2399–2410 (2019)"
 +++

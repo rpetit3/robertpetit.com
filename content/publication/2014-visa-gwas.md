@@ -13,7 +13,7 @@ journal = "*Genome Biology and Evolution*"
 title = "Dissecting vancomycin-intermediate resistance in *Staphylococcus aureus* using genome-wide association"
 pdf = "/pdf/2014-visa-gwas.pdf"
 
-tags = ["genomics", "phylogeny", "staphylococcus", "resistance"]
+tags = ["genomic", "phylogeny", "staphylococcus", "resistance"]
 
 doi = "10.1093/gbe/evu092"
 citation = "Alam, M. T. et al. Dissecting vancomycin-intermediate resistance in *Staphylococcus aureus* using genome-wide association. *Genome Biol. Evol.* 6, 1174–1185 (2014)"

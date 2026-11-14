@@ -48,7 +48,7 @@
                       <span class="mr-2 text-gray flex-shrink-0">
                         {{ partial "select_octicon.html" (dict "context" . "octicon" "flame" ) }}
                       </span>
-                      <a class="text-bold flex-auto min-width-0" href="{{ .Params.link }}" target="_blank">
+                      <a class="text-bold flex-auto min-width-0" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">
                         <span class="repo" title="{{ .Title | markdownify }}">{{ .Title | markdownify }}</span>
                       </a>
                     </div>
@@ -120,7 +120,7 @@
                           <span class="mr-2 text-gray flex-shrink-0">
                             {{ partial "select_octicon.html" (dict "context" . "octicon" "code-square" ) }}
                           </span>
-                          <a class="text-bold flex-auto min-width-0" href="{{ .Params.link }}" target="_blank">
+                          <a class="text-bold flex-auto min-width-0" href="{{ .Params.link }}" target="_blank" rel="noopener noreferrer">
                           <span class="repo" title="{{ .Title | markdownify }}">{{ .Title | markdownify }}</span>
                           </a>
                         </div>

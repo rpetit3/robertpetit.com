@@ -11,7 +11,7 @@ authors = ["Monique R. Bennett", "Robin G. Bombardi", "Nurgun Kose", "Erica H. P
 date = "2019-04-01"
 journal = "*Journal of Infectious Diseases*"
 title = "Human mAbs to *Staphylococcus aureus* IsdA Provide Protection Through Both Heme-Blocking and Fc-Mediated Mechanisms"
-tags =  ["staphylococcus", "isda", "human"]
+tags = ["staphylococcus", "pathogens"]
 doi = "10.1093/infdis/jiy635"
 citation = "Bennett, M. R. et al. Human mAbs to *Staphylococcus aureus* IsdA Provide Protection Through Both Heme-Blocking and Fc-Mediated Mechanisms. *J. Infect. Dis.* 219, 1264–1273 (2019)"
 +++

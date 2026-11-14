@@ -12,7 +12,7 @@ date = "2011-10-01"
 journal = "*Journal of Bacteriology*"
 title = "Genome sequences for five strains of the emerging pathogen *Haemophilus haemolyticus*"
 pdf = "/pdf/2011-hhaemolyticus.pdf"
-tags = ["genomic", "haemophilus"]
+tags = ["genomic", "pathogens"]
 doi = "10.1128/JB.05863-11"
 citation = "Jordan, I. K. et al. Genome sequences for five strains of the emerging pathogen *Haemophilus haemolyticus*. *J. Bacteriol.* 193, 5879–5880 (2011)"
 +++

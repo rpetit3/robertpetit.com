@@ -6,6 +6,7 @@
 <meta name="robots" content="noodp" />
 
 <link rel="canonical" href="{{ .Permalink }}" />
+<link rel="alternate" type="text/plain" href="{{ "llms.txt" | absURL }}" title="LLM summary" />
 
 <!-- Twitter Card -->
 {{ $image := $.Site.Params.avatar | absURL }}
@@ -25,8 +26,23 @@
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:site_name" content="{{ .Title | markdownify | plainify}}" />
 <meta property="og:image" content="{{ $image }}">
-<meta property="og:image:width" content="2048">
-<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="640">
+<meta property="og:image:height" content="640">
+{{ if or .IsHome (eq .Section "about") }}
+{{ $sameAs := slice }}
+{{ range .Site.Params.social }}{{ $sameAs = $sameAs | append .link }}{{ end }}
+{{ $person := dict
+  "@context" "https://schema.org"
+  "@type" "Person"
+  "name" .Site.Params.author
+  "jobTitle" hugo.Data.cv.title
+  "url" .Site.Params.url
+  "email" (printf "mailto:%s" .Site.Params.email)
+  "sameAs" $sameAs
+  "worksFor" (dict "@type" "Organization" "name" .Site.Params.organization)
+}}
+<script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>
+{{ end }}
 {{ if isset .Params "date" }}
 <meta property="article:published_time" content="{{ time .Date }}" />
 {{ end }}

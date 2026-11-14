@@ -12,7 +12,7 @@ date = "2019-01-01"
 journal = "*Microbial Resource Announcement*"
 title = "Whole-Genome Sequences of *Staphylococcus aureus* Isolates from Cystic Fibrosis Lung Infections"
 pdf = "/pdf/2019-saureus-cf-mra.pdf"
-tags =  ["cystic fibrosis","staphylococcus", "nanopore"]
+tags = ["pathogens", "staphylococcus", "sequencing"]
 
 doi = "10.1128/MRA.01564-18"
 citation = "Bernardy, E. E. et al. Whole-Genome Sequences of *Staphylococcus aureus* Isolates from Cystic Fibrosis Lung Infections. *Microbial Resource Announcement* 8, e01564–18 (2019)"

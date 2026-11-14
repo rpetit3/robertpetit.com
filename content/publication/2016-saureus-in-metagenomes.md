@@ -12,7 +12,7 @@ date = "2016-10-01"
 journal = "*PeerJ*"
 title = "The single-species metagenome: subtyping *Staphylococcus aureus* core genome sequences from shotgun metagenomic data"
 pdf = "/pdf/2016-saureus-in-metagenomes.pdf"
-tags = ["metagenomic", "microbiome", "staphylococcus"]
+tags = ["genomic", "microbiome", "staphylococcus"]
 
 doi = "10.7717/peerj.2571"
 citation = "Joseph, S. J. et al. The single-species metagenome: subtyping *Staphylococcus aureus* core genome sequences from shotgun metagenomic data. *PeerJ* 4, e2571 (2016)"

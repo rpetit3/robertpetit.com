@@ -12,7 +12,7 @@ date = "2014-04-01"
 journal = "*Gene*"
 title = "The complete mitochondrial genome sequence of the world's largest fish, the whale shark (*Rhincodon typus*), and its comparison with those of related shark species"
 pdf = ""
-tags = ["genomic", "phylogeny", "whale shark", "rhincodon typus"]
+tags = ["genomic", "phylogeny"]
 doi = "10.1016/j.gene.2014.01.064"
 citation = "Alam, M. T., Petit, R. A., 3rd, Read, T. D. & Dove, A. D. M. The complete mitochondrial genome sequence of the world’s largest fish, the whale shark (*Rhincodon typus*), and its comparison with those of related shark species. *Gene* 539, 44–49 (2014)"
 +++

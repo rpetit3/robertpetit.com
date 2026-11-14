@@ -94,6 +94,38 @@ class SlugTests(unittest.TestCase):
         self.assertIn("2026-thing-2", taken)
 
 
+class TagTests(unittest.TestCase):
+    def test_aliases_fold_to_canonical(self):
+        self.assertEqual(sp.canonical_tag("MRSA"), "staphylococcus")
+        self.assertEqual(sp.canonical_tag("Staphylococcus aureus"), "staphylococcus")
+        self.assertEqual(sp.canonical_tag("antimicrobial resistance"), "resistance")
+        self.assertEqual(sp.canonical_tag("big data"), "data")
+
+    def test_unknown_keyword_uses_fallback(self):
+        self.assertEqual(sp.canonical_tag("brand new topic"), "genomic")
+
+    def test_alias_targets_are_canonical(self):
+        for target in sp.TAG_ALIASES.values():
+            if target:
+                self.assertIn(target, sp.CANONICAL_TAGS)
+
+    def test_derive_tags_dedupes_and_caps_at_three(self):
+        record = {
+            "keywords": [
+                {"display_name": "MRSA"},
+                {"display_name": "staphylococcus"},
+                {"display_name": "genomic"},
+                {"display_name": "virulence"},
+            ]
+        }
+        self.assertEqual(sp.derive_tags(record), ["staphylococcus", "genomic", "virulence"])
+
+    def test_derive_tags_uses_topic_then_fallback(self):
+        record = {"primary_topic": {"subfield": {"display_name": "MRSA"}}}
+        self.assertEqual(sp.derive_tags(record), ["staphylococcus"])
+        self.assertEqual(sp.derive_tags({}), ["genomic"])
+
+
 class TextTests(unittest.TestCase):
     def test_reconstruct_abstract_orders_words(self):
         inverted = {"world": [1], "hello": [0], "again": [2]}
@@ -138,7 +170,7 @@ class EntryTests(unittest.TestCase):
         self.assertEqual(payload["doi"], "10.1/x")
         self.assertIn("***Robert A. Petit III***", payload["authors"])
         self.assertNotIn("pdf", payload)
-        self.assertEqual(payload["tags"], ["staphylococcus-aureus"])
+        self.assertEqual(payload["tags"], ["staphylococcus"])
 
     def test_build_entry_caps_authors_but_keeps_profile_author(self):
         authorships = [

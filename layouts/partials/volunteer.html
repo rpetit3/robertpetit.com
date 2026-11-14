@@ -17,10 +17,10 @@
           {{- .Content -}}
         <h2>Conda Submissions</h2>
         <p>I have created {{ len hugo.Data.volunteer.conda }} (<i>woohoo!</i>🎉) Conda recipes for the community, and I have 
-          <a href="https://github.com/bioconda/bioconda-recipes/pulls?q=is%3Apr+involves%3Arpetit3+is%3Aclosed" target="_blank">reviewed more than 1,000 Bioconda pull requests</a>. 
+          <a href="https://github.com/bioconda/bioconda-recipes/pulls?q=is%3Apr+involves%3Arpetit3+is%3Aclosed" target="_blank" rel="noopener noreferrer">reviewed more than 1,000 Bioconda pull requests</a>. 
           If you have a tool 
            you would like to submit to Bioconda, but are not sure where to start, please reach out! Between the 
-           <a href="https://gitter.im/bioconda/Lobby" target="_blank">Bioconda Gitter</a> and myself, I'm sure we can find some one to help you!</p>
+           <a href="https://gitter.im/bioconda/Lobby" target="_blank" rel="noopener noreferrer">Bioconda Gitter</a> and myself, I'm sure we can find some one to help you!</p>
         <div>
           <table>
               <tr>
@@ -30,9 +30,9 @@
               </tr>
             {{ range sort hugo.Data.volunteer.conda "tool" "" }}
               <tr>
-                  <td><a href="{{ .tool_url }}" alt="{{ .tool }}" target="_blank">{{ .tool }}</a></td>
+                  <td><a href="{{ .tool_url }}" alt="{{ .tool }}" target="_blank" rel="noopener noreferrer">{{ .tool }}</a></td>
                   <td>{{ .description }}</td>
-                  <td><a href="{{ .pr_url }}" alt="{{ .pr_name }}" target="_blank">{{ .pr_name }}</a></td>
+                  <td><a href="{{ .pr_url }}" alt="{{ .pr_name }}" target="_blank" rel="noopener noreferrer">{{ .pr_name }}</a></td>
               </tr>
             {{ end }}
           </table>
@@ -43,7 +43,7 @@
         {{ $merged := mul hugo.Data.merged.search.issueCount 1.0 }}
         {{ $total := mul hugo.Data.github.search.issueCount 1.0 }}
         {{ $percent := math.Round (mul (div $merged $total) 100) }}
-        <p>I have submitted {{ hugo.Data.github.search.issueCount }} pull requests (<i>{{ $percent }}% merged, yay!</i>🎉) to various open source projects. Below are my most recent pull requests. To see the full list, which also includes personal projects, please <a href="{{ .Params.github_pr_url }}" alt="Full list of Pull Requests" target="_blank">view them on Github</a>.</p>
+        <p>I have submitted {{ hugo.Data.github.search.issueCount }} pull requests (<i>{{ $percent }}% merged, yay!</i>🎉) to various open source projects. Below are my most recent pull requests. To see the full list, which also includes personal projects, please <a href="{{ .Params.github_pr_url }}" alt="Full list of Pull Requests" target="_blank" rel="noopener noreferrer">view them on Github</a>.</p>
         <div>
           <table>
             <tr>
@@ -67,7 +67,7 @@
                     </span>
 
                     {{ end }}
-                    <a href="{{ htmlEscape .node.url }}" alt="{{ $pr }}" target="_blank">{{ $pr }}</a>
+                    <a href="{{ htmlEscape .node.url }}" alt="{{ $pr }}" target="_blank" rel="noopener noreferrer">{{ $pr }}</a>
 
                   </td>
                   <td>{{ .node.title }}</td>

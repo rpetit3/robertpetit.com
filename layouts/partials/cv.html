@@ -39,7 +39,7 @@
                   <p>
                     <!-- ORCID -->
                     {{ $orcid := (index (where .Site.Params.social "site" "ORCID") 0) }}
-                    <strong>ORCID: </strong><a href="{{$orcid.link}}" target="_blank">{{$orcid.user}}</a>
+                    <strong>ORCID: </strong><a href="{{$orcid.link}}" target="_blank" rel="noopener noreferrer">{{$orcid.user}}</a>
                   </p>
               </div>
               <div class="col-7 float-left">
@@ -47,21 +47,21 @@
                 <p>
                   <!-- GitHub -->
                   {{ $github := (index (where .Site.Params.social "site" "GitHub") 0) }}
-                  <strong>GitHub: </strong><a href="{{$github.link}}" target="_blank">{{$github.link}}</a>
+                  <strong>GitHub: </strong><a href="{{$github.link}}" target="_blank" rel="noopener noreferrer">{{$github.link}}</a>
                 </p>
                 <p>
                   <!-- LinkedIn -->
                   {{ $linkedin := (index (where .Site.Params.social "site" "LinkedIn") 0) }}
-                  <strong>LinkedIn: </strong><a href="{{$linkedin.link}}" target="_blank">{{$linkedin.link}}</a>
+                  <strong>LinkedIn: </strong><a href="{{$linkedin.link}}" target="_blank" rel="noopener noreferrer">{{$linkedin.link}}</a>
                 </p>
                 <p>
                   <!-- Bluesky -->
                   {{ $bluesky := (index (where .Site.Params.social "site" "Bluesky") 0) }}
-                  <strong>Bluesky: </strong><a href="{{$bluesky.link}}" target="_blank">{{$bluesky.link}}</a>
+                  <strong>Bluesky: </strong><a href="{{$bluesky.link}}" target="_blank" rel="noopener noreferrer">{{$bluesky.link}}</a>
                 </p>
                 <p>
                   <!-- Personal Site -->
-                  <strong>Personal Site: </strong><a href="{{$.Site.Params.url}}" target="_blank">{{$.Site.Params.url}}</a>
+                  <strong>Personal Site: </strong><a href="{{$.Site.Params.url}}" target="_blank" rel="noopener noreferrer">{{$.Site.Params.url}}</a>
                 </p>
               </div>
             </div>
@@ -76,7 +76,7 @@
             <p>
             <strong>{{ .degree }}</strong><br/> 
             {{ if isset . "url" }}
-                <a href="{{ .url }}" alt="{{ .field }}" target="_blank">{{ .field }}</a>,
+                <a href="{{ .url }}" alt="{{ .field }}" target="_blank" rel="noopener noreferrer">{{ .field }}</a>,
             {{ else }}
                 {{ .field }},
             {{end}} {{ .school }}, {{ .end }}
@@ -84,9 +84,12 @@
           {{end}}
 
           <h2>Employment</h2>
-          {{ $ongoing := sort (where hugo.Data.cv.employment "end" "present") "start" "desc" }}
+          {{ $present := where hugo.Data.cv.employment "end" "present" }}
+          {{ $primary := where $present "primary" true }}
+          {{ $ongoing := sort (where $present "primary" "!=" true) "start" "desc" }}
           {{ $finished := sort (where hugo.Data.cv.employment "end" "!=" "present") "start" "desc" }}
-          {{ $ordered := $ongoing }}
+          {{ $ordered := $primary }}
+          {{ range $ongoing }}{{ $ordered = $ordered | append . }}{{ end }}
           {{ range $finished }}{{ $ordered = $ordered | append . }}{{ end }}
           {{ range $ordered }}
             <p>
@@ -117,7 +120,7 @@
           {{ $count := len $section }}
           {{ range  $i, $e := sort $section ".Params.date" "desc" }}
             <p>
-                {{ sub $count $i }}.  {{ delimit $e.Params.authors ", " | markdownify }} <a href="{{ $e.Permalink }}" target="_blank">{{ $e.Title | markdownify }}</a> {{ $e.Params.journal | markdownify }} ({{ $e.Date.Format "2006" }})
+                {{ sub $count $i }}.  {{ delimit $e.Params.authors ", " | markdownify }} <a href="{{ $e.Permalink }}" target="_blank" rel="noopener noreferrer">{{ $e.Title | markdownify }}</a> {{ $e.Params.journal | markdownify }} ({{ $e.Date.Format "2006" }})
             </p>
           {{end}}
 
@@ -137,18 +140,19 @@
           Software tools which I developed or maintain, have been downloaded {{ $downloads | lang.FormatNumber 0}} times using Conda and have {{ $stars | lang.FormatNumber 0}} total Stargazers.{{ if gt $citations 0 }} Their papers have been cited {{ $citations | lang.FormatNumber 0 }} times.{{ end }}
           </p>
           {{ $section := where $.Site.RegularPages "Section" "software" }}
-          {{ range  $i, $e := sort $section ".Title" "ascd" }}
-            {{ if gt $i 0 }}
+          {{/* software.md is the section intro, not a tool. */}}
+          {{ $tools := slice }}
+          {{ range $section }}{{ if ne .File.BaseFileName "software" }}{{ $tools = $tools | append . }}{{ end }}{{ end }}
+          {{ range  $i, $e := sort $tools ".Title" "asc" }}
             {{ $fixed_title := replace $e.Title "-" "_" }}
             {{ $counts := dict }}
             {{ with index (index hugo.Data "software-counts") $fixed_title }}{{ $counts = index . 0 }}{{ end }}
 
             <p>
-                {{ $i }}.  <a href="{{ $e.Params.link }}" target="_blank">{{ $e.Title | markdownify }}</a><br />
+                {{ add $i 1 }}.  <a href="{{ $e.Params.link }}" target="_blank" rel="noopener noreferrer">{{ $e.Title | markdownify }}</a><br />
                 <i>{{ .Summary | safeHTML }}</i><br />
                 {{ if gt (default 0 $counts.downloads) 0 }}{{$counts.downloads | lang.FormatNumber 0}} total downloads{{ if gt (default 0 $counts.stars) 0 }} and {{$counts.stars | lang.FormatNumber 0 }} Stargazers{{end}}{{else if gt (default 0 $counts.stars) 0 }}{{$counts.stars | lang.FormatNumber 0}} Stargazers{{end}}{{ with $counts.citations }}{{ if or (gt (default 0 $counts.downloads) 0) (gt (default 0 $counts.stars) 0) }} and {{ end }}{{ . | lang.FormatNumber 0 }} citations{{ end }}
             </p>
-            {{ end }}
           {{end}}
 
           <h2>Presentations</h2>
@@ -159,14 +163,14 @@
             <p>
                 {{ sub $count $i }}. {{ delimit $e.authors ", " | markdownify }}, 
                 {{ if isset $e "url" }}
-                    <a href="{{ $e.url }}" target="_blank">{{ $e.title | markdownify }}</a>,
+                    <a href="{{ $e.url }}" target="_blank" rel="noopener noreferrer">{{ $e.title | markdownify }}</a>,
                 {{ else }}
                     {{ $e.title | markdownify }},
                 {{ end }}
                 <i>{{ $e.conference | markdownify }}</i> ({{ dateFormat "January 2006" $e.date }})
 
                 {{ if isset $e "video" }}
-                    <a href="{{ $e.video }}" target="_blank">(Recording)</a>
+                    <a href="{{ $e.video }}" target="_blank" rel="noopener noreferrer">(Recording)</a>
                 {{ end }}
             <p>
           {{end}}
@@ -178,13 +182,13 @@
                 {{ sub $count $i }}. {{ delimit $e.authors ", " | markdownify }},
 
                 {{ if isset $e "url" }}
-                    <a href="{{ $e.url }}" target="_blank">{{ $e.title | markdownify }}</a>,
+                    <a href="{{ $e.url }}" target="_blank" rel="noopener noreferrer">{{ $e.title | markdownify }}</a>,
                 {{ else }}
                     {{ $e.title | markdownify }},
                 {{ end }}
                 <i>{{ $e.conference | markdownify }}</i> ({{ dateFormat "January 2006" $e.date }})
                 {{ if isset $e "video" }}
-                    <a href="{{ $e.video }}" target="_blank">(Recording)</a>
+                    <a href="{{ $e.video }}" target="_blank" rel="noopener noreferrer">(Recording)</a>
                 {{ end }}
             <p>
           {{end}}
@@ -208,7 +212,7 @@
           {{ $certs := where hugo.Data.cv.professional_development "type" "certification" }}
           {{ range sort $certs "date" "desc" }}
             <p>
-              <a href="{{ .url }}" target="_blank">
+              <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
                 <strong>{{ .name }}</strong><br/>
               </a>
               <i>
@@ -221,7 +225,7 @@
           {{ $courses := where hugo.Data.cv.professional_development "type" "training" }}
           {{ range sort $courses "date" "desc" }}
             <p>
-              <a href="{{ .url }}" target="_blank">
+              <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
                 <strong>{{ .name }}</strong><br/>
               </a>
               <i>{{ .description }} Completed on {{ dateFormat "January 2, 2006" .date }}.</i>

@@ -60,6 +60,7 @@ jobs:
             grep -qiF "$2" /tmp/probe
           }
           check "$SITE/" "Robert A. Petit III" || { echo "::error::home page lost its title"; fail=1; }
+          check "$SITE/about/" "You made it here" || { echo "::error::about page lost its body"; fail=1; }
           check "$SITE/volunteer/" "Conda Submissions" || { echo "::error::volunteer page lost its conda table"; fail=1; }
           check "$SITE/publication/" "publications" || { echo "::error::publication page lost its content"; fail=1; }
           plain "$SITE/robots.txt" "Sitemap: https://www.robertpetit.com/sitemap.xml" || { echo "::error::robots.txt is missing or served as the SPA fallback"; fail=1; }
