@@ -24,12 +24,33 @@ During my masters I worked with [Dr. Timothy Read](https://med.emory.edu/directo
 
 Undergrad, was an adventure. I changed my major a lot, but hovered around Education, Computer Science and Biology. Favorite classes were probably Ecology and Botany (*I have a green thumb!*). I spent a summer helping Dr. Colleen McDonough (*who is now retired!*) catch and tag nine-banded armadillos for her behavioral ecology studies.
 
-## Professional Experience
+## Employment
 
 🛠️ **Senior Bioinformatics Scientist**  
 *Wyoming Public Health Laboratory, Cheyenne, WY, 2021-present*  
 
 I am the in-house bioinformatician for [Wyoming Public Health Laboratory](https://health.wyo.gov/publichealth/lab/) and will be as long as they'll have me! As part of my role, I develop new tools and help to facilitate in-house bioinformatic trainings. In the last 5 years, we've expanded Bactopia significantly and produced many new tools including [camlhmp](https://github.com/rpetit3/camlhmp), [genome-dl](https://github.com/rpetit3/genome-dl), [gigatyper](https://github.com/rpetit3/gigatyper), among many more! *(and more to come I'm sure!)*.
+
+---
+
+🛠️ **Bioinformatics Consultant**  
+*Simple Bioinformatics, LLC, Cheyenne, WY, 2026-present*  
+
+I provide bioinformatics consulting services in a part-time capacity through Simple Bioinformatics, LLC. My services includes advising on sequencing, data analysis, and AI-driven strategies. In addition more practical, hands-on work involves setting up bioinformatics pipelines, analyzing data, and providing training and support to clients as needed.
+
+---
+
+🛠️ **Adjunct Professor**  
+*University of Wyoming, Laramie, WY, 2022-present*  
+
+I am an adjunct professor at the University of Wyoming in the Department of Mathematics and Statistics, where I mentor graduate students and/or reside on their thesis committees.
+
+---
+
+🛠️ **APHL Global Health Consultant**  
+*French5s, LLC, Cheyenne, WY, 2023-2026*  
+
+I worked as a consultant for the [APHL Global Health Program](https://www.aphl.org/) by providing my bioinformatics expertise. I have assisted Oman's Central Public Health Laboratory and other labs in the MENA region. I will continue to support the global health program as opportunities arise.
 
 ---
 
