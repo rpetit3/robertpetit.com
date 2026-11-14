@@ -1,8 +1,8 @@
 # Robert A. Petit III, PhD
 
 > Bioinformatician at the Wyoming Public Health Laboratory and developer of
-> Bactopia. Bacterial genomics, pathogen surveillance, and open-source
-> bioinformatics tooling.
+> Bactopia. Bacterial genomics, pathogen surveillance, open-source tooling,
+> and local LLM inference on open-weight models.
 
 - [About](https://www.robertpetit.com/about/): role, affiliations, background
 - [Curriculum Vitae](https://www.robertpetit.com/cv/): employment, education, awards, talks, posters

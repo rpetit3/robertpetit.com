@@ -1,14 +1,14 @@
 
 author = "Robert A. Petit III, PhD"
 seo_author = "Robert A. Petit III, PhD"
-description = "A <em>classically trained</em> bioinformatician studying bacterial genomics and developer of [Bactopia](https://bactopia.io/)."
-seo_description = "Dr. Robert A. Petit III is a bioinformatician at Wyoming Public Health Laboratory, developer of the Bactopia, and part-time bioinformatics consultant"
-tagline = "Dr. Robert A. Petit III is a bioinformatician at Wyoming Public Health Laboratory, developer of the Bactopia, and part-time bioinformatics consultant"
+description = "A <em>classically trained</em> bioinformatician working on bacterial genomics, [Bactopia](https://bactopia.io/), and local inference of open-weight models."
+seo_description = "Dr. Robert A. Petit III is a bioinformatician at the Wyoming Public Health Laboratory, developer of Bactopia, and consultant in local LLM inference."
+tagline = "Dr. Robert A. Petit III is a bioinformatician at the Wyoming Public Health Laboratory, developer of Bactopia, and consultant in local LLM inference."
 email = "robbie.petit@gmail.com"
 avatar = "/images/profile.png"
 github = "rpetit3"
 url = "https://www.robertpetit.com"
-keywords = "blog, genomics, bioinformatics, bacteria, bactopia, staphopia, nextflow"
+keywords = "blog, genomics, bioinformatics, bacteria, bactopia, staphopia, nextflow, ai, llm, local inference, open-weight models, deepseek, qwen, glm, vllm, llama.cpp, sglang, nvidia, amd"
 rss = true
 lastmod = true
 favicon = "/images/github.png"
