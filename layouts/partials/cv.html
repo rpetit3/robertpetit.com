@@ -83,8 +83,12 @@
             </p>
           {{end}}
 
-          <h2>Professional Experience</h2>
-          {{ range sort hugo.Data.cv.employment "start" "desc" }}
+          <h2>Employment</h2>
+          {{ $ongoing := sort (where hugo.Data.cv.employment "end" "present") "start" "desc" }}
+          {{ $finished := sort (where hugo.Data.cv.employment "end" "!=" "present") "start" "desc" }}
+          {{ $ordered := $ongoing }}
+          {{ range $finished }}{{ $ordered = $ordered | append . }}{{ end }}
+          {{ range $ordered }}
             <p>
             <strong>{{ .title | title }}</strong><br />
             <i>{{ .company }}, {{ .location }},
@@ -95,19 +99,6 @@
                 {{ end }}
             </i>
             {{ .description }}
-            <p>
-          {{end}}
-
-          <h2>Certifications</h2>
-          {{ range sort hugo.Data.cv.certifications "date" "desc" }}
-            <p>
-              <a href="{{ .url }}" target="_blank">
-                <strong>{{ .name }}</strong><br/>
-              </a>
-              <i>
-                Achieved on {{ dateFormat "January 2, 2006" .date }} <br />
-                {{ .description }} 
-              </i>
             <p>
           {{end}}
 
@@ -212,17 +203,32 @@
             <p>
           {{end}}
 
-          <h2>Professional Development Training</h2>
-          {{ range sort hugo.Data.cv.training "date" "desc" }}
+          <h2>Professional Development</h2>
+          <h3>Certifications</h3>
+          {{ $certs := where hugo.Data.cv.professional_development "type" "certification" }}
+          {{ range sort $certs "date" "desc" }}
             <p>
               <a href="{{ .url }}" target="_blank">
-                <strong>{{ .course }}</strong><br/>
+                <strong>{{ .name }}</strong><br/>
+              </a>
+              <i>
+                Achieved on {{ dateFormat "January 2, 2006" .date }} <br />
+                {{ .description }} 
+              </i>
+            <p>
+          {{end}}
+          <h3>Training</h3>
+          {{ $courses := where hugo.Data.cv.professional_development "type" "training" }}
+          {{ range sort $courses "date" "desc" }}
+            <p>
+              <a href="{{ .url }}" target="_blank">
+                <strong>{{ .name }}</strong><br/>
               </a>
               <i>{{ .description }} Completed on {{ dateFormat "January 2, 2006" .date }}.</i>
             <p>
           {{end}}
               
-          <h2>Teaching Experience</h2>
+          <h2>Teaching and Outreach</h2>
           {{ range sort hugo.Data.cv.teaching "date" "desc" }}
             <p>
             <strong>{{ .role | title }}</strong><br/>

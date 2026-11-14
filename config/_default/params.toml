@@ -1,9 +1,9 @@
 
 author = "Robert A. Petit III, PhD"
 seo_author = "Robert A. Petit III, PhD"
-description = "Bioinformatician studying bacterial genomics and developer of [Bactopia](https://bactopia.github.io/) and [Staphopia](https://staphopia.emory.edu/) workflows."
-seo_description = "Dr. Robert A. Petit III is a bioinformatician at Wyoming Public Health Laboratory and developer of the Bactopia and Staphopia workflows"
-tagline = "Dr. Robert A. Petit III is a bioinformatician at Wyoming Public Health Laboratory and developer of the Bactopia and Staphopia workflows"
+description = "A <em>classically trained</em> bioinformatician studying bacterial genomics and developer of [Bactopia](https://bactopia.io/)."
+seo_description = "Dr. Robert A. Petit III is a bioinformatician at Wyoming Public Health Laboratory, developer of the Bactopia, and part-time bioinformatics consultant"
+tagline = "Dr. Robert A. Petit III is a bioinformatician at Wyoming Public Health Laboratory, developer of the Bactopia, and part-time bioinformatics consultant"
 email = "robbie.petit@gmail.com"
 avatar = "/images/profile.png"
 github = "rpetit3"

@@ -44,10 +44,10 @@ education:
 title: Senior Bioinformatics Scientist
 
 employment:
-  - title: Senior Bioinformatics Scientist
-    company: Wyoming Public Health Laboratory
+  - title: Bioinformatics Consultant
+    company: Simple Bioinformatics, LLC
     location: Cheyenne, WY
-    start: 2021-05-01
+    start: 2026-02-01
     end: present
 
   - title: Adjunct Professor
@@ -55,6 +55,18 @@ employment:
     location: Laramie, WY
     start: 2022-03-01
     end: present
+
+  - title: Senior Bioinformatics Scientist
+    company: Wyoming Public Health Laboratory
+    location: Cheyenne, WY
+    start: 2021-05-01
+    end: present
+
+  - title: APHL Global Health Consultant
+    company: French5s, LLC
+    location: Cheyenne, WY
+    start: 2023-03-01
+    end: 2026-03-01
 
   - title: Senior Data Analyst
     company: Emory University
@@ -81,9 +93,9 @@ employment:
     end: 2005-08-01
 
 grants:
-  - name: Amazon Web Services Cloud Credits for Research
-    amount: 10000
-    date: 2022-06-01
+  - name: Chan Zuckerberg Initiative (CZI) Essential Open Source Software for Science (Cycle 6) 
+    amount: 150000
+    date: 2024-06-01
 
   - name: Amazon Web Services Cloud Credits for Research
     amount: 12500
@@ -101,7 +113,160 @@ grants:
     amount: 10000
     date: 2013-06-01
 
-presentations:  
+presentations:
+  - title: "Bactopia v4: A Scalable Bacterial Genome Surveillance Pipeline"
+    conference: "ASM Bioinformatics, Genomics and Big Data Conference (ASMBIG)"
+    authors: ["***Robert A Petit III***", "Taylor Fearing", "Elena Groves", "Maren Anderson", "Jim Mildenberger", "Rob Christensen", "Timothy D Read", "Joseph M Reed"]
+    type: poster
+    date: 2026-10-11
+    url: https://datasets.bactopia.io/media/2026-bactopia-poster.pdf
+
+  - title: "Bactopia: a Flexible Pipeline for Complete Analysis of Bacterial Genomes"
+    conference: Centre for Pathogen Genomics Bioinformatics Seminar
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2026-06-05
+    url: https://datasets.bactopia.io/media/2026-rp3-cpg-binfies-bactopia.pdf
+
+  - title: "Bactopia v4: A Scalable Bacterial Genome Surveillance Pipeline"
+    conference: "Sequencing to Function: Analysis and Applications for the Future"
+    authors: ["***Robert A Petit III***", "Taylor Fearing", "Elena Groves", "Maren Anderson", "Jim Mildenberger", "Rob Christensen", "Timothy D Read", "Joseph M Reed"]
+    type: poster
+    date: 2026-05-01
+    url: https://datasets.bactopia.io/media/2026-bactopia-poster.pdf
+
+  - title: "Bactopia v4: A Scalable Bacterial Genome Surveillance Pipeline"
+    conference: APHL Annual Conference
+    authors: ["***Robert A Petit III***", "Taylor Fearing", "Elena Groves", "Maren Anderson", "Jim Mildenberger", "Rob Christensen", "Timothy D Read", "Joseph M Reed"]
+    type: poster
+    date: 2026-05-01
+    url: https://datasets.bactopia.io/media/2026-bactopia-poster.pdf
+
+  - title: How we avoided AI slop in Bactopia
+    conference: Nextflow Summit - Boston 2026
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2026-04-01
+    url: https://datasets.bactopia.io/media/2026-rp3-bactopia-nf-summit.pdf
+    video: https://www.youtube.com/watch?v=m_AwgTzVBqY
+
+  - title: Bioinformatics Showcase Demonstration of Bactopia Workflows
+    conference: CZI EOSS Meeting 2025
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2025-10-20
+
+  - title: Bringing Custom Visual Reporting to Bactopia Workflows
+    conference: 14th International Meeting on Microbial Epidemiological Markers (IMMEM)
+    authors: ["***Robert A Petit III***", "Timothy D Read"]
+    type: talk
+    date: 2025-09-17
+    url: https://www.robertpetit.com/pdf/posters/2025-bactopia-immem.pdf
+
+  - title: Introduction to Bactopia for Bacterial Genome Analysis
+    conference: 2025 AMD Molecular Epidemiology Training Series
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2025-08-15
+    url: https://www.robertpetit.com/pdf/2025-rp3-amdmolepi-bactopia.pdf
+
+  - title: Bioinformatics Showcase Demonstration of Bactopia Workflows
+    conference: Applied Bioinformatics & Public Health Microbiology (ABPHM) 2025
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2025-05-21
+
+  - title: Bioinformatics Toolbox at WPHL
+    conference: 2025 AMD Mountain Region Bioinformatics Conference
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2025-04-22
+    url: https://www.robertpetit.com/pdf/2025-rp3-amdmountain.pdf
+
+  - title: Open-Source Bioinformatics Pipelines and Packages for Infectious Diseases
+    conference: Association for Molecular Pathology (AMP) 2024 Annual Meeting
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2024-11-19
+    url: https://amp2024.eventscribe.net/biography.asp?bucket=city&pfp=Attendees
+
+  - title: Bactopia - Enhancing and expanding the Bactopia framework
+    conference: ASM Conference on Rapid Applied Microbial Next-Generation Sequencing and Bioinformatic Pipelines (ASMNGS)
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2024-10-01
+    url: https://datasets.bactopia.io/media/2024-asmngs-bactopia.pdf
+
+  - title: A brief history of workflow managers in bioinformatics
+    conference: APHL AMD Days 2024
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2024-09-01
+    url: https://www.robertpetit.com/pdf/2024-rp3-amddays.pdf
+
+  - title: Expanding Bactopia as a framework for bacterial, fungal, and metagenomic analysis
+    conference: APHL AMD Days 2024
+    authors: ["***Robert A Petit III***", "Chayse Rowley", "Taylor Fearing", "Jim Mildenberger", "Rob Christensen", "Timothy D Read", "Joseph M Reed"]
+    type: poster
+    date: 2024-09-01
+    url: https://datasets.bactopia.io/media/2024-amddays-bactopia.pdf
+
+  - title: 🐪 camlhmp 🐪 - Classification through yAML Heuristic Mapping Protocol
+    conference: APHL AMD Days 2024
+    authors: ["***Robert A Petit III***", "Chayse Rowley", "Taylor Fearing", "Jim Mildenberger", "Rob Christensen", "Timothy D Read", "Joseph M Reed"]
+    type: poster
+    date: 2024-09-01
+    url: https://www.robertpetit.com/pdf/posters/2024-camlhmp.pdf
+
+  - title: Applications of Digital Epidemiology in Wyoming Public Health Lab
+    conference: ESCMID Digital Epidemiology with Applications in Public Health
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2024-07-16
+    url: https://www.robertpetit.com/pdf/2024-escmid-digital-epidemiology.pdf
+
+  - title: Introduction to Bactopia for Bacterial Genome Analysis
+    conference: Technical Outreach and Assistance for States Teams (TOAST) Monthly Webinar
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2024-06-21
+    url: https://datasets.bactopia.io/media/2024-bactopia-toast.pdf
+
+  - title: Improving Bioinformatics for Public Health Labs
+    conference: 2nd Annual CAPE Meeting
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2024-06-06
+    url: https://www.robertpetit.com/pdf/2024-rp3-georgia-pgcoe.pdf
+
+  - title: Expanding Bactopia as a framework for bacterial, fungal, and metagenomic analysis
+    conference: APHL Annual Conference
+    authors: ["Taylor Fearing", "Chayse Rowley", "***Robert A Petit III***", "Jim Mildenberger", "Rob Christensen", "Joseph M Reed"]
+    type: poster
+    date: 2024-05-15
+    url: https://datasets.bactopia.io/media/2024-aphl-bactopia.pdf
+
+  - title: Sequencing West Nile Virus in Wyoming using Illumina Microbial Amplicon Prep Kit
+    conference: APHL Annual Conference
+    authors: ["Chayse Rowley", "Taylor Fearing", "***Robert A Petit III***", "Steven Townbridge", "Jim Mildenberger", "Rob Christensen", "Joseph M Reed"]
+    type: poster
+    date: 2024-05-15
+    url: https://www.robertpetit.com/pdf/posters/2024-aphl-wnv.pdf
+
+  - title: Expanding Bactopia as a framework for bacterial, fungal, and metagenomic analysis
+    conference: "Sequencing to Function: Analysis and Applications for the Future"
+    authors: ["Taylor Fearing", "Chayse Rowley", "***Robert A Petit III***", "Jim Mildenberger", "Rob Christensen", "Joseph M Reed"]
+    type: poster
+    date: 2024-05-01
+    url: https://datasets.bactopia.io/media/2024-aphl-bactopia.pdf
+
+  - title: End-to-end Bacterial Genome Analysis
+    conference: Comparative & Experimental Medicine Seminar Series
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2024-04-01
+    url: https://www.robertpetit.com/pdf/2024-cem-seminar.pdf
+
   - title: Bactopia v3 enhancements for on-going genomic surveillance
     conference: Nextflow Summit - Boston 2023
     authors: ["***Robert A Petit III***"]
@@ -109,6 +274,19 @@ presentations:
     date: 2023-11-28
     url: https://datasets.bactopia.com/media/2023-bactopiav3-nf-summit-boston.pdf
     video: https://youtu.be/su8wvdR7N2Y?si=EFZlOf7R9Qa40jbP
+
+  - title: Bactopia v3 - Enhancements for on-going genomic surveillance of bacterial pathogens
+    conference: "Sequencing to Function: Analysis and Applications for the Future"
+    authors: ["***Robert A Petit III***", "Taylor Fearing", "Chayse Rowley", "Jim Mildenberger", "Timothy D Read"]
+    type: poster
+    date: 2023-06-01
+    url: https://datasets.bactopia.io/media/2023-sfaf-poster.pdf
+
+  - title: Bioinformatics Showcase Demonstration of Bactopia Workflows
+    conference: Applied Bioinformatics & Public Health Microbiology (ABPHM) 2023
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2023-05-03
 
   - title: Production pipeline for wastewater surveillance, a new tool for Wyoming public health
     conference: Wyoming Association of Rural Water Systems 32nd Annual Training Conference
@@ -161,19 +339,19 @@ presentations:
     url: https://bactopia.github.io/v2.2.0/data/resources/2022-nf-core-bytesize-bactopia.pdf
     video: https://www.youtube.com/watch?v=egjgcmeJ0wQ
 
-  - title: Microreact and Data.flo for more than genomic epidemiology
-    conference: SPHERES Meeting
-    authors: ["***Robert A Petit III***"]
-    type: talk
-    date: 2022-05-25
-    url: https://www.robertpetit.com/pdf/posters/2022-05-cgps-spheres.pdf
-
   - title: Using Bactopia for highly scalable, portable and customizable bacterial genome analyses
     conference: Sequencing to Function Analysis and Applications for the Future 
     authors: ["***Robert A Petit III***", "Davi J. Marcon", "Abhinav Sharma", "Timothy D Read"]
     type: poster
     date: 2022-06-21
     url: https://datasets.bactopia.com/media/2022-sfaf-poster-final.pdf
+
+  - title: Microreact and Data.flo for more than genomic epidemiology
+    conference: SPHERES Meeting
+    authors: ["***Robert A Petit III***"]
+    type: talk
+    date: 2022-05-25
+    url: https://www.robertpetit.com/pdf/posters/2022-05-cgps-spheres.pdf
 
   - title: Bactopia v2 Highly scalable, portable and customizable bacterial genome analyses
     conference: APHL Annual Conference
@@ -197,6 +375,13 @@ presentations:
     date: 2022-04-28
     url: https://datasets.bactopia.com/media/2022-wellcome-amr-conference.pdf
     video: https://youtu.be/pWVa-blIw48
+
+  - title: "Bactopia v2: Highly scalable, portable and customizable bacterial genome analyses"
+    conference: "Sequencing to Function: Analysis and Applications for the Future"
+    authors: ["***Robert A Petit III***", "Davi J. Marcon", "Abhinav Sharma", "Timothy D Read"]
+    type: poster
+    date: 2022-03-01
+    url: https://datasets.bactopia.io/media/2022-sfaf-eposter-bactopia-v2-part2.pdf
 
   - title: Deeper dives, workflows and Bactopia
     conference: CLIMB Big Data - Bioinformatics Skills for Microbial Genomics Workshop
@@ -265,6 +450,13 @@ presentations:
     type: poster
     date: 2020-03-13
     url: https://bit.ly/3oY06Yk
+
+  - title: "Bacterial Genome Analysis Workflows: Staphopia and Bactopia"
+    conference: NIAID Webinar Series
+    authors: ["Timothy D Read"]
+    type: talk
+    date: 2020-03-01
+    url: https://datasets.bactopia.io/media/2020-niaid-bactopia-staphopia.pdf
 
   - title: "*Staphylococcus aureus* viewed from the perspective of 40,000+ Genomes"
     conference: ASM Southeastern Branch Meeting
@@ -344,6 +536,55 @@ presentations:
     url: https://doi.org/10.6084/m9.figshare.13726480.v1
 
 teaching:
+  - course: 13th Microbial Bioinformatics Hackathon
+    description: A 3 day hackathon that proceeded the 2026 ASMBIG Conference.
+    role: Organizer
+    school: Wyoming Public Health Laboratory
+    level: Professional
+    date: 2026-10-08
+
+  - course: Northern Plains Consortium Bioinformatics Workshop
+    description: A two day bioinformatics workshop focused on running Bactopia.
+    role: Instructor
+    school: Wyoming Public Health Laboratory
+    level: Professional
+    date: 2025-06-03
+
+  - course: APHL Global Health Train the Trainers Program
+    description: An 8-week mentoring program focused on training participants at Oman CPHL.
+    role: Mentor
+    school: Wyoming Public Health Laboratory
+    level: Professional
+    date: 2025-06-01
+
+  - course: 11th Microbial Bioinformatics Hackathon
+    description: A 3 day hackathon that proceeded the 2025 ABPHM Conference.
+    role: Organizing Committee Member
+    school: Wyoming Public Health Laboratory
+    level: Professional
+    date: 2025-05-18
+
+  - course: APHL Global Health MENA Regional Genomic Epidemiology
+    description: A four-part Genomic Epidemiology Webinar Series focused on molecular epidemiology to enhance the MENA region's capacity.
+    role: Instructor
+    school: Wyoming Public Health Laboratory
+    level: Professional
+    date: 2024-06-03
+
+  - course: APHL Global Health Oman CPHL Bioinformatics Training
+    description: One week visit to Oman CPHL focused on building CPHL's bacterial and viral bioinformatics expertise.
+    role: Instructor
+    school: Wyoming Public Health Laboratory
+    level: Professional
+    date: 2024-02-07
+
+  - course: Nextflow Ambassadors Program
+    description: A worldwide Nextflow initiative designed to foster collaboration, knowledge sharing, and community growth.
+    role: Mentor
+    school: Wyoming Public Health Laboratory
+    level: Professional
+    date: 2023-10-18
+
   - course: Building NGS Data Analysis Workflows
     description: A workshop on workflow managers and their usage in genomics delivered at ASM Microbe 2023
     role: Instructor
@@ -358,6 +599,13 @@ teaching:
     level: Professional
     date: 2023-06-15
 
+  - course: nf-core Mentorship Round 3
+    description: Third round of the nf-core Mentorship program.
+    role: Mentor
+    school: Wyoming Public Health Laboratory
+    level: Professional
+    date: 2023-06-01
+
   - course: Nextflow on ARCC
     description: "A workshop for using Nextflow on the University of Wyoming's Advanced Research Compute Cluster"
     role: Instructor
@@ -371,6 +619,27 @@ teaching:
     school: Wyoming Public Health Laboratory
     level: Professional
     date: 2023-03-13
+
+  - course: APHL Global Health WPHL and Oman CPHL Reciprocal Twinning Visit
+    description: One week reciprocal twinning visit to Oman CPHL focused on building CPHL's bioinformatics capacity.
+    role: Instructor
+    school: Wyoming Public Health Laboratory
+    level: Professional
+    date: 2023-02-22
+
+  - course: nf-core Mentorship Round 2
+    description: Second round of the nf-core Mentorship program.
+    role: Mentor
+    school: Wyoming Public Health Laboratory
+    level: Professional
+    date: 2022-12-01
+
+  - course: nf-core Mentorship Round 1
+    description: First round of the nf-core Mentorship program.
+    role: Mentor
+    school: Wyoming Public Health Laboratory
+    level: Professional
+    date: 2022-05-01
 
   - course: Advance Python Programming in Bioinformatics
     description: Developed and taught an advanced Python programming course to a group of graduate students.
@@ -396,39 +665,45 @@ teaching:
     level: Graduate
     date: 2015-01-01
 
-training:
-  - course: Specialization - Microsoft Azure Fundamentals AZ-900 Exam Prep
+professional_development:
+  - name: Specialization - Microsoft Azure Fundamentals AZ-900 Exam Prep
+    type: training
     description: A Coursera specialization which includes 4 courses to prepare the learned for the Microsoft Azure AZ-900 certification.
     url: https://coursera.org/verify/specialization/R87JX7KGUGCF
     date: 2022-04-04
 
-  - course: Preparing for the AZ-900 Microsoft Azure Fundamentals Exam
+  - name: Preparing for the AZ-900 Microsoft Azure Fundamentals Exam
+    type: training
     description: A Coursera course with an overview of AZ-900 and practice exams
     url: https://coursera.org/verify/222YE5N7A2PX
     date: 2022-04-04
 
-  - course: Microsoft Azure Services and Lifecycles
+  - name: Microsoft Azure Services and Lifecycles
+    type: training
     description: A Coursera course introducing Microsoft Azure service level agreements and service lifecycles.
     url: https://coursera.org/verify/CJ5MBHV739JC
     date: 2022-03-30
 
-  - course: Microsoft Azure Management Tools and Security Solutions
+  - name: Microsoft Azure Management Tools and Security Solutions
+    type: training
     description: A Coursera course introducing Microsoft Azure portal and security related services.
     url: https://coursera.org/verify/MTDWGQDKMBG4
     date: 2022-03-22
 
-  - course: Introduction to Microsoft Azure Cloud Services
+  - name: Introduction to Microsoft Azure Cloud Services
+    type: training
     description: A Coursera course for a basic introductions into the Microsoft Azure ecosystem.
     url: https://coursera.org/verify/7NZJQNKYKAA8
     date: 2022-03-07
 
-  - course: "Machine Learning Foundations: A Case Study Approach"
+  - name: "Machine Learning Foundations: A Case Study Approach"
+    type: training
     description: A Coursera course covering machine learning with a series of practical case-studies.
     url: https://coursera.org/verify/FPVB85653ZX7
     date: 2016-05-15
 
-certifications:
   - name: "AZ-900: Microsoft Azure Fundamentals"
+    type: certification
     description: Demonstrates foundational knowledge of cloud services and how those services are provided with Microsoft Azure.
     url: https://www.credly.com/badges/6bc1b80a-92ca-4f50-9fba-a3443962b06f
     date: 2022-04-08
