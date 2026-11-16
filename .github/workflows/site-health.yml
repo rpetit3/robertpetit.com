@@ -99,7 +99,11 @@ jobs:
           set -uo pipefail
           fail=0
           for url in "http://$HOST/" "https://robertpetit.com/"; do
-            read -r code target < <(curl -sS -o /dev/null -w '%{http_code} %{redirect_url}' --max-time 25 "$url" || echo "000 none")
+            # No `read < <(...)`: curl writes no trailing newline, so `read`
+            # returns 1 at EOF and the runner's `bash -e` kills the step.
+            resp=$(curl -sS -o /dev/null -w '%{http_code} %{redirect_url}' --max-time 25 "$url" || echo "000 none")
+            code=${resp%% *}
+            target=${resp#* }
             if [ "$code" != "301" ] && [ "$code" != "308" ]; then
               echo "::error::$url returned $code instead of a redirect"
               fail=1
@@ -126,6 +130,8 @@ jobs:
         if: failure()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # `gh` shells out to git, and this job never checks out a repo.
+          GH_REPO: ${{ github.repository }}
           RUN: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           set -euo pipefail
@@ -144,6 +150,7 @@ jobs:
         if: success()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
           for number in $(gh issue list --label site-down --state open --limit 10 --json number --jq '.[].number'); do

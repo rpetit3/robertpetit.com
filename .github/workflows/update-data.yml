@@ -12,6 +12,13 @@ concurrency:
   group: update-data
   cancel-in-progress: false
 
+# setup-miniconda activates through the shell profile, which a plain `bash -e`
+# never sources. Without `-l` every later step runs /usr/bin/python (no pytest,
+# no hugo) and fails.
+defaults:
+  run:
+    shell: bash -el {0}
+
 # One env setup, one build and one push for all three refreshes: separate
 # workflows would race each other to main and re-do the setup three times.
 jobs:
