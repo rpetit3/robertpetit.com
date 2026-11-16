@@ -57,3 +57,13 @@ def test_conda_workflows_activate_the_declared_env() -> None:
     for name in CONDA_WORKFLOWS:
         setup = [step for step in steps(name) if "setup-miniconda" in step.get("uses", "")]
         assert setup and setup[0]["with"]["activate-environment"] == "ctx-robertpetit.com-1-dev"
+
+
+def test_gate_covers_every_non_fatal_step() -> None:
+    """A step the gate inspects must not abort the job, and vice versa."""
+    workflow = steps("update-data.yml")
+    optional = {step["id"] for step in workflow if step.get("continue-on-error") is True and step.get("id")}
+    gate = next(step for step in workflow if step.get("name") == "Fail on a failed source")
+    gated = set(re.findall(r"steps\.(\w+)\.outcome", gate["run"]))
+    assert optional
+    assert gated == optional
