@@ -60,7 +60,9 @@ Hand-editable: `data/cv.yml`, `data/assets.toml`, and everything under
 `rpetit3`, `bactopia`, `staphopia`; `scripts/software_exclude.txt` lists public
 non-software repos. Tests pin these contracts, so run pytest after touching a
 script. `consolidate_tags.py` rewrites existing tags from HEAD through the alias
-map; run it after editing `TAG_ALIASES`.
+map; run it after editing `TAG_ALIASES`. `tests/test_workflows.py` pins wiring
+that only fails inside Actions (conda activates in a login shell; `read` dies at
+EOF under `bash -e`), so run pytest after touching `.github/workflows/`.
 
 ## Crawler surface
 

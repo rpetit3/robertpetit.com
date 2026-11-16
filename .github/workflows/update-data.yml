@@ -12,6 +12,13 @@ concurrency:
   group: update-data
   cancel-in-progress: false
 
+# setup-miniconda activates through the shell profile, which a plain `bash -e`
+# never sources. Without `-l` every later step runs /usr/bin/python (no pytest,
+# no hugo) and fails.
+defaults:
+  run:
+    shell: bash -el {0}
+
 # One env setup, one build and one push for all three refreshes: separate
 # workflows would race each other to main and re-do the setup three times.
 jobs:
@@ -31,7 +38,11 @@ jobs:
           activate-environment: ctx-robertpetit.com-1-dev
           miniforge-version: latest
 
+      # A broken test run still leaves the tree buildable and the collectors
+      # usable; the outcome is gated below like any other source.
       - name: Test
+        id: test
+        continue-on-error: true
         run: python -m pytest tests -q
 
       # Each source runs on its own so one failure cannot mask the others; the
@@ -134,7 +145,8 @@ jobs:
         if: always()
         run: |
           set -euo pipefail
-          for outcome in "${{ steps.counts.outcome }}" "${{ steps.get_latest_pr.outcome }}" \
+          for outcome in "${{ steps.test.outcome }}" "${{ steps.counts.outcome }}" \
+                         "${{ steps.get_latest_pr.outcome }}" "${{ steps.get_latest_pr_merged.outcome }}" \
                          "${{ steps.write_pr.outcome }}" "${{ steps.conda.outcome }}"; do
             if [ "$outcome" != "success" ]; then
               echo "::error::a data source failed, see the step logs"
