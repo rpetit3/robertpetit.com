@@ -25,7 +25,7 @@ gitignored. `themes/github-style` is a pinned submodule; run
 | `data/citations-count.yml` | `scripts/sync_publications.py` |
 | `data/software-counts.yml` | `scripts/collect_software_counts.py` |
 | `data/volunteer.yml` | `scripts/sync_conda_submissions.py` |
-| `data/github.json`, `data/merged.json` | GraphQL steps in `.github/workflows/update-data.yml` |
+| `data/github.json`, `data/merged.json` | `scripts/query_pull_requests.py` |
 | `metrics/manifest.toml` | `scripts/collect_software_counts.py` |
 
 Hand-editable: `data/cv.yml`, `data/assets.toml`, and everything under
@@ -56,7 +56,9 @@ Hand-editable: `data/cv.yml`, `data/assets.toml`, and everything under
 `sync_publications.py` defaults to a dry run and writes only with `--apply`.
 `sync_conda_submissions.py` writes by default and takes `--dry-run`, while
 `collect_software_counts.py` always writes. `sync_publications.py` needs
-`OPENALEX_API_KEY`; the other two need `GITHUB_TOKEN`. Accepted owners are
+`OPENALEX_API_KEY`; the other two need `GITHUB_TOKEN`. `query_pull_requests.py`
+also needs `GITHUB_TOKEN`, retries GraphQL 5xx and network errors, and writes
+both files only once both searches validate. Accepted owners are
 `rpetit3`, `bactopia`, `staphopia`; `scripts/software_exclude.txt` lists public
 non-software repos. Tests pin these contracts, so run pytest after touching a
 script. `consolidate_tags.py` rewrites existing tags from HEAD through the alias

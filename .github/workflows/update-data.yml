@@ -54,60 +54,12 @@ jobs:
         continue-on-error: true
         run: python scripts/collect_software_counts.py
 
-      - name: Query latest pull requests
-        id: get_latest_pr
+      # The script retries GitHub's GraphQL 502s and writes both files only
+      # after both searches validate.
+      - name: Query pull request data
+        id: prs
         continue-on-error: true
-        uses: octokit/graphql-action@v3.0.2
-        with:
-          query: |
-            query {
-              search(query: "is:pr author:rpetit3 -user:rpetit3 -user:rpetit3-fun -user:staphopia -user:bactopia -user:Read-Lab-Confederation", type: ISSUE, first: 100) {
-                issueCount
-                edges {
-                  node {
-                  ... on PullRequest {
-                      number
-                      title
-                      repository {
-                        nameWithOwner
-                      }
-                      createdAt
-                      mergedAt
-                      url
-                      changedFiles
-                      additions
-                      deletions
-                    }
-                  }
-                }
-              }
-            }
-
-      - name: Query merged pull request count
-        id: get_latest_pr_merged
-        continue-on-error: true
-        uses: octokit/graphql-action@v3.0.2
-        with:
-          query: |
-            query {
-              search(query: "is:pr is:merged author:rpetit3 -user:rpetit3 -user:rpetit3-fun -user:staphopia -user:bactopia -user:Read-Lab-Confederation", type: ISSUE, first: 100) {
-                issueCount
-              }
-            }
-
-      # Env indirection keeps apostrophes in PR titles from breaking the shell.
-      - name: Write pull request data
-        id: write_pr
-        if: steps.get_latest_pr.outcome == 'success' && steps.get_latest_pr_merged.outcome == 'success'
-        continue-on-error: true
-        env:
-          LATEST: ${{ steps.get_latest_pr.outputs.data }}
-          MERGED: ${{ steps.get_latest_pr_merged.outputs.data }}
-        run: |
-          set -euo pipefail
-          # _meta marks the files generated without breaking the JSON readers.
-          jq '. + {_meta: {generated_by: "update-data.yml"}}' <<<"$LATEST" > data/github.json
-          jq '. + {_meta: {generated_by: "update-data.yml"}}' <<<"$MERGED" > data/merged.json
+        run: python scripts/query_pull_requests.py
 
       # A failed source keeps its previous rows and lands in `_meta.incomplete`,
       # so the page degrades to stale data instead of losing history.
@@ -146,8 +98,7 @@ jobs:
         run: |
           set -euo pipefail
           for outcome in "${{ steps.test.outcome }}" "${{ steps.counts.outcome }}" \
-                         "${{ steps.get_latest_pr.outcome }}" "${{ steps.get_latest_pr_merged.outcome }}" \
-                         "${{ steps.write_pr.outcome }}" "${{ steps.conda.outcome }}"; do
+                         "${{ steps.prs.outcome }}" "${{ steps.conda.outcome }}"; do
             if [ "$outcome" != "success" ]; then
               echo "::error::a data source failed, see the step logs"
               exit 1
