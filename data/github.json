@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_by": "update-data.yml"
+    "generated_by": "query_pull_requests.py"
   },
   "search": {
     "issueCount": 354,
@@ -563,7 +563,7 @@
       {
         "node": {
           "number": 149,
-          "title": "fix hostrange() missing 1 required positional argument: database_directory",
+          "title": "fix hostrange() missing 1 required positional argument: 'database_directory'",
           "repository": {
             "nameWithOwner": "phac-nml/mob-suite"
           },

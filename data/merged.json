@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "generated_by": "update-data.yml"
+    "generated_by": "query_pull_requests.py"
   },
   "search": {
     "issueCount": 304
