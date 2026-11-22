@@ -13,7 +13,7 @@ import yaml
 
 ROOT = Path(__file__).parents[1]
 WORKFLOWS = ROOT / ".github" / "workflows"
-CONDA_WORKFLOWS = ["update-data.yml", "sync-publications.yml"]
+CONDA_WORKFLOWS = ["ci.yml", "deploy.yml", "update-data.yml", "sync-publications.yml"]
 
 
 def load(name: str) -> dict:
@@ -67,3 +67,13 @@ def test_gate_covers_every_non_fatal_step() -> None:
     gated = set(re.findall(r"steps\.(\w+)\.outcome", gate["run"]))
     assert optional
     assert gated == optional
+
+
+def test_ci_runs_checks_and_tests_on_pull_requests() -> None:
+    """The deploy is main-only, so PRs must still gate a merge."""
+    workflow = load("ci.yml")
+    triggers = workflow.get("on", workflow.get(True))
+    assert "pull_request" in triggers
+    runs = " ".join(run_scripts("ci.yml"))
+    assert "actionlint" in runs
+    assert "pytest" in runs

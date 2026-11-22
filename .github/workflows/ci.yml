@@ -1,0 +1,46 @@
+name: CI
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+# setup-miniconda activates through the shell profile, which a plain `bash -e`
+# never sources. Without `-l` every later step runs /usr/bin/python (no pytest,
+# no hugo) and fails.
+defaults:
+  run:
+    shell: bash -el {0}
+
+# The deploy workflow only runs on main, so a PR is where a red build or test
+# is cheapest.
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
+          lfs: true
+
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: environment.yml
+          activate-environment: ctx-robertpetit.com-1-dev
+          miniforge-version: latest
+
+      - name: Lint workflows
+        run: actionlint
+
+      - name: Test
+        run: python -m pytest tests -q
+
+      - name: Build
+        run: hugo --gc --minify -b https://www.robertpetit.com -d /tmp/site-build

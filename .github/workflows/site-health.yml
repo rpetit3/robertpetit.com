@@ -12,9 +12,9 @@ permissions:
 concurrency:
   group: site-health
 
-# The failure mode that matters is silent: a lapsed Netlify certificate once
-# broke the site for weeks. Every probe records its own outcome, a gate fails
-# the run, and an open issue is kept in step with the site.
+# The failure mode that matters is silent: a lapsed certificate once broke the
+# site for weeks. Every probe records its own outcome, a gate fails the run, and
+# an open issue is kept in step with the site.
 jobs:
   probe:
     runs-on: ubuntu-latest
@@ -52,8 +52,8 @@ jobs:
             body=$(curl -sS --max-time 25 "$1") || return 1
             printf '%s' "$body" | grep -qiF "$2"
           }
-          # The SPA catch-all answers a missing file with the homepage and
-          # status 200, so these assert the served type as well as the body.
+          # A missing file falls through to 404.html, so these assert the
+          # served type as well as the body.
           plain() {
             type=$(curl -sS -o /tmp/probe -w '%{content_type}' --max-time 25 "$1") || return 1
             case "$type" in text/plain*) ;; *) return 1 ;; esac
