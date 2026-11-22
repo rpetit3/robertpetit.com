@@ -6,7 +6,6 @@ defaultContentLanguage = "en"
 locale = "en-us"
 title = "Robert A. Petit III, PhD"
 theme = "github-style"
-googleAnalytics = "G-BSZQDCMRH9"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 copyright = "&copy; Dr. Robert A. Petit III, 2020-{year}"
