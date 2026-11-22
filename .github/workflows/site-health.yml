@@ -63,8 +63,8 @@ jobs:
           check "$SITE/about/" "You made it here" || { echo "::error::about page lost its body"; fail=1; }
           check "$SITE/volunteer/" "Conda Submissions" || { echo "::error::volunteer page lost its conda table"; fail=1; }
           check "$SITE/publication/" "publications" || { echo "::error::publication page lost its content"; fail=1; }
-          plain "$SITE/robots.txt" "Sitemap: https://www.robertpetit.com/sitemap.xml" || { echo "::error::robots.txt is missing or served as the SPA fallback"; fail=1; }
-          plain "$SITE/llms.txt" "# Robert A. Petit III" || { echo "::error::llms.txt is missing or served as the SPA fallback"; fail=1; }
+          plain "$SITE/robots.txt" "Sitemap: https://www.robertpetit.com/sitemap.xml" || { echo "::error::robots.txt is missing or served as the 404 page"; fail=1; }
+          plain "$SITE/llms.txt" "# Robert A. Petit III" || { echo "::error::llms.txt is missing or served as the 404 page"; fail=1; }
           exit $fail
 
       - name: Certificate valid and not expiring
