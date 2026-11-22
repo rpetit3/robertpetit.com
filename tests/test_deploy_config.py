@@ -59,6 +59,12 @@ def test_every_path_gets_the_security_headers() -> None:
         assert block.get(name), f"{name} missing from /*"
 
 
+def test_pages_dev_hosts_are_noindex() -> None:
+    blocks = header_blocks()
+    for pattern in ("https://:project.pages.dev/*", "https://:version.:project.pages.dev/*"):
+        assert blocks.get(pattern, {}).get("x-robots-tag") == "noindex"
+
+
 def test_csp_reports_reach_the_function() -> None:
     assert "report-uri /csp-report" in header_blocks()["/*"]["content-security-policy-report-only"]
     handler = (ROOT / "functions" / "csp-report.mjs").read_text()
