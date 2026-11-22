@@ -158,10 +158,10 @@ fails at 3.
 
 `AGENTS.md` holds the environment, generated-file and content notes for coding
 agents. `static/robots.txt` and `static/llms.txt` are real files. A missing path
-does not return a 404; Netlify sends the home page with a 200, so a new crawler
-path has to exist. `site-health.yml` checks both files for `text/plain` and a
+falls through to `404.html` with a real 404, so a stale crawler path is only
+caught by the checks. `site-health.yml` checks both files for `text/plain` and a
 marker, and `tests/test_llms_txt.py` fails when an `llms.txt` link stops
-working.
+working, while `tests/test_pdf_links.py` does the same for PDF links.
 
 ## Tests
 
