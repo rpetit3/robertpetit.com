@@ -69,9 +69,31 @@ jobs:
             exit 1
           fi
 
+      # Nothing pre-creates the project: the first deploy makes it, and later
+      # deploys accept the create failure after confirming the project is
+      # listed. Pages needs a production branch, which is main.
+      - name: Ensure the Pages project exists
+        if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          : "${CLOUDFLARE_API_TOKEN:?missing repository secret CLOUDFLARE_API_TOKEN}"
+          : "${CLOUDFLARE_ACCOUNT_ID:?missing repository secret CLOUDFLARE_ACCOUNT_ID}"
+          npm install --global wrangler@3.90.0
+          if wrangler pages project create robertpetit-com --production-branch main; then
+            echo "created Pages project robertpetit-com"
+          else
+            echo "create failed, checking whether robertpetit-com already exists"
+            wrangler pages project list | grep -F robertpetit-com
+          fi
+
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy public/ --project-name=robertpetit-com --branch=main
+          wranglerVersion: '3.90.0'
+          # The build output is untracked, which wrangler otherwise reports.
+          command: pages deploy public/ --project-name=robertpetit-com --branch=main --commit-dirty=true

@@ -82,8 +82,9 @@ def test_netlify_config_is_gone() -> None:
 
 def test_deploy_targets_the_pages_project() -> None:
     command = step("Deploy")["with"]["command"]
-    assert f"--project-name={PROJECT}" in command
-    assert "--branch=main" in command
+    assert command == (
+        "pages deploy public/ --project-name=robertpetit-com --branch=main --commit-dirty=true"
+    )
 
 
 def test_deploy_uses_the_repository_secrets() -> None:
@@ -112,6 +113,17 @@ def test_deploy_guards_the_pages_limits() -> None:
     runs = " ".join(entry["run"] for entry in steps() if "run" in entry)
     assert "19000" in runs
     assert "-size +25M" in runs
+
+
+def test_deploy_creates_the_project_if_missing() -> None:
+    names = [entry.get("name") for entry in steps()]
+    guard = step("Ensure the Pages project exists")
+    assert names.index(guard["name"]) < names.index("Deploy")
+    assert "github.ref == 'refs/heads/main'" in guard["if"]
+    assert 'pages project create robertpetit-com --production-branch main' in guard["run"]
+    assert "PROJECT=" not in guard["run"]
+    assert "already exists" in guard["run"]
+    assert step("Deploy")["with"]["wranglerVersion"] == "3.90.0"
 
 
 def test_deploy_runs_only_on_main() -> None:
