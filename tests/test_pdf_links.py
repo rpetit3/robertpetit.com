@@ -1,7 +1,7 @@
 """Guard local PDF links against renamed or removed files.
 
-The Netlify catch-all answers a missing PDF with the home page and status 200,
-so a broken local link is invisible in production.
+A missing path falls through to `404.html`, so a broken local link still
+answers with HTML instead of the PDF.
 """
 
 import re
