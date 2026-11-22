@@ -1,0 +1,6 @@
+# The bio lives on the section page, so the old child page redirects there
+# rather than 404ing.
+#
+# There is no `/* /index.html 200` catch-all: Pages follows redirects even when
+# an asset matches, so it would rewrite every real page to the homepage.
+/about/about* /about/ 301

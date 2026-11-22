@@ -1,0 +1,77 @@
+name: Deploy to Cloudflare Pages
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+# setup-miniconda activates through the shell profile, which a plain `bash -e`
+# never sources. Without `-l` every later step runs /usr/bin/python (no pytest,
+# no hugo) and fails.
+defaults:
+  run:
+    shell: bash -el {0}
+
+# Only main deploys. `.github/workflows/ci.yml` covers pull requests.
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      HUGO_ENV: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          # The theme is a submodule and the PDFs are LFS pointers: without
+          # both the build ships an empty layout and pointer text files.
+          submodules: recursive
+          lfs: true
+
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: environment.yml
+          activate-environment: ctx-robertpetit.com-1-dev
+          miniforge-version: latest
+
+      - name: Lint workflows
+        run: actionlint
+
+      - name: Test
+        run: python -m pytest tests -q
+
+      - name: Build
+        run: hugo --gc --minify -b https://www.robertpetit.com
+
+      - name: Check the Pages limits
+        run: |
+          set -euo pipefail
+          count=$(find public -type f | wc -l)
+          echo "deployment files: $count / 20000"
+          if [ "$count" -gt 20000 ]; then
+            echo "::error::$count files is over the Cloudflare Pages 20k limit"
+            exit 1
+          fi
+          if [ "$count" -gt 19000 ]; then
+            echo "::warning::close to the Cloudflare Pages 20k file limit: $count"
+          fi
+          oversized=$(find public -type f -size +25M)
+          if [ -n "$oversized" ]; then
+            echo "::error::over the Cloudflare Pages 25 MiB per-file limit:"
+            echo "$oversized"
+            exit 1
+          fi
+
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public/ --project-name=robertpetit-com --branch=main

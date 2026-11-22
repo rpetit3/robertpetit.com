@@ -1,7 +1,7 @@
 """Guard static/llms.txt links against renamed or removed pages.
 
-The SPA catch-all in netlify.toml answers a dead path with the homepage and
-status 200, so a stale llms.txt link is invisible in production.
+Cloudflare Pages serves 404.html for a dead path, so a stale llms.txt link is
+invisible until a crawler follows it.
 """
 
 import re

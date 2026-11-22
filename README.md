@@ -1,8 +1,17 @@
 # robertpetit.com
 
 This is my personal site, https://www.robertpetit.com/. It is built with Hugo
-and the `github-style` theme, and Netlify deploys `main`. Pages come from
-Markdown files and `data/*.yml`.
+and the `github-style` theme, and `.github/workflows/deploy.yml` deploys `main`
+to Cloudflare Pages. Pages come from Markdown files and `data/*.yml`.
+
+Deploys use the Pages project `robertpetit-com` with `main` as the production
+branch, and need the `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`
+repository secrets. `.github/workflows/site-health.yml` still probes the
+canonical host.
+
+The deploy checks out Git LFS so the PDFs upload as real files, and fails
+before uploading past the Cloudflare Pages limits of 20,000 files and 25 MiB
+per file.
 
 ## Local development
 

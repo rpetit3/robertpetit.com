@@ -9,6 +9,7 @@ dependencies:
   - git
   - git-lfs
   - hugo
+  - nodejs
   - pytest
   - python=3.14
   - pyyaml

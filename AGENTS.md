@@ -1,8 +1,12 @@
 # AGENTS.md
 
 Personal Hugo site for Robert A. Petit III at https://www.robertpetit.com/.
-Pages render from Markdown front matter and `data/*.yml`; Netlify builds and
-deploys `main` using `netlify.toml`.
+Pages render from Markdown front matter and `data/*.yml`.
+`.github/workflows/deploy.yml` builds with Hugo and deploys `main` to the
+Cloudflare Pages project `robertpetit-com`; it needs `CLOUDFLARE_API_TOKEN`
+and `CLOUDFLARE_ACCOUNT_ID` and `main` must stay the production branch.
+`.github/workflows/ci.yml` runs the same lint, tests, and build on pull
+requests, where nothing deploys.
 
 ## Environment
 
@@ -68,8 +72,11 @@ EOF under `bash -e`), so run pytest after touching `.github/workflows/`.
 
 ## Crawler surface
 
-`static/robots.txt` and `static/llms.txt` are served as real files. The
-`/* -> /index.html` redirect in `netlify.toml` applies to misses only, so a
-crawler path that does not exist returns the homepage with status 200 instead
-of a 404. `.github/workflows/site-health.yml` probes both files for
-`text/plain` and a marker; keep it green.
+`static/robots.txt` and `static/llms.txt` are served as real files.
+`static/_headers` and `static/_redirects` are copied into `public/` and read by
+Cloudflare Pages. Pages follows redirects even when an asset matches, so there
+is no `/* /index.html` catch-all: unmatched paths fall through to `404.html`
+with a real 404. `.github/workflows/site-health.yml` probes both files for
+`text/plain` and a marker; keep it green. `functions/csp-report.mjs` receives
+the CSP `report-uri` and logs reports; it deploys from the repo root, not from
+`static/`.
