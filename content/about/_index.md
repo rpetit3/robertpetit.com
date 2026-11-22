@@ -43,7 +43,7 @@ I am the in-house bioinformatician for [Wyoming Public Health Laboratory](https:
 🛠️ **Bioinformatics Consultant**  
 *Simple Bioinformatics, LLC, Cheyenne, WY, 2026-present*  
 
-I provide bioinformatics consulting services in a part-time capacity through Simple Bioinformatics, LLC. Advisory work includes sequencing, data analysis, hardware capacity planning, open-weight LLM selection, and local serving stacks (vLLM, llama.cpp, SGLang) on NVIDIA and AMD GPUs. I also provide hands-on assistance with deploying bioinformatics pipelines, analyzing data, ongoing support, and delivering training to clients.
+I provide bioinformatics consulting services in a part-time capacity through [Simple Bioinformatics, LLC](https://simple.binf.net). Advisory work includes sequencing, data analysis, hardware capacity planning, open-weight LLM selection, and local serving stacks (vLLM, llama.cpp, SGLang) on NVIDIA and AMD GPUs. I also provide hands-on assistance with deploying bioinformatics pipelines, analyzing data, ongoing support, and delivering training to clients.
 
 ---
 
